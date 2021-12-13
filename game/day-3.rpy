@@ -834,6 +834,8 @@ label masami_home_3:
 # Scene cut to the kitchen
 label masami_kitchen_3:
 
+    scene bg kitchen
+
     n "A pungent aroma fills the air long before Masami reaches the kitchen."
     m "(Looks like we're having curry tonight.)"
     n "He hangs his coat on the rack near the door."
@@ -880,6 +882,8 @@ label masami_kitchen_3:
 
 # Scene cut to Masami's room
 label masami_room_3a:
+
+    scene # TODO: Fix me!
 
     n "The moment that Masami sets foot in his room, he flops down face first on the bed with a groan."
     m "(Ugh…)"

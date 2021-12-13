@@ -2,6 +2,8 @@
 # Setting the scene - this is in black
 label office:
 
+    scene # TODO: Change to black screen!
+
     m "…"
     m "(Ugh.)"
     m "(The hell am I even waiting for?)"

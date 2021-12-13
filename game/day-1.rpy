@@ -309,6 +309,8 @@ label hallway_1:
 # Glitch OFF
 label masami_kitchen_1:
 
+    scene kitchen bg # TODO: Fix this!
+
     mm "Hello Masami! Welcome home!"
     m "…"
     mm "Something wrong?"

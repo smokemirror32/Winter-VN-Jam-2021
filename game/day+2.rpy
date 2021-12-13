@@ -374,6 +374,8 @@ label masami_room2c:
 # Masami heads to the kitchen
 label masami_kitchen2:
 
+    scene bg kitchen
+
     n "Masami can smell the fragrant aroma of sesame oil long before he reaches the kitchen."
     n "He walks in to find his mother with her apron on and back turned, having just finished cooking."
     n "She turns off the heat on the bok choi she was stir-frying in a wok. A clay pot sits on low heat on the back burner."
@@ -422,6 +424,8 @@ label masami_kitchen2_ignore:
 
 # Masami returns to his room
 label masami_room2d:
+
+    scene # TODO: Fix this!
 
     n "Masami heads back to his room, where he eats in silence."
     m "(This is really good. I actually feel better now.)"

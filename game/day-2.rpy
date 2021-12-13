@@ -20,6 +20,8 @@ label masami_room_2:
 
 label masami_kitchen_2:
 
+    scene bg kitchen
+
     n "Masami heads down the stairs and into the kitchen."
     n "His mother is scooping the leftover fried noodles from dinner into a large bowl as she chats with Sabie, who stands primly out of the way."
     n "His father is washing the dishes in the corner, silent except for the occasional clack of the silverware and plates against the walls of the sink."

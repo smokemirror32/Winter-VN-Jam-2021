@@ -2,6 +2,8 @@
 # Masami is waiting in the kitchen for his parents to come home
 label masami_kitchen1:
 
+    scene bg kitchen
+
     # Masami's parents come in
     m "Hey. You're finally back."
     mm "…"
@@ -54,6 +56,8 @@ label masami_kitchen1:
     jump masami_room1
 
 label masami_room1:
+
+    scene # TODO: Fix this!
 
     n "Once inside, he leans against the wooden frame behind him and shuts his eyes."
     n "He can make out his parents' low voices in the kitchen, but he doesn't try to listen in further."

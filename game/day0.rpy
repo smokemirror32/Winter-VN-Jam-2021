@@ -91,6 +91,8 @@ label tangyuan_cook:
 # Full VO begins here, might need some pause or transition text if the transition is too quick
 label xinyi_appearance:
 
+    scene # TODO: Fix me!
+
     # Shadow appears in window
     m "{i}Jie?{/i}"
     # Shadow disappears
@@ -99,6 +101,9 @@ label xinyi_appearance:
     m "But, why can't I seem to move?"
     m "Damn it. I have to - agh!"
     # Visuals/Sound Effects depict him breaking free, he calls after her as he runs
+
+    scene bg nightsky
+
     m "{i}Jie{/i}! Wait!"
     x "Huh?"
     m "Please, I'm here now - "
