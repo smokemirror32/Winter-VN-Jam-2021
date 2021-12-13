@@ -1,0 +1,216 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+The label masami_room_2 is defined twice, at File "game/day-2.rpy", line 3:
+label masami_room_2:
+and File "game/day_2.rpyc", line 3:
+label masami_room_2:
+
+
+The label masami_kitchen_2 is defined twice, at File "game/day-2.rpy", line 21:
+label masami_kitchen_2:
+and File "game/day_2.rpyc", line 21:
+label masami_kitchen_2:
+
+
+The label tyree_car is defined twice, at File "game/day-2.rpy", line 105:
+label tyree_car:
+and File "game/day_2.rpyc", line 105:
+label tyree_car:
+
+
+The label party_living_room is defined twice, at File "game/day-2.rpy", line 142:
+label party_living_room:
+and File "game/day_2.rpyc", line 142:
+label party_living_room:
+
+
+The label party_living_room_explore is defined twice, at File "game/day-2.rpy", line 180:
+label party_living_room_explore:
+and File "game/day_2.rpyc", line 180:
+label party_living_room_explore:
+
+
+The label party_alyssa_contemplate is defined twice, at File "game/day-2.rpy", line 208:
+label party_alyssa_contemplate:
+and File "game/day_2.rpyc", line 208:
+label party_alyssa_contemplate:
+
+
+The label party_eggnog_drink is defined twice, at File "game/day-2.rpy", line 229:
+label party_eggnog_drink:
+and File "game/day_2.rpyc", line 229:
+label party_eggnog_drink:
+
+
+The label party_alyssa_chat is defined twice, at File "game/day-2.rpy", line 246:
+label party_alyssa_chat:
+and File "game/day_2.rpyc", line 246:
+label party_alyssa_chat:
+
+
+The label party_porch_initial is defined twice, at File "game/day-2.rpy", line 322:
+label party_porch_initial:
+and File "game/day_2.rpyc", line 322:
+label party_porch_initial:
+
+
+The label party_porch_alyssa is defined twice, at File "game/day-2.rpy", line 374:
+label party_porch_alyssa:
+and File "game/day_2.rpyc", line 374:
+label party_porch_alyssa:
+
+
+The label party_porch_cookies_take is defined twice, at File "game/day-2.rpy", line 417:
+label party_porch_cookies_take:
+and File "game/day_2.rpyc", line 417:
+label party_porch_cookies_take:
+
+
+The label party_porch_cookies_refuse is defined twice, at File "game/day-2.rpy", line 434:
+label party_porch_cookies_refuse:
+and File "game/day_2.rpyc", line 434:
+label party_porch_cookies_refuse:
+
+
+The label party_porch_reflection is defined twice, at File "game/day-2.rpy", line 443:
+label party_porch_reflection:
+and File "game/day_2.rpyc", line 443:
+label party_porch_reflection:
+
+
+The label walk is defined twice, at File "game/day-2.rpy", line 468:
+label walk:
+and File "game/day_2.rpyc", line 468:
+label walk:
+
+
+The label walk_woods is defined twice, at File "game/day-2.rpy", line 494:
+label walk_woods:
+and File "game/day_2.rpyc", line 494:
+label walk_woods:
+
+
+The label walk_woods_convo is defined twice, at File "game/day-2.rpy", line 547:
+label walk_woods_convo:
+and File "game/day_2.rpyc", line 547:
+label walk_woods_convo:
+
+
+The label convo_family is defined twice, at File "game/day-2.rpy", line 561:
+label convo_family:
+and File "game/day_2.rpyc", line 561:
+label convo_family:
+
+
+The label convo_hobbies is defined twice, at File "game/day-2.rpy", line 585:
+label convo_hobbies:
+and File "game/day_2.rpyc", line 585:
+label convo_hobbies:
+
+
+The label convo_friendships is defined twice, at File "game/day-2.rpy", line 610:
+label convo_friendships:
+and File "game/day_2.rpyc", line 610:
+label convo_friendships:
+
+
+The label convo_recognition is defined twice, at File "game/day-2.rpy", line 634:
+label convo_recognition:
+and File "game/day_2.rpyc", line 634:
+label convo_recognition:
+
+
+The label walk_splace is defined twice, at File "game/day-2.rpy", line 648:
+label walk_splace:
+and File "game/day_2.rpyc", line 648:
+label walk_splace:
+
+
+The label walk_splace_explore is defined twice, at File "game/day-2.rpy", line 668:
+label walk_splace_explore:
+and File "game/day_2.rpyc", line 668:
+label walk_splace_explore:
+
+
+The label walk_splace_graffiti is defined twice, at File "game/day-2.rpy", line 690:
+label walk_splace_graffiti:
+and File "game/day_2.rpyc", line 690:
+label walk_splace_graffiti:
+
+
+The label walk_splace_car is defined twice, at File "game/day-2.rpy", line 713:
+label walk_splace_car:
+and File "game/day_2.rpyc", line 713:
+label walk_splace_car:
+
+
+The label walk_splace_tracks is defined twice, at File "game/day-2.rpy", line 733:
+label walk_splace_tracks:
+and File "game/day_2.rpyc", line 733:
+label walk_splace_tracks:
+
+
+The label walk_splace_climb is defined twice, at File "game/day-2.rpy", line 749:
+label walk_splace_climb:
+and File "game/day_2.rpyc", line 749:
+label walk_splace_climb:
+
+
+The label walk_splace_chat is defined twice, at File "game/day-2.rpy", line 789:
+label walk_splace_chat:
+and File "game/day_2.rpyc", line 789:
+label walk_splace_chat:
+
+
+The label walk_splace_charm is defined twice, at File "game/day-2.rpy", line 808:
+label walk_splace_charm:
+and File "game/day_2.rpyc", line 808:
+label walk_splace_charm:
+
+
+The label walk_splace_magpie is defined twice, at File "game/day-2.rpy", line 839:
+label walk_splace_magpie:
+and File "game/day_2.rpyc", line 839:
+label walk_splace_magpie:
+
+
+The label party_porch_end is defined twice, at File "game/day-2.rpy", line 867:
+label party_porch_end:
+and File "game/day_2.rpyc", line 867:
+label party_porch_end:
+
+
+The label kiss is defined twice, at File "game/day-2.rpy", line 899:
+label kiss:
+and File "game/day_2.rpyc", line 899:
+label kiss:
+
+
+The label kiss_break is defined twice, at File "game/day-2.rpy", line 935:
+label kiss_break:
+and File "game/day_2.rpyc", line 935:
+label kiss_break:
+
+
+The label kiss_decide is defined twice, at File "game/day-2.rpy", line 948:
+label kiss_decide:
+and File "game/day_2.rpyc", line 948:
+label kiss_decide:
+
+
+The label party_living_room_end is defined twice, at File "game/day-2.rpy", line 963:
+label party_living_room_end:
+and File "game/day_2.rpyc", line 963:
+label party_living_room_end:
+
+
+The label tyree_chat is defined twice, at File "game/day-2.rpy", line 992:
+label tyree_chat:
+and File "game/day_2.rpyc", line 992:
+label tyree_chat:
+
+
+Ren'Py Version: Ren'Py 7.4.8.1895
+Sun Dec 12 18:43:40 2021

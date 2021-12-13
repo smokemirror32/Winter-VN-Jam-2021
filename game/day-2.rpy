@@ -1,0 +1,1024 @@
+## DAY 2 - BEFORE
+# Masami and Alyssa meet in front of his house
+label masami_room_2:
+
+    m "(Well.)"
+    m "(Today's the day isn't it?)"
+    m "…"
+    m "(I still don't know why I agreed to attend this party.)"
+    n "Masami fiddles with the zipper of his jacket, half-listening to Sabie and his mother converse in Indonesian in the kitchen below."
+    m "(I can't understand everything they're saying, but I'm pretty sure they're talking about me again.)"
+    m "(They always do.)"
+    m "(Or at least, my mom always asks and Sabie just goes along with it because she takes an inhumane amount of satisfaction from airing my dirty laundry.)"
+    n "He takes one last look over the room."
+    m "(Let's see, I've got my keys, my phone…)"
+    m "(That should be everything, right?)"
+    m "…"
+    m "(Yeah, that's everything. I should head out.)"
+
+    jump masami_kitchen_2
+
+label masami_kitchen_2:
+
+    n "Masami heads down the stairs and into the kitchen."
+    n "His mother is scooping the leftover fried noodles from dinner into a large bowl as she chats with Sabie, who stands primly out of the way."
+    n "His father is washing the dishes in the corner, silent except for the occasional clack of the silverware and plates against the walls of the sink."
+    n "Sabie notices him immediately and waves him over."
+    s "Yo, {i}ge{/i}! Show your mom the outfit I - "
+    n "She stops, her lip dropping into a pout."
+    m "What?"
+    s "Your jacket."
+    m "What about my jacket?"
+    s "You're wearing it. Over the Christmas sweater I picked just for you."
+    m "That was exactly the point."
+    s "At least, you'll be taking it off at the party, right?"
+    m "No."
+    s "Aw, come on! I bet someone there {i}really{/i} wants to see you in that beautiful Christmas sweater."
+    s "You won't let them down, will you?"
+    n "At this, Masami's mom lays the spoon momentarily down in the pot."
+    mm "Masami, this is giving season. We have Christmas, we have {i}Dongzhi{/i}."
+    mm "Holiday spirit! We be with others and be happy."
+    n "She pats him gently on the shoulder."
+    mm "Sabrina tell me she work hard to find you a good gift. Think about she feel, okay?"
+    m "…"
+    n "Masami shoots a death glare at Sabie."
+    n "She smiles innocently back at him."
+    s "Ehe."
+    m "…"
+    mm "And I don't want you to overheat in thick jacket. Many people will be there. It will be very hot."
+    s "Oh yeah. It'll be very hot."
+    n "Masami sighs and rubs his temples."
+    m "Fine, I'll think about it, okay?"
+    mm "Good, good."
+    n "Masami's mother hums to herself as she puts a layer of saran wrap over the bowl and puts it in the refrigerator."
+    mm "Oh, I almost forget!"
+    mm "Masami make {i}tangyuan{/i} yesterday. Peanut type!"
+    mm "Do you want some, Sabrina?"
+    m "Uh, Mom, I made those for - "
+    s "Oh no, it's fine. I couldn't!"
+    mm "Are you sure? We cannot eat all by ourselves."
+    s "Yeah, I'm sure. If there are leftovers, I can always come by to pick them up the day after."
+    s "But, I think you all will be able to finish everything."
+    s "Right, Masami?"
+    m "…"
+    m "Yeah. I hope so."
+    n "Masami's mother purses her lips together, but nods along anyways."
+    mm "I keep forgetting Masami is growing boy. He eat much more now."
+    n "Her eyes glaze over a little as she worries her hands together. Behind her, the clacking noises of the dishware grow noticeably more quiet."
+    mm "He grow so fast."
+    mm "One day he will leave for college."
+    mm "I wonder if he will come back to see me…"
+    s "He will. I'm sure of it."
+    n "Masami's mother smiles vacantly and shakes her head."
+    mm "I hope. Family stay together important."
+    mm "That way we can keep celebrate together. Love together. Stay strong. Year after year."
+    n "She pats Sabie on the shoulder."
+    mm "Take care of him okay?"
+    s "You can count on me!"
+    mm "Good, good."
+    n "She adjusts the apron she's wearing and grins."
+    mm "You two have fun now! Don’t come back too late."
+    m "Don't worry, Mom, we won't."
+    mm "I know."
+    n "She plants a kiss onto his forehead."
+    mm "I love you."
+    m "Love you too."
+    n "Masami's dad elbows him as Masami and Sabie head for the door."
+    m "Hm?"
+    n "Masami's dad just smiles mischievously and leans in to whisper into Masami’s ear."
+    md "If you find a girl, make sure to introduce her to us."
+    m "What? I never said - "
+    md "Okay."
+    mm "What's going on?"
+    md "Just giving Masami some last minute advice."
+    n "His dad winks at Sabie, who giggles."
+    m "Sure. Advice."
+    m "(Ugh, remind me never to have the two of them in the same space again.)"
+    n "Masami grabs Sabie's hand."
+    s "Hey, what are you - "
+    m "We're going now or we're going to be late! Bye!"
+    n "With that, Masami forcibly drags Sabie out the door with him."
+
+    jump tyree_car
+
+# Inside Tyree's car
+label tyree_car:
+
+    n "For better or worse, Sabie follows him to Tyree's car without issue, though she is cackling the entire time."
+    n "She also doesn't protest when Masami takes shotgun."
+    n "Rohan is already waiting in the back seat, looking rather confused."
+    r "What happened?"
+    m "Nothing."
+    s "Sure, nothing. Your dad giving me the green light was nothing."
+    m "Tell that to my mom. She still thinks we're going to get married some day."
+    s "Psh, she'll come around."
+    m "Clearly."
+    r "…"
+    t "Ready to go?"
+    m "Please. I just want to get this over with."
+    n "Tyree chuckles."
+    t "You will be fine, don't worry."
+    n "He starts up the engine and turns the radio to some Christmas music."
+    n "After a couple minutes of driving, Masami turns his head around towards the back."
+    m "Sabie."
+    s "Hm?"
+    m "Why am I the only person in this car who is dressed up like this?"
+    s "Hey, there's no need to feel self-conscious about it."
+    m "I'm not self-conscious!"
+    m "I just want to know why you insisted on me wearing {i}this{/i} when I could have just worn what I usually wear."
+    s "Uh."
+    s "It's a Christmas party, so I thought you'd like something a little fun!"
+    m "You're not answering my question."
+    s "Uh…"
+    s "Don't worry about it."
+    r "…"
+    n "Tyree clears his throat and turns up the music to an obnoxiously loud level."
+    m "(Great. There's something that they all know about and they're not going to tell me a thing.)"
+    m "(I just love it when that happens.)"
+    n "They ride the rest of the way with the speakers blaring over their silence."
+
+    jump party_living_room
+
+label party_living_room:
+
+    n "When they arrive at the party, Rohan and Tyree predictably disappear upstairs to play Smash."
+    n "Masami moves to follow, but Sabie grabs him by the hand and drags him to the kitchen."
+    s "Here."
+    n "Sabie shoves a solo cup full of eggnog into his hands."
+    s "For your nerves. Since you'll need a little push to get there."
+    m "My nerves? What are you trying - "
+    s "Oops, the dance floor calls!"
+    s "Talk to you later, {i}ge{/i}! You got this!"
+    m "Sabie, could you please explain - "
+    m "(And she's gone.)"
+    m "…"
+    m "(No use trying to chase her down when she doesn't want to be found.)"
+    m "(No way am I getting near those speakers either. I've already got enough hearing damage from doing audio.)"
+    n "Masami scans the living room, trying to find a friendly face."
+    m "(Hm, I have seen most of these people before at one point or another.)"
+    m "(A few people from the stage crew are here. A couple of robotics are people, too, though more of them are probably upstairs playing Smash.)"
+    m "(But there's no one here that I - )"
+    n "Masami freezes as he notices a small group of girls sitting on the living room couch."
+    m "(Shit. It's Alyssa.)"
+    m "(I didn't expect to see her here.)"
+    m "(I mean, I shouldn't be surprised since half the upperclassmen in the school are here.)"
+    m "(But she's not the party type. Or, not at least that I know of.)"
+    m "(Besides, wouldn't Sabie have - )"
+    m "(Wait a second.)"
+    n "He stares down at his jacket, already starting to feel warm as the realization dawns on him."
+    m "(Dammit.)"
+    m "(I should have stayed home today.)"
+    m "…"
+    m "(Then again, I did ask for this distraction. And…knowing {i}jie{/i}, she would have wanted it for me, too.)"
+    n "He sighs quietly."
+    m "(Either way, I'm stuck here.)"
+    m "(Probably should find some way to kill time while I'm at it.)"
+
+    jump party_living_room_explore
+
+# Explore the living room
+label party_living_room_explore:
+
+    menu:
+
+        "Go chat with Alyssa":
+            jump party_alyssa_contemplate
+
+        "Head upstairs" if upstairs_check:
+            $ alyssa_visit_first = False
+            $ upstairs_check = False
+            m "(They're probably playing Smash up there in the game room.)"
+            m "(I could always go watch them.)"
+            m "…"
+            m "(Yeah, still no.)"
+            m "(They're going to force me into the rotation if I go.)"
+
+            jump party_living_room_explore
+
+        "Investigate the kitchen" if kitchen_check:
+            $ alyssa_visit_first = False
+            $ kitchen_check = False
+            m "(They're making some gingerbread cookies. I don't think they want me back there for that.)"
+            m "(I'm no Rohan in the kitchen.)"
+            m "(They smell really good, though. Maybe I'll have one later.)"
+
+            jump party_living_room_explore
+
+# Masami decides to chat with Alyssa
+label party_alyssa_contemplate:
+
+    n "Masami sneaks another glance at the pocket of the room where Alyssa is."
+    m "(I know I was set up for this, but…)"
+    m "(I could go talk to her. I know a couple of girls and they seem pretty nice.)"
+    m "(Nasir isn't there either.)"
+    n "An odd lump forms in Masami's throat at the last thought. He forces it down."
+    m "(This could be my chance.)"
+    m "(This was what I wanted, didn't I?)"
+    m "…"
+    n "He stares at the drink that Sabie had unceremoniously pushed into his hands."
+    m "(For my nerves, huh?)"
+    m "(Probably means it's spiked.)"
+    n "He chuckles to himself as he gives the eggnog an absentminded swirl."
+
+    menu:
+
+        "Drink the eggnog":
+            jump party_eggnog_drink
+
+# Masami drinks the eggnog
+label party_eggnog_drink:
+
+    m "(Couldn't hurt to try a little.)"
+    n "Masami takes a tentative sip."
+    m "(Yup, it's spiked.)"
+    m "(It's…not bad, though. Probably because it's not straight up alcohol.)"
+    n "He takes another sip. Then another."
+    m "(Ah, to hell with it. Might as well go all the way.)"
+    m "(I've already made enough bad decisions today. What more could this do?)"
+    n "Without giving himself a moment to think about the consequences, he downs the rest of it in one go."
+    m "…"
+    m "(I…)"
+    m "(I'll probably regret this later, but whatever.)"
+
+    jump party_alyssa_chat
+
+# Masami goes to chat with Alyssa
+label party_alyssa_chat:
+
+    n "Masami makes his way through the throngs of people towards where Alyssa and her friends are sitting."
+    n "As he gets closer, he notices their voices grow increasingly hushed, their eyes flitting between Alyssa and Masami."
+    n "Alyssa herself has gone stock still, her face the faintest shade of red."
+    n "Masami clears his throat."
+    m "Um, hi. Alyssa?"
+    a "Yeah. That's me. And you're Masami, right?"
+    m "Mhm."
+    m "(Great. Why can't I do words today?)"
+    m "So, uh. What brings you here?"
+    n "Alyssa just stares until one of her friends elbows her."
+    a "Oh! I, uh - "
+    n "She giggles nervously."
+    a "Actually, I wasn't planning on coming, but Nasir kind of insisted I did."
+    m "Wait, what?"
+    a "Yeah, I know. Me too. Usually, I'm the one who drags him out to go do things."
+    a "He's probably off in a corner somewhere trying to get some peace."
+    m "Heh. Sounds like me and Sabie. Except Sabie was the one who dragged me here this time."
+    a "I see. Well, I'm glad she did."
+    m "You are?"
+    a "Uh, I - "
+    n "Alyssa gives a slight cough."
+    n "The other one of her friends giggles and whispers something into the ear of the first girl. They both laugh."
+    fa "She is. She's just shy about it."
+    a "I am not shy about it! Masami and I are, well. Meeting for the first time."
+    fa "Sure. We all know you've been giving him googly eyes since middle school."
+    n "Alyssa's face turns bright red."
+    a "What? No! I did not."
+    fb "You saw him once on stage and were instantly smitten. Wouldn't stop talking about him since."
+    fb "\"He's so smart\" this and \"he's so nice\" that."
+    fb "\"He can do the arts and sports and STEM. A triple threat!\""
+    fb "\"He's the perfect one to walk me down the aisle and have my babies.\""
+    a "I-I did not say that! Not the last one at least."
+    fa "You basically did."
+    fb "Yeah, you did."
+    fb "Anyways, she framed you as the perfect, good-at-everything-guy who could do no wrong."
+    n "The friend snickers."
+    fb "Ah, young love!"
+    n "Masami feels his throat constrict. He takes a step back."
+    m "Oh."
+    n "Sensing his discomfort, Alyssa shifts and throws up her hands as if to shield herself."
+    a "N-No! It's not like that."
+    a "I-I talk about Nasir like that, too! It's the same thing."
+    fa "You tell him that to his face. But you don't do the same thing to Masami. There's a difference."
+    a "I - I…"
+    n "Alyssa whirls on her friends."
+    a "Ugh, just look how uncomfortable you're making him!"
+    n "Both of her friends exchange glances then look at Masami. The more outspoken of the two laughs nervously."
+    fb "I thought we made it clear we were exaggerating?"
+    fa "Yeah. At least I thought we were."
+    fb "But she does think very highly of you."
+    fa "For sure."
+    n "Alyssa fixes Masami with a helplessly pleading look."
+    a "You did realize all that. Right?"
+    m "…Of course. I did."
+    m "I mean, I think well of you, too, Alyssa. Really."
+    m "…"
+    n "Masami looks away briefly."
+    m "I - I'm probably going to grab something to drink. Then head upstairs and play Smash or something."
+    m "It was nice chatting with you, though."
+    a "Yeah. I guess I'll see you around then?"
+    m "Of course. See you!"
+    n "Masami makes the quickest polite exit he can to the kitchen."
+    n "He can hear Alyssa berating her friends as he fills his cup up with another round of eggnog."
+    m "(That was rude of me. I should have stayed.)"
+    m "(Right?)"
+    m "…"
+    n "Masami unceremoniously downs the whole cup in one go."
+    m "(Ugh, I don’t want to think about this.)"
+    m "(And it's so hot in here. That's not helping either.)"
+    m "(I need…air. Yeah, that's what I need. I'll just head to the back porch for a little while. That should help.)"
+
+    jump party_porch_initial
+
+# Masami heads to the porch and finds Nasir
+label party_porch_initial:
+
+    n "He stumbles his way out the back door, hanging his coat on the rack nearby."
+    n "A gentle winter breeze greets him as he steps outside. The door swings shut behind him, turning the roaring chatter of the party into a muted thrum."
+    m "(Ahh…that's so much better.)"
+    m "(Peace. Quiet. And no one to see me in this stupid sweater - )"
+    n "Masami freezes at the sound of a sudden rustling behind him. He whirls around."
+    m "Wha - "
+    n "There, sitting by the table with an empty solo cup and a plate full of gingerbread cookies is Nasir."
+    m "(Oh. So that's where he went.)"
+    n "To Masami's surprise, Nasir gifts him another warm smile like the one from the day before."
+    n "Except, this time, there's an odd vulnerability to it, belly-up and bared openly to the night air."
+    n "The sight of it makes something in Masami's chest twist."
+    m "(That's…weird.)"
+    n "He gives his head a shake. His mind remains perfectly fogged."
+    m "(Guess I'll make things easier on the both of us and just apologize and leave before things get too awkward - )"
+    na "Ah, hello there, magpie. Didn't expect to see you out here so early in the night."
+    n "Masami feels his face heat up in spite of himself."
+    m "Magpie? Seriously?"
+    m "Am I still some bird to you?"
+    m "If you wanted to insult me properly, you should - "
+    n "Masami's stops when he hears Nasir's embarrassed laughter."
+    m "What?"
+    na "Sorry, I should have known better than to call you something like that, but I couldn't help myself."
+    na "The look on your face was priceless. Still is."
+    m "Really now. You have the guts to say that to someone you hardly know."
+    na "Actually, I usually wouldn't have the guts to say anything at all."
+    n "Nasir laughs mirthlessly, his gaze falling to his empty solo cup as he traces the rim with his finger."
+    na "I guess I have a little push from the eggnog to thank for that."
+    na "Softens the blow for experiments that fail more often than not."
+    n "At this, his smile deepens into something more self-loathing, as does the tightening wrench in Masami's chest."
+    n "Masami forces himself to stare at the bridge of Nasir's nose to keep himself from turning bright red."
+    m "(This. Is. Not. What. I. Think. It. Is.)"
+    m "…"
+    m "(Damn the alcohol.)"
+    n "After a moment, Nasir lifts his hand off the cup and looks back towards Masami, his expression placid once more."
+    na "But, don't worry. I do know who you are, Masami."
+    na "With all of the stories I've heard about you, I'm glad we finally have the chance to talk."
+    m "Huh? Stories?"
+    m "You must be joking, right? I fail to see how I'm interesting enough to have stories told about me."
+    na "Apparently Sabie would disagree."
+    m "You're friends with Sabie?"
+    na "Who isn't?"
+    m "Fair enough."
+    n "Masami sighs and rubs his temples."
+    m "I don't even want to know what she's been telling you."
+    na "She hasn't told me very much. Just a couple things here and there about you and Alyssa."
+    m "That was exactly what I'd hoped you wouldn’t say."
+    m "…"
+
+    jump party_porch_alyssa
+
+label party_porch_alyssa:
+
+    m "Ugh. You were helping Sabie plan this whole thing, weren't you?"
+    m "That's why you weren't inside with Alyssa."
+    na "Heh. Observant aren't you?"
+    n "Masami shrugs."
+    m "It's the only logical conclusion."
+    na "Fair."
+    na "But, yes. Sabie and I did arrange this."
+    m "Why would you even agree to do that in the first place? I thought you and Alyssa were close."
+    m "Wouldn't I get in the way of that?"
+    n "Nasir looks away for a moment."
+    na "…"
+    na "To be honest, I'm not sure I know the answer to that either."
+    na "But she likes you and is open to a relationship. Once she gets to know you a little better, of course."
+    na "And if that's how she feels, I'll do what I can to see it through."
+    m "…"
+    m "All this time, I thought you were being possessive or something when you're just self-sacrificing doormat."
+    n "Nasir chuckles."
+    na "As her very platonic friend, I do want the best for her, after all."
+    na "Even if that means putting aside my own feelings on the matter."
+    m "…"
+    na "By the way, I saw you spoke to her just before this. Did you two have a nice chat?"
+    m "Yeah, I suppose."
+    m "Until I just sort of left."
+    m "…"
+    m "Damn, I don't know what I was thinking."
+    m "This was supposed to be what I've wanted for years and I just…"
+    n "Masami stares at the ground."
+    m "I don't know."
+    n "Something plastic bumps against Masami's arm. He looks up to see Nasir holding out a plate of gingerbread cookies."
+    na "Want some? Before I take the rest."
+    m "Uh…"
+
+    menu:
+
+        "Take some":
+            $ take_cookie = True
+            jump party_porch_cookies_take
+        "Refuse":
+            jump party_porch_cookies_refuse
+
+# You take the cookies
+label party_porch_cookies_take:
+
+    m "Sure. Thanks."
+    na "No problem! Happy to share."
+    n "Masami takes two cookies from the plate and pops them into his mouth."
+    m "These are really good. Real ginger."
+    na "Heh. I like that part, too. They go quite well with the eggnog."
+    m "Ugh, no need to remind me of my bad decisions."
+    na "…"
+    na "My apologies. I often forget that self-deprecation isn't a two way street."
+    m "I wasn't - "
+    na "I was referring to myself."
+    m "Oh."
+
+    jump party_porch_reflection
+
+# You refuse the cookies
+label party_porch_cookies_refuse:
+
+    m "No thanks, I'm good."
+    na "No worries. Just wanted to make sure I wasn't keeping them all for myself if you wanted any."
+    n "Nasir sets down the plate on the table."
+
+    jump party_porch_reflection
+
+
+label party_porch_reflection:
+
+    n "The two of them lapse into an awkward silence as Nasir finishes off the remaining cookies."
+    m "…"
+    na "You don't have to feel obliged to keep me company with conversation. We do, as you've said, hardly know each other."
+    m "No, it's fine. You deserve an explanation anyways since you're friends with Alyssa and all."
+    na "I wouldn't say I deserve it, but if you want to share, I'm open to listening."
+    m "…"
+    m "Well, this is going to sound really bad."
+    m "But honestly? I'm not sure how I feel about Alyssa anymore."
+    na "What do you mean?"
+    m "Don't get me wrong! I - I didn't mean it in a bad way."
+    na "No worries, I understand."
+    n "Masami sighs."
+    m "I mean, she's still smart. Funny. Incredibly, incredibly sweet. All the things I first thought about her when we first met in sixth grade."
+    m "But lately, I've been starting to wonder. Do I actually still like her that way?"
+    m "Or have I been clinging to the feeling of always liking her because that's the only thing I know?"
+    m "And I'm too scared to think otherwise?"
+    na "…"
+    m "Sorry. I've…just had a lot of things on my mind that I'm still trying to sort through."
+    na "That's alright. We've all been there."
+
+    jump walk
+
+# Nasir suggests to take a walk
+label walk:
+
+    na "Want to take a walk?"
+    m "…What?"
+    na "There's a greenway around here and I've found that bit of oxygen helps to clear the mind."
+    na "At least, that's what I've found works for me."
+    m "Yeah, I know. It works for me, too. But the last time I went out for a walk this late…"
+    n "Masami swallows."
+    na "Did something bad happen?"
+    m "…"
+    m "Kind of."
+    m "(It's kind of hard to explain that I've only gone out at this time of night with my sister.)"
+    m "(And she's not here anymore to share this moment with me, so this feels…)"
+    m "…"
+    na "Well, we can be back before the party ends, if that's what you're worried about."
+    na "And, if we go together, we can keep an eye out for each other. Make this experience a good, new one for the both of us."
+    na "What do you say?"
+    m "I - "
+    m "…"
+    m "I'll go."
+    m "I probably need it."
+    m "(I think {i}jie{/i} would have wanted me to do it, too.)"
+    na "Great! Let's head out."
+
+    jump walk_woods
+
+label walk_woods:
+
+    n "Nasir dumps his trash into the bin on the porch, while Masami waits at the edge of the steps, his own cup still at hand."
+    n "Then, they walk down the path together."
+    n "For someone of his height, Nasir walks with a surprisingly contemplative gait."
+    n "His gaze lingers between the bare, frost-bitten branches of the trees as if committing them to memory."
+    n "Masami concedes himself to shuffling awkwardly by his side, glancing apprehensively at Nasir's serene expression every so often."
+    m "(Silence doesn't seem to bother him, does it?)"
+    m "(Not like it bothers me, at least.)"
+    m "…"
+    m "(I can't stand anymore of this.)"
+    n "Masami clears his throat as politely as he can."
+    m "So. Uh. Sorry again wasting you and Sabie's efforts. And for keeping you from the party."
+    n "Nasir's head whips around, clearly startled."
+    m "(Agh. That was smooth. Real smooth.)"
+    na "What?"
+    na "Oh, you don't need to worry about that. I don't mind. Parties don't suit me, anyways."
+    na "And I don't think you need to worry about Sabie, either. I'm sure she'll be glad that you've figured some things out for yourself on it."
+    m "Eh. Maybe. Eventually."
+    n "Nasir's expression softens."
+    na "Hey, at least you have someone like her who worries about you."
+    m "So she tells me."
+    na "Heh. It's how you know she's a keeper. A light to your world, if you will."
+    m "I guess."
+    n "Masami stares at his hands, watching as they tighten around the empty solo cup they're holding."
+    m "But sometimes…the light isn't what you're looking for."
+    m "Its brightness, its warmth, its, well, everything is taunting. It only displays the part of you that everyone else wants to see."
+    m "Puts you on a pedestal for everyone to blindly admire."
+    m "Which makes the parts decaying inside of you that it doesn’t reach feel all the more alien. Even to yourself."
+    n "The bend marks in the red plastic begin to whiten between Masami's fingers, contorted beyond the point of return."
+    n "He barely notices."
+    m "You want to smother the light, shove it as far out of the way as you can, because the sight of it makes you sick."
+    m "It reminds you that you have no right to complain when you were blessed to appear so favorably in the eyes of others."
+    m "That things are so much better for you than you have the right to deserve."
+    m "But you also can't bring yourself to destroy it, because a part of you still longs to simply be what others see of you."
+    m "So you just leave the light there."
+    m "Let your thoughts about it fester."
+    m "And, well. I haven't figured out what happens after that."
+    na "…"
+    m "Shit. That was so cringe."
+    m "Sorry, forget that I ever - "
+    na "No need to apologize."
+    n "Nasir's gaze drifts to the tree branches again."
+    na "I get that. That's how I feel with Alyssa, too."
+    m "Oh."
+    n "Masami tosses his demolished solo cup into one of the trash cans along the road."
+    n "The two of them lapse back into silence, which has now become heavier than before."
+    m "(Damn it. I messed up.)"
+    m "(I need to lighten the mood with a different subject. But what?)"
+
+    jump walk_woods_convo
+
+# Conversation topics
+label walk_woods_convo:
+
+    menu:
+
+        "Ask about Nasir's family":
+            jump convo_family
+
+        "Ask about Nasir's hobbies":
+            jump convo_hobbies
+
+        "Ask about Nasir's friendships":
+            jump convo_friendships
+
+# About Nasir's family
+label convo_family:
+
+    m "So, what's your family like? Got any siblings?"
+    na "I have a younger sister. She's two years below you, actually."
+    m "Really? What's her name?"
+    na "Sahar. I don't think you two would have met, though."
+    m "Yeah, I don't think we have."
+    na "Hm, perhaps I should introduce the two of you sometime. I think you'd like her."
+    m "What makes you say that?"
+    na "Well, she's a bit of a free spirit. She loves songwriting and I'm hoping she can pursue it further one day."
+    na "She's also a wonderful dungeon master for D&D."
+    m "I've actually never played D&D, but it sounds fun."
+    na "It's not my cup of tea, but it's definitely something that you should try at least once if you get the chance."
+    m "That's fair."
+    na "I should also warn you that she's, how do I put it, very straightforward and opinionated. Perhaps to a fault."
+    m "What do you mean?"
+    na "Well, let's just say that my parents can be a bit overbearing."
+    na "It doesn't affect me as much since I conform to their demands rather easily. But sometimes I do worry for my sister, especially when I head off to college."
+    na "I have faith that they'll figure things out, though."
+    m "Yeah…"
+
+    jump convo_recognition
+
+# About Nasir's hobbies
+label convo_hobbies:
+
+    m "What do you do for fun? Besides the extracurriculars everyone talks about you doing."
+    m "Unless that is your fun, of course."
+    na "Hm, I do enjoy what I do, but it does get tiresome at times. Especially when it comes to the viola."
+    m "Child prodigy syndrome?"
+    na "I suppose so."
+    m "How about Scrabble?"
+    na "Oh, that is most certainly for fun."
+    m "So you like words, then."
+    na "I guess you could say that, though that's not the appeal of Scrabble. It's really a math puzzle if you think about it."
+    m "Interesting."
+    na "Why ask? Do you play it as well?"
+    m "Uh, I play Words with Friends sometimes. Not the same thing."
+    na "It's similar enough that the skills should carry over."
+    m "Well…it's more of the timer issue that gets me."
+    na "Then we'll play untimed. If you're open to playing with me, that is."
+    m "Uh…Sure. Why not."
+    m "But don't expect anything much out of me."
+    na "That's alright. I appreciate having new partners. There's always something you can learn from them."
+    m "If you say so."
+
+    jump convo_recognition
+
+# About Nasir's friendships
+label convo_friendships:
+
+    m "So, how did you and Alyssa meet?"
+    na "We were in the same youth orchestra since elementary school."
+    m "Ah, the classic childhood friends scenario."
+    na "You could say that. It's not very interesting, I'm afraid."
+    m "I'm sure you've got plenty of stories."
+    na "Rather mundane ones, but yes, I suppose I do."
+    m "How about Sabie, then?"
+    na "We were at the same table for Physics last year."
+    m "Oh yeah. She mentioned that you carried her through that class. She really hates the subject."
+    na "I don't blame her. The class wasn't exactly well taught."
+    na "If I'm being honest, I wasn't really paying attention either. I was playing Genshin."
+    m "…"
+    na "You're allowed to judge me."
+    m "I really can't. Did Alyssa get you into it?"
+    na "Actually, I was a day one player of my own volition. But I do co-op with Alyssa and Sabie. Do you play as well?"
+    m "No, though Sabie wants me to try. She insists that I'd really like the \"edge, emotionally repressed dude\". Whatever that means."
+    na "Heh. I think I'd agree with her on that one."
+    m "…Not sure what to make of that, but okay."
+
+    jump convo_recognition
+
+# Masami recognizes where they're going
+label convo_recognition:
+
+    n "Suddenly, Masami's eyes widen."
+    m "Wait. I've been here before."
+    na "You have?"
+    m "Yeah. I think so."
+    m "If we take a left beyond that tree right there. Holy shit - "
+    n "Masami breaks into a run."
+    na "Masami, please, slow down, I can't - "
+    n "Masami doesn't notice and continues sprinting full speed ahead."
+
+    jump walk_splace
+
+# Finding the special place
+label walk_splace:
+
+    n "A couple minutes later, he reaches the clearing and slows to a stop. Nasir comes up behind him shortly after, very much out of breath."
+    m "Wow. It's still here."
+    na "What is - "
+    na "Oh. Damn."
+    m "Yeah. This…"
+    m "…"
+    m "This is the place where my sister used to take me."
+    m "Well, one of the places. But we'd come here the most."
+    m "I haven't been back since she disappeared three years ago, but…"
+    m "…"
+    na "Want to show me around?"
+    m "…"
+    m "Sure. I'd like to."
+    m "({i}Jie{/i} wouldn't mind, would she?)"
+
+    jump walk_splace_explore
+
+# Exploring the special place
+label walk_splace_explore:
+
+    if (graffiti_check or car_check or tracks_check):
+
+        menu:
+
+            "Explore graffiti" if graffiti_check:
+                $ graffiti_check = False
+                jump walk_splace_graffiti
+
+            "Explore train car" if car_check:
+                $ car_check = False
+                jump walk_splace_car
+
+            "Explore train tracks" if tracks_check:
+                $ tracks_check = False
+                jump walk_splace_tracks
+
+    else:
+        jump walk_splace_climb
+
+# Explore the graffitti
+label walk_splace_graffiti:
+
+    m "That's one of my sister's magpies. She took to them like Reminisce took to horses, if you know what I mean."
+    na "Reminisce?"
+    m "Oh. She was a well known writer back in the 90s. A graffiti artist, I mean."
+    na "Ah, I see."
+    m "I'm surprised no one's painted over it, yet."
+    na "I don't blame them. It's beautiful."
+    m "Yeah, she's always been good at that sort of thing."
+    na "I can tell."
+    na "Are any of these yours?"
+    m "Me? Heh, no."
+    m "My sister definitely handed me the can more times than I can count. Even offered to help me out, but I never quite got the courage to tag anything."
+    m "I kind of wish I had now."
+    na "Well, it's not too late to start."
+    m "I guess. But…"
+    na "It wouldn't be the same?"
+    m "Yeah."
+    m "I also don't have anything on me, so maybe next time."
+
+    jump walk_splace_explore
+
+# Explore the train car
+label walk_splace_car:
+
+    m "Sometimes, we used to camp out in here, especially in the winter or rain, when a tent wouldn't be enough shelter."
+    na "Ah. Wouldn't it still be rather cold?"
+    m "Of course it was. But {i}jie{/i} got some good sleeping bags and a heater, and always insisted that I wear extra layers."
+    na "That's still quite a bit. But I suppose that's because I'm not very cold-tolerant."
+    m "Eh, you get used to it. Build up the immunity little by little."
+    m "The kind of way you'd build up a spice tolerance, if you know what I mean?"
+    na "That's true. Maybe I'll try it some day."
+    m "You should. I've still got the heater somewhere in my room and I could easily go out to buy some fuel for it."
+    m "It's definitely an experience."
+    na "You're suggesting that we do this together?"
+    m "Well, unless you want me to just hand you the equipment and hope you survive the night."
+    na "…"
+    m "What?"
+    na "Ah, it's nothing."
+
+    jump walk_splace_explore
+
+# Explore the train tracks
+label walk_splace_tracks:
+
+    m "I don't remember anything running on these tracks before. And I don't think anything ever will."
+    m "They're rusted beyond repair. I'd be surprised if anyone tries to fix them."
+    na "Have you ever thought about what would have happened if something were to come by?"
+    m "Yeah. I used to be scared of this place because of that. {i}Jie{/i} almost stopped coming out here because she couldn’t get me to come anywhere near it."
+    m "But now? It's just a part of the landscape. Something that was here before me and will likely still be around when I go."
+    na "That's quite a poetic way of putting it."
+    m "…"
+    m "I drank two cups of spiked eggnog. What else am I supposed to say?"
+    na "Heh, don't worry. I'm not complaining."
+    m "…"
+
+    jump walk_splace_explore
+
+# On top of the car
+label walk_splace_climb:
+
+    na "Is there anything else you want to show me?"
+    m "Not that I can think of."
+    m "…"
+    m "Well, actually, there is one more thing. If you're up for it."
+    n "A curious burst of daring surges through Masami and he winks at Nasir."
+    n "Nasir briefly turns an unexpected shade of red."
+    m "What?"
+    na "…"
+    na "Nothing."
+    na "I'm just intrigued now. What are you thinking?"
+    n "Masami gestures to the ladder on the side of the train car."
+    m "We climb up and take in the view."
+    na "Climb?"
+    m "Yeah. It's not too bad. I've done it enough times that I could do it in my sleep. Watch."
+    n "Masami swings himself up the ladder. His limbs are less steady than they once were, but possess all the easy confidence of an old habit."
+    n "At the roof of the car, he eases his legs over the edge into a sitting position and looks down."
+    n "Nasir hasn't budged."
+    m "Hey, come on. Where'd all the talk about trying new things go?"
+    na "Ah, well."
+    n "Nasir nervously runs his fingers through his hair."
+    na "The alcohol's probably on its way out of my system, I suppose."
+    m "That's bullshit."
+    m "Here."
+    n "Masami gets on his stomach and extends a hand out. Nasir just stares."
+    na "I - "
+    m "Hurry up or I'm going to freeze."
+    na "Ah. Sorry."
+    n "Nasir's warm, trembling fingers immediately wrap themselves tightly around Masami's cold, stiff ones."
+    n "His eyes cling to their clasped hands like a lifeline as he slowly makes his way up the ladder, one hand on holding onto Masami's extended one, the other on the freezing surface of the ladder."
+    n "When Nasir reaches the top, he shuffles into a spot about a foot away from Masami, lowering his feet hesitantly downward to dangle freely."
+    n "He then turns his gaze skyward and exhales softly, his breath a pillowy cloud in the winter air."
+    n "Unconsciously or not, he still doesn't let go of Masami's hand, though his grip has loosened into something more tender."
+    m "…"
+    m "(I…don't exactly hate this.)"
+    m "(Guess I'll leave him be.)"
+
+    jump walk_splace_chat
+
+label walk_splace_chat:
+
+    m "You really like the silence thing, don't you?"
+    na "Hm? Oh. I suppose I do."
+    m "Doesn't it bother you at all?"
+    na "Not really, no. But if it does make you uncomfortable, I can try to help fill it."
+    m "It's fine. It's just…"
+    m "Well, for me at least, every time there's silence, it means that something is wrong."
+    na "Oh."
+    m "I know, I know. It's such a small thing that it isn't worth complaining about, really."
+    m "But it bothers me. Been that way ever since my sister disappeared"
+    m "Two days til the anniversary, actually. That's when she said that she'd come back with an answer about whether leaving was worth it."
+    na "You're still holding out for her."
+    n "Masami exhales quietly."
+    m "Yeah. Yeah, I guess I am."
+    m "She did leave me with this after all."
+
+    jump walk_splace_charm
+
+label walk_splace_charm:
+
+    n "Masami fishes around in his pocket with his free hand for the magpie charm and holds it out for Nasir to see."
+    na "Ah. It’s beautiful."
+    m "Yeah. Or at least I think it is. I am biased, after all."
+    n "Masami puts the charm away with a sigh."
+    m "I…think I'm the only one who still tries to think about her. Nobody will show it, but to everyone else who knew her, she's basically gone. Even my parents."
+    m "But from the way that people talk around her, it's almost like she's still there. Like grating the edge of a wound so that it never heals properly."
+    m "I hear it when they talk about how well I'm doing in school. How successful I am and how much more so I will be in the future."
+    n "Masami stops and swallows."
+    na "Unlike your sister?"
+    m "Basically."
+    m "I’m not sure what to make of it all, whether I should follow what the world wants out of me or reject everything like {i}jie{/i}."
+    m "In both cases, I know I will feel guilty, like I was coerced into a decision. I know I will question what the point of it all is."
+    m "Heh, the grass is always greener on the other side, isn’t it?"
+    n "Masami notices that his grip has only been tightening Nasir's hand and lets go with a start."
+    m "Ah, sorry. I didn't mean to - "
+    na "It's alright. Take it if you need it. I don't mind."
+    m "…"
+    n "Masami tentatively laces his fingers into Nasir's again. He feels himself flush when Nasir gives him a little squeeze back."
+    m "Sorry, I just - "
+    na "You don't need to apologize so much. You haven't done anything wrong."
+    m "I know, it's another bad habit. Like trying to get used to silence."
+    na "Be gentle with yourself. Habits fix themselves with time, once you give yourself space for new ones to grow."
+    na "Or at least, that's what I've been trying to tell myself."
+    m "I know, it's just - "
+    n "Masami sighs again and looks away."
+    m "I'm getting there."
+
+    jump walk_splace_magpie
+
+label walk_splace_magpie:
+
+    na "And that's okay. We all are."
+    m "Heh."
+    na "It's kind of why I look up to magpies."
+    na "They're intelligent and represent many things to many people. Some of these things are good and some of these things not so much."
+    na "Even so, they innately know who they are. Those external impositions don't matter to them."
+    na "It's something that I wish I could say for myself. I'm still looking for it and I do hope I'll get there someday."
+    m "{i}Jie{/i} said something similar before."
+    na "Ah. It's nice to know I'm not alone in thinking so."
+    m "I think she would have liked to know so, too."
+    m "You would have liked her."
+    m "I just wish she were here so I could introduce her to you."
+    na "Maybe you could tell me about her, then. I know it's no substitute, but I'd still like to get to know her better in some way."
+    m "I…would like to. It's been a while since I've talked about her."
+    m "But probably on the way back since it's getting late."
+    na "Sure!"
+    na "Er, could you help me back down again?"
+    m "Yeah, give me one second."
+    n "Masami hops right off the edge before holding out a hand to Nasir."
+    na "Thank you. You really do make it look incredibly simple."
+    m "Just takes a little practice. Nothing that you can't do."
+    na "Heh. I’ll take your word for it.."
+    m "C'mon let's head back. Don't want to keep everyone waiting on us, do we?"
+    na "Ah, yes. Of course."
+
+    jump party_porch_end
+
+label party_porch_end:
+
+    n "They make it back to the porch half an hour later. The party music is still cranked up at full blast, to Masami's simultaneous relief and chagrin."
+    m "(Thankfully the party is still going on or this would have been a bit hard to explain.)"
+    m "(Especially to Sabie and Alyssa.)"
+    n "Beside him, Nasir shifts."
+    na "I suppose this is where we part for the night."
+    m "Yeah."
+    na "I…rather enjoyed chatting with you. Perhaps we could do so again after finals."
+    m "That'd be nice. Let me give you my number so you can get a hold of me."
+    na "Ah. Okay."
+    n "Nasir pulls his phone out of his pocket and waits as Masami types his number in."
+    m "Here you go."
+    na "Thanks."
+    m "Well, it was nice chatting with you. I guess I'll see you - "
+    na "Wait."
+    n "Masami feels Nasir lightly catch his wrist. Again, he feels an odd warmth at the touch of skin on skin."
+    m "Yeah?"
+    n "Nasir swallows, his fingers unconsciously tightening around Masami's wrist."
+    na "Remember what I said before about magpies? And not worrying about what others think of you?"
+    na "Well, I - "
+    m "Hold up. Are you trying to justify yourself for calling me a magpie earlier?"
+    m "Because I'm most definitely not one. No matter how hard I try, I still care what other people think of me."
+    na "I know you're not. Very few people are."
+    na "But there are a lot of things I do see in you. Things that I admire very much."
+    m "Heh, that's funny. Good joke."
+    n "He looks over at Nasir, who has suddenly gone very still and is very much not looking at him anymore."
+    m "That was a joke. Right?"
+    n "Nasir mumbles something incoherent."
+
+    jump kiss
+
+label kiss:
+
+    m "I didn't hear anything you said."
+    na "It wasn't a joke. I stand by what I said."
+    n "Nasir's gaze snaps back to look directly back at Masami, face more flushed than ever."
+    na "I thought I knew you before, but you still surprised me."
+    na "It truly has been a pleasure to spend time with you and I can think of no better way that this night could have gone."
+    m "…Um, thanks?"
+    m "This is flattering and all but if you want something out of me, then just get to the point and say it."
+    n "Nasir startles for a brief moment. Then, he reaches up to cup Masami's cheek with his free hand, smiling nervously."
+    n "Masami freezes, his heartbeat doing double time in his chest. He doesn't pull away."
+    m "(What the hell is going on?)"
+    na "Before, when I mentioned magpies, I wasn't just referring to you."
+    na "I was talking about myself as well."
+    n "His thumb runs gently against Masami's warming skin, dangerously close to the lip. Masami shivers."
+    m "Oh."
+    na "We've both done things to safeguard the feelings of our families and friends. We both struggle to define where society's wants end and where our own begin."
+    na "I've always been so hesitant to break those boundaries for fear of the consequences, but tonight I wonder, can I allow myself to be selfish? Is it worth the cost to me?"
+    na "And I think I have my answer."
+    n "Nasir’s hand shifts to cradle the back of Masami’s head and he closes his eyes. Slowly, he begins to lean in, giving Masami more than enough time to respond."
+    m "(Shit. Shit. Shit.)"
+    m "(This is actually happening.)"
+    m "(He's getting closer.)"
+    m "(What do I do, what do I do, what do I do - )"
+
+    # Decide whether or not to go for the kiss
+    menu:
+
+        "Break away":
+            $ kiss = False
+            jump kiss_break
+
+        "Let him in":
+            jump kiss_decide
+
+# Masami chooses to break off
+label kiss_break:
+
+    n "In a panic, Masami pushes Nasir away."
+    n "Nasir recoils immediately with a soft gasp, visibly stung."
+    m "I - I'm sorry, I wasn't thinking, we're drunk and - "
+    na "Don't worry about it."
+    na "The fault is mine. I shouldn't have assumed you felt the same."
+    m "No! I just wasn't sure that - "
+    na "I - I'll head back in."
+
+    jump party_living_room_end
+
+# Masami chooses to kiss
+label kiss_decide:
+
+    n "Masami takes a deep breath and closes his eyes."
+    m "(I - I know what I want. I think.)"
+    m "(But is it worth it for me to act an instinct?)"
+    m "(For something I don't entirely understand?)"
+    m "(Is it worth - )"
+    n "Suddenly, Nasir’s lips brush his own, warm and full."
+    n "Masami's eyes snap open and he sees Nasir right in front of him, face flushed and eyes shut."
+    m "(Holy. Shit.)"
+    m "(What just - )"
+    m "(What have I - )"
+
+    jump kiss_break
+
+label party_living_room_end:
+
+    n "Nasir turns heel without another word and bolts inside."
+    m "Nasir, wait!"
+    n "Masami catches the screen door before it closes, searching the sea of partygoers frantically for any trace of Nasir."
+    m "Damn it. Where the hell did you - "
+    n "He backs up near the kitchen, colliding right into someone, who whirls angrily on him."
+    s "Watch it, you stupid ass motherfucker! I'm gonna - "
+    m "Sabie?"
+    s "Huh? How do you know - "
+    s "Oh. It's you."
+    s "Having fun chasing your girl around?"
+    m "Uh, I've stopped."
+    s "Ah, that's a shame. I put in so much work for you two to be together only for you to ruin everything with your goody-two-shoeness - "
+    n "Sabie yelps as someone grabs her firmly by the arm."
+    n "Masami’s eyes search behind her to find Rohan standing there with a cup of water and a rather pained expression. Tyree lingers not too far behind."
+    r "Sorry, I should have gone to check on her much sooner or she wouldn’t be like this."
+    m "It’s fine. She hasn’t been bothering me for long anyways."
+    r "Phew, that’s a relief."
+    s "What the fuck are you talking about? I am a grown woman and I sure as hell have not been bothering - "
+    r "Yeah, yeah we know. C’mon, Sabie, let’s go upstairs."
+    s "Upstairs? I don’t know how to play Smash."
+    r "Sabie, I know you do. Just take my spot in the bracket."
+    s "But - "
+    r "You’ll be fine."
+    n "With that, he half drags her upstairs and away from the eggnog, leaving Masami alone with Tyree."
+
+    jump tyree_chat
+
+label tyree_chat:
+
+    m "Well."
+    t "Looks like you made it back in time."
+    m "Huh?"
+    t "I was worried that we needed to send a search party out for you and Nasir since neither of you were picking up your phone."
+    m "Wait. How do you know Nasir?"
+    t "I don’t. I just noticed Alyssa trying to call him after she couldn't find him about half an hour ago."
+    t "Don’t worry, I didn’t tell her or anyone else here that you’d left as well. And I’m not planning on telling, either."
+    m "I know you wouldn’t. I trust you."
+    n "Masami shifts, feeling the magpie charm in his pocket rub against the fabric of his pant leg."
+    m "...You probably pieced together what happened, didn’t you? Not like it took much effort to do so after the plans to set me up with Alyssa fell apart."
+    t "Does it bother you if I did?"
+    m "Less than I thought it would, honestly. I guess it’s because I have a lot of things on my mind right now."
+    t "That’s understandable. Take the time that you need to think."
+    n "Masami sighs."
+    m "Frankly, I’ve tried that before. Many times before. But nothing’s come of it."
+    m "And now after everything tonight that has happened, I’m even more confused."
+    m "Tyree, how the hell do you simultaneously exceed everyone’s expectations and not give a shit about what people think of you?"
+    m "Tell me your secret. At this point, I’d give anything if I could learn it for myself. I’m tired of pretending like all the shit in my head isn’t getting to me."
+    t "Hm. What you described has never been a struggle for me, so I’m not sure how I would be able to explain my secret, if I had one."
+    m "Ah. It’s fine, then."
+    t "I’m sorry I can’t give you a better answer. Are there any thoughts in particular that you would like assistance in parsing out, though?"
+    m "...I think it would be best if I probably didn’t think about anything right now. I’m just drunk, tired, and rambling. I’ll be fine in the morning."
+    m "And I’ve already messed up enough shit today."
+    t "Then, how would you like to watch us upstairs for the last couple of rounds of the night? It would be good to improve your spirits."
+    m "Is…{i}he{/i} there right now?"
+    t "No. I do believe he left with Alyssa a couple minutes ago. He seems to have recovered slightly, if you were concerned."
+    m "Heh. Of course you noticed."
+    m "Alright, I’ll go. Let’s see what Sabie’s gotten herself into."
+    m "(At the very least, it’ll keep me from processing everything that happened.)"
+
+    jump masami_kitchen1

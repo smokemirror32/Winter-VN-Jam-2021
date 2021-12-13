@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/day-1.rpy", line 48, in script
+    jump lunch_1
+ScriptError: could not find label 'lunch_1'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/day-1.rpy", line 48, in script
+    jump lunch_1
+  File "renpy/ast.py", line 1752, in execute
+    rv = renpy.game.script.lookup(target)
+  File "renpy/script.py", line 918, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'lunch_1'.
+
+Windows-10-10.0.19041
+Ren'Py 7.4.8.1895
+Solstice 1.0
+Sun Dec 12 18:44:51 2021
