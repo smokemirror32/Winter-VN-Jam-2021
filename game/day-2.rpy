@@ -106,21 +106,41 @@ label masami_kitchen_2:
 # Inside Tyree's car
 label tyree_car:
 
+    scene # TODO: Change to car background
+    show sabie party
+
     n "For better or worse, Sabie follows him to Tyree's car without issue, though she is cackling the entire time."
     n "She also doesn't protest when Masami takes shotgun."
+
+    show sabie party at left with move
+    show rohan party at right with Dissolve(0.1)
+
     n "Rohan is already waiting in the back seat, looking rather confused."
     r "What happened?"
     m "Nothing."
-    s "Sure, nothing. Your dad giving me the green light was nothing."
+    s mischievous "Sure, nothing. Your dad giving me the green light was nothing."
     m "Tell that to my mom. She still thinks we're going to get married some day."
-    s "Psh, she'll come around."
+    s neutral "Psh, she'll come around."
     m "Clearly."
-    r "…"
+    r sad "…"
+
+    hide sabie
+    hide rohan
+    show tyree party with Dissolve (0.1)
+
+    n "Tyree chuckles from the driver's seat."
     t "Ready to go?"
     m "Please. I just want to get this over with."
-    n "Tyree chuckles."
-    t "You will be fine, don't worry."
-    n "He starts up the engine and turns the radio to some Christmas music."
+    t happy "You will be fine, don't worry."
+
+    hide tyree
+
+    n "Tyree starts up the engine and turns the radio to some Christmas music."
+
+    show sabie party at left
+    show rohan party at right
+    with Dissolve(0.1)
+
     n "After a couple minutes of driving, Masami turns his head around towards the back."
     m "Sabie."
     s "Hm?"
@@ -128,13 +148,21 @@ label tyree_car:
     s "Hey, there's no need to feel self-conscious about it."
     m "I'm not self-conscious!"
     m "I just want to know why you insisted on me wearing {i}this{/i} when I could have just worn what I usually wear."
-    s "Uh."
-    s "It's a Christmas party, so I thought you'd like something a little fun!"
+    s worried "Uh."
+    s neutral "It's a Christmas party, so I thought you'd like something a little fun!"
     m "You're not answering my question."
-    s "Uh…"
-    s "Don't worry about it."
-    r "…"
+    s worried "Uh…"
+    s happy "Don't worry about it."
+    r happy "…"
+
+    hide sabie
+    hide rohan
+    show tyree party with Dissolve (0.1)
+
     n "Tyree clears his throat and turns up the music to an obnoxiously loud level."
+
+    hide tyree
+
     m "(Great. There's something that they all know about and they're not going to tell me a thing.)"
     m "(I just love it when that happens.)"
     n "They ride the rest of the way with the speakers blaring over their silence."
@@ -143,14 +171,22 @@ label tyree_car:
 
 label party_living_room:
 
+    scene # TODO: Change to party living room!
+
     n "When they arrive at the party, Rohan and Tyree predictably disappear upstairs to play Smash."
+
+    show sabie party with Dissolve(0.1)
+
     n "Masami moves to follow, but Sabie grabs him by the hand and drags him to the kitchen."
     s "Here."
     n "Sabie shoves a solo cup full of eggnog into his hands."
-    s "For your nerves. Since you'll need a little push to get there."
+    s mischievous "For your nerves. Since you'll need a little push to get there."
     m "My nerves? What are you trying - "
-    s "Oops, the dance floor calls!"
+    s happy "Oops, the dance floor calls!"
     s "Talk to you later, {i}ge{/i}! You got this!"
+
+    hide sabie with easeoutright
+
     m "Sabie, could you please explain - "
     m "(And she's gone.)"
     m "…"
@@ -184,6 +220,7 @@ label party_living_room_explore:
     menu:
 
         "Go chat with Alyssa":
+            $ alyssa_visit_first = True
             jump party_alyssa_contemplate
 
         "Head upstairs" if upstairs_check:
@@ -323,34 +360,48 @@ label party_alyssa_chat:
 # Masami heads to the porch and finds Nasir
 label party_porch_initial:
 
+    scene # Change to porch
+
     n "He stumbles his way out the back door, hanging his coat on the rack nearby."
     n "A gentle winter breeze greets him as he steps outside. The door swings shut behind him, turning the roaring chatter of the party into a muted thrum."
     m "(Ahh…that's so much better.)"
     m "(Peace. Quiet. And no one to see me in this stupid sweater - )"
     n "Masami freezes at the sound of a sudden rustling behind him. He whirls around."
     m "Wha - "
+
+    show nasir party with Dissolve(0.1)
+
     n "There, sitting by the table with an empty solo cup and a plate full of gingerbread cookies is Nasir."
     m "(Oh. So that's where he went.)"
+
+    show nasir party happy
+
     n "To Masami's surprise, Nasir gifts him another warm smile like the one from the day before."
     n "Except, this time, there's an odd vulnerability to it, belly-up and bared openly to the night air."
     n "The sight of it makes something in Masami's chest twist."
     m "(That's…weird.)"
     n "He gives his head a shake. His mind remains perfectly fogged."
     m "(Guess I'll make things easier on the both of us and just apologize and leave before things get too awkward - )"
-    na "Ah, hello there, magpie. Didn't expect to see you out here so early in the night."
+    na mischievous "Ah, hello there, magpie. Didn't expect to see you out here so early in the night."
     n "Masami feels his face heat up in spite of himself."
     m "Magpie? Seriously?"
     m "Am I still some bird to you?"
     m "If you wanted to insult me properly, you should - "
+
+    show nasir party happy
+
     n "Masami's stops when he hears Nasir's embarrassed laughter."
     m "What?"
-    na "Sorry, I should have known better than to call you something like that, but I couldn't help myself."
-    na "The look on your face was priceless. Still is."
+    na embarrassed "Sorry, I should have known better than to call you something like that, but I couldn't help myself."
+    na neutral "The look on your face was priceless. Still is."
     m "Really now. You have the guts to say that to someone you hardly know."
-    na "Actually, I usually wouldn't have the guts to say anything at all."
-    n "Nasir laughs mirthlessly, his gaze falling to his empty solo cup as he traces the rim with his finger."
-    na "I guess I have a little push from the eggnog to thank for that."
+    na sad "Actually, I usually wouldn't have the courage to say anything at all."
+    n "Nasir's gaze falls to his empty solo cup as he traces the rim with his finger."
+    na happy "I guess I have a little push from the eggnog to thank for that."
     na "Softens the blow for experiments that fail more often than not."
+
+    show nasir party neutral
+
     n "At this, his smile deepens into something more self-loathing, as does the tightening wrench in Masami's chest."
     n "Masami forces himself to stare at the bridge of Nasir's nose to keep himself from turning bright red."
     m "(This. Is. Not. What. I. Think. It. Is.)"
@@ -358,12 +409,15 @@ label party_porch_initial:
     m "(Damn the alcohol.)"
     n "After a moment, Nasir lifts his hand off the cup and looks back towards Masami, his expression placid once more."
     na "But, don't worry. I do know who you are, Masami."
-    na "With all of the stories I've heard about you, I'm glad we finally have the chance to talk."
+    na happy "With all of the stories I've heard about you, I'm glad we finally have the chance to talk."
+
+    show nasir party neutral
+
     m "Huh? Stories?"
     m "You must be joking, right? I fail to see how I'm interesting enough to have stories told about me."
-    na "Apparently Sabie would disagree."
+    na mischievous "Apparently Sabie would disagree."
     m "You're friends with Sabie?"
-    na "Who isn't?"
+    na neutral "Who isn't?"
     m "Fair enough."
     n "Masami sighs and rubs his temples."
     m "I don't even want to know what she's been telling you."
@@ -377,25 +431,34 @@ label party_porch_alyssa:
 
     m "Ugh. You were helping Sabie plan this whole thing, weren't you?"
     m "That's why you weren't inside with Alyssa."
-    na "Heh. Observant aren't you?"
+    na happy "Heh. Observant aren't you?"
+
+    show nasir party neutral
+
     n "Masami shrugs."
     m "It's the only logical conclusion."
     na "Fair."
     na "But, yes. Sabie and I did arrange this."
     m "Why would you even agree to do that in the first place? I thought you and Alyssa were close."
     m "Wouldn't I get in the way of that?"
+
+    show nasir party sad
+
     n "Nasir looks away for a moment."
     na "…"
     na "To be honest, I'm not sure I know the answer to that either."
-    na "But she likes you and is open to a relationship. Once she gets to know you a little better, of course."
+    na neutral "But Alyssa likes you and is open to a relationship. Once she gets to know you a little better, of course."
     na "And if that's how she feels, I'll do what I can to see it through."
     m "…"
     m "All this time, I thought you were being possessive or something when you're just self-sacrificing doormat."
+
+    show nasir party happy
+
     n "Nasir chuckles."
     na "As her very platonic friend, I do want the best for her, after all."
-    na "Even if that means putting aside my own feelings on the matter."
+    na sad "Even if that means putting aside my own feelings on the matter."
     m "…"
-    na "By the way, I saw you spoke to her just before this. Did you two have a nice chat?"
+    na neutral "By the way, I saw you spoke with her just before this. Did you two have a nice chat?"
     m "Yeah, I suppose."
     m "Until I just sort of left."
     m "…"
@@ -413,21 +476,24 @@ label party_porch_alyssa:
             $ take_cookie = True
             jump party_porch_cookies_take
         "Refuse":
+            $ take_cookie = False
             jump party_porch_cookies_refuse
 
 # You take the cookies
 label party_porch_cookies_take:
 
     m "Sure. Thanks."
-    na "No problem! Happy to share."
+    na happy "No problem! Happy to share."
+
+    show nasir party neutral
+
     n "Masami takes two cookies from the plate and pops them into his mouth."
     m "These are really good. Real ginger."
     na "Heh. I like that part, too. They go quite well with the eggnog."
     m "Ugh, no need to remind me of my bad decisions."
-    na "…"
-    na "My apologies. I often forget that self-deprecation isn't a two way street."
+    na sad "…My apologies. I often forget that self-deprecation isn't a two way street."
     m "I wasn't - "
-    na "I was referring to myself."
+    na neutral "I was referring to myself."
     m "Oh."
 
     jump party_porch_reflection
@@ -445,24 +511,27 @@ label party_porch_cookies_refuse:
 label party_porch_reflection:
 
     n "The two of them lapse into an awkward silence as Nasir finishes off the remaining cookies."
-    m "…"
     na "You don't have to feel obliged to keep me company with conversation. We do, as you've said, hardly know each other."
     m "No, it's fine. You deserve an explanation anyways since you're friends with Alyssa and all."
-    na "I wouldn't say I deserve it, but if you want to share, I'm open to listening."
+    na happy "I wouldn't say I deserve it, but if you want to share, I'm open to listening."
+
+    show nasir party neutral
+
     m "…"
     m "Well, this is going to sound really bad."
     m "But honestly? I'm not sure how I feel about Alyssa anymore."
-    na "What do you mean?"
+    na surprised "What do you mean?"
     m "Don't get me wrong! I - I didn't mean it in a bad way."
-    na "No worries, I understand."
+    na neutral "No worries, I understand."
     n "Masami sighs."
+    m "Thanks."
     m "I mean, she's still smart. Funny. Incredibly, incredibly sweet. All the things I first thought about her when we first met in sixth grade."
     m "But lately, I've been starting to wonder. Do I actually still like her that way?"
     m "Or have I been clinging to the feeling of always liking her because that's the only thing I know?"
     m "And I'm too scared to think otherwise?"
-    na "…"
+    na sad "…"
     m "Sorry. I've…just had a lot of things on my mind that I'm still trying to sort through."
-    na "That's alright. We've all been there."
+    na neutral "That's alright. We've all been there."
 
     jump walk
 
@@ -475,13 +544,12 @@ label walk:
     na "At least, that's what I've found works for me."
     m "Yeah, I know. It works for me, too. But the last time I went out for a walk this late…"
     n "Masami swallows."
-    na "Did something bad happen?"
+    na sad "Did something bad happen?"
     m "…"
     m "Kind of."
     m "(It's kind of hard to explain that I've only gone out at this time of night with my sister.)"
     m "(And she's not here anymore to share this moment with me, so this feels…)"
-    m "…"
-    na "Well, we can be back before the party ends, if that's what you're worried about."
+    na neutral "Well, we can be back before the party ends, if that's what you're worried about."
     na "And, if we go together, we can keep an eye out for each other. Make this experience a good, new one for the both of us."
     na "What do you say?"
     m "I - "
@@ -489,11 +557,14 @@ label walk:
     m "I'll go."
     m "I probably need it."
     m "(I think {i}jie{/i} would have wanted me to do it, too.)"
-    na "Great! Let's head out."
+    na happy "Great! Let's head out."
 
     jump walk_woods
 
 label walk_woods:
+
+    scene # TODO: Replace with woods background!
+    show nasir party
 
     n "Nasir dumps his trash into the bin on the porch, while Masami waits at the edge of the steps, his own cup still at hand."
     n "Then, they walk down the path together."
@@ -506,16 +577,19 @@ label walk_woods:
     m "(I can't stand anymore of this.)"
     n "Masami clears his throat as politely as he can."
     m "So. Uh. Sorry again wasting you and Sabie's efforts. And for keeping you from the party."
+
+    show nasir party surprised
+
     n "Nasir's head whips around, clearly startled."
     m "(Agh. That was smooth. Real smooth.)"
     na "What?"
-    na "Oh, you don't need to worry about that. I don't mind. Parties don't suit me, anyways."
-    na "And I don't think you need to worry about Sabie, either. I'm sure she'll be glad that you've figured some things out for yourself on it."
+    na happy "Oh, you don't need to worry about that. I don't mind. Parties don't suit me, anyways."
+    na neutral "And I don't think you need to worry about Sabie, either. I'm sure she'll be glad that you've figured some things out for yourself."
     m "Eh. Maybe. Eventually."
-    n "Nasir's expression softens."
     na "Hey, at least you have someone like her who worries about you."
     m "So she tells me."
-    na "Heh. It's how you know she's a keeper. A light to your world, if you will."
+    na happy "Heh. It's how you know she's a keeper."
+    na neutral "A light to your world, if you will."
     m "I guess."
     n "Masami stares at his hands, watching as they tighten around the empty solo cup they're holding."
     m "But sometimes…the light isn't what you're looking for."
@@ -531,12 +605,12 @@ label walk_woods:
     m "So you just leave the light there."
     m "Let your thoughts about it fester."
     m "And, well. I haven't figured out what happens after that."
-    na "…"
+    na sad "…"
     m "Shit. That was so cringe."
     m "Sorry, forget that I ever - "
-    na "No need to apologize."
+    na neutral "No need to apologize."
     n "Nasir's gaze drifts to the tree branches again."
-    na "I get that. That's how I feel with Alyssa, too."
+    na sad "I get that. That's how I feel with Alyssa, too."
     m "Oh."
     n "Masami tosses his demolished solo cup into one of the trash cans along the road."
     n "The two of them lapse back into silence, which has now become heavier than before."
@@ -563,22 +637,22 @@ label walk_woods_convo:
 label convo_family:
 
     m "So, what's your family like? Got any siblings?"
-    na "I have a younger sister. She's two years below you, actually."
+    na neutral "I have a younger sister. She's two years below you, actually."
     m "Really? What's her name?"
     na "Sahar. I don't think you two would have met, though."
     m "Yeah, I don't think we have."
     na "Hm, perhaps I should introduce the two of you sometime. I think you'd like her."
     m "What makes you say that?"
-    na "Well, she's a bit of a free spirit. She loves songwriting and I'm hoping she can pursue it further one day."
-    na "She's also a wonderful dungeon master for D&D."
+    na happy "Well, she's a bit of a free spirit. She loves songwriting if that's an indicator for you. I'm hoping she can pursue it further one day."
+    na neutral "She's also a wonderful dungeon master for D&D."
     m "I've actually never played D&D, but it sounds fun."
     na "It's not my cup of tea, but it's definitely something that you should try at least once if you get the chance."
     m "That's fair."
     na "I should also warn you that she's, how do I put it, very straightforward and opinionated. Perhaps to a fault."
     m "What do you mean?"
-    na "Well, let's just say that my parents can be a bit overbearing."
+    na sad "Well, let's just say that my parents can be a bit overbearing."
     na "It doesn't affect me as much since I conform to their demands rather easily. But sometimes I do worry for my sister, especially when I head off to college."
-    na "I have faith that they'll figure things out, though."
+    na neutral "I have faith that they'll figure things out, though."
     m "Yeah…"
 
     jump convo_recognition
@@ -590,21 +664,28 @@ label convo_hobbies:
     m "Unless that is your fun, of course."
     na "Hm, I do enjoy what I do, but it does get tiresome at times. Especially when it comes to the viola."
     m "Child prodigy syndrome?"
-    na "I suppose so."
+    na sad "I suppose so."
     m "How about Scrabble?"
-    na "Oh, that is most certainly for fun."
+    na happy "Oh, that is most certainly for fun."
     m "So you like words, then."
-    na "I guess you could say that, though that's not the appeal of Scrabble. It's really a math puzzle if you think about it."
-    m "Interesting."
+    na neutral "I guess you could say that. Though that's not the quite appeal of it to me. Scrabble is really a math puzzle if you think about it."
+    m "Math. Interesting."
     na "Why ask? Do you play it as well?"
     m "Uh, I play Words with Friends sometimes. Not the same thing."
     na "It's similar enough that the skills should carry over."
     m "Well…it's more of the timer issue that gets me."
-    na "Then we'll play untimed. If you're open to playing with me, that is."
-    m "Uh…Sure. Why not."
+    na "Then we'll play untimed."
+    na embarrassed "If you're open to playing with me, that is."
+
+    show nasir party neutral
+
+    m "Uh…"
+    m "Sure. Why not."
     m "But don't expect anything much out of me."
-    na "That's alright. I appreciate having new partners. There's always something you can learn from them."
+    na happy "That's alright. I appreciate having new partners. There's always something you can learn from them."
     m "If you say so."
+
+    show nasir party neutral
 
     jump convo_recognition
 
@@ -614,20 +695,23 @@ label convo_friendships:
     m "So, how did you and Alyssa meet?"
     na "We were in the same youth orchestra since elementary school."
     m "Ah, the classic childhood friends scenario."
-    na "You could say that. It's not very interesting, I'm afraid."
+    na sad "You could say that. It's not very interesting, I'm afraid."
     m "I'm sure you've got plenty of stories."
-    na "Rather mundane ones, but yes, I suppose I do."
+    na neutral "Rather mundane ones, but yes, I suppose I do."
     m "How about Sabie, then?"
     na "We were at the same table for Physics last year."
     m "Oh yeah. She mentioned that you carried her through that class. She really hates the subject."
     na "I don't blame her. The class wasn't exactly well taught."
-    na "If I'm being honest, I wasn't really paying attention either. I was playing Genshin."
+    na embarrassed "If I'm being honest, I wasn't really paying attention either. I was playing Genshin."
     m "…"
-    na "You're allowed to judge me."
+    na happy "You're allowed to judge me."
     m "I really can't. Did Alyssa get you into it?"
-    na "Actually, I was a day one player of my own volition. But I do co-op with Alyssa and Sabie. Do you play as well?"
+    na neutral "Actually, I was a day one player of my own volition. But I do co-op with Alyssa and Sabie. Do you play as well?"
     m "No, though Sabie wants me to try. She insists that I'd really like the \"edge, emotionally repressed dude\". Whatever that means."
-    na "Heh. I think I'd agree with her on that one."
+    na happy "Heh. I think I'd agree with her on that one."
+
+    show nasir party neutral
+
     m "…Not sure what to make of that, but okay."
 
     jump convo_recognition
@@ -637,7 +721,7 @@ label convo_recognition:
 
     n "Suddenly, Masami's eyes widen."
     m "Wait. I've been here before."
-    na "You have?"
+    na surprised "You have?"
     m "Yeah. I think so."
     m "If we take a left beyond that tree right there. Holy shit - "
     n "Masami breaks into a run."
@@ -649,24 +733,30 @@ label convo_recognition:
 # Finding the special place
 label walk_splace:
 
-    n "A couple minutes later, he reaches the clearing and slows to a stop. Nasir comes up behind him shortly after, very much out of breath."
+    scene # TODO: Change!
+
+    n "A couple minutes later, he reaches the clearing and slows to a stop."
+
+    show nasir party with Dissolve(0.2)
+
+    n "Nasir comes up behind him shortly after, very much out of breath, but somehow relatively composed otherwise."
     m "Wow. It's still here."
     na "What is - "
-    na "Oh. Damn."
+    na surprised "Oh. Damn."
     m "Yeah. This…"
     m "…"
     m "This is the place where my sister used to take me."
     m "Well, one of the places. But we'd come here the most."
     m "I haven't been back since she disappeared three years ago, but…"
     m "…"
-    na "Want to show me around?"
+    na neutral "Want to show me around?"
     m "…"
     m "Sure. I'd like to."
     m "({i}Jie{/i} wouldn't mind, would she?)"
 
     jump walk_splace_explore
 
-# Exploring the special place
+# Exploring the special place - all of this is unsprited
 label walk_splace_explore:
 
     if (graffiti_check or car_check or tracks_check):
@@ -688,7 +778,7 @@ label walk_splace_explore:
     else:
         jump walk_splace_climb
 
-# Explore the graffitti
+# Explore the graffitti - unsprited
 label walk_splace_graffiti:
 
     m "That's one of my sister's magpies. She took to them like Reminisce took to horses, if you know what I mean."
@@ -711,7 +801,7 @@ label walk_splace_graffiti:
 
     jump walk_splace_explore
 
-# Explore the train car
+# Explore the train car - unsprited
 label walk_splace_car:
 
     m "Sometimes, we used to camp out in here, especially in the winter or rain, when a tent wouldn't be enough shelter."
@@ -731,7 +821,7 @@ label walk_splace_car:
 
     jump walk_splace_explore
 
-# Explore the train tracks
+# Explore the train tracks - unsprited
 label walk_splace_tracks:
 
     m "I don't remember anything running on these tracks before. And I don't think anything ever will."
@@ -750,33 +840,44 @@ label walk_splace_tracks:
 # On top of the car
 label walk_splace_climb:
 
-    na "Is there anything else you want to show me?"
+    show nasir party neutral
+
+    n "Nasir takes a slow lingering loop around the train car. Masami lingers behind, watching."
+    na "This is...facinating. Is there anything else you'd like to show me?"
     m "Not that I can think of."
     m "…"
     m "Well, actually, there is one more thing. If you're up for it."
     n "A curious burst of daring surges through Masami and he winks at Nasir."
-    n "Nasir briefly turns an unexpected shade of red."
+    na surprised "…"
     m "What?"
-    na "…"
-    na "Nothing."
-    na "I'm just intrigued now. What are you thinking?"
+    na embarrassed "Nothing."
+    na neutral "I'm just intrigued now. What are you thinking?"
     n "Masami gestures to the ladder on the side of the train car."
     m "We climb up and take in the view."
-    na "Climb?"
+    na surprised "Climb?"
     m "Yeah. It's not too bad. I've done it enough times that I could do it in my sleep. Watch."
+
+    hide nasir
+
     n "Masami swings himself up the ladder. His limbs are less steady than they once were, but possess all the easy confidence of an old habit."
     n "At the roof of the car, he eases his legs over the edge into a sitting position and looks down."
+
+    show nasir party surprised with Dissolve(0.1)
+
     n "Nasir hasn't budged."
     m "Hey, come on. Where'd all the talk about trying new things go?"
-    na "Ah, well."
+    na embarrassed "Ah, well."
     n "Nasir nervously runs his fingers through his hair."
     na "The alcohol's probably on its way out of my system, I suppose."
     m "That's bullshit."
+
+    show nasir party surprised
+
     m "Here."
     n "Masami gets on his stomach and extends a hand out. Nasir just stares."
     na "I - "
     m "Hurry up or I'm going to freeze."
-    na "Ah. Sorry."
+    na embarrassed "Ah. Sorry."
     n "Nasir's warm, trembling fingers immediately wrap themselves tightly around Masami's cold, stiff ones."
     n "His eyes cling to their clasped hands like a lifeline as he slowly makes his way up the ladder, one hand on holding onto Masami's extended one, the other on the freezing surface of the ladder."
     n "When Nasir reaches the top, he shuffles into a spot about a foot away from Masami, lowering his feet hesitantly downward to dangle freely."
@@ -788,8 +889,12 @@ label walk_splace_climb:
 
     jump walk_splace_chat
 
+# Leaving this part unsprited!
 label walk_splace_chat:
 
+    scene bg nightsky
+
+    n "Masami looks up, taking in the night sky."
     m "You really like the silence thing, don't you?"
     na "Hm? Oh. I suppose I do."
     m "Doesn't it bother you at all?"
@@ -808,6 +913,8 @@ label walk_splace_chat:
     jump walk_splace_charm
 
 label walk_splace_charm:
+
+    scene # TODO: Fix this!
 
     n "Masami fishes around in his pocket with his free hand for the magpie charm and holds it out for Nasir to see."
     na "Ah. It’s beautiful."
@@ -868,20 +975,23 @@ label walk_splace_magpie:
 
 label party_porch_end:
 
-    n "They make it back to the porch half an hour later. The party music is still cranked up at full blast, to Masami's simultaneous relief and chagrin."
-    m "(Thankfully the party is still going on or this would have been a bit hard to explain.)"
+    scene # TODO: Fix this!
+    show nasir party with Dissolve(0.1)
+
+    n "They make it back to the porch half an hour later. The party music is still cranked up at full blast."
+    m "(Phew. At least things are still going strong or this would have been a bit hard to explain.)"
     m "(Especially to Sabie and Alyssa.)"
     n "Beside him, Nasir shifts."
-    na "I suppose this is where we part for the night."
+    na sad "I suppose this is where we part for the night."
     m "Yeah."
-    na "I…rather enjoyed chatting with you. Perhaps we could do so again after finals."
+    na happy "I...rather enjoyed conversing with you. Perhaps we could do so again after finals."
     m "That'd be nice. Let me give you my number so you can get a hold of me."
-    na "Ah. Okay."
+    na neutral "Ah. Okay."
     n "Nasir pulls his phone out of his pocket and waits as Masami types his number in."
     m "Here you go."
     na "Thanks."
     m "Well, it was nice chatting with you. I guess I'll see you - "
-    na "Wait."
+    na sad "Wait."
     n "Masami feels Nasir lightly catch his wrist. Again, he feels an odd warmth at the touch of skin on skin."
     m "Yeah?"
     n "Nasir swallows, his fingers unconsciously tightening around Masami's wrist."
@@ -889,11 +999,14 @@ label party_porch_end:
     na "Well, I - "
     m "Hold up. Are you trying to justify yourself for calling me a magpie earlier?"
     m "Because I'm most definitely not one. No matter how hard I try, I still care what other people think of me."
-    na "I know you're not. Very few people are."
-    na "But there are a lot of things I do see in you. Things that I admire very much."
+    na neutral "I know you're not. Very few people are."
+    na "But there are a lot of similarities that I do see in you. Things that I admire very much."
     m "Heh, that's funny. Good joke."
     n "He looks over at Nasir, who has suddenly gone very still and is very much not looking at him anymore."
     m "That was a joke. Right?"
+
+    show nasir party sad
+
     n "Nasir mumbles something incoherent."
 
     jump kiss
@@ -903,21 +1016,35 @@ label kiss:
     m "I didn't hear anything you said."
     na "It wasn't a joke. I stand by what I said."
     n "Nasir's gaze snaps back to look directly back at Masami, face more flushed than ever."
-    na "I thought I knew you before, but you still surprised me."
-    na "It truly has been a pleasure to spend time with you and I can think of no better way that this night could have gone."
+    na neutral "I thought I knew you before, but you still surprised me."
+    na happy "It truly has been a pleasure to spend time with you and I can think of no better way that this night could have gone."
+
+    show nasir party neutral
+
     m "…Um, thanks?"
     m "This is flattering and all but if you want something out of me, then just get to the point and say it."
-    n "Nasir startles for a brief moment. Then, he reaches up to cup Masami's cheek with his free hand, smiling nervously."
+
+    show nasir party surprised
+
+    n "Nasir startles for a brief moment."
+
+    show nasir party neutral
+
+    n "Then, he reaches up to cup Masami's cheek with his free hand, smiling nervously."
     n "Masami freezes, his heartbeat doing double time in his chest. He doesn't pull away."
     m "(What the hell is going on?)"
     na "Before, when I mentioned magpies, I wasn't just referring to you."
-    na "I was talking about myself as well."
+    na sad "I was talking about myself as well."
     n "His thumb runs gently against Masami's warming skin, dangerously close to the lip. Masami shivers."
     m "Oh."
     na "We've both done things to safeguard the feelings of our families and friends. We both struggle to define where society's wants end and where our own begin."
     na "I've always been so hesitant to break those boundaries for fear of the consequences, but tonight I wonder, can I allow myself to be selfish? Is it worth the cost to me?"
-    na "And I think I have my answer."
-    n "Nasir’s hand shifts to cradle the back of Masami’s head and he closes his eyes. Slowly, he begins to lean in, giving Masami more than enough time to respond."
+    na neutral "And I think I have my answer."
+
+    scene bg black
+
+    n "Nasir’s hand shifts to cradle the back of Masami’s head. Masami's breath hitches, his eyes fluttering shut."
+    n "He can feel Nasir slowly leaning in, giving him more than enough time to respond."
     m "(Shit. Shit. Shit.)"
     m "(This is actually happening.)"
     m "(He's getting closer.)"
@@ -931,30 +1058,40 @@ label kiss:
             jump kiss_break
 
         "Let him in":
+            $ kiss = True
             jump kiss_decide
 
 # Masami chooses to break off
 label kiss_break:
 
+    scene # Change back to the porch!
+    show nasir party surprised
+
     n "In a panic, Masami pushes Nasir away."
     n "Nasir recoils immediately with a soft gasp, visibly stung."
     m "I - I'm sorry, I wasn't thinking, we're drunk and - "
-    na "Don't worry about it."
-    na "The fault is mine. I shouldn't have assumed you felt the same."
+    na neutral "Don't worry about it."
+    na happy "The fault is mine. I shouldn't have assumed you felt the same."
     m "No! I just wasn't sure that - "
-    na "I - I'll head back in."
+    na sad "I - I'll head back in."
+
+    hide nasir with easeoutleft
+
+    m "Nasir, wait!"
 
     jump party_living_room_end
 
 # Masami chooses to kiss
 label kiss_decide:
 
-    n "Masami takes a deep breath and closes his eyes."
     m "(I - I know what I want. I think.)"
     m "(But is it worth it for me to act an instinct?)"
     m "(For something I don't entirely understand?)"
     m "(Is it worth - )"
     n "Suddenly, Nasir’s lips brush his own, warm and full."
+
+    scene # Change to CG!
+
     n "Masami's eyes snap open and he sees Nasir right in front of him, face flushed and eyes shut."
     m "(Holy. Shit.)"
     m "(What just - )"
@@ -964,29 +1101,45 @@ label kiss_decide:
 
 label party_living_room_end:
 
-    n "Nasir turns heel without another word and bolts inside."
-    m "Nasir, wait!"
+    scene # TODO: Change to party living room!
+
     n "Masami catches the screen door before it closes, searching the sea of partygoers frantically for any trace of Nasir."
     m "Damn it. Where the hell did you - "
     n "He backs up near the kitchen, colliding right into someone, who whirls angrily on him."
+
+    show sabie party annoyed with Dissolve(0.1)
+
     s "Watch it, you stupid ass motherfucker! I'm gonna - "
     m "Sabie?"
-    s "Huh? How do you know - "
-    s "Oh. It's you."
+    s surprised "Huh? How do you know - "
+    s mischievous "Oh. It's you."
     s "Having fun chasing your girl around?"
     m "Uh, I've stopped."
-    s "Ah, that's a shame. I put in so much work for you two to be together only for you to ruin everything with your goody-two-shoeness - "
+    s annoyed "Ah, that's a shame. I put in so much work for you two to be together only for you to ruin everything with your goody-two-shoeness - "
+
+    show sabie surprised
+
     n "Sabie yelps as someone grabs her firmly by the arm."
-    n "Masami’s eyes search behind her to find Rohan standing there with a cup of water and a rather pained expression. Tyree lingers not too far behind."
+
+    show rohan party at right
+    show tyree party at left
+    with Dissolve (0.1)
+
+    n "Masami’s eyes search behind her to find Rohan standing there with a cup of water and a rather pained expression. Tyree lingers on the other side."
     r "Sorry, I should have gone to check on her much sooner or she wouldn’t be like this."
     m "It’s fine. She hasn’t been bothering me for long anyways."
-    r "Phew, that’s a relief."
-    s "What the fuck are you talking about? I am a grown woman and I sure as hell have not been bothering - "
-    r "Yeah, yeah we know. C’mon, Sabie, let’s go upstairs."
-    s "Upstairs? I don’t know how to play Smash."
+    r happy "Phew, that’s a relief."
+    s annoyed "What the fuck are you talking about? I am a grown woman and I sure as hell have not been bothering - "
+    r neutral "Yeah, yeah we know. C’mon, Sabie, let’s go upstairs."
+    s surprised "Upstairs? I don’t know how to play Smash."
     r "Sabie, I know you do. Just take my spot in the bracket."
     s "But - "
     r "You’ll be fine."
+
+    hide rohan
+    hide sabie
+    with easeoutright
+
     n "With that, he half drags her upstairs and away from the eggnog, leaving Masami alone with Tyree."
 
     jump tyree_chat
@@ -994,12 +1147,18 @@ label party_living_room_end:
 label tyree_chat:
 
     m "Well."
+
+    show tyree party at center with move
+
     t "Looks like you made it back in time."
     m "Huh?"
     t "I was worried that we needed to send a search party out for you and Nasir since neither of you were picking up your phone."
     m "Wait. How do you know Nasir?"
     t "I don’t. I just noticed Alyssa trying to call him after she couldn't find him about half an hour ago."
-    t "Don’t worry, I didn’t tell her or anyone else here that you’d left as well. And I’m not planning on telling, either."
+    t happy "Don’t worry, I didn’t tell her or anyone else here that you’d left as well. And I’m not planning on telling, either."
+
+    show tyree party neutral
+
     m "I know you wouldn’t. I trust you."
     n "Masami shifts, feeling the magpie charm in his pocket rub against the fabric of his pant leg."
     m "...You probably pieced together what happened, didn’t you? Not like it took much effort to do so after the plans to set me up with Alyssa fell apart."
@@ -1011,14 +1170,15 @@ label tyree_chat:
     m "And now after everything tonight that has happened, I’m even more confused."
     m "Tyree, how the hell do you simultaneously exceed everyone’s expectations and not give a shit about what people think of you?"
     m "Tell me your secret. At this point, I’d give anything if I could learn it for myself. I’m tired of pretending like all the shit in my head isn’t getting to me."
-    t "Hm. What you described has never been a struggle for me, so I’m not sure how I would be able to explain my secret, if I had one."
+    t worried "Hm. What you described has never been a struggle for me, so I’m not sure how I would be able to explain my secret, if I had one."
     m "Ah. It’s fine, then."
-    t "I’m sorry I can’t give you a better answer. Are there any thoughts in particular that you would like assistance in parsing out, though?"
+    t "I’m sorry I can’t give you a better answer."
+    t neutral "Are there any thoughts in particular that you would like assistance in parsing out, though?"
     m "...I think it would be best if I probably didn’t think about anything right now. I’m just drunk, tired, and rambling. I’ll be fine in the morning."
     m "And I’ve already messed up enough shit today."
     t "Then, how would you like to watch us upstairs for the last couple of rounds of the night? It would be good to improve your spirits."
     m "Is…{i}he{/i} there right now?"
-    t "No. I do believe he left with Alyssa a couple minutes ago. He seems to have recovered slightly, if you were concerned."
+    t "No. I do believe he left with Alyssa shortly before we found you. He seems to have recovered slightly, if you were concerned."
     m "Heh. Of course you noticed."
     m "Alright, I’ll go. Let’s see what Sabie’s gotten herself into."
     m "(At the very least, it’ll keep me from processing everything that happened.)"

@@ -7,8 +7,10 @@
     m party "At a party!"
     m surprised "What?"
 
-    hide masami
+    show masami at right with move
+    show sabie happy at left with moveinleft
+    show xinyi happy at center with Dissolve(0.2)
 
-    m "Sad"
+    m happy "Oh."
 
     jump office

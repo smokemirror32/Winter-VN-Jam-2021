@@ -105,11 +105,14 @@ label xinyi_appearance:
     scene bg nightsky
 
     m "{i}Jie{/i}! Wait!"
+
+    show xinyi with Dissolve(0.4)
+
     x "Huh?"
     m "Please, I'm here now - "
     m "Your hands. T-They're like ice. And your face, your hair - " # Gasp at the begin
     m "W-Why are you so cold?"
-    x "..." # A sigh
+    x sad "..." # A sigh
     x "Because I am not truly here."
     m "Huh?"
 
@@ -118,27 +121,36 @@ label xinyi_appearance:
 # Looking back at the house
 label house_reflect:
 
+    scene # TODO: Replace with CG
+
     m "No…"
     x "You are still there, Masami. Where you belong."
     x "And I am where I belong as well."
     x "There is no reason for me to take part in a reunion if I know that I will not stay."
+
+    scene bg nightsky
+    show xinyi sad
+
     m "{i}Jie{/i}, I - "
-    x "You do not need to feel pity for me. I know what it means to make the choice I did."
+    x happy "You do not need to feel pity for me. I know what it means to make the choice I did."
     x "If I am to be selfish, I shall be so until the end. And if I have hurt anyone for that decision, I will pay the price for it accordingly."
+
+    show xinyi neutral
+
     m "That…wasn't what I was going to say."
     m "What I meant was, I understand."
-    x "…"
+    x sad "…"
     m "Not completely, of course. I still haven't figured out how to use a spray can properly."
     m "But I'm still watching the skies for the same birds as you. Trying to figure out what the hell they've got that makes them able to just {i}be{/i} when the rest of us are still struggling to figure out how."
-    x "I suppose you've reached the same conclusion as me, then."
+    x neutral "I suppose you've reached the same conclusion as me, then."
     x "They are just birds in the same way that we are just humans. There is nothing different. Nothing except for belief."
-    x "And call that what you will, delusion or self-worth. It does not matter in the end if you cannot find it."
+    x sad "And call that what you will, delusion or self-worth. It does not matter in the end if you cannot find it."
     m "…" # Sigh
     m "I'm not asking for you to change your answer, {i}jie{/i}. I don't think I ever could."
     m "But I - I do have something to ask."
-    x "Yes?"
+    x neutral "Yes?"
     m "Could you let me hold you?"
-    x "I don't see what this will change for either of us."
+    x sad "I don't see what this will change for either of us."
     m "I - I know. But I want this."
     m "I want to be selfish. If only for a little while. If only for you."
     x "I - I don't want to hurt you more than I already have."
@@ -150,6 +162,8 @@ label house_reflect:
 
 # Ending cut scene - fade out Masami/Xinyi after last line
 label ending:
+
+    scene # TODO: Replace with CG!
 
     x "Shh…it's okay."
     m "Don't say that. Please don't say that when it's…it's…"

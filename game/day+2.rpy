@@ -97,6 +97,7 @@ label phone2a_rohan:
             jump phone2a_rohan_respond
 
         "Ignore":
+            $ rohan_respond = False
             jump phone2a_rohan_ignore
 
 # Reply to Rohan's message
@@ -169,6 +170,7 @@ label phone2a_sabie:
             jump phone2a_sabie_respond
 
         "Ignore":
+            $ sabie_respond = True
             jump phone2a_sabie_ignore
 
 # Reply to Sabie's Message
@@ -249,6 +251,7 @@ label phone2a_tyree:
             jump phone2a_tyree_respond
 
         "Ignore":
+            $ tyree_respond = False
             jump phone2a_tyree_ignore
 
 # Masami responds to Tyree

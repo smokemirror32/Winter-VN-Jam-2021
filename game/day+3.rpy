@@ -2,7 +2,7 @@
 # Setting the scene - this is in black
 label office:
 
-    scene # TODO: Change to black screen!
+    scene bg black
 
     m "…"
     m "(Ugh.)"
@@ -18,6 +18,8 @@ label office:
 
 # Inside the office
 label office_inside:
+
+    scene # Change to office!
 
     # Initial introduction and setting description
     n "The principal gestures to a stiff wooden chair on the opposite side of the desk."
