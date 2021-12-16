@@ -50,60 +50,85 @@ label class_1_kalm:
 # Back to lunch
 label lunch_1a:
 
+    scene # TODO: Fix background!
+
     n "As per usual, Masami hears the chaos long before he sees it."
+    m "Well. Here we go again. Might as well try to end this one before it starts."
+
+    show rohan annoyed at right
+    show sabie annoyed at left
+    with Dissolve(0.1)
+
+    n "He hurries in as quickly as he can to find Rohan and Sabie engaged in another one of their tabletop battles."
     r "Hey, let go of my phone!"
     s "But you gotta delete those videos you took of me last night."
     r "What? No! They were good videos."
-    r "Besides I - I wasn't even planning on sharing them."
+    r sad "Besides I - I wasn't even planning on sharing them."
     s "I don't trust you. You sent those drunk karaoke videos last time without a second thought."
-    r "But Smash videos are different!"
+    r annoyed "But Smash videos are different!"
     s "No, they are not."
-    r "Why?"
-    s "Ugh, spare me that, will you? The number of times I suicided with Kirby was - "
+    r sad "Why?"
+    s worried "Ugh, spare me that, will you? The number of times I suicided with Kirby was - "
+
+    show sabie surprised
+
     n "Suddenly she freezes when she catches sight of Masami."
-    s "Oh. Hey. Look who it is."
+    s mischievous "Oh. Hey. Look who it is."
 
     # Depending on if you supported Sabie on the third day
+    # GLITCH ON
+
+    hide rohan with Dissolve(1.0) # TODO: Fix animation such that Sabie dominates or something else disturbing happens!
+
     if support == "Sabie":
 
         s "Feel like coming to help me again?"
-        # Glitch ON
         s "Or are you going to leave me out to dry like you did to Alyssa because you've got commitment issues?"
         s "I should hope that a good old family friend means something to you, {i}ge{/i}."
-        s "But then again, Xinyi did decide to leave her poor little brother behind."
+        s happy "But then again, Xinyi did decide to leave her poor little brother behind."
         s "Who knows how much more you've learned from her? You two were close after all."
 
     else:
 
         s "Are you going to help me this time?"
-        # Glitch ON
-        s "Or you could go ahead and let me suffer alone. Wonder if it's worth it for me to care about someone who didn't care for me back."
-        s "That's what Xinyi did to you, after all."
+        s "Or are going to leave me to suffer alone."
+        s "I wonder if it's worth it for me to care about someone who didn't care for me back."
+        s happy "That's what Xinyi did to you, after all."
         s "It's only fair that you take it out on the rest of us, right {i}ge{/i}?"
 
     m "W-What? When did I ever think that?"
+
     # Glitch OFF
-    s "Uh…I guess you could start thinking about helping me right about now. Kinda in a tough spot, as you can see."
+    show rohan sad at right
+
+    s worried "Uh…I guess you could start thinking about helping me right about now. Kinda in a tough spot, as you can see."
     m "Ah."
     n "Masami swallows."
     m "Rohan, maybe this time if you - "
     r "Does it matter what I do?"
 
     # Glitch ON
-    r "I’ll answer that question for you. No, it doesn't."
+
+    hide sabie with Dissolve(1.0) # TODO: Similar fix as before!
+
+    r annoyed "I’ll answer that question for you. No, it doesn't."
     r "You're the only one here that she'll even listen to and you know that."
     if support == "Rohan":
 
         r "Stand up for me like you did last time."
-        r "Or do I not matter to you either?"
+        r sad "Or do I not matter to you either?"
 
     else:
 
-        r "But definitely, go ahead. Let her walk all over to me."
+        r sad "But definitely, go ahead. Let her walk all over to me."
         r "I won't care."
 
     m "N-No! It's not like that. I care about you guys, I promise."
     # Glitch OFF
+
+    show sabie worried at left
+    show rohan neutral at right
+
     n "Sabie and Rohan exchange glances. The phone hangs between them in their limp grasps, forgotten. "
     r "Uh, we already knew that part, but thanks."
     s "Is there something that you're thinking too hard about, {i}ge{/i}?"
@@ -112,6 +137,11 @@ label lunch_1a:
     m "It's nothing. Just tired. You know what happens when you don't get those eight hours."
     n "Sabie and Rohan just stare at him."
     m "(Shit. I should have known they wouldn't buy it. Not when they've got a worse sleep schedule than me.)"
+
+    show tyree
+    hide sabie
+    hide rohan
+
     t "Ah."
     n "Masami jumps."
     m "Wait, when did you - "
@@ -122,23 +152,26 @@ label lunch_1a:
     t "Hm."
 
     # Glitch ON
-    t "There is no use trying to destroy who you once were."
+    t happy "There is no use trying to destroy who you once were."
     if support == "Tyree":
 
         t "You may be able to ignore others for a short while, but you cannot ignore them forever."
         t "Not if you've expressed affection for them before. It will be too late then."
-        t "They will always want the old you back. As they should."
-        t "What will they say when you cannot return to them?"
+        t neutral "They will always want the old you back. As they should."
+        t worried "What will they say when you cannot return to them?"
 
     else:
 
         t "People will always expect the same good thing out of you once you've given it to them before."
-        t "They will accept no less, because that is how we become who we need to be."
-        t "Is it too much to ask for, to make a wise decision more than once?"
+        t "They will accept no less and we must follow through."
+        t neutral "This is how we become who we need to be."
+        t worried "Is it too much to ask for, to make a wise decision more than once?"
+
+    hide tyree
 
     n "Masami backs up quickly, colliding into a nearby tree. His hands reach backwards around the trunk."
     # Glitch OFF
-    m "I - I…"
+    m "I - I..."
     m "Look, I don't know what I should do anymore."
     m "If I help Rohan, Sabie complains. If I help Sabie, Rohan complains. If I leave you both alone, you both complain."
     m "I can't win. So, stop trying to make me play your fucking game, okay?"
@@ -147,49 +180,69 @@ label lunch_1a:
 
 label lunch_1b:
 
-    r "…"
-    s "…"
-    t "…"
+    show rohan sad at right
+    show sabie worried at left
+
+    r "..."
+    s "..."
+
+    show tyree worried
+    hide rohan
+    hide sabie
+
+    t "..."
+
+    hide tyree
+    show rohan sad at right
+    show sabie worried at left
+
     n "Sabie lets go of the phone and nudges it back to Rohan. Rohan quietly pockets it, eyes trained on Masami."
     s "{i}Ge{/i}. What happened last night?"
     m "Last night?"
     s "Something happened last night or you wouldn't be acting like this."
     n "Masami inhales slowly."
     m "Nothing happened. I have no idea what you're talking about."
-    n "Sabie gets up and walks over to him very slowly, her fists balled. She stops when she's inches away and stares up at him, unflinching."
+
+    show sabie annoyed at center with move
+    show rohan neutral
+
+    n "Sabie gets up and walks over to him very slowly, her fists balled."
+    n "She stops when she's inches away and stares up at him, unflinching."
     s "Don't even try that on me, dumbass. I thought you knew better than that."
     n "She pokes him hard on the forehead."
     m "Ow! What was that for?"
     s "Your idiocy."
-    n "She sighs."
-    s "Look, I really didn't want things to go this way, but you're not giving me a choice."
+    s worried "Look, I really didn't want things to go this way, but you're not giving me a choice."
     s "I let you get away with holding those stupid thoughts in your head last time."
 
     # Glitch ON - will stay on until Masami enters house
-    s "And what did you do?"
+    s mischievous  "And what did you do?"
+    hide rohan with Dissolve(1.0) # TODO: Fix transition!
 
     # Depends if you visited Alyssa first or not
     if alyssa_visit_first:
 
-        s "You ditch the girl you've been pining over for years as if it were nothing."
-        s "I'll give you credit for even having the balls to go straight to her in the first place. But still."
+        s happy "You ditch the girl you've been pining over for years as if it were nothing."
+        s "I'll give you credit for even having the balls to go straight to her in the first place."
+        s "But still."
 
     else:
 
-        s "You waste so much time trying to decide whether or not you actually want to get the idiot you've been pining over for years."
+        s happy "You waste so much time trying to decide whether or not you actually want to get the idiot you've been pining over for years."
         s "Then after you finally work up the fucking nerve, you just ditch her."
 
-    s "Incredibly rude. Waste of my efforts."
+    s mischievous "Incredibly rude."
+    s "Waste of my efforts."
 
     # Depends if you trusted Sabie with the Xinyi response earlier on Day 3 - Before
     if sabie_trust:
 
-        s "You told me something was wrong before and I supported you."
+        s happy "You told me something was wrong before and I supported you."
         s "What about that wasn't enough for you that you had to clam up like that?"
 
     else:
 
-        s "Don't you care that there are people out here trying to help you at all?"
+        s happy "Don't you care that there are people out here trying to help you at all?"
         s "Was it worth it being so damn selfish that you couldn't even bother to explain yourself? Not even to me when I fucking asked you what was wrong?"
 
     s "What on earth is going on in your head that's worth keeping from the rest of us?"
@@ -200,7 +253,7 @@ label lunch_1b:
 
 label lunch_1c:
 
-    s "Pft. Of course you know yourself, silly."
+    s mischievous "Pft. Of course you know yourself, silly."
 
     # Depends on if you answered Sabie's message on Day 2 - After
     if sabie_respond:
@@ -208,11 +261,20 @@ label lunch_1c:
         s "How sick of you think you could hide such a monster from yourself."
     else:
         s "You knew enough that you decided to leave me on read. On read!"
-        s "On no circumstance do you ever leave some on read, even if they fucked up and sent a deleted message to you. You have to at least leave an emoji."
+        s "On no circumstance do you ever leave some on read, even if they fucked up and sent a deleted message to you."
+        s "You have to at least leave an emoji."
+
+    s happy "Sometimes, I really can't believe you."
 
     m "But - "
 
     # Depends on if you answered Rohan's message
+
+    show rohan annoyed at right with Dissolve(1.0)
+
+    r "Don't even try lying to yourself."
+    r sad "Just look at how you've treated me!"
+
     if rohan_respond:
         r "You respond to my photos just to be nice. I know that you do."
         r "You wouldn't dare tell me otherwise or you think I'll go even further off the rails."
@@ -221,17 +283,32 @@ label lunch_1c:
         r "You couldn't even spend a moment to look at a single photo."
         r "It wasn't even much to ask for. Just a glance to say that you supported me when I needed it."
 
+    r happy "But definitely, believe what you want. That you actually look good in the eyes of others."
+    r "Keep your pathetic little image of yourself as the golden boy."
+
+    m "What are you talking about?"
+    m "Of course I'm not perfect! Of all people, you'd think I know that by now."
+
     # Depends on if you answered Tyree's message
+
+    show tyree at left with Dissolve(1.0)
+
+    t "We know you aren't."
+    t worried "But that's the problem lies, I'm afraid."
+
     if tyree_respond:
-        t "You always care too much about what others think and take on more than what you can give."
+        t "You always care too much about what others think."
+        t "What's more is that you take on more than what you can give."
     else:
         t "You don't think enough of others to offer gratitude for when they do offer to help."
         t "When the world gives you its favor, you wallow in self-pity. And when you do not succeed, you bury yourself even deeper."
         t "Nothing is ever enough for you and in your cowardice, you will never be satisfied."
 
+    # TODO: Change Tyree's expression to happy and add dialogue to adjust flow, address secrets kept, etc.
+
     m "Please, I - "
-    n "Masami looks desperately between his three friends, who suddenly seem to have moved in a lot closer. His arms lock tighter around the trunk."
-    n "Sabie laughs and shakes her head."
+    n "Masami looks desperately around. His arms lock tighter around the trunk."
+    n "Sabie laughs and shakes her head." # Integrate this!
     s "If you don't trust us, just say so. At least you're being honest."
     s "Not like whatever shit you're trying to pull with yourself."
     m "I - "
@@ -244,12 +321,15 @@ label lunch_1c:
 # Masami runs into Nasir
 label hallway_1:
 
+    scene # Change this to hallway
+
     n "He pushes open the door and tries to lose himself in the crowd."
     n "Behind him, he can hear Sabie's footsteps hot on his heels."
     s "Oi, dumbass!"
     s "You can't run from yourself forever!"
     m "(I'm not running from myself. I'm not.)"
-    m "(I'm just…)"
+    m "(I'm just...)"
+    m "..."
     m "(Damn it.)"
     n "Masami quickens his pace, weaving in between the molasses slow current of people."
     m "(Can't everyone just leave me alone?)"
@@ -259,13 +339,29 @@ label hallway_1:
     m "Ah, sorry - "
     n "Masami freezes."
     m "Oh."
-    na "It's alright."
-    n "Nasir looks away and moves to leave, but Masami moves to grab his wrist."
+
+    show nasir surprised at right with Dissolve(0.1)
+    # TODO: Add Alyssa in here too!
+
+    a "Ugh, you again?"
+    a "Got some nerve to show up, huh."
+    m "Alyssa - "
+    a "Oh, I know what you came for now."
+    # Alyssa gives Nasir a little push
+    a "Go on, take your boyfriend and be happy. That's what you want, right?"
+    m "The hell? I never - "
+    a "Spare me. I've had enough of you, cheating scum."
+    # TODO: Add transition text and animation of Alyssa yeeting
+    na sad "It's alright."
+
+    show nasir surprised at center with move
+
+    n "Nasir looks away and also moves to leave, but Masami moves to grab his wrist."
     m "Wait!"
-    na "What do you want from me now?"
+    na sad "What is it?"
     m "About last night. I - "
-    na "You don't need to explain. I understand."
-    na "But perhaps you could have been more honest with yourself."
+    na happy "You don't need to explain. I understand."
+    na sad "But perhaps you could have been more honest with yourself."
 
     if kiss:
         na "You should have pushed me away earlier if you didn't want me."
@@ -291,7 +387,8 @@ label hallway_1:
         na "Ah."
         m "That's it? Your only response? Isn't this suppose to be a mutual feeling where we're both supposed to be excited?"
         na "Perhaps."
-        na "But let me ask you this: if we start something, would you be ready to tell your friends and family about it? Even if they would reject you?"
+        na "But let me ask you this: if we start something, would you be ready to tell your friends and family about it?"
+        na "Even if they would reject you?"
         na "Is that something you could truly ask of yourself when you don’t even have the courage to speak up for your own sister?"
         m "…"
         na "That's what I was afraid of."
@@ -300,8 +397,11 @@ label hallway_1:
         na "You've already made yourself clear enough."
 
     na "Goodbye Masami."
+
+    hide nasir with Dissolve(1.0)
+
     n "With that, Nasir twists his arm free and disappears into the outgoing stream of people."
-    m "…"
+    m "..."
 
     jump masami_kitchen_1
 
@@ -309,7 +409,7 @@ label hallway_1:
 # Glitch OFF
 label masami_kitchen_1:
 
-    scene kitchen bg # TODO: Fix this!
+    scene bg kitchen # TODO: Fix this!
 
     mm "Hello Masami! Welcome home!"
     m "…"

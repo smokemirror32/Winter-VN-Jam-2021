@@ -892,7 +892,7 @@ label walk_splace_climb:
 # Leaving this part unsprited!
 label walk_splace_chat:
 
-    scene bg nightsky
+    scene bg nightskymoreblur
 
     n "Masami looks up, taking in the night sky."
     m "You really like the silence thing, don't you?"
@@ -1121,7 +1121,7 @@ label party_living_room_end:
 
     n "Sabie yelps as someone grabs her firmly by the arm."
 
-    show rohan party at right
+    show rohan party at right # TODO: Fix positioning!
     show tyree party at left
     with Dissolve (0.1)
 
@@ -1153,6 +1153,7 @@ label tyree_chat:
     t "Looks like you made it back in time."
     m "Huh?"
     t "I was worried that we needed to send a search party out for you and Nasir since neither of you were picking up your phone."
+    m "Shit! I must have forgotten to switch my phone off of silent from yesterday. I am so sorry - "
     m "Wait. How do you know Nasir?"
     t "I don’t. I just noticed Alyssa trying to call him after she couldn't find him about half an hour ago."
     t happy "Don’t worry, I didn’t tell her or anyone else here that you’d left as well. And I’m not planning on telling, either."
