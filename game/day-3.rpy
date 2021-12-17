@@ -32,45 +32,50 @@ label class_3:
 # This is a series of text messages between Sabie and Masami
 label phone_3a:
 
-    s "yo"
-    s "yooo"
-    s "{i}ge{/i}"
-    s "r u there"
-    s "…"
-    s "{i}ge geeeeeee{/i}"
-    s "u r not ignoring me right"
-    s ":((((("
-    m "Hey"
-    s ":o"
-    s "ur here"
-    s ":D"
-    m "Ye"
-    m "Sorry, just got out of class"
-    s "tis ok ^.^"
-    s "we r outside at usual spot"
-    s "dont take too long or rohan will niwnag;awngawn"
-    s "nae;iwngliane;li;ngial"
-    s "I;eangioaen;oein;ioeanwi"
-    s "ianewgilnewa"
-    m "?"
-    s "naigneianeiawne;"
-    s "wia;eiai"
-    s "eaaijeianwl"
-    m "…"
-    s "sry he took my phone again :("
-    m "Okay. You deserved it."
-    s "hey >:("
-    s "rude"
-    m ":)"
-    s "fine then dont come"
-    s "i dont need u to bully me"
-    m "Someone needs to bully you"
-    s ">:("
-    m ":)"
-    s "meanie"
-    s "i hate u"
-    s "leave me alone"
-    m "Okay bye"
+    call phone_open(True)
+
+    call message(s, "yo")
+    call message(s, "yo")
+    call message(s, "yooo")
+    call message(s,"{i}ge{/i}")
+    call message(s, "r u there")
+    call message(s, "...")
+    call message(s, "{i}ge geeeeeee{/i}")
+    call message(s, "u r not ignoring me right")
+    call message(s, ":(((((")
+    call message(m, "Hey")
+    call message(s, ":o")
+    call message(s, "ur here")
+    call message(s, ":D")
+    call message(m, "Ye")
+    call message(m, "Sorry, just got out of class")
+    call message(s, "tis ok ^.^")
+    call message(s, "we r outside at usual spot")
+    call message(s, "dont take too long or rohan will niwnag;awngawn")
+    call message(s, "nae;iwngliane;li;ngial")
+    call message(s, "I;eangioaen;oein;ioeanwi")
+    call message(s, "ianewgilnewa")
+    call message(m, "?")
+    call message(s, "naigneianeiawne;")
+    call message(s, "wia;eiai")
+    call message(s, "eaaijeianwl")
+    call message(m, "...")
+    call message(s, "sry he took my phone again :(")
+    call message(m, "Okay. You deserved it.")
+    call message(s, "hey >:(")
+    call message(s, "rude")
+    call message(m, ":)")
+    call message(s, "fine then dont come")
+    call message(s, "i dont need u to bully me")
+    call message(m, "Someone needs to bully you")
+    call message(s, ">:(")
+    call message(m, ":)")
+    call message(s, "meanie")
+    call message(s, "i hate u")
+    call message(s, "leave me alone")
+    call message(m, "Okay bye")
+
+    call phone_close()
 
     jump hallway_3
 
@@ -776,8 +781,8 @@ label lunch_end_alyssa:
     s "Hey. Wouldn't now be a good - "
     m "Shhh."
     n "Remarkably, Sabie obediently purses her lips and falls silent."
-    a "…That was weird. I thought I heard something."
-    na "Really? What?" # TODO: Turn this into question marks!
+    a "...That was weird. I thought I heard something."
+    u "Really? What?" # TODO: Turn this into question marks!
     n "At the sound of the second voice, Masami's stomach drops."
     m "(Damnit. It's Nasir.)"
     m "(Of course he's with her.)"
@@ -1134,8 +1139,12 @@ label masami_room_3a:
 # Brings up phone screen of Masami's phone
 label phone_3b:
 
-    m "Hey."
-    m "I'm going."
+    call phone_open(True)
+
+    call message(m, "Hey.")
+    call message(m, "I'm going.")
+
+    call phone_close()
 
     jump masami_room_3b
 

@@ -1512,3 +1512,112 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+## Phone Code
+style phone_mc:
+    ymargin 6
+    background Frame(im.Flip("Message1.png", True), 10,20,60,10)
+    padding (10,10,40,10)
+    yminimum 55
+    outlines [ (absolute(1), "#ff0000", absolute(0), absolute(0)) ]
+style phone_mc_1:
+    ymargin 6
+    background Frame(im.Flip("Message1.png", True), 10,20,60,10)
+    padding (10,10,40,10)
+    yminimum 55
+style phone_others:
+    ymargin 6
+    background Frame ("Message2.png", 76,20,10,10)
+    padding (10,10,70,10)
+    yminimum 55
+style phone_others_1:
+    ymargin 6
+    background Frame ("Message2.png", 76,20,10,10)
+    padding (10,10,70,10)
+    yminimum 55
+
+screen nphone():
+    $ firstmessage = 0
+    $ firstmessagemc = 0
+    $ thumbnail_x = 200
+    $ thumbnail_y = 200
+    $ textsize = 38
+    $ colorsender = "#FFFFFF"
+    $ coloremitter = "#2B2846"
+    python:
+        yadj.value = yadjValue
+    frame:
+        id "windowmail"
+        area(731, 184, 465, 785)
+        background None
+        frame:
+            xsize 470
+            ysize 700
+            padding (0,0,0,0)
+            background None yfill True
+            viewport yadjustment yadj id "vp":
+                draggable True scrollbars None
+                yinitial 1.0
+                xfill True
+                yfill True
+                frame:
+                    padding(0,0,0,0) background None
+                    vbox:
+                        for i in phone.history:
+
+                            # Textboxes for Sender
+                            if i.name == "Masami":
+                                hbox:
+
+                                    if re.findall(r'jpg|png', i.message, re.I):
+                                        xalign 0.75
+                                        frame:
+                                            style "phone_mc"
+                                            xsize thumbnail_x
+                                            ysize thumbnail_y
+
+                                            background Frame(Transform(i.message, size=(thumbnail_x, thumbnail_y)))
+                                    else:
+                                        if firstmessagemc == 0:
+                                            frame:
+                                                xsize 430
+                                                style "phone_mc"
+                                                text i.message size textsize color colorsender font "CaslonAntique.ttf" xalign 1.0
+
+                                        else:
+                                            frame:
+                                                xsize 430
+                                                style "phone_mc_1"
+                                                text i.message size textsize color colorsender font "CaslonAntique.ttf" xalign 1.0
+                                $ firstmessagemc = 1
+                                $ firstmessage = 0
+
+                            # Textboxes for Everyone Else
+                            else:
+                                hbox:
+                                    if re.findall(r'jpg|png', i.message, re.I):
+                                        xalign 0.3
+                                        frame:
+                                            xsize thumbnail_x
+                                            ysize thumbnail_y
+                                            background Frame(Transform(i.message, size=(thumbnail_x, thumbnail_y)))
+                                            style "phone_others"
+                                    else:
+                                        xalign 0.0
+                                        if firstmessage == 0:
+                                            add "P_Noah.png" yalign 0.15 # TODO: Fix this so that it shows the right person's picture (if we're doing pictures)
+                                            frame:
+                                                # xsize 330
+                                                ypadding 10
+                                                xpadding 20
+                                                style "phone_others" xoffset 15
+                                                text i.message size textsize color coloremitter font "CaslonAntique.ttf"
+                                        else:
+                                            frame:
+                                                # xsize 430
+                                                ypadding 10
+                                                xpadding 20
+                                                style "phone_others_1" xoffset 15
+                                                text i.message size textsize color coloremitter font "CaslonAntique.ttf"
+                                $ firstmessage = 1
+                                $ firstmessagemc = 0

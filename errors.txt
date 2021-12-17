@@ -2,9 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/day-2.rpy", line 142: expected 'name' not found.
-    transform:
-             ^
+File "game/day+2.rpy", line 195: is not terminated with a newline. (Check strings and parenthesis.)
+        call message(m, "Okay."
 
 Ren'Py Version: Ren'Py 7.4.8.1895
-Tue Dec 14 11:32:58 2021
+Fri Dec 17 16:52:43 2021

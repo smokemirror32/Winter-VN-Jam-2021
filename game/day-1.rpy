@@ -13,7 +13,9 @@ label class_1:
 # Glitch ON
 label phone_1a:
 
-    s "Hey dumbass. I know who you really are. It'd be a shame if I told everyone, wouldn't it? ;)"
+    call phone_open(True)
+    call message(s, "Hey dumbass. I know who you really are. It'd be a shame if I told everyone, wouldn't it? ;)")
+    call phone_close()
 
     jump class_1_panik
 
@@ -29,9 +31,13 @@ label class_1_panik:
 # The previous message disappears from the screen revealing the actual message:
 label phone_1b:
 
-    s "dude"
-    s "rohan is bullying me again"
-    s "send help :("
+    call phone_open(True)
+
+    call message(s, "dude")
+    call message(s, "rohan is bullying me again")
+    call message(s, "send help :(")
+
+    call phone_close()
 
     jump class_1_kalm
 
@@ -42,7 +48,7 @@ label class_1_kalm:
     m "(It's okay. I'm just seeing things.)"
     n "He rubs his temples."
     m "(Dammit. I should have gotten back earlier last night. Three hours is definitely not enough sleep.)"
-    m "…"
+    m "..."
     m "(I'll just reply to Sabie in person.)"
 
     jump lunch_1a

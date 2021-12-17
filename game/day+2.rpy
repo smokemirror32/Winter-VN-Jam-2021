@@ -85,10 +85,14 @@ label phone2a:
 # Masami chose to check Rohan's message - on phone
 label phone2a_rohan:
 
-    r "Hey"
-    r "About the mall pics from a couple days ago"
-    r "I think I found one thats not bad if u want to look"
-    r "Not ready to post in gc yet"
+    call phone_open(True)
+
+    call message(r, "Hey")
+    call message(r, "About the mall pics from a couple days ago")
+    call message(r, "I think I found one thats not bad if u want to look")
+    call message(r, "Not ready to post in gc yet")
+
+    call phone_close()
 
     menu:
 
@@ -103,42 +107,46 @@ label phone2a_rohan:
 # Reply to Rohan's message
 label phone2a_rohan_respond:
 
+    call phone_open(False, False)
+
     # On phone portion
-    m "Yeah sure"
-    r "Kk give me one sec"
+    call message(m, "Yeah sure")
+    call message(r, "Kk give me one sec")
     # Rohan picture here
-    r "Sabie helped me pick"
-    r "Makeup isnt very good since I did it myself this time"
-    r "It isnt too bad is it"
-    m "You look great"
-    r "…"
-    m "You don't believe me?"
-    r "Uh"
-    r "You always say stuff like that so I cant tell if youre just trying to make me feel better"
-    m "…"
-    r "Sabie does that too"
-    m "Well, we are being honest"
-    r "Maybe"
-    r "Sometimes I wonder if that would change if she knew"
-    m "Knew what?"
-    r "Like what I told you about before"
-    m "Oh, that."
-    m "Nah, I don't think she'd treat you any differently if she knew you felt that way about her"
-    r "I hope so"
-    m "Why ask?"
-    r "Dunno just thinking"
-    m "Ah"
-    r "Wanna coop"
-    r "I can carry you"
-    m "I'll think about it"
-    r "Kk"
-    r "Oh"
-    r "I almost forgot"
-    r "I have leftover gingerbread cookies if u want extra"
-    m "I'm good, thanks."
-    r "U sure"
-    m "Yeah. I'll let you know if I want any."
-    r "Kk"
+    call message(r, "Sabie helped me pick")
+    call message(r, "Makeup isnt very good since I did it myself this time")
+    call message(r, "It isnt too bad is it")
+    call message(m, "You look great")
+    call message(r, "...")
+    call message(m, "You don't believe me?")
+    call message(r, "Uh")
+    call message(r, "You always say stuff like that so I cant tell if youre just trying to make me feel better")
+    call message(m, "...")
+    call message(r, "Sabie does that too")
+    call message(m, "Well, we are being honest")
+    call message(r, "Maybe")
+    call message(r, "Sometimes I wonder if that would change if she knew")
+    call message(m, "Knew what?")
+    call message(r, "Like what I told you about before")
+    call message(m, "Oh, that.")
+    call message(m, "Nah, I don't think she'd treat you any differently if she knew you felt that way about her")
+    call message(r, "I hope so")
+    call message(m, "Why ask?")
+    call message(r, "Dunno just thinking")
+    call message(m, "Ah")
+    call message(r, "Wanna coop")
+    call message(r, "I can carry you")
+    call message(m, "I'll think about it")
+    call message(r, "Kk")
+    call message(r, "Oh")
+    call message(r, "I almost forgot")
+    call message(r, "I have leftover gingerbread cookies if u want extra")
+    call message(m, "I'm good, thanks.")
+    call message(r, "U sure")
+    call message(m, "Yeah. I'll let you know if I want any.")
+    call message(r, "Kk")
+
+    call phone_close()
 
     # Off phone portion
     m "(Ahh, I'd actually kill for one of those cookies right now. Or anything he'd make.)"
@@ -159,9 +167,13 @@ label phone2a_rohan_ignore:
 # Masami chose to check Sabie's message - on phone
 label phone2a_sabie:
 
-    s "{i}This message was deleted.{/i}"
-    s "sry ge my bad"
-    s "ignore me"
+    call phone_open(True)
+
+    call message(s, "{i}This message was deleted.{/i}")
+    call message(s, "sry ge my bad")
+    call message(s, "ignore me")
+
+    call phone_close()
 
     menu:
 
@@ -177,52 +189,57 @@ label phone2a_sabie:
 label phone2a_sabie_respond:
 
     # On phone portion
-    m "Okay."
-    s "bruh"
-    s "you didnt listen >:("
-    m "What else did you expect me to do?"
-    s "idk"
-    s "just not respond ig"
-    m "Okay."
-    m "But what was it?"
-    s "…"
-    m "Are you actually embarrassed?"
-    s "no ofc not"
-    m "Why no show?"
-    s "do u wanna see drunk pics again"
-    m "No?"
-    s "there u go"
-    m "…"
-    s "what"
-    m "Nothing."
-    m "Nothing at all. (:"
-    s "…"
-    s "are u trying to blackmail me again"
-    m "Blackmail? When have I blackmailed you?"
-    s "uh all the time"
-    m "Like what"
-    s "is threatening to tell my parents about me going out to have fun not blackmail"
-    m "No, that's me looking out for you"
-    m "I don't like seeing you getting wasted every weekend"
-    s "but you keep your mouth shut about rohan doing theatre in front of his parents"
-    s "thats very fair"
-    s "no problems at all"
-    m "That's different. His parents are worse than yours and you know it."
-    s ":P"
-    s "whatevs"
-    s "anyways"
-    s "how are quizbowl qs going"
-    s "i need my steady supply of nerd qs to torture the kiddos with"
-    m "Nerd qs"
-    s "yes nerd qs"
-    s "you need something to keep you busy"
-    s "and i don’t want to touch any of your gross sciencey math shit"
-    m "You know, if you keep insulting me, I won't help you."
-    s "see theres the blackmail right there"
-    m "(:"
-    s "ugh ur hopeless"
-    s "bye"
-    m "Okay, bye."
+
+    call phone_open(False, False)
+
+    call message(m, "Okay.")
+    call message(s, "bruh")
+    call message(s, "you didnt listen >:(")
+    call message(m, "What else did you expect me to do?")
+    call message(s, "idk")
+    call message(s, "just not respond ig")
+    call message(m, "Okay.")
+    call message(m, "But what was it?")
+    call message(s, "...")
+    call message(m, "Are you actually embarrassed?")
+    call message(s, "no ofc not")
+    call message(m, "Why no show?")
+    call message(s, "do u wanna see drunk pics again")
+    call message(m, "No?")
+    call message(s, "there u go")
+    call message(m, "...")
+    call message(s, "what")
+    call message(m, "Nothing.")
+    call message(m, "Nothing at all. (:")
+    call message(s, "...")
+    call message(s, "are u trying to blackmail me again")
+    call message(m, "Blackmail? When have I blackmailed you?")
+    call message(s, "uh all the time")
+    call message(m, "Like what")
+    call message(s, "is threatening to tell my parents about me going out to have fun not blackmail")
+    call message(m, "No, that's me looking out for you")
+    call message(m, "I don't like seeing you getting wasted every weekend")
+    call message(s, "but you keep your mouth shut about rohan doing theatre in front of his parents")
+    call message(s, "thats very fair")
+    call message(s, "no problems at all")
+    call message(m, "That's different. His parents are worse than yours and you know it.")
+    call message(s, ":P")
+    call message(s, "whatevs")
+    call message(s, "anyways")
+    call message(s, "how are quizbowl qs going")
+    call message(s, "i need my steady supply of nerd qs to torture the kiddos with")
+    call message(m, "Nerd qs")
+    call message(s, "yes nerd qs")
+    call message(s, "you need something to keep you busy")
+    call message(s, "and i don’t want to touch any of your gross sciencey math shit")
+    call message(m, "You know, if you keep insulting me, I won't help you.")
+    call message(s, "see theres the blackmail right there")
+    call message(m, "(:")
+    call message(s, "ugh ur hopeless")
+    call message(s, "bye")
+    call message(m, "Okay, bye.")
+
+    call phone_close()
 
     # Off phone portion
     m "(Well, at least things seem normal with her.)"
@@ -241,8 +258,12 @@ label phone2a_sabie_ignore:
 # Masami chose to check Tyree's message - on phone
 label phone2a_tyree:
 
-    t "Let me know if you want me to take over anything for you."
-    t "You do not need to reply, but I am here if you need me."
+    call phone_open(True)
+
+    call message(t, "Let me know if you want me to take over anything for you.")
+    call message(t, "You do not need to reply, but I am here if you need me.")
+
+    call phone_close()
 
     menu:
 
@@ -257,24 +278,28 @@ label phone2a_tyree:
 # Masami responds to Tyree
 label phone2a_tyree_respond:
 
+    call phone_open(False, False)
+
     # On-phone portion
-    m "Hey thanks for reaching out"
-    m "I think I'm good for now, but I'll let you know"
-    t "Alright."
-    m "Oh yeah, I forgot to ask"
-    m "Are there any more sponsors I need to reach out or grants I should apply to before the season starts?"
-    m "Our budget is looking a bit tight right now"
-    t "There are a few, but I can manage them."
-    m "You sure?"
-    m "You're not too busy with swim captaining and recruiting?"
-    m "Or helping Sabie with Quizbowl?"
-    t "Don't worry, I can do it."
-    m "You sure?"
-    t "I'm sure."
-    t ":)"
-    m "Alright, I'll take your word for it."
-    m "Let me know if you need me to look over anything!"
-    t "Okay!"
+    call message(m, "Hey thanks for reaching out")
+    call message(m, "I think I'm good for now, but I'll let you know")
+    call message(t, "Alright.")
+    call message(m, "Oh yeah, I forgot to ask")
+    call message(m, "Are there any more sponsors I need to reach out or grants I should apply to before the season starts?")
+    call message(m, "Our budget is looking a bit tight right now")
+    call message(t, "There are a few, but I can manage them.")
+    call message(m, "You sure?")
+    call message(m, "You're not too busy with swim captaining and recruiting?")
+    call message(m, "Or helping Sabie with Quizbowl?")
+    call message(t, "Don't worry, I can do it.")
+    call message(m, "You sure?")
+    call message(t, "I'm sure.")
+    call message(t, ":)")
+    call message(m, "Alright, I'll take your word for it.")
+    call message(m, "Let me know if you need me to look over anything!")
+    call message(t, "Okay!")
+
+    call phone_close()
 
     # Off-phone portion
     m "(That was nice.)"
@@ -297,61 +322,65 @@ label phone2a_tyree_ignore:
 # Masami responds to the group chat - on phone
 label phone2a_gc:
 
-    s "yo"
-    s "did yall see that"
-    r "See what"
-    s "the vandalism thing"
-    s "someone absolutely lost their shit"
-    r "uh no"
-    r "But hasnt everyone lost their shit"
-    s "well yeah"
-    r "Except for like tyree"
-    s "also yeah"
-    s "bc hes just special like that"
-    r "Truee"
-    t "Okay."
-    s "anyways somebody really snapped this time"
-    s "went savagely poetic spitting them facts"
-    s "it was beautiful <3"
-    r "Uh…"
-    s "what"
-    s "ik art when I see it"
-    r "Im not questioning that"
-    r "You just sound suspiciously like the one who did it"
-    s "lmaoo i wish"
-    s "i don’t have the balls to do that"
-    s "i just drink and drive"
-    r "…"
-    s "ur judging me arent u -_-"
-    r "No, ofc not!"
-    t "Lol."
-    s "i agree rohan is very sus"
-    r "Hey!"
-    t ":)"
-    s "anyways, im not crazy enough to risk my perfect school record with a suspension"
-    r "Yeah I feel kinda bad for whoever did it"
-    r "Its like academic suicide"
-    s "psh now you sound like masami"
-    r "Lol for real though, I scared myself channeling that energy"
-    t "I just hope whoever it is finds the help they need."
-    s "ykw ur right"
-    s "we should all be nice people like tyree"
-    s "right ge"
-    s "…"
-    s "……"
-    t "………"
-    r "Uh…"
-    s "guess hell see this later"
-    r "*he'll"
-    s "**hell"
-    t "He's probably taking some time off."
-    r "or just watching us"
-    s "truu he really likes lurking"
-    r "Lol"
-    s "heyo gegeee"
-    s "if youre reading this i just wanna say that you gotta let go like vandal dude"
-    s "but not too much like vandal dude"
-    s "u will feel better i promiseee"
+    call phone_open(True)
+
+    call message(s, "yo")
+    call message(s, "did yall see that")
+    call message(r, "See what")
+    call message(s, "the vandalism thing")
+    call message(s, "someone absolutely lost their shit")
+    call message(r, "Uh...")
+    call message(r, "But hasnt everyone lost their shit")
+    call message(s, "well yeah")
+    call message(r, "Except for like tyree")
+    call message(s, "also yeah")
+    call message(s, "bc hes just special like that")
+    call message(r, "Truee")
+    call message(t, "Okay.")
+    call message(s, "anyways somebody really snapped this time")
+    call message(s, "went savagely poetic spitting them facts")
+    call message(s, "it was beautiful <3")
+    call message(r, "Uh…")
+    call message(s, "what")
+    call message(s, "ik art when I see it")
+    call message(r, "Im not questioning that")
+    call message(r, "You just sound suspiciously like the one who did it")
+    call message(s, "lmaoo i wish")
+    call message(s, "i don’t have the balls to do that")
+    call message(s, "i just drink and drive")
+    call message(r, "...")
+    call message(s, "ur judging me arent u -_-")
+    call message(r, "No, ofc not!")
+    call message(t, "Lol.")
+    call message(s, "i agree rohan is very sus")
+    call message(r, "Hey!")
+    call message(t, ":)")
+    call message(s, "anyways, im not crazy enough to risk my perfect school record with a suspension")
+    call message(r, "Yeah I feel kinda bad for whoever did it")
+    call message(r, "Its like academic suicide")
+    call message(s, "psh now you sound like masami")
+    call message(r, "Lol for real though, I scared myself channeling that energy")
+    call message(t, "I just hope whoever it is finds the help they need.")
+    call message(s, "ykw ur right")
+    call message(s, "we should all be nice people like tyree")
+    call message(s, "right ge")
+    call message(s, "...")
+    call message(s, "......")
+    call message(t, ".........")
+    call message(r, "Uh...")
+    call message(s, "guess hell see this later")
+    call message(r, "*he'll")
+    call message(s, "**hell")
+    call message(t, "He's probably taking some time off.")
+    call message(r, "or just watching us")
+    call message(s, "truu he really likes lurking")
+    call message(r, "Lol")
+    call message(s, "heyo gegeee")
+    call message(s, "if youre reading this i just wanna say that you gotta let go like vandal dude")
+    call message(s, "but not too much like vandal dude")
+    call message(s, "u will feel better i promiseee")
+
+    call phone_close()
 
     jump masami_room2c
 
@@ -502,8 +531,12 @@ label masami_news:
 # Text from the unknown number - should not show it's from Nasir
 label phone_2b:
 
-    na "You're really a brave one, aren't you, magpie?"
-    na "Your sister must be proud of you. :)"
+    call phone_open(True)
+
+    call message("???", "You're really a brave one, aren't you, magpie?")
+    call message("???", "Your sister must be proud of you. :)")
+
+    call phone_close()
 
     jump masami_dayend
 
