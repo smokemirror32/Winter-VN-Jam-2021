@@ -14,7 +14,7 @@ label class_1:
 label phone_1a:
 
     call phone_open(True)
-    call message(s, "Hey dumbass. I know who you really are. It'd be a shame if I told everyone, wouldn't it? ;)")
+    call message(s, "Hey dumbass. I know who you really are. It'd be a shame if I told everyone, wouldn't it? ;)", True)
     call phone_close()
 
     jump class_1_panik
@@ -33,7 +33,7 @@ label phone_1b:
 
     call phone_open(True)
 
-    call message(s, "dude")
+    call message(s, "dude", True)
     call message(s, "rohan is bullying me again")
     call message(s, "send help :(")
 

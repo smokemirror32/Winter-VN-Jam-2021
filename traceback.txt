@@ -1,22 +1,38 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/variables.rpy", line 103, in script
-    return
-Exception: Could not find return label (u'game/day+2.rpy', 1639778583, 39).
+  File "game/phone.rpy", line 29, in script
+    image phonebg  = ConditionSwitch(
+  File "game/phone.rpy", line 29, in script
+    image phonebg  = ConditionSwitch(
+  File "game/phone.rpy", line 34, in <module>
+    "who_chat = 'Group'", "phone/phone_gc.png",
+SyntaxError: invalid syntax (<none>, line 1)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/variables.rpy", line 103, in script
-    return
-  File "renpy/ast.py", line 1562, in execute
-    next_node(renpy.game.context().lookup_return(pop=True))
-  File "renpy/execution.py", line 710, in lookup_return
-    raise Exception("Could not find return label {!r}.".format(self.return_stack[-1]))
-Exception: Could not find return label (u'game/day+2.rpy', 1639778583, 39).
+  File "renpy/bootstrap.py", line 326, in bootstrap
+    renpy.main.main()
+  File "renpy/main.py", line 515, in main
+    renpy.game.context().run(node)
+  File "game/phone.rpy", line 29, in script
+    image phonebg  = ConditionSwitch(
+  File "game/phone.rpy", line 29, in script
+    image phonebg  = ConditionSwitch(
+  File "renpy/ast.py", line 1022, in execute
+    img = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "renpy/python.py", line 2259, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/phone.rpy", line 34, in <module>
+    "who_chat = 'Group'", "phone/phone_gc.png",
+  File "renpy/display/layout.py", line 1538, in ConditionSwitch
+    code = renpy.python.py_compile(cond, 'eval')
+  File "renpy/python.py", line 835, in py_compile
+    raise e
+SyntaxError: invalid syntax (<none>, line 1)
 
 Windows-10-10.0.19041
 Ren'Py 7.4.8.1895
 Solstice 1.0
-Fri Dec 17 17:10:17 2021
+Sat Dec 18 22:47:56 2021

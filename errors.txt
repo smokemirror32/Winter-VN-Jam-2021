@@ -2,8 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/day+2.rpy", line 195: is not terminated with a newline. (Check strings and parenthesis.)
-        call message(m, "Okay."
+File "game/phone.rpy", line 36: invalid syntax
+    image phonebg = DynamicDisplayable(who_chat)
+                 ^
+    
 
 Ren'Py Version: Ren'Py 7.4.8.1895
-Fri Dec 17 16:52:43 2021
+Sat Dec 18 22:33:18 2021
