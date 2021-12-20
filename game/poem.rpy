@@ -13,4 +13,6 @@
 
     m happy "Oh."
 
+    scene bg black with Dissolve(2.0)
+
     jump office

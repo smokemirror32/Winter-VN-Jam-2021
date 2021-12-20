@@ -2,10 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/phone.rpy", line 36: invalid syntax
-    image phonebg = DynamicDisplayable(who_chat)
-                 ^
-    
+File "game/day-1.rpy", line 128: expected end of line
+    play music uptempo 1.0
+                       ^
 
 Ren'Py Version: Ren'Py 7.4.8.1895
-Sat Dec 18 22:33:18 2021
+Sun Dec 19 21:54:30 2021

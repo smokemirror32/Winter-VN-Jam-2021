@@ -1,38 +1,66 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/phone.rpy", line 29, in script
-    image phonebg  = ConditionSwitch(
-  File "game/phone.rpy", line 29, in script
-    image phonebg  = ConditionSwitch(
-  File "game/phone.rpy", line 34, in <module>
-    "who_chat = 'Group'", "phone/phone_gc.png",
-SyntaxError: invalid syntax (<none>, line 1)
+While loading <'Image' u'images/bg/partyporchscaled.jpg'>:
+  File "game/day-2.rpy", line 391, in script
+    n "He stumbles his way out the back door, hanging his coat on the rack nearby."
+IOError: Couldn't find file 'images/bg/partyporchscaled.jpg'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/bootstrap.py", line 326, in bootstrap
-    renpy.main.main()
-  File "renpy/main.py", line 515, in main
-    renpy.game.context().run(node)
-  File "game/phone.rpy", line 29, in script
-    image phonebg  = ConditionSwitch(
-  File "game/phone.rpy", line 29, in script
-    image phonebg  = ConditionSwitch(
-  File "renpy/ast.py", line 1022, in execute
-    img = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "renpy/python.py", line 2259, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/phone.rpy", line 34, in <module>
-    "who_chat = 'Group'", "phone/phone_gc.png",
-  File "renpy/display/layout.py", line 1538, in ConditionSwitch
-    code = renpy.python.py_compile(cond, 'eval')
-  File "renpy/python.py", line 835, in py_compile
+  File "game/day-2.rpy", line 391, in script
+    n "He stumbles his way out the back door, hanging his coat on the rack nearby."
+  File "renpy/ast.py", line 716, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "renpy/exports.py", line 1417, in say
+    who(what, *args, **kwargs)
+  File "renpy/character.py", line 1223, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "renpy/character.py", line 875, in do_display
+    **display_args)
+  File "renpy/character.py", line 621, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 3276, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "renpy/display/core.py", line 3793, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "renpy/display/core.py", line 2521, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 492, in renpy.display.render.render_screen
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/layout.py", line 814, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/layout.py", line 814, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/layout.py", line 814, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/transform.py", line 715, in render
+    return transform_render(self, width, height, st, at)
+  File "accelerator.pyx", line 140, in renpy.display.accelerator.transform_render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/image.py", line 501, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "renpy/display/image.py", line 307, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/im.py", line 607, in render
+    return cache.get(self, render=True)
+  File "renpy/display/im.py", line 271, in get
+    surf = image.load()
+  File "renpy/display/im.py", line 688, in load
     raise e
-SyntaxError: invalid syntax (<none>, line 1)
+IOError: Couldn't find file 'images/bg/partyporchscaled.jpg'.
 
 Windows-10-10.0.19041
 Ren'Py 7.4.8.1895
 Solstice 1.0
-Sat Dec 18 22:47:56 2021
+Sun Dec 19 17:58:35 2021

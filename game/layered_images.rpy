@@ -35,6 +35,7 @@ layeredimage masami:
             "Masami/Masami_Glasses.png"
 
 ## Nasir's layered image
+define nasir_blush = False
 layeredimage nasir:
 
     always:
@@ -61,6 +62,9 @@ layeredimage nasir:
             "Nasir/Nasir_Sad.png"
         attribute surprised:
             "Nasir/Nasir_Surprised.png"
+
+    if nasir_blush:
+        "Nasir/Nasir_Blush.png"
 
 ## Rohan's layered image
 layeredimage rohan:
@@ -107,6 +111,8 @@ layeredimage sabie:
             "Sabie/Sabie_Annoyed.png"
         attribute happy:
             "Sabie/Sabie_Happy.png"
+        attribute innocent:
+            "Sabie/Sabie_Innocent.png"
         attribute mischievous:
             "Sabie/Sabie_Mischievous.png"
         attribute neutral default:

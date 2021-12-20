@@ -2,13 +2,14 @@
 # Setting the scene - this is in black
 label office:
 
-    scene bg black
+    scene bg black with Dissolve(2.0)
+    play music reflective fadein 2.0 fadeout 1.0
 
     m "…"
     m "(Ugh.)"
     m "(The hell am I even waiting for?)"
     m "(The damage is already done.)"
-    # SEFF: DOOR RAP
+    n "{i}* knocking sounds *{/i}"
     p "Who's there?"
     m "…It's me."
     p "Oh! Come on in."
@@ -19,7 +20,7 @@ label office:
 # Inside the office
 label office_inside:
 
-    scene # Change to office!
+    scene bg office with Dissolve(1.0)
 
     # Initial introduction and setting description
     n "The principal gestures to a stiff wooden chair on the opposite side of the desk."
@@ -131,7 +132,11 @@ label office_outburst:
     p "I know that the past few days have been difficult for you."
     p "Losing a loved one isn't something to be taken lightly. It is necessary to take the time and space you need to grieve."
     p "Especially for someone like your sister, who was tragically gone so soon - "
-    m "Heh. You don’t actually expect me to believe that, do you? That {i}jie{/i} actually amounted to anything in your eyes?"
+
+    play music chaos
+
+    m "Hmph."
+    m "You don’t actually expect me to believe that, do you? That {i}jie{/i} actually amounted to anything in your eyes?"
     p "I did not say - "
     m "That's what you implied."
     n "Before he knows it, Masami has flown to his feet, hand planted on the desk in front of him."
@@ -154,8 +159,14 @@ label office_outburst:
     m "That they've had enough of the bullshit?"
     m "That they want to find out how to move on their own?"
     m "That they want - "
+
+    stop music
+
     m "I - "
-    m "…"
+    m "..."
+
+    play music emotional fadein 2.0
+
     n "Suddenly, just as it begins to crescendo, Masami's voice breaks and the dark fire in his eyes flickers out. Hollow."
     n "His gaze drops back to the desk again, but he remains standing."
     m "(Shit.)"
@@ -182,6 +193,9 @@ label office_outburst:
 
 # Masami heads to his car
 label car:
+
+    scene bg black with Dissolve(1.5)
+    scene carday with Dissolve(1.5)
 
     n "Masami heads out of the office and back to his car."
     n "Once he's inside, he leans against the headrest and sighs."
@@ -255,5 +269,8 @@ label masami_home3:
     n "He musters what remained of his willpower and takes his keys out from the ignition."
     n "Cradling the magpie delicately in his hands, he cracks open the car and steps outside."
     m "(If I keep waiting until I'm ready, I'll never leave.)"
+
+    stop music fadeout 2.0
+    scene bg black with Dissolve(2.0)
 
     jump class_3

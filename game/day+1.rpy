@@ -2,17 +2,25 @@
 # Masami is waiting in the kitchen for his parents to come home
 label masami_kitchen1:
 
-    scene bg kitchen
+    scene bg kitchen with Dissolve(1.0)
+    play music emotional fadein 1.0
 
     # Masami's parents come in
-    m "Hey. You're finally back."
+    m "Hey. You're finally back from the damn hospital."
+    m "I was beginning to wonder what was taking you so long."
     mm "…"
     m "You don't need to tell me. {i}Jie{/i} is gone, isn't she?"
     n "Masami's mother dabs her eyes with the tissue she's holding, then stares wordlessly at it."
     n "Masami's father shifts beside her. Neither of them attempt to close the door, nor do they move away from it."
     md "We made the choice to let her go."
-    m "…"
+
+    stop music fadeout 2.0
+
+    m "..."
     m "I see."
+
+    play music chaos fadein 1.0
+
     m "Can't say I'm surprised about that."
     m "I already gave the leftover {i}tangyuan{/i} to Sabie. She’s still around so she might as well take it, anyways."
     mm "…"
@@ -32,7 +40,7 @@ label masami_kitchen1:
     md "Masami! You apologize to your mother - "
     m "I said, that's bullshit!"
     m "And I am not apologizing!"
-    m "I'm fucking sick of apologies."
+    m "I'm fucking sick of apologies that don't fix any fucking problems."
     m "{i}Jie{/i} was basically dead to everyone the moment she left the house three years ago."
     m "No one said a word about her. Not a single fucking word."
     m "Not even yesterday before we got the fucking phone call at dinner when we were supposed to be talking about the importance of \"family togetherness\" and shit."
@@ -41,8 +49,14 @@ label masami_kitchen1:
     m "Now, she's actually dead."
     m "And everyone still wants to keep dancing around the whole thing like it didn't happen."
     m "Is it a crime that I want to actually talk about how fucked up it is that we are erasing a whole member of our family’s existence because she wouldn’t be the fucking doll you wanted her to?"
+
+    stop music fadeout 3.0
+
     mm "…"
     md "…"
+
+    play music reflective fadein 2.0
+
     n "Masami sighs."
     m "I - I don't know what else I expected."
     mm "…"
@@ -57,7 +71,8 @@ label masami_kitchen1:
 
 label masami_room1:
 
-    scene # TODO: Fix this!
+    scene bg black with Dissolve(1.0)
+    scene bg bedroom with Dissolve(1.0)
 
     n "Once inside, he leans against the wooden frame behind him and shuts his eyes."
     n "He can make out his parents' low voices in the kitchen, but he doesn't try to listen in further."
@@ -65,7 +80,7 @@ label masami_room1:
     m "(But I'm just so tired of everything. So fucking tired.)"
     m "(Guess you're right, Mom. I really have changed.)"
     n "His gaze drifts across the room to the keychain on his desk."
-    m "(Why are you still here when you are gone?)"
+    m "(How is it that you still want to cling to me so long after you left?)"
     m "(Couldn't you have picked someone else to bother, {i}jie{/i}?)"
     m "(Someone a little less perfect? Someone who didn’t belong? Someone who wasn’t too comfortable where they were at and was willing to vanish away with you?)"
     m "(Maybe you’d have come out of this alive, then.)"
@@ -76,7 +91,8 @@ label masami_room1:
     m "(I guess we are on the same on the inside, after all.)"
     m "(But on the outside…)"
     m "(There was a reason you took the fall.)"
-    m "(It was so easy for others to point a finger at you. Your grades were good, but not \"good enough\". You spoke, but not \"enough\" to be whatever the hell normal was.)"
+    m "(It was so easy for others to point a finger at you, because you never seemed to be \"enough.\")"
+    m "(Your grades were good, but not \"good enough\". You spoke, but not \"enough\" to be whatever the hell normal was.)"
     m "(The only thing you did \"enough\" of was smile. But even then, it was to pretend nothing was wrong.)"
     m "(Back then…I did nothing for you. Because it was easier. And I benefited from it.)"
     m "(I was succeeding, so why did I need to change?)"
@@ -84,7 +100,14 @@ label masami_room1:
     m "(You knew this, too. Didn't you?)"
     m "(That's why you came back to us with the answer you did.)"
     m "(And my answer in return?)"
-    m "(I…)"
+    m "(I...)"
+
+    stop music fadeout 2.0
+
+    m "..."
+
+    play music emotional fadein 1.0
+
     n "Masami's eyes flutter open and he draws in a deep breath."
     m "(Maybe I do have something in mind.)"
     n "He strides over to the window and pushes it open, letting the night air flutter in as he stares into the backyard."
@@ -100,7 +123,9 @@ label masami_room1:
 # Masami goes to buy some spray paint at the store
 label store:
 
-    # SEFF - Probably need some for starting up the car engine, driving, parking, cash register, etc.
+    scene bg black with Dissolve(1.0)
+    # TODO: Adjust timing here!
+
     m "I'd like to check these out, please."
     ca "That's a lot of spray cans and tape, kid. You trying to make a mural or something?"
     m "Something like that, I guess."
@@ -135,5 +160,8 @@ label wall:
     # Probably have some sort of "glitching" visual effect after this to imply it might be a dream.
     # This effect will pop up throughout the next section as well with "Glitch ON/OFF" comments
     # TODO - Add Xinyi laughter at end as well!
+
+    stop music fadeout 2.0
+    scene bg black with Dissolve(2.0)
 
     jump class_1

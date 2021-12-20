@@ -1,6 +1,9 @@
 ## DAY 2 - AFTER
 label masami_room2a:
 
+    play music reflective fadein 2.0
+    scene bg black with Dissolve(2.0)
+
     mm "Masami!"
     mm "{i}Cepetan{/i}! Breakfast is getting cold."
     n "Masami groans. He curls up into a fetal position and shoves the pillow over his head."
@@ -30,10 +33,17 @@ label masami_room2a:
 
         "Go back to sleep":
             m "(Guess I'll just go back to sleep then.)"
+
+            stop music fadeout 2.0
+            scene bg black with Dissolve(1.0)
+
             jump masami_room2b
 
 # A few hours later
 label masami_room2b:
+
+    play music emotional fadein 1.0
+    scene bg bedroom with Dissolve(1.0)
 
     n "Masami is rudely awakened by the sunlight glaring down at him."
     m "(Ugh. My eyes. Where's…pillow?)"
@@ -342,7 +352,7 @@ label phone2a_gc:
     call message(s, "it was beautiful <3")
     call message(r, "Uh...", True)
     call message(s, "what", True)
-    call message(s, "ik art when I see it")
+    call message(s, "ik art when i see it")
     call message(r, "Im not questioning that", True)
     call message(r, "You just sound suspiciously like the one who did it")
     call message(s, "lmaoo i wish", True)
@@ -399,14 +409,15 @@ label masami_room2c:
     m "(No matter what I say, she still wouldn't really understand. She never has.)"
     m "…"
     n "Masami sighs."
-    m "(Well. Might as well head over to the kitchen since I need food anyways.)"
+    m "(Well. Might as well head on over since I need food anyways.)"
 
     jump masami_kitchen2
 
 # Masami heads to the kitchen
 label masami_kitchen2:
 
-    scene bg kitchen
+    scene bg black with Dissolve(1.0)
+    scene bg kitchen with Dissolve(1.0)
 
     n "Masami can smell the fragrant aroma of sesame oil long before he reaches the kitchen."
     n "He walks in to find his mother with her apron on and back turned, having just finished cooking."
@@ -457,7 +468,8 @@ label masami_kitchen2_ignore:
 # Masami returns to his room
 label masami_room2d:
 
-    scene # TODO: Fix this!
+    scene bg black with Dissolve(1.0)
+    scene bg bedroom with Dissolve(1.0)
 
     n "Masami heads back to his room, where he eats in silence."
     m "(This is really good. I actually feel better now.)"
@@ -485,8 +497,7 @@ label masami_room2_explore:
         "Play some video games":
             m "(Hm, looks like Rohan is online.)"
             m "…"
-            m "(Not really in the mood for multiplayer right now.)"
-            m "(Might as well continue where I left off with Herlock Sholmes.)"
+            m "(Not really in the mood for multiplayer right now, so I might as well continue where I left off with Herlock Sholmes.)"
             jump masami_news
 
         "Read a book":
@@ -497,8 +508,17 @@ label masami_room2_explore:
 # Masami indulges himself for a couple hours, before it's time for dinner
 label masami_news:
 
+    scene bg black with Dissolve(1.0)
+    stop music fadeout 2.0
+
     n "Masami sets his phone to silent and puts on his headset."
+
+    scene bg bedroom with Dissolve(1.0)
+
     n "A few hours later, he is faintly aware of the ringing of the telephone and the soft clack of his mom's slippers as she goes to pick it up."
+
+    play music reflective fadein 2.0
+
     mm "Hello?"
     mm "Yes."
     mm "Yes..."
@@ -510,7 +530,7 @@ label masami_news:
     m "(The school called them about the vandalism, didn't they?)"
     n "A lump forms in Masami's throat. He swallows hard and stares at his hands."
     n "They're shaking."
-    m "(Is this what {i}jie{/i} felt like whenever she didn’t quite manage to do what people wanted out of her?)"
+    m "(Is this what {i}jie{/i} felt like the first time she rebelled?)"
     m "(How did she learn to stop caring?)"
     n "He squeezes his eyes tight, only vaguely noticing the way his fists clench and his nails dig into his palms."
     m "(I…)"
@@ -549,5 +569,8 @@ label masami_dayend:
     m "(You think she's proud of me, huh?)"
     m "..."
     m "(Is that what I even want anymore?)"
+
+    scene bg black with Dissolve(2.0)
+    stop music fadeout 2.0
 
     jump masami_room_2

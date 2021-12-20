@@ -1,6 +1,9 @@
 ﻿## DAY 1 - BEFORE
 label class_1:
 
+    scene bg hallway with Dissolve(1.0)
+    play music lighthearted fadein 1.0
+
     # SEFF: SCHOOL BELL RING
     m "Thanks, Mr. Friedman! Happy holidays to you, too!"
     n "Masami waves goodbye to his physics teacher before he steps out of the classroom, joining the sea of students heading to lunch."
@@ -12,6 +15,9 @@ label class_1:
 
 # Glitch ON
 label phone_1a:
+
+    stop music fadeout 1.0
+    play music chaos
 
     call phone_open(True)
     call message(s, "Hey dumbass. I know who you really are. It'd be a shame if I told everyone, wouldn't it? ;)", True)
@@ -31,6 +37,8 @@ label class_1_panik:
 # The previous message disappears from the screen revealing the actual message:
 label phone_1b:
 
+    stop music fadeout 1.0
+
     call phone_open(True)
 
     call message(s, "dude", True)
@@ -44,6 +52,8 @@ label phone_1b:
 # Cuts back to Masami
 label class_1_kalm:
 
+    play music lighthearted fadein 1.0
+
     n "Masami exhales slowly and slides the phone back into his pocket."
     m "(It's okay. I'm just seeing things.)"
     n "He rubs his temples."
@@ -56,7 +66,10 @@ label class_1_kalm:
 # Back to lunch
 label lunch_1a:
 
-    scene # TODO: Fix background!
+    stop music fadeout 1.0
+    scene bg black with Dissolve(1.0)
+    scene bg courtyard with Dissolve(1.0)
+    play music uptempo fadein 1.0
 
     n "As per usual, Masami hears the chaos long before he sees it."
     m "Well. Here we go again. Might as well try to end this one before it starts."
@@ -74,15 +87,20 @@ label lunch_1a:
     r annoyed "But Smash videos are different!"
     s "No, they are not."
     r sad "Why?"
-    s worried "Ugh, spare me that, will you? The number of times I suicided with Kirby was - "
+    s worried "Ugh, spare me, will you? The number of times I suicided with Kirby was - "
 
     show sabie surprised
 
     n "Suddenly she freezes when she catches sight of Masami."
+
+    stop music fadeout 1.0
+
     s mischievous "Oh. Hey. Look who it is."
 
     # Depending on if you supported Sabie on the third day
     # GLITCH ON
+
+    play music chaos fadein 1.0
 
     hide rohan with Dissolve(1.0) # TODO: Fix animation such that Sabie dominates or something else disturbing happens!
 
@@ -105,15 +123,20 @@ label lunch_1a:
     m "W-What? When did I ever think that?"
 
     # Glitch OFF
+    stop music fadeout 1.0
     show rohan sad at right
+    play music uptempo fadein 2.0
 
     s worried "Uh…I guess you could start thinking about helping me right about now. Kinda in a tough spot, as you can see."
     m "Ah."
     n "Masami swallows."
     m "Rohan, maybe this time if you - "
     r "Does it matter what I do?"
+    stop music fadeout 1.0
 
     # Glitch ON
+
+    play music chaos fadein 1.0
 
     hide sabie with Dissolve(1.0) # TODO: Similar fix as before!
 
@@ -132,8 +155,10 @@ label lunch_1a:
     m "N-No! It's not like that. I care about you guys, I promise."
     # Glitch OFF
 
+    stop music fadeout 1.0
     show sabie worried at left
     show rohan neutral at right
+    play music uptempo fadein 2.0
 
     n "Sabie and Rohan exchange glances. The phone hangs between them in their limp grasps, forgotten. "
     r "Uh, we already knew that part, but thanks."
@@ -155,9 +180,15 @@ label lunch_1a:
     t "Same time as always."
     m "Oh."
     m "Sorry, I am really out of it today."
+
+    stop music fadeout 1.0
+
     t "Hm."
 
     # Glitch ON
+
+    play music chaos fadein 1.0
+
     t happy "There is no use trying to destroy who you once were."
     if support == "Tyree":
 
@@ -228,14 +259,14 @@ label lunch_1b:
     # Depends if you visited Alyssa first or not
     if alyssa_visit_first:
 
-        s happy "You ditch the girl you've been pining over for years as if it were nothing."
-        s "I'll give you credit for even having the balls to go straight to her in the first place."
+        s innocent "You ditch the girl you've been pining over for years as if it were nothing."
+        s happy "I'll give you credit for even having the balls to go straight to her in the first place."
         s "But still."
 
     else:
 
-        s happy "You waste so much time trying to decide whether or not you actually want to get the idiot you've been pining over for years."
-        s "Then after you finally work up the fucking nerve, you just ditch her."
+        s innocent "You waste so much time trying to decide whether or not you actually want to get the idiot you've been pining over for years."
+        s happy "Then after you finally work up the fucking nerve, you just ditch her."
 
     s mischievous "Incredibly rude."
     s "Waste of my efforts."
@@ -327,7 +358,8 @@ label lunch_1c:
 # Masami runs into Nasir
 label hallway_1:
 
-    scene # Change this to hallway
+    scene bg black with Dissolve(0.5)
+    scene bg hallway with Dissolve(0.5)
 
     n "He pushes open the door and tries to lose himself in the crowd."
     n "Behind him, he can hear Sabie's footsteps hot on his heels."
@@ -357,7 +389,8 @@ label hallway_1:
     a "Go on, take your boyfriend and be happy. That's what you want, right?"
     m "The hell? I never - "
     a "Spare me. I've had enough of you, cheating scum."
-    # TODO: Add transition text and animation of Alyssa yeeting
+    m "No, Alyssa, please - "
+    m "I didn't mean - "
     na sad "It's alright."
 
     show nasir surprised at center with move
@@ -415,7 +448,10 @@ label hallway_1:
 # Glitch OFF
 label masami_kitchen_1:
 
-    scene bg kitchen # TODO: Fix this!
+    stop music fadeout 1.5
+    scene bg black with Dissolve(1.5)
+    scene bg kitchen with Dissolve(1.5)
+    play music emotional fadein 1.0
 
     mm "Hello Masami! Welcome home!"
     m "…"
@@ -433,5 +469,8 @@ label masami_kitchen_1:
     m "Yeah. I think so."
     m "That would be nice. I couldn't wish for more than that."
     m "(I just such a wish was worth having to begin with.)"
+
+    stop music fadeout 2.0
+    scene bg black with Dissolve(2.0)
 
     jump tangyuan_cook

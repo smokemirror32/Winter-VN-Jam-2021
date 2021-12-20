@@ -2,6 +2,9 @@
 
 label class_3:
 
+    play music lighthearted fadein 1.0
+    scene bg hallway with Dissolve(2.0)
+
     # SEFF: SCHOOL BELL RING
     m "Thanks, Mr. Friedman! Happy holidays to you, too!"
     n "Masami steps out of the classroom, joining the sea of students heading to lunch."
@@ -95,7 +98,9 @@ label hallway_3:
 # Scene change to the lunch spot
 label lunch_chaos:
 
-    scene # TODO: Replace with courtyard!
+    scene bg black with Dissolve(1.0)
+    scene courtyard with Dissolve(1.0) # TODO: Replace with courtyard!
+    play music uptempo fadein 1.0 fadeout 1.0
 
     n "As per usual, Masami hears the chaos long before he sees it."
     r "Hey, let go of my phone!"
@@ -138,7 +143,7 @@ label lunch_chaos:
     n "Sabie swats at his hand. Rohan yelps."
     r annoyed "Hey, what was that for?"
     s happy "That. Would be cheating."
-    s neutral "Besties only help besties."
+    s innocent "Besties only help besties."
     s mischievous "Right, {i}ge{/i}?"
     n "Sabie winks at Masami."
     r sad "Hey! I thought we were besties."
@@ -153,7 +158,7 @@ label lunch_chaos:
     s mischievous "Besides…weren't you the one who said you wanted everyone to get more comfy with {i}that{/i} side of yourself?"
     r "I - "
     r sad "…"
-    s happy "Don’t be shy. I know you, theater butterfly."
+    s innocent "Don’t be shy. I know you, theater butterfly."
     r embarrassed "I-I never said - "
     s mischievous "Sucks to suck ‘cuz you know I'm right."
     r "I - "
@@ -423,8 +428,8 @@ label lunch_stable:
     t "I answered your question."
     m "He's not wrong."
     n "Sabie rolls her eyes dramatically."
-    s happy "Oh, my bad. It seems that I did. Let me specify."
-    s "Are your classes less sucky than usual?"
+    s innocent "Oh, my bad. It seems that I did. Let me specify."
+    s happy "Are your classes less sucky than usual?"
     s "Are you saying your prayers so that your sad grades will get you into the Ivy League of your dreams?"
     s "Are your extracurricular overcommitments getting you down?"
     s "Are you counting down the days to Christmas carousing and {i}Dongzhi{/i} binge-eating like they're a lifeline from above?"
@@ -440,10 +445,10 @@ label lunch_stable:
     r neutral "Definitely thinking about it."
     s happy "Ayy, can't wait to see how it turns out!"
     s worried "Anyways, let's see, what else do I need to ask you emotionally constipated children to help you open up properly?"
-    s happy "Oh yeah! Are you - "
+    s innocent "Oh yeah! Are you - "
     r sad "Um, I think we get the point."
     s mischievous "Great!"
-    n "She puts elbows on the table, hands resting in her open palms as she leans forward."
+    n "She puts her elbows on the table, hands resting in her open palms as she leans forward."
     s "So. Got an answer?"
     r embarrassed "Uh - "
 
@@ -457,9 +462,9 @@ label lunch_stable:
 # Tyree's turn
 label lunch_stable_tyree:
 
-    t "My classes and grades are fine. My extracurriculars are going well. I am looking forward to going on break."
-    s annoyed "…"
-    m "…"
+    t happy "My classes and grades are fine. My extracurriculars are going well. I am looking forward to going on break."
+    s annoyed "..."
+    m "..."
     r happy "Pft."
     s worried "That was kind of vague."
     t worried "I'm not sure what else you want me to say."
@@ -562,7 +567,9 @@ label lunch_stable_masami:
 # Sabie approaches Masami at the end of lunch in the hallway on the way to class
 label lunch_end:
 
-    scene # TODO: Replace with BG!
+    scene bg black with Dissolve(1.0)
+    scene hallway with Dissolve(1.0)
+    play music lighthearted fadein 1.0
 
     n "Masami heads quickly into the building and down the hallway to chemistry."
     m "(Thank God for the indoor heating. I don't know why we sit outside.)"
@@ -574,7 +581,6 @@ label lunch_end:
     m "…"
     m "(At least the only person who'd bother me for it isn't - )"
     s "{i}Ge{/i}!"
-    n "Masami groans inwardly."
     m "(Well. Just when I thought she'd let up on me.)"
     n "Just to spite her, Masami picks up his pace."
     s "Oi! Halt, dumbass!"
@@ -591,7 +597,7 @@ label lunch_end:
     n "Sabie shrugs."
     s "Who knows."
     n "She goes up on her tiptoes and sticks out her right index finger to boop him on the forehead."
-    s happy "There's still a lot of things going on in there that you aren't telling me, {i}ge{/i}."
+    s innocent "There's still a lot of things going on in there that you aren't telling me, {i}ge{/i}."
     s neutral "Not even after these sixteen {i}long{/i} years of knowing each other."
     m "...And despite that, you're not going to stop calling me {i}ge{/i}, are you?"
     s mischievous "Nah. You being hung up over the fact that it’s \"culturally incorrect\" isn't going to stop me."
@@ -710,7 +716,7 @@ label lunch_end_invite:
     s neutral "Well, Rohan was going anyways, but you get the point."
     n "Masami sighs."
     m "I've already told you that I don't go to parties. Especially not Christmas parties."
-    s happy "I know. But you need a distraction."
+    s innocent "I know. But you need a distraction."
     n "She waggles a finger mischievously in his face."
     s mischievous "And if someone doesn't give you a good one, you're never going to learn about how nice it is to just live in the moment instead of brooding all the time."
     m "I do not brood."
@@ -728,11 +734,14 @@ label lunch_end_invite:
     s "You can relax, chat up some girls - "
     m "I can't chat up girls - "
     s mischievous "Please, I've seen you in your glory days."
-    s happy "You had the stagehands swooning from second hand exposure. And that wasn't even the kiss scene!"
+    s innocent "You had the stagehands swooning from second hand exposure. And that wasn't even the kiss scene!"
     m "That was in middle school. I run audio now."
     s neutral "Psh, whatever. What I {i}mean{/i} is that you have experience."
     s "Besides, what's the difference between flirting in improv and flirting in reality?"
     m "There is a difference! None of them were - "
+
+    stop music
+
     s happy "ALYSSA!"
 
     jump lunch_end_alyssa
@@ -741,6 +750,9 @@ label lunch_end_invite:
 label lunch_end_alyssa:
 
     m "Wha - "
+
+    play music uptempo fadein 1.0
+
     n "Masami whirls around to see Sabie waving wildly to an approaching figure at the other end of the hall."
     n "A very familiar figure."
     m "(Shit.)"
@@ -833,7 +845,7 @@ label lunch_end_ignore:
     m "No."
     s mischievous "Aha, I see that hesitation! I know you. I know you want to hear her voice…"
     m "Will you shut up?"
-    s happy "Who do you think I am?"
+    s innocent "Who do you think I am?"
     m "Please?"
     s neutral "Not until you put your eyes in the right place."
     m "Ugh, fine."
@@ -965,7 +977,7 @@ label lunch_end_nasir:
     show sabie neutral
 
     n "Sabie gives him a pat of mock consolation on the shoulder."
-    s happy "Aw, it's okay to defend your butthurt little male ego sometime."
+    s innocent "Aw, it's okay to defend your butthurt little male ego sometime."
     n "Masami sighs."
     m "For the last time. I. Am. Not. Jealous. Of. Him."
     m "Okay?"
@@ -1001,7 +1013,7 @@ label lunch_end_party:
     s mischievous "Okay. I've got it."
     m "What?"
     s happy "I'll just introduce you to some of my friends who also sit in the corner."
-    s "And then you guys can sit in awkward silence together!"
+    s innocent "And then you guys can sit in awkward silence together!"
     m "..."
     s neutral "Or play Scrabble or whatever else you nerds do."
     m "Aren't you also a nerd too?"
@@ -1039,6 +1051,12 @@ label lunch_end_party:
 # Scene cut to Masami's car
 label masami_home_3:
 
+    stop music fadeout 2.0
+    scene bg black with Dissolve(1.0)
+    scene bg carday with Dissolve(1.0)
+    play music emotional fadein 1.0 fadeout 1.0
+
+
     m "(I'm home.)"
     m "…"
     m "(It's been three whole hours and I still haven't figured out what I'm doing yet.)"
@@ -1058,7 +1076,8 @@ label masami_home_3:
 # Scene cut to the kitchen
 label masami_kitchen_3:
 
-    scene bg kitchen
+    scene bg black with Dissolve(1.0)
+    scene bg kitchen with Dissolve(1.0)
 
     n "A pungent aroma fills the air long before Masami reaches the kitchen."
     m "(Looks like we're having curry tonight.)"
@@ -1107,7 +1126,8 @@ label masami_kitchen_3:
 # Scene cut to Masami's room
 label masami_room_3a:
 
-    scene # TODO: Fix me!
+    scene bg black with Dissolve(1.0)
+    scene bg bedroom with Dissolve(1.0)
 
     n "The moment that Masami sets foot in his room, he flops down face first on the bed with a groan."
     m "(Ugh…)"
@@ -1141,7 +1161,7 @@ label phone_3b:
 
     call phone_open(True)
 
-    call message(m, "Hey.")
+    call message(m, "Hey.", True)
     call message(m, "I'm going.")
 
     call phone_close()
@@ -1158,5 +1178,8 @@ label masami_room_3b:
     n "Masami rubs his eyes and turns to stare at the ceiling again."
     m "(What would you have thought of me if you'd known what I'd done, {i}jie{/i}?)"
     m "(I…hope that you're proud.)"
+
+    scene bg black with Dissolve(2.0)
+    stop music fadeout 2.0
 
     jump masami_room2a
