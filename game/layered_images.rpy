@@ -163,3 +163,25 @@ layeredimage xinyi:
             "Xinyi/Xinyi_Neutral.png"
         attribute sad:
             "Xinyi/Xinyi_Sad.png"
+
+## Alyssa's layered image
+layeredimage alyssa:
+
+    always:
+        "Alyssa/Alyssa_Base.png"
+
+    group mood:
+
+        attribute happy:
+            "Alyssa/Alyssa_Happy.png"
+        attribute nervous:
+            "Alyssa/Alyssa_Nervous.png"
+        attribute neutral default:
+            "Alyssa/Alyssa_Neutral.png"
+        attribute sad:
+            "Alyssa/Alyssa_Sad.png"
+
+    group glasses:
+
+        attribute glass default:
+            "Alyssa/Alyssa_Glasses.png"

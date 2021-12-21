@@ -1,28 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/day+2.rpy", line 488, in script
-    call screen bedroom
-ScriptError: could not find label 'masami_room2_read'.
+  File "game/day-3.rpy", line 1095, in script
+    show alyssa at nervous with Dissolve(0.3)
+  File "game/day-3.rpy", line 1095, in <module>
+    show alyssa at nervous with Dissolve(0.3)
+NameError: name 'nervous' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/bootstrap.py", line 326, in bootstrap
-    renpy.main.main()
-  File "renpy/main.py", line 617, in main
-    run(restart)
-  File "renpy/main.py", line 148, in run
-    renpy.execution.run_context(True)
-  File "renpy/execution.py", line 922, in run_context
-    context.run()
-  File "game/day+2.rpy", line 488, in script
-    call screen bedroom
-  File "renpy/script.py", line 918, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'masami_room2_read'.
+  File "game/day-3.rpy", line 1095, in script
+    show alyssa at nervous with Dissolve(0.3)
+  File "renpy/ast.py", line 1192, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "renpy/ast.py", line 1151, in show_imspec
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "renpy/python.py", line 2266, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "renpy/python.py", line 2259, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/day-3.rpy", line 1095, in <module>
+    show alyssa at nervous with Dissolve(0.3)
+NameError: name 'nervous' is not defined
 
 Windows-10-10.0.19041
 Ren'Py 7.4.8.1895
 Solstice 1.0
-Mon Dec 20 17:46:02 2021
+Tue Dec 21 14:35:10 2021

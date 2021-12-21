@@ -5,7 +5,13 @@ label test_block:
     show masami # REMOVE TEST BLOCK
 
     m "I am a poem"
+
+    show masami at bounce
+
     m party "At a party!"
+
+    show masami at shake
+
     m surprised "What?"
 
     show masami at right with move

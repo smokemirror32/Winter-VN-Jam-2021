@@ -116,7 +116,7 @@ label lunch_chaos:
 
     show rohan annoyed at right
     show sabie mischievous at left
-    with Dissolve(0.1)
+    with Dissolve(0.5)
 
     n "As he gets closer, he can see Rohan and Sabie kneeling on top of the only occupied table in the yard, fighting for possession over what is apparently Rohan's phone."
 
@@ -138,17 +138,29 @@ label lunch_chaos:
     n "At the sound of Masami's voice, Rohan's head whips around."
     r "What?"
     r neutral "Oh! Hi!"
+
+    show rohan at shake, right
+
     n "He gives the phone a tug. Sabie doesn't budge."
     r happy "I, uh. Need a little help here?"
     n "Sabie swats at his hand. Rohan yelps."
-    r annoyed "Hey, what was that for?"
+
+    show rohan annoyed at bounce
+
+    r "Hey, what was that for?"
     s happy "That. Would be cheating."
     s innocent "Besties only help besties."
     s mischievous "Right, {i}ge{/i}?"
     n "Sabie winks at Masami."
     r sad "Hey! I thought we were besties."
-    s annoyed "Well, not after you sent those drunk karaoke clips of me in the chat."
-    r annoyed "But that was because you posted those shots you took of me in the mall!"
+
+    show sabie annoyed at shake, left
+
+    s "Well, not after you sent those drunk karaoke clips of me in the chat."
+
+    show rohan annoyed at shake, right
+
+    r "But that was because you posted those shots you took of me in the mall!"
 
     show sabie neutral
 
@@ -158,35 +170,56 @@ label lunch_chaos:
     s mischievous "Besides…weren't you the one who said you wanted everyone to get more comfy with {i}that{/i} side of yourself?"
     r "I - "
     r sad "…"
-    s innocent "Don’t be shy. I know you, theater butterfly."
+
+    show sabie innocent at bounce
+
+    s "Don’t be shy. I know you, theater butterfly."
     r embarrassed "I-I never said - "
     s mischievous "Sucks to suck ‘cuz you know I'm right."
     r "I - "
     r sad "Ugh. Fine."
-    r annoyed "But that doesn't give you the right to send the rest of the - "
+
+    show rohan annoyed at shake, right
+
+    r "But that doesn't give you the right to send the rest of the - "
     s surprised "Wait. You've got more pictures?"
     r embarrassed "What? No, I didn't mean - "
-    s mischievous "Ooh, now this is something I have to see!"
+
+    show sabie mischievous at center with move
+    show sabie at bounce
+
+    s "Ooh, now this is something I have to see!"
     r "Sabie, no!"
+
+    show sabie at left
+    show rohan at center
+    with move
+    show sabie at shake,left
+
+
     n "Sabie makes another desperate, backwards yank at Rohan's phone."
 
-    # TODO - Make them go off-screen and have screen shake!
     hide sabie
     hide rohan
     with easeoutleft
 
     n "Rohan holds on for dear life as the momentum sends them both flying onto the ground, where they continue to wrestle for control."
+    n "Or at least, Rohan is struggling, while Sabie bats lightly at his limbs, clearly toying with him."
     n "Masami takes a cautious step forward."
     m "Um - "
 
-    show rohan embarrassed at right with Dissolve(0.1)
+    show rohan embarrassed at center, shake with Dissolve(0.1)
 
     r "Masami, do something! Don't let her - ah!"
 
-    show sabie mischievous at left with Dissolve(0.1)
+    show rohan at right with move
+    show sabie mischievous at shake, center with Dissolve(0.1)
 
     n "Rohan yelps again as Sabie's elbow brushes roughly against his cheek."
     s happy "Oh, please. You know you're going to be thanking me later."
+
+    show sabie mischievous at shake
+
     s mischievous "And, {i}ge{/i}? If anything, you should be helping - me!"
 
     hide rohan
@@ -196,22 +229,25 @@ label lunch_chaos:
 
     t "Or you could just watch them."
 
-    show rohan annoyed at right
-    show sabie annoyed at left
+    show rohan annoyed at shake, right
+    show sabie annoyed at center
     hide tyree
 
     r "What?"
+
+    show sabie at shake, center
+
     s "Hey!"
 
     hide rohan
     hide sabie
-    show tyree happy
+    show tyree happy at center, bounce
     with Dissolve(0.1)
 
     t "It's free entertainment."
 
-    show rohan annoyed at right
-    show sabie annoyed at left
+    show rohan annoyed at shake, right
+    show sabie annoyed at shake, center
     hide tyree
 
     n "Sabie sticks her tongue out at Tyree."
@@ -243,9 +279,12 @@ label lunch_chaos_sabie:
     m "I'm actually with Sabie for once."
 
     show rohan sad
-    show sabie happy
 
-    r "Rohan's expression instantly deflates. In the meantime, Sabie does a fist pump."
+    n "Rohan's expression instantly deflates."
+
+    show sabie happy at bounce
+
+    n "In the meantime, Sabie does a fist pump."
     s "Aha, yes! Someone understands where I'm coming from."
     n "Masami gives her a pointed look."
     m "I'm not finished."
@@ -271,14 +310,12 @@ label lunch_chaos_sabie:
     hide sabie
     hide rohan
     show tyree
-    with Dissolve(0.1)
 
     t "Agreed."
 
-    show sabie at left
+    show sabie at center
     show rohan at right
     hide tyree
-    with Dissolve(0.1)
 
     n "After a moment of hesitation, Rohan nods."
     r "Okay. I'll think about it."
@@ -286,7 +323,13 @@ label lunch_chaos_sabie:
     s "Yeah?"
     m "Could you let go of his phone?"
     n "Sabie blinks at him uncomprehendingly for a moment before she realizes her hands are still clamped down tight around it."
-    s surprised "Oh."
+
+    show sabie surprised at shake, center
+
+    s "Oh."
+
+    show sabie at left with move
+
     n "She obediently lets go. The moment she does, Rohan quickly tucks it away, eyeing her with a healthy amount of distrust."
     n "Masami sighs in relief."
     m "(That was easier to take care of than usual.)"
@@ -299,7 +342,13 @@ label lunch_chaos_rohan:
     m "Sabie. Let go of his phone."
     s surprised "But - "
     m "Now. Or I'll make you do it myself."
+
+    show sabie annoyed at shake, center
+
     s annoyed "Ugh. Fine. Spoilsport."
+
+    show sabie at left with move
+
     n "Sabie sticks out her tongue at him, but grudgingly complies."
     n "The moment she lets go, Rohan snatches up his phone and stuffs it hastily into his pocket."
     r happy "Phew. Thanks."
@@ -312,51 +361,75 @@ label lunch_chaos_rohan:
 label lunch_chaos_tyree:
 
     m "I wash my hands of this."
+
+    show rohan at shake, right
+
     r embarrassed "What? You can't just - "
     s mischievous "Ohoho, you heard him. This one's between you and me, string bean."
+
+    show rohan at shake, right
+
     r annoyed "Urgh…"
     r "If that's what it's going to be, I am not going to let you have my phone."
-    s "Bet!"
-    n "With that, the two of them begin to struggle for control again. Or at least, Rohan is struggling, while Sabie bats lightly at his limbs, clearly toying with him."
+
+    show sabie at bounce, center
+
+    s innocent "Bet!"
 
     hide rohan
     hide sabie
     show tyree
-    with Dissolve(0.1)
 
     n "Tyree catches Masami's eye." # TODO: Start here!
     t "Who do you think is going to win?"
     m "Hm, tough one, but I'm going with Sabie."
     m "(After all, there's only so much you can do against someone on the wrestling team. Even if they're only on JV.)"
+
+    show tyree happy at bounce
+
     t "Same."
 
-    show sabie at left
+    show sabie at center
     show rohan sad at right
     hide tyree
-    with Dissolve(0.1)
 
     r "Thanks for the vote of confidence."
     m "Sorry, Rohan, but I'm afraid I have to take into account prior experience."
     s mischievous "As you should. Those noodle arms got nothing on these guns."
-    r annoyed "H-Hey! This time will be different."
+
+
+    show rohan annoyed at shake, right
+
+    r "H-Hey! This time will be different."
     s happy "Sure. That's what you said last time."
 
     hide rohan
     hide sabie
     show tyree
-    with Dissolve(0.1)
 
     t "Change your mind, Masami?"
     m "Nope."
     t "Good."
 
-    show sabie mischievous at left
-    show rohan sad at right
     hide tyree
-    with Dissolve(0.1)
+    show sabie mischievous
+    show rohan annoyed at right
 
-    n "As expected, it isn't even a minute before Sabie wrests control of the device away from him. Rohan lies spread eagle on the ground in defeat."
-    s happy "Ehe. Now, let's see…"
+    s "Hehe. Good choice."
+
+    show rohan at shake, right
+    show sabie at shake, center
+    pause(0.5)
+    show rohan sad
+    show sabie at left with move
+
+    n "As expected, it isn't even a minute before Sabie wrests control of the device away from him."
+    n "Rohan lies spread eagle on the ground in defeat."
+
+    show sabie happy at bounce, left
+
+    s "Ehe."
+    s mischievous "Now, let's see…"
     s surprised "Dammit. You changed the passcode again."
 
     show rohan happy
@@ -365,35 +438,45 @@ label lunch_chaos_tyree:
     r happy "Heh."
     s annoyed "Ugh. Maybe it’s the one from last week? Nope. Or the week before that? Nope again…"
     n "Sabie proceeds to check a flurry of combinations. After a couple of minutes, she stops."
-    s neutral "Rohan, bestie, can you please - "
+
+    show sabie innocent at bounce, left
+
+    s "Rohan, bestie, can you please - "
     r neutral "Nope."
     s worried "But - "
-    r happy "Sucks to suck."
+
+    show rohan happy at bounce, right
+
+    r "Sucks to suck."
     m "Well. Why am I not surprised?"
+
+    show sabie annoyed at shake, left
+
     s annoyed "Hey! What did I do to deserve that attitude from you?"
 
     hide rohan
     hide sabie
     show tyree
-    with Dissolve(0.1)
 
     t "Everything."
 
     show sabie annoyed at left
     show rohan at right
     hide tyree
-    with Dissolve(0.1)
 
     s "Rude. I was not asking for your opinion."
     m "I mean, he does have a point. This is a weekly occurrence."
     r happy "Yeah. And now we're at the part where you give me my phone back?"
     n "Sabie purses her lips as her gaze bounces between Masami, Tyree, and Rohan."
-    n "Then, she sighs and hands Rohan's phone back to him." # TODO: Add motion for this!
+
+    show sabie at shake, left
+
     s "Ugh. Fine. Thought I'd get lucky for once, but whatever."
     s "Guess I have no choice when everyone decides to gang up on me like that."
 
     show rohan neutral
 
+    n "She grudgingly hands Rohan's phone back to him."
     n "For his part, Rohan tucks the phone quickly into his pocket, eyeing Sabie with a healthy amount of distrust."
     n "Masami smiles quietly to himself."
     m "(Some things never get old, do they?)"
@@ -404,12 +487,19 @@ label lunch_chaos_tyree:
 label lunch_stable:
 
     # TODO: Fix spacing and make move simultaneous
-    show sabie neutral at center with move
-    show rohan neutral at right with move
-    show tyree at left with moveinleft
+    show sabie neutral at center
+    show rohan neutral at right behind sabie
+    with move
 
-    n "Rohan and Sabie move back to sit at the table like proper civilized human beings. Tyree picks up his things to join them and Masami follows suit."
+    n "Rohan and Sabie move back to sit at the table like proper civilized human beings."
+
+    show tyree at left behind sabie with moveinleft
+
+    n "Tyree picks up his things to join them and Masami follows suit."
     n "Once they've all gathered, Sabie rubs her hands together."
+
+    show sabie happy at bounce
+
     s happy "So. How's everyone doing?"
     r sad "Why this question all of a sudden? Can we like, you know, talk about the usual stuff?"
 
@@ -418,38 +508,56 @@ label lunch_stable:
     n "Sabie shrugs."
     s "We could."
     s mischievous "But I also kind of want to check in since {i}some{/i} people I don't share their feelings unless they're asked to."
-    s happy "So. How about it?"
-    r "Uh…"
+
+    show sabie happy at bounce
+
+    s "So. How about it?"
+    r embarrassed "Uh…"
+
+    show tyree at bounce, left
+
     t "I'm doing fine."
     m "Same."
+
+    show rohan at bounce, right
+
     r neutral "What they said."
-    s annoyed "That's...not quite what I meant."
+
+    show sabie annoyed at shake
+
+    s "That's not what I meant. And you know that."
     n "Tyree shrugs."
     t "I answered your question."
     m "He's not wrong."
     n "Sabie rolls her eyes dramatically."
     s innocent "Oh, my bad. It seems that I did. Let me specify."
-    s happy "Are your classes less sucky than usual?"
+    show sabie at bounce
+    s "Are your classes less sucky than usual?"
+    show sabie at bounce
     s "Are you saying your prayers so that your sad grades will get you into the Ivy League of your dreams?"
+    show sabie at bounce
     s "Are your extracurricular overcommitments getting you down?"
-    s "Are you counting down the days to Christmas carousing and {i}Dongzhi{/i} binge-eating like they're a lifeline from above?"
+    show sabie at bounce
+    s "Are you counting down the days to Christmas carousing?"
+    show sabie at bounce
+    s "Are you holding on to the promise {i}Dongzhi{/i} binge-eating with the fam like they're a lifeline from above?"
+    show sabie at bounce
     s "Are you - "
     n "She stops when she sees Rohan raising his hand."
     s neutral "Yeah?"
     r "Question. What's {i}Dongzhi{/i}?"
     t "It's an East Asian holiday centered around reuniting with family and eating {i}tangyuan{/i}."
-    s "Basically Thanksgiving with a better menu."
-    m "(...And the assumption that you have the extended family to spend it with.)"
-    r happy "Oh. Cool!"
-    s "It is cool! You should look into making some of the traditional food."
-    r neutral "Definitely thinking about it."
-    s happy "Ayy, can't wait to see how it turns out!"
+    m "(...And the assumption that you have the family to spend it with.)"
+    s "Basically Thanksgiving with a better menu. Fun stuff!"
     s worried "Anyways, let's see, what else do I need to ask you emotionally constipated children to help you open up properly?"
-    s innocent "Oh yeah! Are you - "
+    show sabie innocent at bounce
+    s "Oh yeah! Are you - "
     r sad "Um, I think we get the point."
     s mischievous "Great!"
     n "She puts her elbows on the table, hands resting in her open palms as she leans forward."
+    show sabie at bounce
     s "So. Got an answer?"
+    show rohan at shake, right
     r embarrassed "Uh - "
 
     show rohan neutral
@@ -462,9 +570,11 @@ label lunch_stable:
 # Tyree's turn
 label lunch_stable_tyree:
 
+    show tyree at bounce, left
     t happy "My classes and grades are fine. My extracurriculars are going well. I am looking forward to going on break."
     s annoyed "..."
     m "..."
+    show rohan at bounce, right
     r happy "Pft."
     s worried "That was kind of vague."
     t worried "I'm not sure what else you want me to say."
@@ -473,8 +583,7 @@ label lunch_stable_tyree:
     r sad "He means that MIT and Stanford have already talked about wanting to sign him on and that the robotics team is on track to go to Worlds again this year."
     r "And that he's passed his HSK 3 exam for Chinese last month."
 
-    show sabie surprised
-
+    show sabie surprised at shake
     n "Sabie stands up from her seat and plants her hands on the table."
     s "Wait, what the hell? That's a shit ton. Why didn't you say anything?"
     t worried "I thought it wasn't necessary to bring up."
@@ -482,10 +591,16 @@ label lunch_stable_tyree:
     t neutral "Um. Sure."
     s neutral "Now, that's the spirit!"
     n "Sabie then whirls on Rohan."
-    s annoyed "And you, how did you know about this anyways when this kid over here won't open his mouth?"
+
+    show sabie annoyed at shake
+
+    s "And you, how did you know about this anyways when this kid over here won't open his mouth?"
+    show rohan happy at bounce, right
     r happy "Uh, my parents?"
+    show sabie happy at bounce
     s happy "Oh, right. Sorry I asked."
     s "Your parents are crazy. I don't know how they find the stuff they do."
+    show rohan happy at bounce, right
     r "To be honest, me neither."
     r "It's okay though. I'm kinda numb to it at this point."
 
@@ -493,20 +608,24 @@ label lunch_stable_tyree:
 
 label lunch_stable_rohan:
 
+    show sabie happy at bounce
     s "I felt that."
     s mischievous "Anyways, how are you? Wanna tell us about your life?"
-    r sad "Dammit. I was hoping you'd forget."
+    show rohan embarrassed at shake, right
+    r "Dammit. I was hoping you'd forget."
     s "Not a chance. So, what do you have to say for yourself?"
     r neutral "Uh, my grades are probably good enough for me to go to the state university for medical school and my classes are kinda interesting?"
-    r "...All of the ones except for the STEM ones at least. I hate bio."
-    r "Most of my clubs have wound down for the year. We had a full house for our productions all last week, so that was nice."
+    r sad "...All of the ones except for the STEM ones at least. I hate bio."
+    r neutral "Most of my clubs have wound down for the year. We had a full house for our productions all last week, so that was nice."
     r sad "I still haven't done anything for Science Olympiad, though. Or HOSA. Or the Intel Research competition. I need to get on that."
     r neutral "Anyways, I am definitely very tired and looking forward to break."
     n "Rohan gives Sabie a nervous look."
     r "That was it, right? I didn't miss anything, did I?"
-    s neutral "That. Was perfect. Exactly what I was looking for."
+    show sabie neutral at bounce
+    s "That. Was perfect. Exactly what I was looking for."
     n "Sabie points in Tyree's direction."
-    s mischievous "You. Take note when I ask you next time."
+    show sabie mischievous at bounce
+    s "You. Take note when I ask you next time."
     t "Okay."
 
     jump lunch_stable_masami
@@ -515,10 +634,12 @@ label lunch_stable_masami:
 
     s happy "Now, last one."
     s worried "..."
+    show sabie at bounce
     s "Hey, Masami? You still there?"
     m "Huh?"
     n "Masami blinks and looks up. Everyone at the table is now staring at him."
     m "(Shit. How long have I zoned out for?)"
+    show sabie at bounce
     s neutral "It's your turn for a group progress update."
     m "Oh."
     n "Masami stares at his hands, a lump forming in his throat."
@@ -531,7 +652,9 @@ label lunch_stable_masami:
     m "Grades and classes are pretty good, though break is also nice."
     m "I…don't really have anything to complain about."
     m "(At least, in the sense that is acceptable for me to say, that is.)"
+    show rohan at bounce, right
     r "Sounds like things are going as well as always for you then."
+    show tyree at bounce, left
     t "That's good."
     s worried "Yeah, I suppose."
     n "Sabie stares at Masami for a moment longer, as she usually does when she's trying to fish the hesitancy out of him."
@@ -543,14 +666,17 @@ label lunch_stable_masami:
     m "Looks like that's our cue to leave for class."
     r sad "Yeah, unfortunately."
     r neutral "Are we coming here again tomorrow?"
-    s neutral "Yep!"
+    show sabie neutral at bounce
+    s "Yep!"
     s mischievous "Next time, I {i}will{/i} get my hands on those pictures. Just you wait."
     r "Sure, as long as you remember."
 
     show sabie surprised
+    show tyree at bounce, left
 
     t happy "You won't."
     r happy "Oop."
+    show sabie annoyed at shake, center
     s annoyed "Hey!"
     m "He's not wrong."
     m "Anyways, I've really got to run. You know how chemistry is. See you all!"
@@ -588,6 +714,7 @@ label lunch_end:
     m "Hm?"
 
     show sabie annoyed with moveinleft
+    show sabie at shake
 
     n "Masami glances over his shoulder as if he's just noticed Sabie tearing down the sidewalk at full speed. He dramatically slows to a stop to let her catch up to him."
     m "Heh. Did you really think I wasn't going to wait?"
@@ -597,7 +724,8 @@ label lunch_end:
     n "Sabie shrugs."
     s "Who knows."
     n "She goes up on her tiptoes and sticks out her right index finger to boop him on the forehead."
-    s innocent "There's still a lot of things going on in there that you aren't telling me, {i}ge{/i}."
+    show sabie innocent at bounce
+    s "There's still a lot of things going on in there that you aren't telling me, {i}ge{/i}."
     s neutral "Not even after these sixteen {i}long{/i} years of knowing each other."
     m "...And despite that, you're not going to stop calling me {i}ge{/i}, are you?"
     s mischievous "Nah. You being hung up over the fact that it’s \"culturally incorrect\" isn't going to stop me."
@@ -651,8 +779,9 @@ label lunch_end_honest:
 label lunch_end_vague:
 
     m "Was it that obvious?"
-    s neutral "Nah. I don't think anyone else noticed."
-    s "Mm, now that I think about it, maybe Tyree did."
+    show sabie innocent at bounce
+    s "Nah. I don't think anyone else noticed."
+    s neutral "Mm, now that I think about it, maybe Tyree did."
     s "Then again, who knows what he does or doesn't notice because he won't say anything."
     m "Well -"
     s happy "But, that's besides the point!"
@@ -663,6 +792,7 @@ label lunch_end_vague:
     s neutral "Don't get me wrong, your guy friends are great and all."
     s mischievous "But do you really think that you're going to bring up any of your {i}feelings{/i} with any of them?"
     m "That's - "
+    show sabie at bounce
     s "And!"
     s "If the problem is what I think it is, if you're not going to be telling me about it, you're not going to be telling anyone at all."
     m "That's…"
@@ -679,7 +809,10 @@ label lunch_end_vague:
     m "…"
     m "Alright."
     m "Thanks, Sabie."
-    s happy "You got it!"
+
+    show sabie innocent at bounce
+
+    s "You got it!"
     m "(It's nice being reminded that someone has my back, but…)"
     m "(Well, it's probably too selfish of me to wish that there is someone who gets me a little better that I could talk to.)"
 
@@ -711,12 +844,15 @@ label lunch_end_invite:
     show sabie mischievous
 
     n "Then she snaps her fingers."
-    s "Oh, I almost forgot! The head of the student council is hosting a Christmas party at his bougie house tomorrow. You should come!"
-    s "I'm even dragging Tyree and Rohan along."
+    s "Oh, I almost forgot! The head of the student council is hosting a Christmas party at his bougie house tomorrow."
+    show sabie innocent at bounce
+    s "You should come!"
+    s neutral "I'm even dragging Tyree and Rohan along."
     s neutral "Well, Rohan was going anyways, but you get the point."
     n "Masami sighs."
     m "I've already told you that I don't go to parties. Especially not Christmas parties."
-    s innocent "I know. But you need a distraction."
+    show sabie innocent at bounce
+    s "I know. But you need a distraction."
     n "She waggles a finger mischievously in his face."
     s mischievous "And if someone doesn't give you a good one, you're never going to learn about how nice it is to just live in the moment instead of brooding all the time."
     m "I do not brood."
@@ -734,7 +870,8 @@ label lunch_end_invite:
     s "You can relax, chat up some girls - "
     m "I can't chat up girls - "
     s mischievous "Please, I've seen you in your glory days."
-    s innocent "You had the stagehands swooning from second hand exposure. And that wasn't even the kiss scene!"
+    show sabie innocent at bounce
+    s "You had the stagehands swooning from second hand exposure. And that wasn't even the kiss scene!"
     m "That was in middle school. I run audio now."
     s neutral "Psh, whatever. What I {i}mean{/i} is that you have experience."
     s "Besides, what's the difference between flirting in improv and flirting in reality?"
@@ -742,7 +879,8 @@ label lunch_end_invite:
 
     stop music
 
-    s happy "ALYSSA!"
+    show sabie happy at shake, center
+    s "ALYSSA!"
 
     jump lunch_end_alyssa
 
@@ -759,16 +897,17 @@ label lunch_end_alyssa:
     m "(Shit. Shit. Shit.)"
     m "Sabie. What are you - "
     n "Sabie ignores him and starts jumping up and down."
-    s "HEY ALYSSA, BESTIE - " # TODO: Add bounce and other movements to this general section!
+    show sabie at shake, center
+    s "HEY ALYSSA, BESTIE - "
 
-    show sabie at left with move
+    show sabie at shake, center
+    pause(0.1)
+    show sabie surprised at left with move
 
-    s surprised "Mpmf!"
     n "Sabie lets out a muffled cry of protest as Masami puts a hand lightly over her mouth and yanks them behind a corner."
-
     show sabie annoyed
-
     n "As soon as they're safely behind the wall, Sabie bats his hand away."
+    show sabie at shake, left
     s "What the hell was that for? I'm doing you - "
     m "Please. Just."
     n "Masami sighs."
@@ -778,16 +917,18 @@ label lunch_end_alyssa:
     m "Ugh, that's not what I meant, but whatever."
     m "I've already told you that I've stopped trying to \"get to know her better.\""
     s mischievous "Uh, you did not tell me that you've stopped trying. You told me it was complicated."
-    s happy "Which means you should be trying harder! If someone like me can get on her good side, so can you."
+    show sabie happy at bounce, left
+    s "Which means you should be trying harder! If someone like me can get on her good side, so can you."
     m "That's…not what I meant by \"complicated.\""
-    s worried "Wait, did you already talk to her, piss her off, and not tell me anything because you were embarrassed?"
+    show sabie worried at shake, left
+    s "Wait, did you already talk to her, piss her off, and not tell me anything because you were embarrassed?"
     m "What? No! I - "
 
     # Alyssa actually arrives on scene with Nasir in tow
     n "Masami freezes as Alyssa's voice drifts into earshot."
     n "He presses himself further against the wall and motions for Sabie to do the same."
 
-    hide sabie with Dissolve(0.3)
+    hide sabie with moveoutleft
 
     n "For once, Sabie actually follows through, albeit with a questioning look."
     s "Hey. Wouldn't now be a good - "
@@ -832,17 +973,19 @@ label lunch_end_listen:
 label lunch_end_ignore:
 
     n "Masami shuts his eyes and tries to block out what's going on."
-
     show sabie at left with easeinleft
-
     n "Unfortunately, Sabie keeps nudging him."
+    show sabie at bounce, left
     s "Pst. Pay attention."
     m "No."
+    show sabie at shake, left
     s worried "But aren't you the least bit curious?"
     m "No."
+    show sabie at shake, left
     s "Don't you want to talk to Alyssa the slightest bit?"
     m "…"
     m "No."
+    show sabie at bounce, left
     s mischievous "Aha, I see that hesitation! I know you. I know you want to hear her voice…"
     m "Will you shut up?"
     s innocent "Who do you think I am?"
@@ -855,10 +998,8 @@ label lunch_end_ignore:
     show sabie mischievous
 
     n "Sabie rubs her hands together."
-
-    hide sabie with easeoutleft
-
     s "Good choice. Good choice…"
+    hide sabie with easeoutleft
     n "Masami sighs."
     m "(I'm going to regret this.)"
     n "He peeks over his shoulder as inconspicuously as he can, trying to ignore the blood pounding in his ears and Sabie's triumphant cackling."
@@ -867,54 +1008,67 @@ label lunch_end_ignore:
 
 label lunch_end_nasir:
 
-    show nasir at right with Dissolve(0.3) # TODO: Fix as needed!
+    show nasir at innerright
+    show alyssa neutral at right
+    with Dissolve(0.3)
 
-    na neutral "…Huh. Strange. I don't think I heard that."
-    a "Really? That's a first."
+    na "…Huh. Strange. I don't think I heard that."
+    a nervous "Really? That's a first."
     na sad "What do you mean?"
-    a "Well, usually you're the one who catches the things I miss."
+    a happy "Well, usually you're the one who catches the things I miss."
     na happy "Not really."
     a "Yes, you are."
+    show alyssa at shake, right
+    show nasir at shake, innerright
     n "Alyssa gives Nasir a playful bump on the shoulder." # TODO: Add animation for this!
-    a "Come on, Mr. I-Got-Into-MIT-Early-Action. Have more confidence in yourself!"
+    a neutral "Come on, Mr. I-Got-Into-MIT-Early-Action. Have more confidence in yourself!"
 
     hide nasir
+    hide alyssa
     show sabie surprised at left
+    with Dissolve(0.3)
 
     n "Sabie exchanges glances with Masami before she leans over to stage whisper into his ear."
     m "I mean, I'm not surprised, but…"
     s "…how does the whole school not know about this yet when he's basically a celebrity?"
     m "Yeah."
-
     show sabie neutral
-
     n "Sabie shrugs."
-    s "Beats me. Some people are just good at keeping things to themselves."
+    s "Beats me."
+    show sabie at bounce, left
+    s innocent "Some people are just good at keeping things to themselves."
     m "Unlike you."
+    show sabie at shake, left
     s annoyed "Hey!"
 
     hide sabie
-    show nasir happy at right # TODO: Fix as needed!
+    show nasir happy at bounce, innerright
+    show alyssa neutral at right
 
     n "In the meantime, Nasir chuckles, though it seems a little strained."
     na "That was luck. You know how college admissions are."
+    show alyssa happy at bounce, right
     a "What about being principal cellist of the National Youth Orchestra?"
+    show alyssa at bounce, right
     a "Or being on the International Physics Olympiad team?"
+    show alyssa at bounce, right
     a "Or being a nationally ranked Scrabble player?"
 
+
     hide nasir
-    show sabie mischievous at left
+    hide alyssa
+    show sabie mischievous at shake, left
 
     n "At the last one, Masami feels a nudge on his arm."
     s "Nationally ranked Scrabble player, huh?"
-    s "Hey, {i}ge{/i}, maybe you finally have someone that could - "
+    s happy "Hey, {i}ge{/i}, maybe you finally have someone that could - "
     m "No."
     s worried "But - "
     m "No. Words with Friends is not Scrabble."
     s "But you still beat me every time by at least 200 points!"
     m "I hate to say it, but you're just not very good."
 
-    show sabie annoyed
+    show sabie annoyed at shake, left
 
     n "Sabie sticks out her tongue at him."
     s "Meanie."
@@ -933,36 +1087,49 @@ label lunch_end_nasir:
     m "(Shit. He definitely heard everything we said.)"
     n "For a moment, the two of them just stand there looking at each other."
 
-    show nasir happy
+    show nasir happy at bounce, center
 
     n "Then, to his surprise, Nasir's mouth breaks into a warm, encouraging smile."
     m "(???)"
-    a "Uh, Nasir?" # TODO: Show Alyssa's sprite here at the edge of right
+
+    show alyssa nervous at bounce, right with Dissolve(0.3)
+
+    a "Uh, Nasir?"
+    show nasir at shake, center
     na surprised "Huh?"
+    show alyssa at bounce, right
     a "You still there?"
 
-    show nasir neutral at right with move
+    show nasir neutral at innerright with move
 
-    n "Nasir turns sheepishly back to Alyssa, who seemed thankfully oblivious to the fact that Masami and Sabie were standing right behind him."
+    n "Nasir turns sheepishly back to Alyssa, who seems thankfully oblivious to the fact that Masami and Sabie were standing right behind him."
     na "Yeah."
     n "Masami sighs in relief."
     m "(Thank God he's tall enough to block Alyssa's view of us.)"
     na "Sorry, I saw a magpie outside and got a little distracted."
-    a "A magpie? I thought they didn’t live around here."
+    a neutral "A magpie? I thought they didn’t live around here."
     a "Or at least, I’ve never seen one that did."
     n "Nasir shrugs."
-    na happy "They come by every once in a while."
+    show nasir happy at bounce, innerright
+    na "They come by every once in a while."
     na neutral "You’ll find them. If you know where to look."
+    show alyssa happy at bounce, right
     a "Ah. Well, I’ll take your word for it."
-    na sad "...Alright."
-    a "What?"
+    na sad "..."
+    a sad "What?"
     na happy "It’s nothing."
-    a "Okay then…"
+    a neutral "Okay then."
     na neutral "Anyways, what was I saying before?"
 
-    hide nasir with easeoutright
+    hide nasir
+    hide alyssa
+    with Dissolve(0.3)
 
-    n "And then, just like that he's gone, swept up in the flow of students meandering down the hall."
+    jump lunch_end_aftermath
+
+label lunch_end_aftermath:
+
+    n "And then, just like that they're gone, swept up in the flow of students meandering down the hall."
     n "Masami's hand flies forward after him in spite of itself."
     m "Wha - W-Wait!"
     m "(What the hell was that about?)"
@@ -971,13 +1138,13 @@ label lunch_end_nasir:
     show sabie mischievous at center with Dissolve(0.2)
 
     n "Sabie's giggling snaps him back to the present."
+    show sabie at bounce, center
     s "Oo, so somebody does want to play a little Scrabble after all."
     m "I-I did not say that."
-
     show sabie neutral
-
     n "Sabie gives him a pat of mock consolation on the shoulder."
-    s innocent "Aw, it's okay to defend your butthurt little male ego sometime."
+    show sabie innocent at bounce, center
+    s "Aw, it's okay to defend your butthurt little male ego sometime."
     n "Masami sighs."
     m "For the last time. I. Am. Not. Jealous. Of. Him."
     m "Okay?"
@@ -985,7 +1152,8 @@ label lunch_end_nasir:
     show sabie neutral
 
     n "Sabie waves her hand dismissively."
-    s "Yeah, yeah. You and your complicated everything. You really need to unwind that mind of yours."
+    s innocent "Yeah, yeah. Whatever you say."
+    s neutral "You really need to unwind that mind of yours."
 
     jump lunch_end_party
 
@@ -993,9 +1161,11 @@ label lunch_end_party:
 
     # Back to the party
     s mischievous "Which brings me back to the Christmas party."
-    s happy "You should come!"
+    show sabie happy at bounce
+    s "You should come!"
     m "Ugh. This again?"
-    s worried "What do you mean? Can't you appreciate a break when you see it?"
+    show sabie worried at shake, center
+    s "What do you mean? Can't you appreciate a break when you see it?"
     s neutral "You'll have people you know there. Rohan. Tyree. Me."
     m "Well, yeah. But Rohan and Tyree are probably going to be playing Smash."
     m "And you're going to be - uh. Singing karaoke."
@@ -1013,7 +1183,8 @@ label lunch_end_party:
     s mischievous "Okay. I've got it."
     m "What?"
     s happy "I'll just introduce you to some of my friends who also sit in the corner."
-    s innocent "And then you guys can sit in awkward silence together!"
+    show sabie innocent at bounce, center
+    s "And then you guys can sit in awkward silence together!"
     m "..."
     s neutral "Or play Scrabble or whatever else you nerds do."
     m "Aren't you also a nerd too?"
@@ -1026,10 +1197,10 @@ label lunch_end_party:
     m "Fine, I'll think about it, okay?"
     m "Satisfied?"
 
-    show sabie happy
+    show sabie happy at bounce, center
 
     n "Sabie does a fist pump."
-    s "Ayy! That's more like it. Glad you came around."
+    s innocent "Ayy! That's more like it. Glad you came around."
     m "What? That's not what I - "
     n "Before he can finish his sentence, Masami is conveniently cut off by the blare of the warning bell."
     # SEFF: Warning Bell

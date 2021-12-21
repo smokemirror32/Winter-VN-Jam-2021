@@ -2,7 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 1703: indentation mismatch.
+File "game/day-3.rpy", line 1185: end of line expected.
+    show sabie happy with bounce, center
+                                ^
 
 Ren'Py Version: Ren'Py 7.4.8.1895
-Mon Dec 20 18:21:05 2021
+Tue Dec 21 14:50:38 2021
