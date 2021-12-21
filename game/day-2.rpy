@@ -2,8 +2,6 @@
 # Masami and Alyssa meet in front of his house
 label masami_room_2:
 
-    # TODO: Check if rewrite is needed
-
     play music lighthearted fadein 2.0
     scene bg bedroom with Dissolve(2.0)
 
@@ -242,34 +240,36 @@ label party_living_room:
 # Explore the living room
 label party_living_room_explore:
 
-    menu:
+    call screen party
 
-        "Go chat with Alyssa":
-            $ alyssa_visit_first = True
-            jump party_alyssa_contemplate
+# Check Upstairs
+label party_upstairs:
 
-        "Head upstairs" if upstairs_check:
-            $ alyssa_visit_first = False
-            $ upstairs_check = False
-            m "(They're probably playing Smash up there in the game room.)"
-            m "(I could always go watch them.)"
-            m "…"
-            m "(Yeah, still no.)"
-            m "(They're going to force me into the rotation if I go.)"
+    $ alyssa_visit_first = False
+    $ upstairs_check = False
+    m "(They're probably playing Smash up there in the game room.)"
+    m "(I could always go watch them.)"
+    m "…"
+    m "(Yeah, still no.)"
+    m "(They're going to force me into the rotation if I go.)"
 
-            jump party_living_room_explore
+    jump party_living_room_explore
 
-        "Investigate the kitchen" if kitchen_check:
-            $ alyssa_visit_first = False
-            $ kitchen_check = False
-            m "(They're making some gingerbread cookies. I don't think they want me back there for that.)"
-            m "(I'm no Rohan in the kitchen.)"
-            m "(They smell really good, though. Maybe I'll have one later.)"
+# Investigate the Kitchen
+label party_kitchen:
 
-            jump party_living_room_explore
+    $ alyssa_visit_first = False
+    $ kitchen_check = False
+    m "(They're making some gingerbread cookies. I don't think they want me back there for that.)"
+    m "(I'm no Rohan in the kitchen.)"
+    m "(They smell really good, though. Maybe I'll have one later.)"
+
+    jump party_living_room_explore
 
 # Masami decides to chat with Alyssa
 label party_alyssa_contemplate:
+
+    $ alyssa_visit_first = True
 
     n "Masami sneaks another glance at the pocket of the room where Alyssa is."
     m "(I know I was set up for this, but…)"

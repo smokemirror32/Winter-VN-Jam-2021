@@ -1513,7 +1513,9 @@ style slider_slider:
     variant "small"
     xsize 900
 
+################################################################################
 ## Phone Code
+################################################################################
 
 style phone_mc:
     ymargin 6
@@ -1654,3 +1656,71 @@ screen nphone():
                                             text i.message size textsize color coloremitter font "CaslonAntique.ttf"
                             $ firstmessage = 1
                             $ firstmessagemc = 0
+
+################################################################################
+## Point and Click Things
+################################################################################
+
+### Bedroom Point and Click
+
+screen bedroom:
+
+    if room_read:
+        imagebutton:
+            xpos 0.89 ypos 0.37
+            idle "eye_idle"
+            hover "eye_hover" hovered
+            tooltip "Read a book"
+            action Jump("masami_room2_read")
+
+    if room_study:
+        imagebutton:
+            xpos 0.55 ypos 0.75
+            idle "eye_idle"
+            hover "eye_hover" hovered
+            tooltip "Study for upcoming final exams"
+            action Jump("masami_room2_study")
+
+    imagebutton:
+        xpos 0.18 ypos 0.56
+        idle "eye_idle"
+        hover "eye_hover" hovered
+        tooltip "Play some video games"
+        action Jump("masami_room2_games")
+
+### Party Point and Click
+
+screen party:
+
+    if upstairs_check:
+        imagebutton:
+            xpos 0.83 ypos 0.1
+            idle "eye_idle"
+            hover "eye_hover" hovered
+            tooltip "Head upstairs"
+            action Jump("party_upstairs")
+
+    if kitchen_check:
+        imagebutton:
+            xpos 0.515 ypos 0.27
+            idle "eye_idle"
+            hover "eye_hover" hovered
+            tooltip "Investigate the kitchen"
+            action Jump("party_kitchen")
+
+    imagebutton:
+        xpos 0.125 ypos 0.5
+        idle "eye_idle"
+        hover "eye_hover" hovered
+        tooltip "Go chat with Alyssa"
+        action Jump("party_alyssa_contemplate")
+
+# Tooltip Things - TODO: Fix this to look pretty with GUI!
+    $ tooltip = GetTooltip()
+    if tooltip:
+        frame:
+            background None
+            xalign 0.5 # Unsure of where the best place to put the box for this
+            yalign 0.1
+            #pos renpy.get_mouse_pos() # This puts the text where the mouse is, but doesn't look pretty
+            text "[tooltip]"

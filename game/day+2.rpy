@@ -485,25 +485,32 @@ label masami_room2d:
 # Open up a screen to explore things, disappear on click after each option is looked at
 label masami_room2_explore:
 
-    # TODO: Make this point and click!
-    menu:
+    call screen bedroom
 
-        "Study for upcoming final exams":
-            m "(Right. I still need to do that.)"
-            m "…"
-            m "(I don't really think I can focus on that now.)"
-            jump masami_room2_explore
+# If the bookcase option is selected
+label masami_room2_read:
 
-        "Play some video games":
-            m "(Hm, looks like Rohan is online.)"
-            m "…"
-            m "(Not really in the mood for multiplayer right now, so I might as well continue where I left off with Herlock Sholmes.)"
-            jump masami_news
+    $ room_read = False
+    m "(Heh. Younger me definitely had the patience for that.)"
+    m "(But now? For some reason, I can't get myself to read for fun anymore.)"
+    jump masami_room2_explore
 
-        "Read a book":
-            m "(Heh. Younger me definitely had the patience for that.)"
-            m "(But now? For some reason, I can't get myself to read for fun anymore.)"
-            jump masami_room2_explore
+# If the backpack option is selected
+label masami_room2_study:
+
+    $ room_study = False
+    m "(Right. I still need to do that.)"
+    m "…"
+    m "(I don't really think I can focus on that now.)"
+    jump masami_room2_explore
+
+# If the computer option is selected
+label masami_room2_game:
+
+    m "(Hm, looks like Rohan is online.)"
+    m "…"
+    m "(Not really in the mood for multiplayer right now, so I might as well continue where I left off with Herlock Sholmes.)"
+    jump masami_news
 
 # Masami indulges himself for a couple hours, before it's time for dinner
 label masami_news:
