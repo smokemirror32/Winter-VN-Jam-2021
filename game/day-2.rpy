@@ -27,31 +27,38 @@ label masami_kitchen_2:
     scene bg kitchen with Dissolve(1.0)
 
     n "Masami heads down the stairs and into the kitchen."
+    show wsprite at right
+    show sabie party at center
+    with Dissolve(0.3)
     n "His mother is scooping the leftover fried noodles from dinner into a large bowl as she chats with Sabie, who stands primly out of the way."
+    hide wsprite
+    hide sabie
+    show msprite at left
+    with Dissolve(0.3)
     n "His father is washing the dishes in the corner, silent except for the occasional clack of the silverware and plates against the walls of the sink."
-
-    show sabie party at center with Dissolve(0.5)
-
-    n "Sabie notices him immediately and waves him over."
-
+    hide msprite
+    show sabie party at center
+    show wsprite at right
+    n "Sabie notices Masami immediately and waves him over."
     show sabie innocent at bounce
-
     s "Yo, {i}ge{/i}! Show your mom the outfit I - "
-    s annoyed "Seriously?"
+    show sabie annoyed at shake, center
+    s "Seriously?"
     m "What?"
     s "Your jacket."
     m "What about my jacket?"
+    show sabie at shake, center
     s "You're wearing it. Over the Christmas sweater I picked just for you."
     m "That was exactly the point."
     s neutral "At least, you'll be taking it off at the party, right?"
     m "No."
+    show sabie at bounce, center
     s innocent "Aw, come on! I bet someone there {i}really{/i} wants to see you in that beautiful Christmas sweater."
     s "You won't let them down, will you?"
-
-    show sabie neutral at left with move
-
     n "At this, Masami's mom lays the spoon momentarily down in the pot."
+    show wsprite at bounce, right
     mm "Masami, this is giving season. We have Christmas, we have {i}Dongzhi{/i}."
+    show wsprite at bounce, right
     mm "Holiday spirit! We be with others and be happy."
     n "She pats him gently on the shoulder."
     mm "Sabrina tell me she work hard to find you a good gift. Think about she feel, okay?"
@@ -66,9 +73,12 @@ label masami_kitchen_2:
     s mischievous "Oh yeah. It'll be very hot."
     n "Masami sighs and rubs his temples."
     m "Fine, I'll think about it, okay?"
+    show wsprite at bounce, right
     mm "Good, good."
     n "Masami's mother hums to herself as she puts a layer of saran wrap over the bowl and puts it in the refrigerator."
+    show wsprite at shake, right
     mm "Oh, I almost forget!"
+    show wsprite at bounce, right
     mm "Masami make {i}tangyuan{/i} yesterday. Peanut type!"
     mm "Do you want some, Sabrina?"
     m "Uh, Mom, I made those for - "
@@ -91,12 +101,12 @@ label masami_kitchen_2:
     mm "That way we can keep celebrate together. Love together. Stay strong. Year after year."
     n "She pats Sabie on the shoulder."
     mm "Take care of him okay?"
-
     show sabie neutral at bounce
-
     s "You can count on me!"
+    show wsprite at bounce, right
     mm "Good, good."
     n "She adjusts the apron she's wearing and grins."
+    show wsprite at bounce, right
     mm "You two have fun now! Don’t come back too late."
     m "Don't worry, Mom, we won't."
     mm "I know."
@@ -108,27 +118,30 @@ label masami_kitchen_2:
 
 label masami_kitchen_leave:
 
-    # show sabie at right with move # TODO: Figure out scene cheoreography!
+    hide wsprite with Dissolve(0.3)
+    show sabie at innerright with move
+    show msprite behind sabie at shake, left
 
     n "Masami's dad elbows him as Masami and Sabie head for the door."
     m "Hm?"
     n "Masami's dad just smiles mischievously and leans in to whisper into Masami’s ear."
+    show msprite at bounce, left
     md "If you find a girl, make sure to introduce her to us."
     m "What? I never said - "
     md "Okay."
     mm "What's going on?"
     md "Just giving Masami some last minute advice."
-
     show sabie innocent at bounce
-
     n "His dad winks at Sabie, who giggles."
     m "Sure. Advice."
     m "(Ugh, remind me never to have the two of them in the same space again.)"
+    show sabie surprised at shake, innerright
     n "Masami grabs Sabie's hand."
-    s surprised "Hey, what are you - "
+    s "Hey, what are you - "
     m "We're going now or we're going to be late! Bye!"
 
-    hide sabie with moveoutleft # TODO: Figure out scene cheoreography!
+    hide sabie with moveoutright # TODO: Figure out scene cheoreography!
+    show bg kitchen at hpunch
 
     n "With that, Masami forcibly drags Sabie out the door with him."
 
@@ -153,13 +166,14 @@ label tyree_car:
     m "Nothing."
     s mischievous "Sure, nothing. Your dad giving me the green light was nothing."
     m "Tell that to my mom. She still thinks we're going to get married some day."
-    s neutral "Psh, she'll come around."
+    show sabie neutral at bounce, left
+    s "Psh, she'll come around."
     m "Clearly."
     r sad "…"
 
     hide sabie
     hide rohan
-    show tyree party with Dissolve (0.1)
+    show tyree party
 
     n "Tyree chuckles from the driver's seat."
     t "Ready to go?"
@@ -178,7 +192,8 @@ label tyree_car:
     m "Sabie."
     s "Hm?"
     m "Why am I the only person in this car who is dressed up like this?"
-    s innocent "Hey, there's no need to feel self-conscious about it."
+    show sabie innocent at bounce, left
+    s "Hey, there's no need to feel self-conscious about it."
     m "I'm not self-conscious!"
     m "I just want to know why you insisted on me wearing {i}this{/i} when I could have just worn what I usually wear."
 
@@ -221,8 +236,10 @@ label party_living_room:
     n "When they arrive at the party, Rohan and Tyree predictably disappear upstairs to play Smash."
 
     show sabie party
+    show bg partyinsideedit behind sabie at hpunch
 
     n "Masami moves to follow, but Sabie grabs him by the hand and drags him to the kitchen."
+    show sabie at bounce
     s "Here."
     n "Sabie shoves a solo cup full of eggnog into his hands."
     s mischievous "For your nerves. Since you'll need a little push to get there."
@@ -244,7 +261,7 @@ label party_living_room:
     m "(Hm, I have seen most of these people before at one point or another.)"
     m "(A few people from the stage crew are here. A couple of robotics are people, too, though more of them are probably upstairs playing Smash.)"
     m "(But there's no one here that I - )"
-    n "Masami freezes as he notices a small group of girls sitting on the living room couch."
+    n "Masami freezes as he notices a small group of people sitting on the living room couch."
     m "(Shit. It's Alyssa.)"
     m "(I didn't expect to see her here.)"
     m "(I mean, I shouldn't be surprised since half the upperclassmen in the school are here.)"
@@ -299,7 +316,7 @@ label party_alyssa_contemplate:
 
     n "Masami sneaks another glance at the pocket of the room where Alyssa is."
     m "(I know I was set up for this, but…)"
-    m "(I could go talk to her. I know a couple of girls and they seem pretty nice.)"
+    m "(I could go talk to her. I know the people with her and they seem pretty nice.)"
     m "(Nasir isn't there either.)"
     n "An odd lump forms in Masami's throat at the last thought. He forces it down."
     m "(This could be my chance.)"
@@ -338,6 +355,9 @@ label party_alyssa_chat:
     n "Masami makes his way through the throngs of people towards where Alyssa and her friends are sitting."
 
     show alyssa nervous
+    show msprite behind alyssa at left
+    show wsprite behind alyssa at right
+    with Dissolve(0.3)
 
     n "As he gets closer, he notices their voices grow increasingly hushed, their eyes flitting between Alyssa and Masami. Alyssa herself has gone stock still, her face the faintest shade of red."
     m "Um, hi. Alyssa?"
@@ -349,10 +369,9 @@ label party_alyssa_chat:
     m "Mhm."
     m "(Great. Why can't I do words today?)"
     m "So, uh. What brings you here?"
+    show msprite at shake, left
     n "Alyssa just stares until one of her friends elbows her."
-
     show alyssa nervous at bounce
-
     a "Oh! I, uh - "
     n "She giggles nervously."
     a happy "Actually, I wasn't planning on coming, but Nasir kind of insisted I did."
@@ -364,50 +383,55 @@ label party_alyssa_chat:
     m "You are?"
     a nervous "Uh, I - "
     n "Alyssa gives a slight cough."
-    n "The other one of her friends giggles and whispers something into the ear of the first girl. They both laugh."
+    show wsprite at bounce, right
+    n "The other one of her friends giggles and whispers something into the ear of the first friend. They both laugh."
+    show msprite at bounce, left
     fa "She is. She's just shy about it."
-
-    show alyssa at bounce
-
+    show alyssa at shake, center
     a "I am not shy about it! Masami and I are, well. Meeting for the first time."
+    show msprite at bounce, left
     fa "Sure. We all know you've been giving him googly eyes since middle school."
     n "Alyssa's face turns bright red."
-
     show alyssa at shake
-
     a "What? No! I did not."
+    show wsprite at bounce, right
     fb "You saw him once on stage and were instantly smitten. Wouldn't stop talking about him since."
+    show wsprite at bounce, right
     fb "\"He's so smart\" this and \"he's so nice\" that."
+    show wsprite at bounce, right
     fb "\"He can do the arts and sports and STEM. A triple threat!\""
+    show wsprite at bounce, right
     fb "\"He's the perfect one to walk me down the aisle and have my babies.\""
-
     show alyssa at shake
-
     a "I-I did not say that! Not the last one at least."
+    show msprite at bounce, left
     fa "You basically did."
+    show wsprite at bounce, right
     fb "Yeah, you did."
     fb "Anyways, she framed you as the perfect, good-at-everything-guy who could do no wrong."
     n "The friend snickers."
+    show wsprite at bounce, right
     fb "Ah, young love!"
     n "Masami feels his throat constrict. He takes a step back."
     m "Oh."
-
     show alyssa at shake
-
     n "Sensing his discomfort, Alyssa shifts and throws up her hands as if to shield herself."
     a "N-No! It's not like that."
     a "I-I talk about Nasir like that, too! It's the same thing."
+    show msprite at bounce, left
     fa "You tell him that to his face. But you don't do the same thing to Masami. There's a difference."
     a "I - I…"
-
     show alyssa sad at shake
-
     n "Alyssa whirls on her friends."
     a "Ugh, just look how uncomfortable you're making him!"
     n "Both of her friends exchange glances then look at Masami. The more outspoken of the two laughs nervously."
+    show wsprite at bounce, right
     fb "I thought we made it clear we were exaggerating?"
+    show msprite at bounce, left
     fa "Yeah. At least I thought we were."
+    show wsprite at bounce, right
     fb "But she does think very highly of you."
+    show msprite at bounce, left
     fa "For sure."
     a happy "You did realize all that. Right?"
     m "…Of course. I did."
@@ -419,7 +443,10 @@ label party_alyssa_chat:
     a neutral "Yeah. I guess I'll see you around then?"
     m "Of course. See you!"
 
-    hide alyssa with Dissolve(0.1)
+    hide alyssa
+    hide msprite
+    hide wsprite
+    with Dissolve(0.1)
 
     n "Masami makes the quickest polite exit he can to the kitchen."
     n "He can hear Alyssa berating her friends as he fills his cup up with another round of eggnog."
@@ -1083,12 +1110,15 @@ label walk_splace_chat:
 
 label walk_splace_charm:
 
-    scene # TODO: Fix this!
+    scene bg black with Dissolve(0.5)
+    scene cg Magpie_Keychain with Dissolve(1.0)
 
     n "Masami fishes around in his pocket with his free hand for the magpie charm and holds it out for Nasir to see."
     na "Ah. It’s beautiful."
-    m "Yeah. Or at least I think it is. I am biased, after all."
+    m "Yeah."
+    m "Or at least I think it is. I am biased, after all."
 
+    scene bg black with Dissolve(0.5)
     scene bg nightskymoreblur with Dissolve(1.0)
 
     n "Masami puts the charm away with a sigh."
@@ -1142,8 +1172,7 @@ label walk_splace_magpie:
 
 label walk_end:
 
-    scene bg railcars
-    with Dissolve(1.0)
+    scene bg railcars with Dissolve(1.0)
 
     n "Masami hops right off the edge before holding out a hand to Nasir."
 
@@ -1179,7 +1208,7 @@ label party_porch_end:
     na sad "I suppose this is where we part for the night."
     m "Yeah."
     $ nasir_blush = True
-    na happy "I...rather enjoyed conversing with you."
+    na "I...rather enjoyed conversing with you."
     na embarrassed "Perhaps we could do so again after finals?"
     m "That'd be nice. Let me give you my number so you can get a hold of me."
     $ nasir_blush = False
@@ -1237,7 +1266,12 @@ label kiss:
 
     n "Nasir startles for a brief moment."
 
-    show nasir party neutral
+    show nasir party neutral:
+        parallel:
+            ease 3.0 zoom 1.1
+        parallel:
+            yalign 0.0
+            linear 0.5 yalign 0.5
 
     n "Then, he reaches up to cup Masami's cheek with his free hand, smiling nervously."
     n "Masami freezes, his heartbeat doing double time in his chest. He doesn't pull away."
@@ -1273,8 +1307,9 @@ label kiss:
 # Masami chooses to break off
 label kiss_break:
 
-    scene partyporch
-    show nasir party surprised at shake
+    scene partyporch at hpunch
+    show nasir party surprised at shake:
+        zoom 1.0
 
     n "In a panic, Masami pushes Nasir away. Nasir recoils immediately with a soft gasp, visibly stung."
     m "I - I'm sorry, I wasn't thinking, we're drunk and - "
@@ -1299,7 +1334,7 @@ label kiss_decide:
     m "(Is it worth - )"
     n "Suddenly, Nasir’s lips brush his own, warm and full."
 
-    scene # Change to CG!
+    scene cg Masami_Nasir_Kiss with Dissolve(0.5)
 
     n "Masami's eyes snap open and he sees Nasir right in front of him, face flushed and eyes shut."
     m "(Holy. Shit.)"
@@ -1317,10 +1352,9 @@ label party_living_room_end:
 
     n "Masami catches the screen door before it closes, searching the sea of partygoers frantically for any trace of Nasir."
     m "Damn it. Where the hell did you - "
+    show bg partyinsideedit at hpunch
     n "He backs up near the kitchen, colliding right into someone. The victim whirls angrily on him."
-
     show sabie party annoyed at shake
-
     s "Watch it, you stupid ass motherfucker! I'm gonna - "
     m "Sabie?"
     s surprised "Huh? How do you know - "

@@ -1627,9 +1627,13 @@ screen nphone():
                                     # For other pics
                                     else:
 
-                                        frame:
-                                            background Frame(Transform(i.message, size=(thumbnail_x, thumbnail_y)))
-                                            style "phone_others" xoffset 15
+                                        vbox:
+                                            xsize 330
+                                            ysize 330
+
+                                            frame:
+                                                background Frame(Transform(i.message, size=(100, 100)))
+                                                style "phone_others" xoffset 15
 
                             # Textboxes for Everyone Else
                             else:
@@ -1688,6 +1692,16 @@ screen bedroom:
         tooltip "Play some video games"
         action Jump("masami_room2_games")
 
+    $ tooltip = GetTooltip()
+    if tooltip:
+        frame:
+            background None
+            xalign 0.5 # Unsure of where the best place to put the box for this
+            yalign 0.1
+            #pos renpy.get_mouse_pos() # This puts the text where the mouse is, but doesn't look pretty
+            text "[tooltip]"
+
+
 ### Party Point and Click
 
 screen party:
@@ -1715,7 +1729,6 @@ screen party:
         tooltip "Go chat with Alyssa"
         action Jump("party_alyssa_contemplate")
 
-# Tooltip Things - TODO: Fix this to look pretty with GUI!
     $ tooltip = GetTooltip()
     if tooltip:
         frame:

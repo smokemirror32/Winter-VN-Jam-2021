@@ -47,8 +47,10 @@ label masami_room2b:
 
     n "Masami is rudely awakened by the sunlight glaring down at him."
     m "(Ugh. My eyes. Where's…pillow?)"
+    show bg bedroom at shake
     n "He feels around the bed for a moment, before sitting up with a sigh."
     m "(Where? I still don't - )"
+    show bg bedroom at shake
     n "His hand hits something fluffy right behind him."
     m "(Oh. Well. Guess today is just one of those days.)"
     n "Masami props the pillow behind his head, where it's supposed to go."
@@ -122,7 +124,7 @@ label phone2a_rohan_respond:
     # On phone portion
     call message(m, "Yeah sure", True)
     call message(r, "Kk give me one sec", True)
-    call message("Image", "phone/P_Noah.png") # TODO: Rohan picture here
+    call message("Image", "cg/Rohan_Mall.png") # TODO: Rohan picture here
     call message(r, "Sabie helped me pick")
     call message(r, "Makeup isnt very good since I did it myself this time")
     call message(r, "It isnt too bad is it")
@@ -420,6 +422,7 @@ label masami_kitchen2:
     scene bg kitchen with Dissolve(1.0)
 
     n "Masami can smell the fragrant aroma of sesame oil long before he reaches the kitchen."
+    show wsprite with Dissolve(0.2)
     n "He walks in to find his mother with her apron on and back turned, having just finished cooking."
     n "She turns off the heat on the bok choi she was stir-frying in a wok. A clay pot sits on low heat on the back burner."
     m "(Looks like it's a Hainanese chicken rice day.)"
@@ -441,6 +444,7 @@ label masami_kitchen2_talk:
 
     n "Masami gingerly taps his mother's shoulder."
     m "Uh…Mom?"
+    show wsprite at shake, center
     n "Masami's mother stops stirring the pot and turns around."
     mm "Yes?"
     m "I…"
@@ -448,10 +452,11 @@ label masami_kitchen2_talk:
     n "Masami's eyes drop to the floor, his hand retracting back to his side."
     m "(Damn it. I still don't know what to say.)"
     n "Masami feels his mother wrapping her arms around him. She kisses him softly on the forehead."
+    show wsprite at bounce, center
     mm "{i}Makan.{/i} Have some food. You feel better, okay?"
     n "Masami nods."
     m "Okay. Thanks."
-    n "Masami grabs a plate and spoon from the cupboard, helping himself to some food."
+    n "He grabs a plate and spoon from the cupboard, helping himself to some food."
 
     jump masami_room2d
 
@@ -505,10 +510,11 @@ label masami_room2_study:
     jump masami_room2_explore
 
 # If the computer option is selected
-label masami_room2_game:
+label masami_room2_games:
 
-    m "(Hm, looks like Rohan is online.)"
-    m "…"
+    m "(Hm, looks like Sabie is online playing Genshin.)"
+    m "(And Rohan, too, with League of Legends as always.)"
+    m "..."
     m "(Not really in the mood for multiplayer right now, so I might as well continue where I left off with Herlock Sholmes.)"
     jump masami_news
 
@@ -537,7 +543,7 @@ label masami_news:
     m "(The school called them about the vandalism, didn't they?)"
     n "A lump forms in Masami's throat. He swallows hard and stares at his hands."
     n "They're shaking."
-    m "(Is this what {i}jie{/i} felt like the first time she rebelled?)"
+    m "(Is this what {i}jie{/i} felt like whenever she disappointed someone?)"
     m "(How did she learn to stop caring?)"
     n "He squeezes his eyes tight, only vaguely noticing the way his fists clench and his nails dig into his palms."
     m "(I…)"

@@ -79,12 +79,15 @@ label lunch_1a:
     with Dissolve(0.1)
 
     n "He hurries in as quickly as he can to find Rohan and Sabie engaged in another one of their tabletop battles."
+    show rohan at shake, right
     r "Hey, let go of my phone!"
+    show sabie at shake, left
     s "But you gotta delete those videos you took of me last night."
     r "What? No! They were good videos."
     r sad "Besides I - I wasn't even planning on sharing them."
     s "I don't trust you. You sent those drunk karaoke videos last time without a second thought."
-    r annoyed "But Smash videos are different!"
+    show rohan annoyed at shake, right
+    r "But Smash videos are different!"
     s "No, they are not."
     r sad "Why?"
     s worried "Ugh, spare me, will you? The number of times I suicided with Kirby was - "
@@ -92,6 +95,10 @@ label lunch_1a:
     show sabie surprised
 
     n "Suddenly she freezes when she catches sight of Masami."
+
+    jump sabie_glitching
+
+label sabie_glitching:
 
     stop music fadeout 1.0
 
@@ -102,23 +109,41 @@ label lunch_1a:
 
     play music chaos fadein 1.0
 
-    hide rohan with Dissolve(1.0) # TODO: Fix animation such that Sabie dominates or something else disturbing happens!
+    show rohan at glitch
+    pause(0.05)
+    show rohan
+    pause(0.05)
+    hide rohan with Dissolve(0.2)
+    call sabie_glitch()
+    call sabie_spaz()
 
     if support == "Sabie":
 
+        call sabie_spaz()
         s "Feel like coming to help me again?"
+        call sabie_spaz()
         s "Or are you going to leave me out to dry like you did to Alyssa because you've got commitment issues?"
+        call sabie_spaz()
         s "I should hope that a good old family friend means something to you, {i}ge{/i}."
-        s happy "But then again, Xinyi did decide to leave her poor little brother behind."
-        s "Who knows how much more you've learned from her? You two were close after all."
+        call sabie_spaz()
+        call sabie_spaz()
+        s innocent "But then again, Xinyi did decide to leave her poor little brother behind."
+        call sabie_spaz()
+        s happy "Who knows how much more you've learned from her? You two were close after all."
 
     else:
 
+        call sabie_spaz()
         s "Are you going to help me this time?"
+        call sabie_spaz()
         s "Or are going to leave me to suffer alone."
+        call sabie_spaz()
         s "I wonder if it's worth it for me to care about someone who didn't care for me back."
-        s happy "That's what Xinyi did to you, after all."
-        s "It's only fair that you take it out on the rest of us, right {i}ge{/i}?"
+        call sabie_spaz()
+        s innocent "That's what Xinyi did to you, after all."
+        call sabie_spaz()
+        call sabie_spaz()
+        s happy "It's only fair that you take it out on the rest of us, right {i}ge{/i}?"
 
     m "W-What? When did I ever think that?"
 
@@ -126,8 +151,10 @@ label lunch_1a:
     stop music fadeout 1.0
     show rohan sad at right
     play music uptempo fadein 2.0
+    show sabie worried:
+        ease 40 zoom 1.0
 
-    s worried "Uh…I guess you could start thinking about helping me right about now. Kinda in a tough spot, as you can see."
+    s "Uh…I guess you could start thinking about helping me right about now. Kinda in a tough spot, as you can see."
     m "Ah."
     n "Masami swallows."
     m "Rohan, maybe this time if you - "
@@ -138,18 +165,32 @@ label lunch_1a:
 
     play music chaos fadein 1.0
 
-    hide sabie with Dissolve(1.0) # TODO: Similar fix as before!
+    show sabie at glitch
+    pause(0.05)
+    show sabie
+    pause(0.05)
+    hide sabie with Dissolve(0.2)
+    call rohan_glitch()
+    call rohan_spaz()
+    call rohan_spaz()
 
     r annoyed "I’ll answer that question for you. No, it doesn't."
+    call rohan_spaz()
     r "You're the only one here that she'll even listen to and you know that."
     if support == "Rohan":
 
+        call rohan_spaz()
         r "Stand up for me like you did last time."
+        call rohan_spaz()
+        call rohan_spaz()
         r sad "Or do I not matter to you either?"
 
     else:
 
+        call rohan_spaz()
         r sad "But definitely, go ahead. Let her walk all over to me."
+        call rohan_spaz()
+        call rohan_spaz()
         r "I won't care."
 
     m "N-No! It's not like that. I care about you guys, I promise."
@@ -157,11 +198,12 @@ label lunch_1a:
 
     stop music fadeout 1.0
     show sabie worried at left
-    show rohan neutral at right
     play music uptempo fadein 2.0
+    show rohan:
+        ease 40 zoom 1.0
 
     n "Sabie and Rohan exchange glances. The phone hangs between them in their limp grasps, forgotten. "
-    r "Uh, we already knew that part, but thanks."
+    r neutral "Uh, we already knew that part, but thanks."
     s "Is there something that you're thinking too hard about, {i}ge{/i}?"
     m "I - "
     n "Masami runs his hand through his hair."
@@ -188,20 +230,32 @@ label lunch_1a:
     # Glitch ON
 
     play music chaos fadein 1.0
+    call tyree_glitch()
+    call tyree_spaz()
 
     t happy "There is no use trying to destroy who you once were."
     if support == "Tyree":
 
+        call tyree_spaz()
         t "You may be able to ignore others for a short while, but you cannot ignore them forever."
+        call tyree_spaz()
         t "Not if you've expressed affection for them before. It will be too late then."
+        call tyree_spaz()
         t neutral "They will always want the old you back. As they should."
+        call tyree_spaz()
+        call tyree_spaz()
         t worried "What will they say when you cannot return to them?"
 
     else:
 
+        call tyree_spaz()
         t "People will always expect the same good thing out of you once you've given it to them before."
+        call tyree_spaz()
         t "They will accept no less and we must follow through."
+        call tyree_spaz()
         t neutral "This is how we become who we need to be."
+        call tyree_spaz()
+        call tyree_spaz()
         t worried "Is it too much to ask for, to make a wise decision more than once?"
 
     hide tyree
@@ -246,6 +300,9 @@ label lunch_1b:
     n "Sabie gets up and walks over to him very slowly, her fists balled."
     n "She stops when she's inches away and stares up at him, unflinching."
     s "Don't even try that on me, dumbass. I thought you knew better than that."
+
+    show sabie at shake, center
+
     n "She pokes him hard on the forehead."
     m "Ow! What was that for?"
     s "Your idiocy."
@@ -253,104 +310,215 @@ label lunch_1b:
     s "I let you get away with holding those stupid thoughts in your head last time."
 
     # Glitch ON - will stay on until Masami enters house
+
+    call sabie_spaz()
     s mischievous  "And what did you do?"
-    hide rohan with Dissolve(1.0) # TODO: Fix transition!
+
+    show rohan at glitch
+    pause(0.05)
+    show rohan
+    pause(0.05)
+    hide rohan with Dissolve(0.2)
+    call sabie_glitch()
+    call sabie_spaz()
 
     # Depends if you visited Alyssa first or not
     if alyssa_visit_first:
 
         s innocent "You ditch the girl you've been pining over for years as if it were nothing."
+        call sabie_spaz()
         s happy "I'll give you credit for even having the balls to go straight to her in the first place."
+        call sabie_spaz()
         s "But still."
 
     else:
 
         s innocent "You waste so much time trying to decide whether or not you actually want to get the idiot you've been pining over for years."
+        call sabie_spaz()
         s happy "Then after you finally work up the fucking nerve, you just ditch her."
 
+    call sabie_spaz()
+    call sabie_spaz()
     s mischievous "Incredibly rude."
+    call sabie_spaz()
+    call sabie_spaz()
     s "Waste of my efforts."
 
     # Depends if you trusted Sabie with the Xinyi response earlier on Day 3 - Before
     if sabie_trust:
 
+        call sabie_spaz()
         s happy "You told me something was wrong before and I supported you."
-        s "What about that wasn't enough for you that you had to clam up like that?"
+        call sabie_spaz()
+        s "What about that wasn't enough for you that you had to clam up like this again?"
 
     else:
 
+        call sabie_spaz()
         s happy "Don't you care that there are people out here trying to help you at all?"
+        call sabie_spaz()
         s "Was it worth it being so damn selfish that you couldn't even bother to explain yourself? Not even to me when I fucking asked you what was wrong?"
 
+    call sabie_spaz()
+    call sabie_spaz()
+    call sabie_spaz()
     s "What on earth is going on in your head that's worth keeping from the rest of us?"
+    call sabie_spaz()
     m "I - "
+    call sabie_spaz()
     m "I don’t know."
 
     jump lunch_1c
 
 label lunch_1c:
 
+    call sabie_glitch_big()
+    call sabie_spaz()
     s mischievous "Pft. Of course you know yourself, silly."
 
     # Depends on if you answered Sabie's message on Day 2 - After
     if sabie_respond:
+        call sabie_spaz()
         s "The day after you painted that wall with your word vomit, you had the audacity to text me like everything was perfectly normal."
+        call sabie_spaz()
         s "How sick of you think you could hide such a monster from yourself."
     else:
+        call sabie_spaz()
         s "You knew enough that you decided to leave me on read. On read!"
+        call sabie_spaz()
         s "On no circumstance do you ever leave some on read, even if they fucked up and sent a deleted message to you."
+        call sabie_spaz()
         s "You have to at least leave an emoji."
 
+    call sabie_spaz()
+    call sabie_spaz()
     s happy "Sometimes, I really can't believe you."
 
     m "But - "
 
     # Depends on if you answered Rohan's message
 
-    show rohan annoyed at right with Dissolve(1.0)
+    show rohan annoyed at right behind sabie
+    call rohan_spaz()
+    call sabie_spaz()
+    call rohan_glitch()
+    call rohan_spaz()
 
     r "Don't even try lying to yourself."
+    call rohan_spaz()
+    call sabie_spaz()
     r sad "Just look at how you've treated me!"
 
     if rohan_respond:
+        call rohan_spaz()
+        call sabie_spaz()
         r "You respond to my photos just to be nice. I know that you do."
+        call rohan_spaz()
+        call sabie_spaz()
         r "You wouldn't dare tell me otherwise or you think I'll go even further off the rails."
-        r "Just like your sister. And you didn't want that happening, did you?"
+        call rohan_spaz()
+        call sabie_spaz()
+        call rohan_spaz()
+        r "Just like your sister."
+        call rohan_spaz()
+        call sabie_spaz()
+        r "And you didn't want that happening, did you?"
     else:
+        call rohan_spaz()
+        call sabie_spaz()
         r "You couldn't even spend a moment to look at a single photo."
+        call rohan_spaz()
+        call sabie_spaz()
+        call rohan_spaz()
         r "It wasn't even much to ask for. Just a glance to say that you supported me when I needed it."
 
+    show rohan happy
+    call rohan_glitch_big()
+    call rohan_spaz()
+    call sabie_spaz()
     r happy "But definitely, believe what you want. That you actually look good in the eyes of others."
+    call sabie_spaz()
+    call rohan_spaz()
     r "Keep your pathetic little image of yourself as the golden boy."
-
+    call sabie_spaz()
+    call rohan_spaz()
     m "What are you talking about?"
+    call rohan_spaz()
+    call sabie_spaz()
     m "Of course I'm not perfect! Of all people, you'd think I know that by now."
 
     # Depends on if you answered Tyree's message
 
-    show tyree at left with Dissolve(1.0)
+    show tyree at left behind sabie
+    call tyree_spaz()
+    call rohan_spaz()
+    call tyree_glitch()
+    call tyree_spaz()
+    call sabie_spaz()
 
     t "We know you aren't."
+    call sabie_spaz()
+    call tyree_spaz()
+    call rohan_spaz()
     t worried "But that's the problem lies, I'm afraid."
 
     if tyree_respond:
+        call tyree_glitch_big()
+        call rohan_spaz()
+        call sabie_spaz()
+        call tyree_spaz()
         t "You always care too much about what others think."
+        call tyree_spaz()
+        call rohan_spaz()
+        call sabie_spaz()
         t "What's more is that you take on more than what you can give."
     else:
+        call tyree_spaz()
+        call rohan_spaz()
+        call sabie_spaz()
         t "You don't think enough of others to offer gratitude for when they do offer to help."
+        call rohan_spaz()
+        call sabie_spaz()
+        call tyree_spaz()
         t "When the world gives you its favor, you wallow in self-pity. And when you do not succeed, you bury yourself even deeper."
+        call sabie_spaz()
+        call tyree_spaz()
+        call rohan_spaz()
         t "Nothing is ever enough for you and in your cowardice, you will never be satisfied."
 
     # TODO: Change Tyree's expression to happy and add dialogue to adjust flow, address secrets kept, etc.
 
+    call tyree_spaz()
+    call rohan_spaz()
+    call sabie_spaz()
     m "Please, I - "
+    call sabie_spaz()
+    call tyree_spaz()
+    call rohan_spaz()
     n "Masami looks desperately around. His arms lock tighter around the trunk."
-    n "Sabie laughs and shakes her head." # Integrate this!
-    s "If you don't trust us, just say so. At least you're being honest."
+    call rohan_spaz()
+    call tyree_spaz()
+    call sabie_spaz()
+    s innocent "If you don't trust us, just say so. At least you're being honest."
+    call tyree_spaz()
+    call rohan_spaz()
+    call sabie_spaz()
     s "Not like whatever shit you're trying to pull with yourself."
+    call sabie_spaz()
+    call tyree_spaz()
+    call rohan_spaz()
     m "I - "
+    call rohan_spaz()
+    call tyree_spaz()
+    call sabie_spaz()
     n "In the distance, the school bell rings."
+    call sabie_spaz()
+    call tyree_spaz()
+    call rohan_spaz()
     m "I gotta go."
+    call tyree_spaz()
+    call rohan_spaz()
+    call sabie_spaz()
     n "Before any of them can stop him, Masami makes a break for entrance inside."
 
     jump hallway_1
@@ -361,83 +529,153 @@ label hallway_1:
     scene bg black with Dissolve(0.5)
     scene bg hallway with Dissolve(0.5)
 
+    show bg hallway with vpunch
     n "He pushes open the door and tries to lose himself in the crowd."
     n "Behind him, he can hear Sabie's footsteps hot on his heels."
+    show bg hallway with vpunch
     s "Oi, dumbass!"
+    show bg hallway with vpunch
     s "You can't run from yourself forever!"
+    show bg hallway with vpunch
     m "(I'm not running from myself. I'm not.)"
+    show bg hallway with vpunch
     m "(I'm just...)"
+    show bg hallway with vpunch
     m "..."
+    show bg hallway with vpunch
     m "(Damn it.)"
+    show bg hallway with vpunch
     n "Masami quickens his pace, weaving in between the molasses slow current of people."
+    show bg hallway with vpunch
     m "(Can't everyone just leave me alone?)"
+    show bg hallway with vpunch
     m "(Nothing happened, nothing changed.)"
+    show bg hallway with vpunch
     m "(So why can't I just - )"
+    show bg hallway with vpunch
     n "He turns a corner and brushes a little too hard against an unsuspecting student."
+    show bg hallway with vpunch
     m "Ah, sorry - "
-    n "Masami freezes."
+    show bg hallway with vpunch
+
+    show nasir surprised at innerright
+    call nasir_spaz()
+    show alyssa nervous at right
+    call alyssa_spaz()
+
     m "Oh."
-
-    show nasir surprised at right with Dissolve(0.1)
-    # TODO: Add Alyssa in here too!
-
-    a "Ugh, you again?"
-    a "Got some nerve to show up, huh."
+    call alyssa_spaz()
+    call nasir_spaz()
+    a sad "Ugh, you again? Got some nerve to show up, huh."
+    call nasir_spaz()
+    call alyssa_spaz()
     m "Alyssa - "
-    a "Oh, I know what you came for now."
-    # Alyssa gives Nasir a little push
+    call alyssa_spaz()
+    call nasir_spaz()
+    a happy "Oh, I know what you came for now."
+    show alyssa at shake, right
+    call nasir_spaz()
+    show nasir at center with move
+    call alyssa_spaz()
     a "Go on, take your boyfriend and be happy. That's what you want, right?"
+    call alyssa_spaz()
+    call nasir_spaz()
     m "The hell? I never - "
-    a "Spare me. I've had enough of you, cheating scum."
+    call nasir_spaz()
+    call alyssa_spaz()
+    a sad "Spare me. I've had enough of you, cheating scum."
+    call alyssa_spaz()
+    hide alyssa
+    call nasir_spaz()
     m "No, Alyssa, please - "
+    call nasir_spaz()
     m "I didn't mean - "
+    call nasir_spaz()
     na sad "It's alright."
-
     show nasir surprised at center with move
-
+    call nasir_spaz()
     n "Nasir looks away and also moves to leave, but Masami moves to grab his wrist."
+    show bg hallway with vpunch
     m "Wait!"
+    call nasir_spaz()
     na sad "What is it?"
+    call nasir_spaz()
     m "About last night. I - "
+    call nasir_spaz()
     na happy "You don't need to explain. I understand."
+    call nasir_spaz()
+    call nasir_spaz()
     na sad "But perhaps you could have been more honest with yourself."
 
     if kiss:
+        call nasir_spaz()
         na "You should have pushed me away earlier if you didn't want me."
+        call nasir_spaz()
+        call nasir_spaz()
         na "You shouldn't have kissed me back as if it meant something."
 
     else:
         # If a cookie was taken
         if take_cookie:
+            call nasir_spaz()
             na "Perhaps I should have known better than to judge from a simple gesture of taking a cookie."
         else:
+            call nasir_spaz()
             na "I should have known when you refused to take a cookie."
+            call nasir_spaz()
             na "But then, you led me on the whole night with the journey and conversation. And I thought, maybe, we did feel the same way about each other."
+            call nasir_spaz()
+            call nasir_spaz()
             na "Do you know how betrayed I felt when you couldn't do something so simple at the end?"
+            call nasir_spaz()
             na "Is a kiss really too much go give?"
 
+    call nasir_spaz()
     m "I - I wasn't thinking straight. Neither of us were."
+    call nasir_spaz()
     m "I'm trying to tell you what I really want now. And that's - "
 
     if kiss:
 
+        call nasir_spaz()
+        call nasir_spaz()
         na "What?"
+        call nasir_spaz()
         m "…I think I like you. The same way. I just didn't realize until last night."
+        call nasir_spaz()
+        call nasir_spaz()
         na "Ah."
+        call nasir_spaz()
         m "That's it? Your only response? Isn't this suppose to be a mutual feeling where we're both supposed to be excited?"
+        call nasir_spaz()
         na "Perhaps."
+        call nasir_spaz()
         na "But let me ask you this: if we start something, would you be ready to tell your friends and family about it?"
+        call nasir_spaz()
+        call nasir_spaz()
         na "Even if they would reject you?"
+        call nasir_spaz()
+        call nasir_spaz()
+        call nasir_spaz()
         na "Is that something you could truly ask of yourself when you don’t even have the courage to speak up for your own sister?"
-        m "…"
+        call nasir_spaz()
+        m "..."
+        call nasir_spaz()
+        call nasir_spaz()
         na "That's what I was afraid of."
 
     else:
+        call nasir_spaz()
+        call nasir_spaz()
+        call nasir_spaz()
         na "You've already made yourself clear enough."
 
+    stop music fadeout 1.5
     na "Goodbye Masami."
 
     hide nasir with Dissolve(1.0)
+
+    # GLITCH OFF - Fade out
 
     n "With that, Nasir twists his arm free and disappears into the outgoing stream of people."
     m "..."
@@ -445,12 +683,12 @@ label hallway_1:
     jump masami_kitchen_1
 
 # Blackout scene change back to house
-# Glitch OFF
 label masami_kitchen_1:
 
-    stop music fadeout 1.5
     scene bg black with Dissolve(1.5)
-    scene bg kitchen with Dissolve(1.5)
+    scene bg kitchen
+    show wsprite at center
+    with Dissolve(1.5)
     play music emotional fadein 1.0
 
     mm "Hello Masami! Welcome home!"
@@ -459,12 +697,15 @@ label masami_kitchen_1:
     m "Not really, no."
     n "Masami glances at the stovetop."
     m "Making the ginger duck hotpot so soon?"
+    show wsprite at bounce, center
     n "Masami's mother laughs."
     mm "Well you made a lot of {i}tangyuan{/i}. So I think, why not start making soup?"
     m "Oh."
+    show wsprite at bounce, center
     mm "We can always make more tomorrow {i}tangyuan{/i} to cook tomorrow, don't worry!"
     m "Of course."
     n "She pats him heartily on the back."
+    show wsprite at bounce, center
     mm "You excited to eat? Have family time?"
     m "Yeah. I think so."
     m "That would be nice. I couldn't wish for more than that."

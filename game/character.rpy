@@ -1,4 +1,4 @@
-# Defining characters
+##### Defining Characters #####
 define n = Character(None)
 define m = Character("Masami", image = "masami")
 define p = Character("Principal")
@@ -15,3 +15,7 @@ define ca = Character("Store Cashier")
 define x = Character("Xinyi", image = "xinyi")
 define u = Character("???")
 define narrator = nvl_narrator # Remove if we don't need!
+
+##### Defining Unlayered Sprites #####
+image wsprite = "Woman_Sprite.png"
+image msprite = "Man_Sprite.png"

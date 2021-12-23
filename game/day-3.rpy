@@ -99,7 +99,7 @@ label hallway_3:
 label lunch_chaos:
 
     scene bg black with Dissolve(1.0)
-    scene courtyard with Dissolve(1.0) # TODO: Replace with courtyard!
+    scene bg courtyard with Dissolve(1.0)
     play music uptempo fadein 1.0 fadeout 1.0
 
     n "As per usual, Masami hears the chaos long before he sees it."
@@ -202,6 +202,7 @@ label lunch_chaos:
     hide sabie
     hide rohan
     with easeoutleft
+    show bg courtyard behind rohan, sabie at hpunch
 
     n "Rohan holds on for dear life as the momentum sends them both flying onto the ground, where they continue to wrestle for control."
     n "Or at least, Rohan is struggling, while Sabie bats lightly at his limbs, clearly toying with him."
@@ -419,6 +420,7 @@ label lunch_chaos_tyree:
 
     show rohan at shake, right
     show sabie at shake, center
+    show bg courtyard behind rohan, sabie at hpunch
     pause(0.5)
     show rohan sad
     show sabie at left with move
@@ -768,6 +770,7 @@ label lunch_end_honest:
     s "You know that better than anyone. Don't you?"
     m "I suppose."
     n "Sabie pats him reassuringly on the shoulder."
+    show sabie at bounce
     s "Then, take it easy. That's what she'd want for you."
     m "Yeah. I'll try."
     m "(I know that you're just saying these things to make me feel better, but I'll take it.)"
@@ -902,7 +905,9 @@ label lunch_end_alyssa:
 
     show sabie at shake, center
     pause(0.1)
-    show sabie surprised at left with move
+    show sabie at left with move
+    show bg hallway behind sabie at hpunch
+    show sabie surprised
 
     n "Sabie lets out a muffled cry of protest as Masami puts a hand lightly over her mouth and yanks them behind a corner."
     show sabie annoyed
@@ -912,7 +917,7 @@ label lunch_end_alyssa:
     m "Please. Just."
     n "Masami sighs."
     m "Why is it that you two have to be friends?"
-    s worried "Are you questioning my bestie status with Alyssa?"
+    s worried "Are you jealous of my bestie status with Alyssa?"
     m "No! Of course not - "
     m "Ugh, that's not what I meant, but whatever."
     m "I've already told you that I've stopped trying to \"get to know her better.\""
@@ -928,7 +933,7 @@ label lunch_end_alyssa:
     n "Masami freezes as Alyssa's voice drifts into earshot."
     n "He presses himself further against the wall and motions for Sabie to do the same."
 
-    hide sabie with moveoutleft
+    hide sabie with Dissolve(0.4)
 
     n "For once, Sabie actually follows through, albeit with a questioning look."
     s "Hey. Wouldn't now be a good - "
@@ -939,7 +944,7 @@ label lunch_end_alyssa:
     n "At the sound of the second voice, Masami's stomach drops."
     m "(Damnit. It's Nasir.)"
     m "(Of course he's with her.)"
-    m "(I…I'm not jealous that she's such close friends with one of the most…{i}academically{/i} perfect students at our school.)"
+    m "(I…I'm not {i}bothered{/i} that she's such close friends with one of the most…{i}academically{/i} perfect students at our school.)"
     m "(Well, I'm not jealous anymore, at least.)"
     m "(But…)"
     n "Masami sighs."
@@ -1236,10 +1241,7 @@ label masami_home_3:
     m "(…and it's starting again.)"
     n "He sighs and sets his phone silent."
     m "(Finally. Peace and quiet for me to think. Should have done it earlier.)"
-    m "…"
-    n "Instinctively, Masami's eyes wander back to his car, where a pendant of a magpie hangs from his key ring."
-    n "His eyes linger on it for a moment as it sways, before he goes back to staring at his tightly clenched hands."
-    m "…"
+    m "..."
     m "(Might as well head inside.)"
 
     jump masami_kitchen_3
@@ -1254,10 +1256,16 @@ label masami_kitchen_3:
     m "(Looks like we're having curry tonight.)"
     n "He hangs his coat on the rack near the door."
     m "{i}Ma{/i}. I'm home."
+
+    show wsprite with Dissolve(0.1)
+    show wsprite at bounce
+
     mm "Masami!"
     n "Masami's mother leaves her cooking in an instant to sweep her son up into a warm hug, her eyes twinkling."
+    show wsprite at bounce
     mm "{i}Bagaimana harimu?{/i} Learn a lot today?"
     m "It went well."
+    show wsprite at bounce
     mm "Good, good. You keep working hard, you have good future."
     m "…"
     m "Yeah. I know."
@@ -1266,19 +1274,24 @@ label masami_kitchen_3:
     mm "We have curry tonight. Warm for winter."
     m "It smells really good. Thanks for making it."
     n "His mother beams."
+    show wsprite at bounce
     mm "Of course!"
     n "She gestures towards the refrigerator."
     mm "If you not busy, you can help make {i}tangyuan{/i}. I buy ingredients today."
     m "{i}Tangyuan{/i}? Isn't it a little early to make that? {i}Dongzhi{/i} is in three days."
     n "His mother shifts quietly. Her lips purse briefly before they curve back into a bright smile."
     mm "Ah."
+    show wsprite at bounce
     mm "Not bad to start early, right?"
+    show wsprite at bounce
     mm "You grow up, you eat more! Also, more to save for later."
+    show wsprite at bounce
     mm "I buy sesame. More variety. You ask for that, right?"
     m "…"
     m "Yeah, I did."
     m "I'll get started on making the peanut ones after dinner and freeze them up. Probably should get warmed up with something familiar before I try anything new."
     m "Thanks for remembering."
+    show wsprite at bounce
     mm "You're welcome."
     n "She leans forward to tuck a stray lock of hair behind his ear."
     mm "Stay focused, okay?"
@@ -1289,7 +1302,9 @@ label masami_kitchen_3:
     m "…"
     m "Right."
     m "I've…got some homework to do. I'll be back down in a bit!"
-    mm "Okay, I call you down for dinner. Remember, stay focused!"
+    mm "Okay, I call you down for dinner."
+    show wsprite at bounce
+    mm "Remember, stay focused!"
     m "I will!"
 
     jump masami_room_3a
@@ -1301,6 +1316,7 @@ label masami_room_3a:
     scene bg bedroom with Dissolve(1.0)
 
     n "The moment that Masami sets foot in his room, he flops down face first on the bed with a groan."
+    show bg bedroom at vpunch
     m "(Ugh…)"
     m "(What a day…)"
     m "(I don't feel like functioning any more.)"

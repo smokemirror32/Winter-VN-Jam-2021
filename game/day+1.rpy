@@ -4,6 +4,10 @@ label masami_kitchen1:
 
     scene bg kitchen with Dissolve(1.0)
     play music emotional fadein 1.0
+    show msprite at left
+    show wsprite at right
+    with Dissolve(1.0)
+    pause(0.5)
 
     # Masami's parents come in
     m "Hey. You're finally back from the damn hospital."
@@ -28,26 +32,39 @@ label masami_kitchen1:
     m "What? I'm just being honest."
     mm "…She would want you to be there when she go. Have her baby brother there one last time."
     m "Sure. Like she even meant to stick around in the first place."
-    mm "That is not true. I am her mother. I know her."
+    show wsprite at shake, right
+    mm "That is not true! I am her mother. I know her."
     m "Then you knew why she went and graffitied every illegal surface she could find."
     m "Why her bank account always had monthly cash withdrawals."
     m "Why she bought a noise machine to put outside her room."
     m "You knew about all that, right?"
+    show wsprite at shake, right
     n "Masami's mother gasps softly, clutching tightly at the tissue."
+    show msprite at shake, left
     md "Masami. That is enough for today."
     m "…"
     m "That's bullshit."
+    show wsprite at shake, right
     md "Masami! You apologize to your mother - "
+    show bg kitchen at hpunch
     m "I said, that's bullshit!"
+    show bg kitchen at hpunch
     m "And I am not apologizing!"
+    show bg kitchen at hpunch
     m "I'm fucking sick of apologies that don't fix any fucking problems."
+    show bg kitchen at hpunch
     m "{i}Jie{/i} was basically dead to everyone the moment she left the house three years ago."
+    show bg kitchen at hpunch
     m "No one said a word about her. Not a single fucking word."
+    show bg kitchen at hpunch
     m "Not even yesterday before we got the fucking phone call at dinner when we were supposed to be talking about the importance of \"family togetherness\" and shit."
     m "Now - "
     n "Masami swallows."
+    show bg kitchen at hpunch
     m "Now, she's actually dead."
+    show bg kitchen at hpunch
     m "And everyone still wants to keep dancing around the whole thing like it didn't happen."
+    show bg kitchen at hpunch
     m "Is it a crime that I want to actually talk about how fucked up it is that we are erasing a whole member of our family’s existence because she wouldn’t be the fucking doll you wanted her to?"
 
     stop music fadeout 3.0
@@ -63,8 +80,10 @@ label masami_kitchen1:
     mm "You changed Masami."
     mm "Why? Why you change?"
     m "…"
+    show bg kitchen at shake
     n "Masami abruptly stands from his spot at the dinner table. His chair shakes from where he pushed it aside."
     m "I'm done with this."
+    show bg kitchen at hpunch
     n "He turns for the stairs and stalks off to his room, slamming the door behind him."
 
     jump masami_room1

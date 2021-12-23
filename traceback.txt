@@ -1,17 +1,17 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/day-3.rpy", line 1095, in script
-    show alyssa at nervous with Dissolve(0.3)
-  File "game/day-3.rpy", line 1095, in <module>
-    show alyssa at nervous with Dissolve(0.3)
-NameError: name 'nervous' is not defined
+  File "game/day-2.rpy", line 372, in script
+    show wsprite2 at shake, nearright with move
+  File "game/day-2.rpy", line 372, in <module>
+    show wsprite2 at shake, nearright with move
+NameError: name 'nearright' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/day-3.rpy", line 1095, in script
-    show alyssa at nervous with Dissolve(0.3)
+  File "game/day-2.rpy", line 372, in script
+    show wsprite2 at shake, nearright with move
   File "renpy/ast.py", line 1192, in execute
     show_imspec(self.imspec, atl=getattr(self, "atl", None))
   File "renpy/ast.py", line 1151, in show_imspec
@@ -20,11 +20,11 @@ Full traceback:
     return py_eval_bytecode(code, globals, locals)
   File "renpy/python.py", line 2259, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/day-3.rpy", line 1095, in <module>
-    show alyssa at nervous with Dissolve(0.3)
-NameError: name 'nervous' is not defined
+  File "game/day-2.rpy", line 372, in <module>
+    show wsprite2 at shake, nearright with move
+NameError: name 'nearright' is not defined
 
 Windows-10-10.0.19041
 Ren'Py 7.4.8.1895
-Solstice 1.0
-Tue Dec 21 14:35:10 2021
+And So, I Fall 1.0
+Wed Dec 22 18:40:34 2021

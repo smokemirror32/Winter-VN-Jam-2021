@@ -2,4 +2,4 @@
 
 label start:
 
-    jump test_block # TODO: Change this to the poem once the textblock is deleted!
+    jump intro_poem # TODO: Change this to the poem once the textblock is deleted!

@@ -2,8 +2,8 @@
 # Setting the scene - this is in black
 label office:
 
-    scene bg black with Dissolve(2.0)
     play music reflective fadein 2.0 fadeout 1.0
+    scene bg black with Dissolve(2.0)
 
     m "…"
     m "(Ugh.)"
@@ -20,7 +20,9 @@ label office:
 # Inside the office
 label office_inside:
 
-    scene bg office with Dissolve(1.0)
+    scene bg office
+    show wsprite
+    with Dissolve(2.0)
 
     # Initial introduction and setting description
     n "The principal gestures to a stiff wooden chair on the opposite side of the desk."
@@ -32,6 +34,7 @@ label office_inside:
     m "Sorry."
     n "The word comes out of his mouth on reflex. Masami flinches, startled. He turns away, face slightly flushed."
     m "I - "
+    show wsprite at bounce
     n "The principal chuckles."
     p "Don't worry, everyone's been complaining about it, not just you."
     p "Reminds me, I really need to go about replacing that chair..."
@@ -51,6 +54,7 @@ label office_inside:
 
 label office_question:
 
+    show wsprite at bounce
     p "Masami?"
     n "Masami's head jolts back upright again."
     n "The principal's gaze on him is softer now and she leans back slightly, as if to appear less intimidating. More sympathetic."
@@ -137,32 +141,46 @@ label office_outburst:
 
     m "Hmph."
     m "You don’t actually expect me to believe that, do you? That {i}jie{/i} actually amounted to anything in your eyes?"
+    show wsprite at shake, center
     p "I did not say - "
     m "That's what you implied."
+    show bg office at vpunch
     n "Before he knows it, Masami has flown to his feet, hand planted on the desk in front of him."
     n "His voice remains quiet and steady, but the tone of it has sharpened."
     m "It's always been about the implications, hasn't it?"
     m "All the things that we want others to know, but won't dare speak into existence."
+    show wsprite at shake, center
     n "The principal flinches."
     m "You don't deny it, do you?"
     p "Masami -"
     m "You said you wanted to understand me."
+    show bg office at vpunch
     m "Fine. I'll tell you then."
     p "…"
+    show bg office at vpunch
     m "All of us here are cowards."
+    show bg office at vpunch
     m "Fucking dancing puppets on strings."
+    show bg office at vpunch
     m "We're all pulling at each other because we're too damn stupid to know any other way to move."
+    show bg office at vpunch
     m "Get good grades to get into a good college. Get a good resume to get into a good job. Get a good salary to get a nice, big house you can retire in."
+    show bg office at vpunch
     m "Smile good enough that you won't feel like you need to roll over in your grave when you die."
+    show bg office at vpunch
     m "Feels good, doesn't it?"
+    show bg office at vpunch
     m "You know what happens the moment that someone decides they want to cut themselves free?"
+    show bg office at vpunch
     m "That they've had enough of the bullshit?"
+    show bg office at vpunch
     m "That they want to find out how to move on their own?"
+    show bg office at vpunch
     m "That they want - "
-
+    show bg office at vpunch
     stop music
 
-    m "I - "
+    m "That I - "
     m "..."
 
     play music emotional fadein 2.0

@@ -1,31 +1,7 @@
-# Just a test block :)
-label test_block:
-
-    scene bg kitchen # REMOVE TEST BLOCK
-    show masami # REMOVE TEST BLOCK
-
-    m "I am a poem"
-
-    show masami at bounce
-
-    m party "At a party!"
-
-    show masami at shake
-
-    m surprised "What?"
-
-    show masami at right with move
-    show sabie happy at left with moveinleft
-    show xinyi happy at center with Dissolve(0.2)
-
-    m happy "Oh."
-
-    scene bg black with Dissolve(2.0)
-
-    jump intro_poem
-
 # The actual starting point
 label intro_poem:
+
+    show bg black with Dissolve(0.2)
 
     # This is currently in NVL mode, though we can change if needed!
     narrator "\n For every defining moment, there is a Before and an After."
@@ -34,5 +10,7 @@ label intro_poem:
     narrator "But what can be said of the moment itself, this impossibly thin waist in the hourglass of time? What can be said of this paradoxical well of space, where even the falling seconds dare to defy gravity?"
     narrator "What dare we make of it?"
     nvl clear
+
+    stop music fadeout 2.0
 
     jump office
