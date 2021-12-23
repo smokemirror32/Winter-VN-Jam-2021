@@ -548,8 +548,9 @@ label lunch_stable:
     n "She stops when she sees Rohan raising his hand."
     s neutral "Yeah?"
     r "Question. What's {i}Dongzhi{/i}?"
-    t "It's an East Asian holiday centered around reuniting with family and eating {i}tangyuan{/i}."
+    t "It's an East Asian holiday held on the winter solstice that comprises of reuniting with family and eating {i}tangyuan{/i}."
     m "(...And the assumption that you have the family to spend it with.)"
+    show sabie at bounce
     s "Basically Thanksgiving with a better menu. Fun stuff!"
     s worried "Anyways, let's see, what else do I need to ask you emotionally constipated children to help you open up properly?"
     show sabie innocent at bounce

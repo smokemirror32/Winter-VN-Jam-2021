@@ -70,6 +70,9 @@ define config.main_menu_music = "audio/music/finale.mp3"
 ## Each variable should be set to a transition, or None to indicate that no
 ## transition should be used.
 
+## Adding a layer ##
+define config.layers = [ 'master', 'transient', 'screens', 'glitching', 'overlay', 'mcsprite']
+
 ## Entering or exiting the game menu.
 
 define config.enter_transition = dissolve

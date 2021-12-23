@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 1725: expected statement.
-    frame:
-         ^
+File "game/day-1.rpy", line 32: expected statement.
+    glitch_filter hide
+                  ^
 
 Ren'Py Version: Ren'Py 7.4.8.1895
-Wed Dec 22 15:53:53 2021
+Thu Dec 23 18:11:11 2021

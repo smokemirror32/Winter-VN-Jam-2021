@@ -3,7 +3,7 @@
 label office:
 
     play music reflective fadein 2.0 fadeout 1.0
-    scene bg black with Dissolve(2.0)
+    #scene bg black with Dissolve(2.0)
 
     m "…"
     m "(Ugh.)"

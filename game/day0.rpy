@@ -1,7 +1,9 @@
 ﻿## DAY 0
 # This part doesn't need full voice over
-# This part doesn't need full voice over, fully CGs
 label tangyuan_cook:
+
+    play music emotional fadein 2.0
+    scene bg black with Dissolve(2.0) # Fix this with CGs!
 
     # Empty setup
     mm "Ready, Masami?"
@@ -91,18 +93,21 @@ label tangyuan_cook:
 # Full VO begins here, might need some pause or transition text if the transition is too quick
 label xinyi_appearance:
 
+    stop music fadeout 2.0
     scene # TODO: Fix me!
 
     # Shadow appears in window
     m "{i}Jie?{/i}"
     # Shadow disappears
+    play music finale fadein 2.0
     m "{i}Jie{/i} - "
     m "I saw her out there, I know I did."
     m "But, why can't I seem to move?"
+    show bg kitchen at hpunch # TODO: Change this to the correct scene!
     m "Damn it. I have to - agh!"
-    # Visuals/Sound Effects depict him breaking free, he calls after her as he runs
-
-    scene bg nightsky
+    scene bg black with Dissolve(0.1)
+    scene bg nightsky with Dissolve(0.1)
+    show bg nightsky at shake
 
     m "{i}Jie{/i}! Wait!"
 
@@ -173,9 +178,10 @@ label ending:
     m "You’re…warmer now. So warm…"
     m "Don't let go. I don't want to forget you like everyone else. Please - "
     x "I promise."
-    m "…" # Choked up sobbing
+    m "{i}Jie...{/i}" # TODO: Replace with "..." when voicelines are in!
     x "I promise."
 
-    return
+    window hide dissolve
+    pause(2.0)
 
-# Idk how to end this thing but it's the ending! :D
+    jump credits # TODO: Fix transition!

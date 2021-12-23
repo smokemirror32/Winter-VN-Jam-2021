@@ -1,30 +1,64 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/day-2.rpy", line 372, in script
-    show wsprite2 at shake, nearright with move
-  File "game/day-2.rpy", line 372, in <module>
-    show wsprite2 at shake, nearright with move
-NameError: name 'nearright' is not defined
+While processing text tag {} in u'{b}Background/GUI Artist{/b}\nCypher\n\n{b}CG Artist{/b}\nMx. Rux\n\n{b}Sprite Artist{\x08}\nChani_MK'.:
+  File "game/credits.rpy", line 12, in script
+    show text "{b}Background/GUI Artist{/b}\nCypher\n\n{b}CG Artist{/b}\nMx. Rux\n\n{b}Sprite Artist{\b}\nChani_MK" with dissolve
+Exception: Unknown text tag u'\x08'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/day-2.rpy", line 372, in script
-    show wsprite2 at shake, nearright with move
-  File "renpy/ast.py", line 1192, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "renpy/ast.py", line 1151, in show_imspec
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "renpy/python.py", line 2266, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "renpy/python.py", line 2259, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/day-2.rpy", line 372, in <module>
-    show wsprite2 at shake, nearright with move
-NameError: name 'nearright' is not defined
+  File "game/credits.rpy", line 12, in script
+    show text "{b}Background/GUI Artist{/b}\nCypher\n\n{b}CG Artist{/b}\nMx. Rux\n\n{b}Sprite Artist{\b}\nChani_MK" with dissolve
+  File "renpy/ast.py", line 1438, in execute
+    renpy.exports.with_statement(trans, paired)
+  File "renpy/exports.py", line 1682, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 2718, in do_with
+    clear=clear)
+  File "renpy/display/core.py", line 3276, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "renpy/display/core.py", line 3793, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "renpy/display/core.py", line 2521, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 492, in renpy.display.render.render_screen
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/layout.py", line 814, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/transition.py", line 368, in render
+    top = render(self.new_widget, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/layout.py", line 814, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/layout.py", line 814, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/transform.py", line 715, in render
+    return transform_render(self, width, height, st, at)
+  File "accelerator.pyx", line 140, in renpy.display.accelerator.transform_render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/image.py", line 501, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "renpy/display/image.py", line 307, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/text/text.py", line 2060, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "renpy/text/text.py", line 610, in __init__
+    self.paragraphs = self.segment(text.tokens, style, renders, text)
+  File "renpy/text/text.py", line 1240, in segment
+    raise Exception("Unknown text tag %r" % text)
+Exception: Unknown text tag u'\x08'
 
 Windows-10-10.0.19041
 Ren'Py 7.4.8.1895
 And So, I Fall 1.0
-Wed Dec 22 18:40:34 2021
+Thu Dec 23 14:22:50 2021

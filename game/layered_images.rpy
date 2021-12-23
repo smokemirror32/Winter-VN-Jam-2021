@@ -1,3 +1,7 @@
+################################################################################
+## Sprites
+################################################################################
+
 ## Masami's layered image
 layeredimage masami:
 
@@ -185,3 +189,23 @@ layeredimage alyssa:
 
         attribute glass default:
             "Alyssa/Alyssa_Glasses.png"
+
+################################################################################
+## Glitch Filter
+################################################################################
+
+layeredimage glitch_filter:
+
+    always:
+
+        "bg/vignette.png"
+
+    group scan2:
+
+        attribute normal2 default:
+            "bg/scanlinesmellow.png"
+
+    group scan:
+
+        attribute normal default:
+            "bg/scanlines.png"

@@ -20,6 +20,7 @@ label phone_1a:
     play music chaos
 
     call phone_open(True)
+    show glitch_filter onlayer glitching with Dissolve(1.0)
     call message(s, "Hey dumbass. I know who you really are. It'd be a shame if I told everyone, wouldn't it? ;)", True)
     call phone_close()
 
@@ -28,6 +29,7 @@ label phone_1a:
 # Glitch OFF, cuts back to Masami
 label class_1_panik:
 
+    hide glitch_filter onlayer glitching
     n "Masami nearly drops his phone."
     m "What the hell?"
     n "He nervously picks up his phone again."
@@ -107,6 +109,7 @@ label sabie_glitching:
     # Depending on if you supported Sabie on the third day
     # GLITCH ON
 
+    show glitch_filter onlayer glitching with Dissolve(1.0)
     play music chaos fadein 1.0
 
     show rohan at glitch
@@ -148,11 +151,12 @@ label sabie_glitching:
     m "W-What? When did I ever think that?"
 
     # Glitch OFF
-    stop music fadeout 1.0
-    show rohan sad at right
-    play music uptempo fadein 2.0
+    stop music fadeout 2.0
     show sabie worried:
         ease 40 zoom 1.0
+    show rohan sad at right with Dissolve(1.0)
+    hide glitch_filter onlayer glitching with Dissolve(2.0)
+    play music uptempo fadein 2.0
 
     s "Uh…I guess you could start thinking about helping me right about now. Kinda in a tough spot, as you can see."
     m "Ah."
@@ -163,6 +167,7 @@ label sabie_glitching:
 
     # Glitch ON
 
+    show glitch_filter onlayer glitching with Dissolve(1.0)
     play music chaos fadein 1.0
 
     show sabie at glitch
@@ -196,11 +201,12 @@ label sabie_glitching:
     m "N-No! It's not like that. I care about you guys, I promise."
     # Glitch OFF
 
-    stop music fadeout 1.0
-    show sabie worried at left
-    play music uptempo fadein 2.0
+    stop music fadeout 2.0
     show rohan:
         ease 40 zoom 1.0
+    show sabie worried at left with Dissolve(1.0)
+    hide glitch_filter onlayer glitching with Dissolve(2.0)
+    play music uptempo fadein 2.0
 
     n "Sabie and Rohan exchange glances. The phone hangs between them in their limp grasps, forgotten. "
     r neutral "Uh, we already knew that part, but thanks."
@@ -229,6 +235,7 @@ label sabie_glitching:
 
     # Glitch ON
 
+    show glitch_filter onlayer glitching with Dissolve(1.0)
     play music chaos fadein 1.0
     call tyree_glitch()
     call tyree_spaz()
@@ -262,6 +269,7 @@ label sabie_glitching:
 
     n "Masami backs up quickly, colliding into a nearby tree. His hands reach backwards around the trunk."
     # Glitch OFF
+    hide glitch_filter onlayer glitching with Dissolve(2.0)
     m "I - I..."
     m "Look, I don't know what I should do anymore."
     m "If I help Rohan, Sabie complains. If I help Sabie, Rohan complains. If I leave you both alone, you both complain."
@@ -294,7 +302,8 @@ label lunch_1b:
     n "Masami inhales slowly."
     m "Nothing happened. I have no idea what you're talking about."
 
-    show sabie annoyed at center with move
+    show sabie annoyed at center with move:
+        ease 1.5 zoom 1.05
     show rohan neutral
 
     n "Sabie gets up and walks over to him very slowly, her fists balled."
@@ -311,6 +320,7 @@ label lunch_1b:
 
     # Glitch ON - will stay on until Masami enters house
 
+    show glitch_filter onlayer glitching with Dissolve(1.0)
     call sabie_spaz()
     s mischievous  "And what did you do?"
 
@@ -673,7 +683,9 @@ label hallway_1:
     stop music fadeout 1.5
     na "Goodbye Masami."
 
-    hide nasir with Dissolve(1.0)
+    call nasir_spaz()
+    hide nasir
+    hide glitch_filter onlayer glitching with Dissolve(2.0)
 
     # GLITCH OFF - Fade out
 
