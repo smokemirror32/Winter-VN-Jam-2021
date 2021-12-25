@@ -1737,3 +1737,40 @@ screen party:
             yalign 0.1
             #pos renpy.get_mouse_pos() # This puts the text where the mouse is, but doesn't look pretty
             text "[tooltip]"
+
+### Railcar Point and Click
+
+screen railcar:
+
+    if graffiti_check:
+        imagebutton:
+            xpos 0.335 ypos 0.19
+            idle "eye_idle"
+            hover "eye_hover" hovered
+            tooltip "Explore graffiti"
+            action Jump("walk_splace_graffiti")
+
+    if car_check:
+        imagebutton:
+            xpos 0.6 ypos 0.5
+            idle "eye_idle"
+            hover "eye_hover" hovered
+            tooltip "Explore train car"
+            action Jump("walk_splace_car")
+
+    if tracks_check:
+        imagebutton:
+            xpos 0.85 ypos 0.8
+            idle "eye_idle"
+            hover "eye_hover" hovered
+            tooltip "Explore train tracks"
+            action Jump("walk_splace_tracks")
+
+    $ tooltip = GetTooltip()
+    if tooltip:
+        frame:
+            background None
+            xalign 0.5 # Unsure of where the best place to put the box for this
+            yalign 0.1
+            #pos renpy.get_mouse_pos() # This puts the text where the mouse is, but doesn't look pretty
+            text "[tooltip]"

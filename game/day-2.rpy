@@ -945,25 +945,15 @@ label walk_splace_explore:
 
     if (graffiti_check or car_check or tracks_check):
 
-        menu:
-
-            "Explore graffiti" if graffiti_check:
-                $ graffiti_check = False
-                jump walk_splace_graffiti
-
-            "Explore train car" if car_check:
-                $ car_check = False
-                jump walk_splace_car
-
-            "Explore train tracks" if tracks_check:
-                $ tracks_check = False
-                jump walk_splace_tracks
+        call screen railcar
 
     else:
         jump walk_splace_climb
 
 # Explore the graffitti - unsprited
 label walk_splace_graffiti:
+
+    $ graffiti_check = False
 
     m "That's one of my sister's magpies. She took to them like Reminisce took to horses, if you know what I mean."
     na "Reminisce?"
@@ -988,6 +978,7 @@ label walk_splace_graffiti:
 # Explore the train car - unsprited
 label walk_splace_car:
 
+    $ car_check = False
     m "Sometimes, we used to camp out in here, especially in the winter or rain, when a tent wouldn't be enough shelter."
     na "Ah. Wouldn't it still be rather cold?"
     m "Of course it was. But {i}jie{/i} got some good sleeping bags and a heater, and always insisted that I wear extra layers."
@@ -1007,6 +998,8 @@ label walk_splace_car:
 
 # Explore the train tracks - unsprited
 label walk_splace_tracks:
+
+    $ tracks_check = False
 
     m "I don't remember anything running on these tracks before. And I don't think anything ever will."
     m "They're rusted beyond repair. I'd be surprised if anyone tries to fix them."
@@ -1087,7 +1080,7 @@ label walk_splace_climb:
 # Leaving this part unsprited!
 label walk_splace_chat:
 
-    scene bg nightskymoreblur with Dissolve(1.0)
+    scene bg nightsky with Dissolve(1.0)
     $ nasir_blush = False
 
     n "Masami looks up, taking in the night sky."
@@ -1119,7 +1112,7 @@ label walk_splace_charm:
     m "Or at least I think it is. I am biased, after all."
 
     scene bg black with Dissolve(0.5)
-    scene bg nightskymoreblur with Dissolve(1.0)
+    scene bg nightsky with Dissolve(1.0)
 
     n "Masami puts the charm away with a sigh."
     m "I…think I'm the only one who still tries to think about her."

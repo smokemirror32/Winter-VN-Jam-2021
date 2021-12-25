@@ -3,11 +3,14 @@
 label tangyuan_cook:
 
     play music emotional fadein 2.0
-    scene bg black with Dissolve(2.0) # Fix this with CGs!
+    scene cg Cooking_Tangyuan_Empty with Dissolve(2.0)
 
     # Empty setup
     mm "Ready, Masami?"
     m "…Yeah. Let's do this."
+
+    scene bg black with Dissolve(1.0)
+    scene cg Cooking_Tangyuan_Step1 with Dissolve(1.0)
 
     # Toast black sesame seeds in frying pan over low heat
     mm "Careful. Make sure they plump, but not overcooked."
@@ -19,15 +22,20 @@ label tangyuan_cook:
     m "…How about now?"
     mm "That is perfect."
 
+    scene bg black with Dissolve(1.0)
+    scene cg Cooking_Tangyuan_Step2 with Dissolve(1.0)
+
     # Grind with food processer with sugar into paste, add lard and refrigerate
     mm "Okay, we put in here. Let run for a little bit with some lard."
     m "I think it looks good."
     mm "You want to try?"
-    m "Uh, I don't think that - hey! Dad, why'd you eat that?"
+    m "Uh, I don't think that - "
+    m "Hey! Dad, why'd you eat it?"
     md "Why not?"
     m "It's raw! Aren't you supposed to cook it first?"
     md "It taste good."
-    m "Heh. Guess I can't say anything to the guy who ate dirt as a kid."
+    m "Well, guess I can't say anything to the guy who ate dirt as a kid."
+    md "Heh."
     m "Why are you laughing all of a sudden, Mom?"
     mm "Nothing. Just happy."
     m "Alright. I'm going to put this in the refrigerator and then we can get started on the dough."
@@ -44,12 +52,20 @@ label tangyuan_cook:
     md "Haha. Here is water. Anything else?"
     m "One moment, let me get this mixed first."
 
+    scene bg black with Dissolve(1.0)
+    scene cg Cooking_Tangyuan_Step3 with Dissolve(1.0)
+
     # Flatten and wrap with filling in middle, boil in pot
     m "…Alright. I'm done. Could you help me roll these out?"
     md "Okay!"
-    mm "You need filling, I put here. Your {i}tangyuan{/i} already made, I go ahead and put in water since it boiling."
-    mm "Also, be gentle with dough. Add water if crack, okay?"
+    mm "Be gentle with dough. Add water if crack, okay?"
     m "Thanks, Mom. Got it."
+
+    scene bg black with Dissolve(1.0)
+    scene cg Cooking_Tangyuan_Step41 with Dissolve(1.0)
+
+    m "Phew, I think that was the last one."
+    mm "Your {i}tangyuan{/i} already made, I put here. Add to water when it boiling."
     md "Are those peanut?"
     m "Yeah."
     md "Can I taste test?"
@@ -58,20 +74,21 @@ label tangyuan_cook:
     m "What - Mom. You're laughing again."
     mm "Nothing, nothing!"
     m "Alright, if you say so."
+
+    scene bg black with Dissolve(1.0)
+    scene cg Cooking_Tangyuan_Step42 with Dissolve(1.0)
     mm "I take finished one out, put new one in."
     m "Got it! One second, let me - "
-    md "Hey! Why you taste test, too?"
+    md "Hey! I thought you say no taste test."
     m "Why not? It's cooked."
     md "What's different? The lard just more melted."
     m "I dunno. Some bio stuff probably."
     md "Excuse."
     m "Hey, I’m just saying. I don’t do bio, but I’d rather be safe than sorry, alright?"
     mm "Oh! I think curry is done. I set to simmer. We can eat now if you ready."
-    m "Uh, we should be ready. Dad and I should be able to finish the rest of these and freeze them up."
-    md "I can finish by myself. You help your mom set the table."
-    m "Alright, got it."
+    m "Uh, we should be ready. I'll help set the table then."
 
-    # Set table CG
+    # Set table CG TODO - Add CG
     mm "Okay, we all ready?"
     m "…Could we wait a little bit?"
     mm "Why?"

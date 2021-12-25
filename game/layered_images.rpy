@@ -200,12 +200,10 @@ layeredimage glitch_filter:
 
         "bg/vignette.png"
 
-    group scan2:
-
-        attribute normal2 default:
-            "bg/scanlinesmellow.png"
-
     group scan:
 
         attribute normal default:
             "bg/scanlines.png"
+
+        attribute normal2 default:
+            "bg/scanlinesmellow.png"
