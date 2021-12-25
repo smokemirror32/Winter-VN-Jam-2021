@@ -14,6 +14,8 @@
     hide text with Dissolve(1.0)
     show text "{b}Audio Director{/b}\nEliana\n\n{b}Composers{/b}\nKelly Thiessen\nShar J" with Dissolve(1.5)
     $ renpy.pause(4.0)
+    show text "{b}Editor{/b}\nAllie Vera\n\n{b}Glitch Code{/b}Gouvernathor\n(https://github.com/Gouvernathor/renpy-ChromaGlitch)" with Dissolve(1.5)
+    $ renpy.pause(4.0)
     hide text with Dissolve(1.0)
     show text "Thanks for playing! :)" with Dissolve(1.5)
     $ renpy.pause(2.0)

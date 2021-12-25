@@ -205,5 +205,5 @@ layeredimage glitch_filter:
         attribute normal default:
             "bg/scanlines.png"
 
-        attribute normal2 default:
+        attribute normal2:
             "bg/scanlinesmellow.png"
