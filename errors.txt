@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/day-1.rpy", line 32: expected statement.
-    glitch_filter hide
-                  ^
+File "game/day+3.rpy", line 25: expected statement.
+    add SideImage()
+                 ^
 
 Ren'Py Version: Ren'Py 7.4.8.1895
-Thu Dec 23 18:11:11 2021
+Mon Dec 27 19:35:57 2021

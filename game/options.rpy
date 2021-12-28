@@ -71,7 +71,9 @@ define config.main_menu_music = "audio/music/finale.mp3"
 ## transition should be used.
 
 ## Adding a layer ##
-define config.layers = [ 'master', 'transient', 'screens', 'glitching', 'overlay', 'mcsprite']
+define config.layers = [ 'master', 'transient', 'screens', 'glitching', 'character','overlay']
+define config.tag_layer = {'masami':'character'}  #tag it so every cohan image is automatically place on the 'character' layer. Alternatively, you can use "onlayer" to manually put him in there every time
+define config.menu_clear_layers = ['character'] # clear it so the char will disappear when enter game screen, otherwise he will awkwardly stay there
 
 ## Entering or exiting the game menu.
 
