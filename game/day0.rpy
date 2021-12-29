@@ -9,7 +9,6 @@ label tangyuan_cook:
     mm "Ready, Masami?"
     m "…Yeah. Let's do this."
 
-    scene bg black with Dissolve(1.0)
     scene cg Cooking_Tangyuan_Step1 with Dissolve(1.0)
 
     # Toast black sesame seeds in frying pan over low heat
@@ -22,7 +21,6 @@ label tangyuan_cook:
     m "…How about now?"
     mm "That is perfect."
 
-    scene bg black with Dissolve(1.0)
     scene cg Cooking_Tangyuan_Step2 with Dissolve(1.0)
 
     # Grind with food processer with sugar into paste, add lard and refrigerate
@@ -52,7 +50,6 @@ label tangyuan_cook:
     md "Haha. Here is water. Anything else?"
     m "One moment, let me get this mixed first."
 
-    scene bg black with Dissolve(1.0)
     scene cg Cooking_Tangyuan_Step3 with Dissolve(1.0)
 
     # Flatten and wrap with filling in middle, boil in pot
@@ -61,7 +58,6 @@ label tangyuan_cook:
     mm "Be gentle with dough. Add water if crack, okay?"
     m "Thanks, Mom. Got it."
 
-    scene bg black with Dissolve(1.0)
     scene cg Cooking_Tangyuan_Step41 with Dissolve(1.0)
 
     m "Phew, I think that was the last one."
@@ -75,7 +71,6 @@ label tangyuan_cook:
     mm "Nothing, nothing!"
     m "Alright, if you say so."
 
-    scene bg black with Dissolve(1.0)
     scene cg Cooking_Tangyuan_Step42 with Dissolve(1.0)
     mm "I take finished one out, put new one in."
     m "Got it! One second, let me - "
@@ -88,7 +83,9 @@ label tangyuan_cook:
     mm "Oh! I think curry is done. I set to simmer. We can eat now if you ready."
     m "Uh, we should be ready. I'll help set the table then."
 
-    # Set table CG TODO - Add CG
+    scene bg black with Dissolve(1.5)
+    scene cg Family_Dinner_NoShadow with Dissolve(1.5)
+
     mm "Okay, we all ready?"
     m "…Could we wait a little bit?"
     mm "Why?"
@@ -111,19 +108,22 @@ label tangyuan_cook:
 label xinyi_appearance:
 
     stop music fadeout 2.0
-    scene # TODO: Fix me!
+    scene cg Family_Dinner with Dissolve(3.0)
 
     # Shadow appears in window
     m "{i}Jie?{/i}"
     # Shadow disappears
     play music finale fadein 2.0
+    scene cg Family_Dinner_NoShadow with Dissolve(3.0)
     m "{i}Jie{/i} - "
     m "I saw her out there, I know I did."
     m "But, why can't I seem to move?"
-    show bg kitchen at hpunch # TODO: Change this to the correct scene!
+    show cg Family_Dinner_NoShadow at hpunch
     m "Damn it. I have to - agh!"
     scene bg black with Dissolve(0.1)
-    scene bg nightsky with Dissolve(0.1)
+    scene bg nightsky
+    show masami surprised at mc_pos
+    with Dissolve(0.1)
     show bg nightsky at shake
 
     m "{i}Jie{/i}! Wait!"
@@ -131,27 +131,35 @@ label xinyi_appearance:
     show xinyi with Dissolve(0.4)
 
     x "Huh?"
-    m "Please, I'm here now - "
-    m "Your hands. T-They're like ice. And your face, your hair - " # Gasp at the begin
+    m neutral "Please, I'm here now - "
+    show masami surprised at shake, mc_pos
+    m surprised "Your hands. T-They're like ice. And your face, your hair - " # Gasp at the begin
     m "W-Why are you so cold?"
     x sad "..." # A sigh
     x "Because I am not truly here."
-    m "Huh?"
+    show masami surprised at shake, mc_pos
+    m surprised "Huh?"
 
     jump house_reflect
 
 # Looking back at the house
 label house_reflect:
 
-    scene # TODO: Replace with CG
+    scene bg black
+    hide masami
+    with Dissolve(2.0)
+    scene cg Looking_Back with Dissolve(2.0)
 
     m "No…"
     x "You are still there, Masami. Where you belong."
     x "And I am where I belong as well."
     x "There is no reason for me to take part in a reunion if I know that I will not stay."
 
+    scene bg black with Dissolve(2.0)
     scene bg nightsky
     show xinyi sad
+    show masami sad at mc_pos
+    with Dissolve(2.0)
 
     m "{i}Jie{/i}, I - "
     x happy "You do not need to feel pity for me. I know what it means to make the choice I did."
@@ -159,25 +167,26 @@ label house_reflect:
 
     show xinyi neutral
 
+    show masami exasperated at shake, mc_pos
     m "That…wasn't what I was going to say."
-    m "What I meant was, I understand."
+    m neutral "What I meant was, I understand."
     x sad "…"
-    m "Not completely, of course. I still haven't figured out how to use a spray can properly."
-    m "But I'm still watching the skies for the same birds as you. Trying to figure out what the hell they've got that makes them able to just {i}be{/i} when the rest of us are still struggling to figure out how."
+    m sad "Not completely, of course. I still haven't figured out how to use a spray can properly."
+    m neutral "But I'm still watching the skies for the same birds as you. Trying to figure out what the hell they've got that makes them able to just {i}be{/i} when the rest of us are still struggling to figure out how."
     x neutral "I suppose you've reached the same conclusion as me, then."
     x "They are just birds in the same way that we are just humans. There is nothing different. Nothing except for belief."
     x sad "And call that what you will, delusion or self-worth. It does not matter in the end if you cannot find it."
-    m "…" # Sigh
+    m sad "…" # Sigh
     m "I'm not asking for you to change your answer, {i}jie{/i}. I don't think I ever could."
-    m "But I - I do have something to ask."
+    m neutral "But I - I do have something to ask."
     x neutral "Yes?"
-    m "Could you let me hold you?"
+    m sad "Could you let me hold you?"
     x sad "I don't see what this will change for either of us."
     m "I - I know. But I want this."
-    m "I want to be selfish. If only for a little while. If only for you."
+    m neutral "I want to be selfish. If only for a little while. If only for you."
     x "I - I don't want to hurt you more than I already have."
     # Masami starts choking up here
-    m "No, {i}jie{/i}, you didn't…you never…"
+    m sad "No, {i}jie{/i}, you didn't…you never…"
     m "It was me. Just me. And I..."
 
     jump ending
@@ -185,6 +194,9 @@ label house_reflect:
 # Ending cut scene - fade out Masami/Xinyi after last line
 label ending:
 
+    scene bg black
+    hide masami
+    with Dissolve(2.0)
     scene # TODO: Replace with CG!
 
     x "Shh…it's okay."

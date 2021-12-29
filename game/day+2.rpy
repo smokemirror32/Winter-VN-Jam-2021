@@ -42,26 +42,29 @@ label masami_room2a:
 # A few hours later
 label masami_room2b:
 
+    $ masami_glasses = False
     play music emotional fadein 1.0
-    scene bg bedroom with Dissolve(1.0)
+    scene bg bedroom
+    show masami sad at mc_pos
+    with Dissolve(1.0)
 
     n "Masami is rudely awakened by the sunlight glaring down at him."
-    m "(Ugh. My eyes. Where's…pillow?)"
+    show masami at shake, mc_pos
+    m exasperated "(Ugh. My eyes. Where's…pillow?)"
     show bg bedroom at shake
     n "He feels around the bed for a moment, before sitting up with a sigh."
     m "(Where? I still don't - )"
     show bg bedroom at shake
     n "His hand hits something fluffy right behind him."
-    m "(Oh. Well. Guess today is just one of those days.)"
+    m sad "(Oh. Well. Guess today is just one of those days.)"
     n "Masami props the pillow behind his head, where it's supposed to go."
-    n "Then, he reaches for his phone."
+    $ masami_glasses = True
+    n "Then, he puts on his glasses and picks up his phone."
     m "(It's almost twelve. Half the day is gone.)"
-    m "…"
-    n "Masami chuckles to himself."
-    m "(To think that I expected the world to end or something after what I did yesterday...)"
-    m "…"
+    m happy "(To think that I expected the world to end or something after what I did yesterday...)"
+    m sad "..."
     m "(It feels…kinda weird.)"
-    m "(But also kinda nice, actually.)"
+    m neutral "(But also kinda nice, actually.)"
     n "He hums a little to himself as he unlocks his phone."
     m "(Hm. New messages.)"
 
@@ -70,7 +73,10 @@ label masami_room2b:
 # Pick who you want to respond to…or no one
 label phone2a:
 
+
     if (rohan_unread or sabie_unread or tyree_unread):
+
+        hide masami
 
         menu:
 
@@ -87,10 +93,11 @@ label phone2a:
                 jump phone2a_tyree
 
     else:
+        show masami neutral at mc_pos
         m "(Well, looks like I've finished responding to all the messages.)"
         n "Just then, Masami's phone starts buzzing again."
-        m "(Dammit. It's the group chat.)"
-        m "(Wonder what they're up to now.)"
+        m exasperated "(Dammit. It's the group chat.)"
+        m sad "(Wonder what they're up to now.)"
 
         jump phone2a_gc
 
@@ -161,8 +168,9 @@ label phone2a_rohan_respond:
     call phone_close()
 
     # Off phone portion
-    m "(Ahh, I'd actually kill for one of those cookies right now. Or anything he'd make.)"
-    m "(But I also don't feel like seeing anyone today.)"
+    show masami at mc_pos
+    m neutral "(Ahh, I'd actually kill for one of those cookies right now. Or anything he'd make.)"
+    m sad "(But I also don't feel like seeing anyone today.)"
     m "…"
     m "(Guess I'll have to ask him later when I'm feeling up to it.)"
 
@@ -171,8 +179,9 @@ label phone2a_rohan_respond:
 # Ignore Rohan's message - off phone
 label phone2a_rohan_ignore:
 
-    m "(I wouldn't mind seeing it, but…)"
-    m "(It wouldn't hurt if I delayed replying by a day or two.)"
+    show masami at mc_pos
+    m sad "(I wouldn't mind seeing it, but…)"
+    m neutral "(It wouldn't hurt if I delayed replying by a day or two.)"
 
     jump phone2a
 
@@ -254,8 +263,9 @@ label phone2a_sabie_respond:
     call phone_close()
 
     # Off phone portion
-    m "(Well, at least things seem normal with her.)"
-    m "…"
+    show masami at mc_pos
+    m neutral "(Well, at least things seem normal with her.)"
+    m sad "…"
     m "(It's nice that she's not bringing up {i}jie{/i}, but I kind of wish she did.)"
 
     jump phone2a
@@ -263,7 +273,8 @@ label phone2a_sabie_respond:
 # Ignore Sabie's Message - off phone
 label phone2a_sabie_ignore:
 
-    m "(Well, she said to ignore it, so that's what I'm gonna do.)"
+    show masami at mc_pos
+    m neutral "(Well, she said to ignore it, so that's what I'm gonna do.)"
 
     jump phone2a
 
@@ -314,8 +325,9 @@ label phone2a_tyree_respond:
     call phone_close()
 
     # Off-phone portion
-    m "(That was nice.)"
-    m "…"
+    show masami at mc_pos
+    m neutral "(That was nice.)"
+    m sad "…"
     m "(I know he can handle it, but I still feel bad about giving him so much to do.)"
 
     jump phone2a
@@ -323,16 +335,19 @@ label phone2a_tyree_respond:
 # Masami chooses to ignore the message
 label phone2a_tyree_ignore:
 
-    m "(I appreciate that.)"
+    show masami at mc_pos
+    m neutral "(I appreciate that.)"
     m "(I'll just leave the message as is. Tyree understands.)"
-    m "(Besides, he'll probably have his hands full enough once the school realizes what I've done.)"
+    m sad "(Besides, he'll probably have his hands full enough once the school realizes what I've done.)"
     m "…"
-    m "(Whatever. It's too late to change anything.)"
+    m exasperated "(Whatever. It's too late to change anything.)"
 
     jump phone2a
 
 # Masami responds to the group chat - on phone
 label phone2a_gc:
+
+    hide masami
 
     call phone_open(True,"Group")
 
@@ -367,7 +382,7 @@ label phone2a_gc:
     call message(s, "i agree rohan is very sus", True)
     call message(r, "Hey!", True)
     call message(t, ":)", True)
-    call message(s, "anyways, im not crazy enough to risk my perfect school record with a suspension", True)
+    call message(s, "anyways, im not crazy enough to risk my perfect school record with a suspension ^.^", True)
     call message(r, "Yeah I feel kinda bad for whoever did it", True)
     call message(r, "Its like academic suicide")
     call message(s, "psh now you sound like masami", True)
@@ -399,14 +414,15 @@ label phone2a_gc:
     # You're done responding
 label masami_room2c:
 
+    show masami at mc_pos
+
     n "Masami casually lets his phone drop onto his stomach. It keeps buzzing, but he doesn't bother to pick it up."
     m "(If only you knew, Sabie.)"
     m "(If only you knew how temporary that relief was.)"
-    m "…"
+    m sad "…"
     n "His stomach rumbles."
-    m "(Right. Mom's probably making lunch right now.)"
-    m "…"
-    m "(I probably owe her an apology since I haven't given her one last night either.)"
+    m neutral "(Right. Mom's probably making lunch right now.)"
+    m sad "(...I probably owe her an apology since I haven't given her one last night either.)"
     m "(Not sure if I even want to say anything.)"
     m "(No matter what I say, she still wouldn't really understand. She never has.)"
     m "…"
@@ -418,16 +434,20 @@ label masami_room2c:
 # Masami heads to the kitchen
 label masami_kitchen2:
 
-    scene bg black with Dissolve(1.0)
-    scene bg kitchen with Dissolve(1.0)
+    scene bg black
+    hide masami
+    with Dissolve(1.0)
+    scene bg kitchen
+    show masami sad at mc_pos
+    with Dissolve(1.0)
 
     n "Masami can smell the fragrant aroma of sesame oil long before he reaches the kitchen."
     show wsprite with Dissolve(0.2)
     n "He walks in to find his mother with her apron on and back turned, having just finished cooking."
     n "She turns off the heat on the bok choi she was stir-frying in a wok. A clay pot sits on low heat on the back burner."
     m "(Looks like it's a Hainanese chicken rice day.)"
-    m "(Kind of need that.)"
-    m "…"
+    m neutral "(Kind of need that.)"
+    m sad "…"
     m "(Should I say something to her?)"
 
     # Pick whether or not you plan on talking to Masami's mom
@@ -443,17 +463,20 @@ label masami_kitchen2:
 label masami_kitchen2_talk:
 
     n "Masami gingerly taps his mother's shoulder."
-    m "Uh…Mom?"
+    m neutral "Uh…Mom?"
     show wsprite at shake, center
     n "Masami's mother stops stirring the pot and turns around."
     mm "Yes?"
     m "I…"
-    m "…"
+    m sad "…"
     n "Masami's eyes drop to the floor, his hand retracting back to his side."
+    show masami exasperated at shake, mc_pos
     m "(Damn it. I still don't know what to say.)"
+    show masami sad
     n "Masami feels his mother wrapping her arms around him. She kisses him softly on the forehead."
     show wsprite at bounce, center
     mm "{i}Makan.{/i} Have some food. You feel better, okay?"
+    show masami neutral
     n "Masami nods."
     m "Okay. Thanks."
     n "He grabs a plate and spoon from the cupboard, helping himself to some food."
@@ -465,23 +488,28 @@ label masami_kitchen2_ignore:
 
     n "Masami grabs a plate and spoon from the cupboard. His mom watches in silence as he helps himself to the food."
     m "…"
-    m "(This is awkward. I thought she'd say something by now.)"
-    m "(Guess she's just deciding to give me some space.)"
+    m exasperated "(This is awkward. I thought she'd say something by now.)"
+    m sad "(Guess she's just deciding to give me some space.)"
 
     jump masami_room2d
 
 # Masami returns to his room
 label masami_room2d:
 
-    scene bg black with Dissolve(1.0)
-    scene bg bedroom with Dissolve(1.0)
+    scene bg black
+    hide masami
+    with Dissolve(1.0)
+    scene bg bedroom
+    show masami sad at mc_pos
+    with Dissolve(1.0)
 
     n "Masami heads back to his room, where he eats in silence."
-    m "(This is really good. I actually feel better now.)"
-    m "(Sort of.)"
+    m neutral "(This is really good. I actually feel better now.)"
+    m sad "(Sort of.)"
     n "Despite himself, instinctively turns to look out the window."
     m "…"
-    m "(I wonder why I still bother when she's gone.)"
+    m exasperated "(I wonder why I still bother when she's gone.)"
+    show masami sad
     n "He looks around his room."
     m "(It'll be several hours before Dad comes home. Might as well find something to do.)"
 
@@ -490,6 +518,7 @@ label masami_room2d:
 # Open up a screen to explore things, disappear on click after each option is looked at
 label masami_room2_explore:
 
+    hide masami
     call screen bedroom
 
 # If the bookcase option is selected
@@ -521,12 +550,15 @@ label masami_room2_games:
 # Masami indulges himself for a couple hours, before it's time for dinner
 label masami_news:
 
-    scene bg black with Dissolve(1.0)
+    scene bg black
+    with Dissolve(1.0)
     stop music fadeout 2.0
 
     n "Masami sets his phone to silent and puts on his headset."
 
-    scene bg bedroom with Dissolve(1.0)
+    scene bg bedroom
+    show masami sad at mc_pos
+    with Dissolve(1.0)
 
     n "A few hours later, he is faintly aware of the ringing of the telephone and the soft clack of his mom's slippers as she goes to pick it up."
 
@@ -539,30 +571,36 @@ label masami_news:
     n "His mom goes silent, not saying a word as she hangs up the phone."
     n "Masami hears his father, who must have come home some time ago, say something indiscernible to her and the two of them speak in hushed whispers."
     n "A moment later, he hears his mother's muffled sobbing."
-    m "…"
-    m "(The school called them about the vandalism, didn't they?)"
+    m "(...The school called them about the vandalism, didn't they?)"
     n "A lump forms in Masami's throat. He swallows hard and stares at his hands."
     n "They're shaking."
     m "(Is this what {i}jie{/i} felt like whenever she disappointed someone?)"
-    m "(How did she learn to stop caring?)"
-    n "He squeezes his eyes tight, only vaguely noticing the way his fists clench and his nails dig into his palms."
+    m exasperated "(How did she learn to stop caring?)"
+    n "He squeezes his fists tight, only vaguely noticing the way his nails dig into his palms."
+    show masami at shake, mc_pos
     m "(I…)"
+    show masami sad
     n "His eyes snap back open, roaming around in every direction beside the window and the door."
     n "They settle on the phone face down on his desk."
-    m "(Rohan, Sabie, Tyree…none of them know, do they?)"
-    m "…"
-    m "(With how they thought about the vandalism, do I even want them to know?)"
+    m "(Rohan, Sabie, Tyree...none of them know, do they?)"
+    m exasperated "(...With how they thought about the vandalism, do I even want them to know?)"
+    show masami sad
     n "His fingers gingerly trace the shell of the case before flipping it over, screen side belly-up."
-    n "When it lights up, his breath catches."
+    show masami surprised
+    n "When the home screen flicks on, his breath catches."
     m "(New messages from an unknown number.)"
     m "(No way. I thought…)"
-    m "(No, it can't be. Can it?)"
+    show masami at shake, mc_pos
+    m exasperated "(No, it can't be.)"
+    m sad "(Can it?)"
     n "Holding his breath, he opens the message up."
 
     jump phone2b
 
 # Text from the unknown number - should not show it's from Nasir
 label phone2b:
+
+    hide masami
 
     call phone_open(True, "???")
 
@@ -576,14 +614,18 @@ label phone2b:
 # Masami reflects on it, scene cut
 label masami_dayend:
 
+    show masami at mc_pos
+
     n "Masami feels his chest warm."
     m "(Ah, so it was you.)"
     n "He delicately traces the outline of the text bubbles with his thumb."
-    m "(You think she's proud of me, huh?)"
-    m "..."
+    m happy "(You think she's proud of me, huh?)"
+    m sad "..."
     m "(Is that what I even want anymore?)"
 
-    scene bg black with Dissolve(2.0)
+    scene bg black
+    hide masami
+    with Dissolve(2.0)
     stop music fadeout 2.0
 
     jump masami_room_2

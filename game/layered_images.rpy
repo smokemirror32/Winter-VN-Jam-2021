@@ -3,6 +3,7 @@
 ################################################################################
 
 ## Masami's layered image
+define masami_glasses = True
 layeredimage masami:
 
     always:
@@ -34,9 +35,8 @@ layeredimage masami:
         attribute surprised:
             "Masami/Masami_Surprised.png"
 
-    group eyewear:
-        attribute glasses default:
-            "Masami/Masami_Glasses.png"
+    if masami_glasses:
+        "Masami/Masami_Glasses.png"
 
 ## Nasir's layered image
 define nasir_blush = False
