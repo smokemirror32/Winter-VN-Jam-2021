@@ -112,7 +112,7 @@ label masami_room1:
     scene bg black
     hide masami
     with Dissolve(1.0)
-    scene bg bedroom
+    scene bg bedroomnight
     show masami sad at mc_pos
     with Dissolve(1.0)
 
@@ -169,8 +169,8 @@ label store:
 
     scene bg black
     hide masami
-    with Dissolve(1.0)
-    # TODO: Adjust timing here!
+    with Dissolve(2.0)
+    pause(2.0)
 
     m "I'd like to check these out, please."
     ca "That's a lot of cans and markers, kid. You trying to make a mural or something?"
@@ -184,9 +184,10 @@ label store:
 # Masami goes to spray paint the wall
 label wall:
 
-    scene bg black # TODO: Change this to the wall!
+    pause(2.0)
+    scene bg wall
     show masami at mc_pos
-    with Dissolve(1.0)
+    with Dissolve(2.0)
     m "(Well. I guess I'm really am going to do it this time.)"
     m "(With the security cameras rolling.)"
     m sad "…"
@@ -196,11 +197,13 @@ label wall:
 
     scene bg black
     hide masami
-    with Dissolve(1.0)
+    with Dissolve(2.0)
     pause(2.0)
-    scene bg black # TODO: Change this to the wall!
+    scene bg graffitizoom with Dissolve(2.0)
+    pause
+    scene bg graffiti
     show masami at mc_pos
-    with Dissolve(1.0)
+    with Dissolve(2.0)
 
     # Scene cut to the wonderful graffiti
     m "(There.)"

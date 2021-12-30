@@ -143,8 +143,8 @@ label xinyi_appearance:
 
     x "Huh?"
     m neutral "Please, I'm here now - "
-    show masami surprised at shake, mc_pos
-    m surprised "Your hands. T-They're like ice. And your face, your hair - " # Gasp at the begin
+    show masami sad at shake, mc_pos
+    m "Your hands. T-They're like ice. And your face, your hair - " # Gasp at the begin
     m "W-Why are you so cold?"
     x sad "..." # A sigh
     x "Because I am not truly here."
@@ -180,10 +180,10 @@ label house_reflect:
 
     show masami exasperated at shake, mc_pos
     m "That…wasn't what I was going to say."
-    m neutral "What I meant was, I understand."
+    m sad "What I meant was, I understand."
     x sad "…"
-    m sad "Not completely, of course. I still haven't figured out how to use a spray can properly."
-    m neutral "But I'm still watching the skies for the same birds as you. Trying to figure out what the hell they've got that makes them able to just {i}be{/i} when the rest of us are still struggling to figure out how."
+    m neutral "Not completely, of course. I still haven't figured out how to use a spray can properly."
+    m "But I'm still watching the skies for the same birds as you. Trying to figure out what the hell they've got that makes them able to just {i}be{/i} when the rest of us are still struggling to figure out how."
     x neutral "I suppose you've reached the same conclusion as me, then."
     x "They are just birds in the same way that we are just humans. There is nothing different. Nothing except for belief."
     x sad "And call that what you will, delusion or self-worth. It does not matter in the end if you cannot find it."
@@ -207,8 +207,8 @@ label ending:
 
     scene bg black
     hide masami
-    with Dissolve(2.0)
-    scene # TODO: Replace with CG!
+    with Dissolve(1.0)
+    scene cg Masami_Xinyi_Hug with Dissolve(2.0)
 
     x "Shh…it's okay."
     m "Don't say that. Please don't say that when it's…it's…"
@@ -222,6 +222,9 @@ label ending:
     x "I promise."
 
     window hide dissolve
-    pause(2.0)
+    pause(3.0)
+    scene cg Masami_Xinyi_Hug_BGonly with Dissolve(2.5)
+
+    pause(4.0)
 
     jump credits # TODO: Fix transition!

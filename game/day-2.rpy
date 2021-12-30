@@ -13,7 +13,7 @@ label day_2_transition:
 label masami_room_2:
 
     play music lighthearted fadein 2.0
-    scene bg bedroom
+    scene bg bedroomnight
     show masami party at mc_pos
     with Dissolve(2.0)
 

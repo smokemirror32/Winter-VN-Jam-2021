@@ -567,7 +567,7 @@ label masami_news:
 
     n "Masami sets his phone to silent and puts on his headset."
 
-    scene bg bedroom
+    scene bg bedroomnight
     show masami sad at mc_pos
     with Dissolve(1.0)
 
