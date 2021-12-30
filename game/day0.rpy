@@ -1,8 +1,19 @@
 ﻿## DAY 0
+
+label day0_transition:
+
+    pause(2.0)
+    show text "{size=+50}Day 0{/size}" at trans_text with Dissolve(2.0)
+    pause(4.0)
+    hide text with Dissolve(2.0)
+    pause(2.0)
+
+    jump tangyuan_cook
+
 # This part doesn't need full voice over
 label tangyuan_cook:
 
-    play music emotional fadein 2.0
+    play music lighthearted fadein 2.0
     scene cg Cooking_Tangyuan_Empty with Dissolve(2.0)
 
     # Empty setup
@@ -80,7 +91,7 @@ label tangyuan_cook:
     m "I dunno. Some bio stuff probably."
     md "Excuse."
     m "Hey, I’m just saying. I don’t do bio, but I’d rather be safe than sorry, alright?"
-    mm "Oh! I think curry is done. I set to simmer. We can eat now if you ready."
+    mm "Oh! I think dumpling is done. I set to simmer. We can eat now if you ready."
     m "Uh, we should be ready. I'll help set the table then."
 
     scene bg black with Dissolve(1.5)

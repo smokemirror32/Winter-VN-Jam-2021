@@ -1,5 +1,15 @@
 ## DAY 2 - BEFORE
-# Masami and Alyssa meet in front of his house
+
+label day_2_transition:
+
+    pause(2.0)
+    show text "{size=+50}Day 2 - Before{/size}" at trans_text with Dissolve(2.0)
+    pause(4.0)
+    hide text with Dissolve(2.0)
+    pause(2.0)
+
+    jump masami_room_2
+
 label masami_room_2:
 
     play music lighthearted fadein 2.0
@@ -1494,7 +1504,7 @@ label party_living_room_end:
     s surprised "Upstairs? I don’t know how to play Smash."
     r "Sabie, I know you do. Just take my spot in the bracket."
     s "But - "
-    r "You’ll be fine."
+    r happy "You’ll be fine."
 
     hide rohan
     hide sabie
@@ -1550,6 +1560,6 @@ label tyree_chat:
     stop music fadeout 2.0
     scene bg black
     hide masami
-    with Dissolve(2.0)
+    with Dissolve(3.0)
 
-    jump masami_kitchen1
+    jump day1_transition

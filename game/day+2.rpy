@@ -1,4 +1,15 @@
 ## DAY 2 - AFTER
+
+label day2_transition:
+
+    pause(2.0)
+    show text "{size=+50}Day 2 - After{/size}" at trans_text with Dissolve(2.0)
+    pause(4.0)
+    hide text with Dissolve(2.0)
+    pause(2.0)
+
+    jump masami_room2a
+
 label masami_room2a:
 
     play music reflective fadein 2.0
@@ -625,7 +636,7 @@ label masami_dayend:
 
     scene bg black
     hide masami
-    with Dissolve(2.0)
+    with Dissolve(3.0)
     stop music fadeout 2.0
 
-    jump masami_room_2
+    jump day_2_transition

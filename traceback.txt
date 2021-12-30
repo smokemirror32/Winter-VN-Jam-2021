@@ -1,34 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/character.rpy", line 24, in script
-    image side masami = LayeredImageProxy("masami", xoffset=-100)
-  File "game/character.rpy", line 24, in script
-    image side masami = LayeredImageProxy("masami", xoffset=-100)
-  File "game/character.rpy", line 24, in <module>
-    image side masami = LayeredImageProxy("masami", xoffset=-100)
-TypeError: __init__() got an unexpected keyword argument 'xoffset'
+  File "game/day-1.rpy", line 8, in script
+    show text "{size=+50}Day 1 - Before{/size}" at glitch(crop=True), trans_text
+  File "game/day-1.rpy", line 8, in <module>
+    show text "{size=+50}Day 1 - Before{/size}" at glitch(crop=True), trans_text
+TypeError: glitch() takes at least 1 argument (1 given)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/bootstrap.py", line 326, in bootstrap
-    renpy.main.main()
-  File "renpy/main.py", line 515, in main
-    renpy.game.context().run(node)
-  File "game/character.rpy", line 24, in script
-    image side masami = LayeredImageProxy("masami", xoffset=-100)
-  File "game/character.rpy", line 24, in script
-    image side masami = LayeredImageProxy("masami", xoffset=-100)
-  File "renpy/ast.py", line 1022, in execute
-    img = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "game/day-1.rpy", line 8, in script
+    show text "{size=+50}Day 1 - Before{/size}" at glitch(crop=True), trans_text
+  File "renpy/ast.py", line 1192, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "renpy/ast.py", line 1151, in show_imspec
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "renpy/python.py", line 2266, in py_eval
+    return py_eval_bytecode(code, globals, locals)
   File "renpy/python.py", line 2259, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/character.rpy", line 24, in <module>
-    image side masami = LayeredImageProxy("masami", xoffset=-100)
-TypeError: __init__() got an unexpected keyword argument 'xoffset'
+  File "game/day-1.rpy", line 8, in <module>
+    show text "{size=+50}Day 1 - Before{/size}" at glitch(crop=True), trans_text
+TypeError: glitch() takes at least 1 argument (1 given)
 
 Windows-10-10.0.19041
 Ren'Py 7.4.8.1895
 And So, I Fall 1.0
-Mon Dec 27 19:20:56 2021
+Wed Dec 29 20:45:44 2021

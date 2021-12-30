@@ -38,6 +38,18 @@ transform mc_pos:
     ypos 450
     zoom 0.7
 
+##### Defining Transition Text Position #####
+
+transform trans_text:
+    xalign 0.8
+    yalign 0.8
+
+##### Defining Glitched Transition Text Position #####
+
+transform glitch_trans_text:
+    xalign 0.7
+    yalign 0.6
+
 ################################################################################
 ## General Glitch Definitions
 ################################################################################

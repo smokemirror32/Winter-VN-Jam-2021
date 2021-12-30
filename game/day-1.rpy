@@ -1,26 +1,44 @@
 ﻿## DAY 1 - BEFORE
+
+label day_1_transition:
+
+    pause(2.0)
+    show text "{size=+50}Day 1 - Before{/size}" at trans_text with Dissolve(2.0)
+    pause(1.0)
+    show text "{size=+50}Day1-Before{/size}" at glitch, glitch_trans_text
+    pause(0.5)
+    show text "{size=+50}Day 1 - Before{/size}" at trans_text
+    pause(1.5)
+    hide text with Dissolve(2.0)
+    pause(2.0)
+
+    jump class_1
+
 label class_1:
 
-    scene bg hallway with Dissolve(1.0)
+    scene bg hallway
+    show masami at mc_pos
+    with Dissolve(1.0)
     play music lighthearted fadein 1.0
 
     # SEFF: SCHOOL BELL RING
     m "Thanks, Mr. Friedman! Happy holidays to you, too!"
     n "Masami waves goodbye to his physics teacher before he steps out of the classroom, joining the sea of students heading to lunch."
-    m "(Phew. I can't believe that - )"
+    m happy "(Phew. I can't believe that - )"
     n "Suddenly, his phone buzzes in his pocket."
-    m "(Hm. It's probably Sabie again. I wonder what she's up to this time.)"
+    m neutral "(Hm. It's probably Sabie again. I wonder what she's up to this time.)"
 
     jump phone_1a
 
 # Glitch ON
 label phone_1a:
 
+    hide masami
     stop music fadeout 1.0
-    play music chaos
 
     call phone_open(True)
     show glitch_filter onlayer glitching with Dissolve(1.0)
+    play music chaos
     call message(s, "Hey dumbass. I know who you really are. It'd be a shame if I told everyone, wouldn't it? ;)", True)
     call phone_close()
 
@@ -30,8 +48,11 @@ label phone_1a:
 label class_1_panik:
 
     hide glitch_filter onlayer glitching
+    show masami surprised at mc_pos
     n "Masami nearly drops his phone."
+    show masami at shake, mc_pos
     m "What the hell?"
+    show masami sad
     n "He nervously picks up his phone again."
 
     jump phone_1b
@@ -40,6 +61,7 @@ label class_1_panik:
 label phone_1b:
 
     stop music fadeout 1.0
+    hide masami
 
     call phone_open(True)
 
@@ -55,13 +77,15 @@ label phone_1b:
 label class_1_kalm:
 
     play music lighthearted fadein 1.0
+    show masami sad at mc_pos
 
     n "Masami exhales slowly and slides the phone back into his pocket."
-    m "(It's okay. I'm just seeing things.)"
+    m neutral "(It's okay. I'm just seeing things.)"
     n "He rubs his temples."
+    show masami exasperated at shake, mc_pos
     m "(Dammit. I should have gotten back earlier last night. Three hours is definitely not enough sleep.)"
-    m "..."
-    m "(I'll just reply to Sabie in person.)"
+    m sad "..."
+    m neutral "(I'll just reply to Sabie in person.)"
 
     jump lunch_1a
 
@@ -69,8 +93,12 @@ label class_1_kalm:
 label lunch_1a:
 
     stop music fadeout 1.0
-    scene bg black with Dissolve(1.0)
-    scene bg courtyard with Dissolve(1.0)
+    scene bg black
+    hide masami
+    with Dissolve(1.0)
+    scene bg courtyard
+    show masami at mc_pos
+    with Dissolve(1.0)
     play music uptempo fadein 1.0
 
     n "As per usual, Masami hears the chaos long before he sees it."
@@ -148,6 +176,7 @@ label sabie_glitching:
         call sabie_spaz()
         s happy "It's only fair that you take it out on the rest of us, right {i}ge{/i}?"
 
+    show masami surprised at shake, mc_pos
     m "W-What? When did I ever think that?"
 
     # Glitch OFF
@@ -159,9 +188,9 @@ label sabie_glitching:
     play music uptempo fadein 2.0
 
     s "Uh…I guess you could start thinking about helping me right about now. Kinda in a tough spot, as you can see."
-    m "Ah."
+    m sad "Ah."
     n "Masami swallows."
-    m "Rohan, maybe this time if you - "
+    m neutral "Rohan, maybe this time if you - "
     r "Does it matter what I do?"
     stop music fadeout 1.0
 
@@ -198,6 +227,7 @@ label sabie_glitching:
         call rohan_spaz()
         r "I won't care."
 
+    show masami surprised at shake, mc_pos
     m "N-No! It's not like that. I care about you guys, I promise."
     # Glitch OFF
 
@@ -211,23 +241,25 @@ label sabie_glitching:
     n "Sabie and Rohan exchange glances. The phone hangs between them in their limp grasps, forgotten. "
     r neutral "Uh, we already knew that part, but thanks."
     s "Is there something that you're thinking too hard about, {i}ge{/i}?"
+    show masami at shake, mc_pos
     m "I - "
+    show masami neutral
     n "Masami runs his hand through his hair."
-    m "It's nothing. Just tired. You know what happens when you don't get those eight hours."
+    m happy "It's nothing. Just tired. You know what happens when you don't get those eight hours."
     n "Sabie and Rohan just stare at him."
-    m "(Shit. I should have known they wouldn't buy it. Not when they've got a worse sleep schedule than me.)"
+    m exasperated "(Shit. I should have known they wouldn't buy it. Not when they've got a worse sleep schedule than me.)"
 
     show tyree
     hide sabie
     hide rohan
 
     t "Ah."
-    n "Masami jumps."
+    show masami surprised at shake, mc_pos
     m "Wait, when did you - "
     n "His eyes land on Tyree's usual spot where he is indeed sitting and eating his salad."
     t "Same time as always."
-    m "Oh."
-    m "Sorry, I am really out of it today."
+    m neutral "Oh."
+    m happy "Sorry, I am really out of it today."
 
     stop music fadeout 1.0
 
@@ -267,13 +299,16 @@ label sabie_glitching:
 
     hide tyree
 
+    show layer master at hpunch
+    show masami surprised at hpunch, mc_pos
     n "Masami backs up quickly, colliding into a nearby tree. His hands reach backwards around the trunk."
     # Glitch OFF
     hide glitch_filter onlayer glitching with Dissolve(2.0)
     m "I - I..."
+    show masami exasperated at shake, mc_pos
     m "Look, I don't know what I should do anymore."
     m "If I help Rohan, Sabie complains. If I help Sabie, Rohan complains. If I leave you both alone, you both complain."
-    m "I can't win. So, stop trying to make me play your fucking game, okay?"
+    m angry "I can't win. So, stop trying to make me play your fucking game, okay?"
 
     jump lunch_1b
 
@@ -297,12 +332,13 @@ label lunch_1b:
 
     n "Sabie lets go of the phone and nudges it back to Rohan. Rohan quietly pockets it, eyes trained on Masami."
     s "{i}Ge{/i}. What happened last night?"
-    m "Last night?"
+    m sad "Last night?"
     s "Something happened last night or you wouldn't be acting like this."
     n "Masami inhales slowly."
-    m "Nothing happened. I have no idea what you're talking about."
+    m happy "Nothing happened. I have no idea what you're talking about."
 
-    show sabie annoyed at center with move:
+    show sabie annoyed at center with move
+    show sabie:
         ease 1.5 zoom 1.05
     show rohan neutral
 
@@ -313,6 +349,7 @@ label lunch_1b:
     show sabie at shake, center
 
     n "She pokes him hard on the forehead."
+    show masami angry at shake, mc_pos
     m "Ow! What was that for?"
     s "Your idiocy."
     s worried "Look, I really didn't want things to go this way, but you're not giving me a choice."
@@ -374,6 +411,7 @@ label lunch_1b:
     call sabie_spaz()
     s "What on earth is going on in your head that's worth keeping from the rest of us?"
     call sabie_spaz()
+    show masami surprised at shake, mc_pos
     m "I - "
     call sabie_spaz()
     m "I don’t know."
@@ -404,6 +442,7 @@ label lunch_1c:
     call sabie_spaz()
     s happy "Sometimes, I really can't believe you."
 
+    show masami at shake, mc_pos
     m "But - "
 
     # Depends on if you answered Rohan's message
@@ -452,10 +491,11 @@ label lunch_1c:
     r "Keep your pathetic little image of yourself as the golden boy."
     call sabie_spaz()
     call rohan_spaz()
-    m "What are you talking about?"
+    show masami angry at shake, mc_pos
+    m "What the hell are you talking about?"
     call rohan_spaz()
     call sabie_spaz()
-    m "Of course I'm not perfect! Of all people, you'd think I know that by now."
+    m sad "Of course I'm not perfect! Of all people, you'd think I know that by now."
 
     # Depends on if you answered Tyree's message
 
@@ -501,6 +541,7 @@ label lunch_1c:
     call tyree_spaz()
     call rohan_spaz()
     call sabie_spaz()
+    show masami surprised at shake, mc_pos
     m "Please, I - "
     call sabie_spaz()
     call tyree_spaz()
@@ -517,6 +558,7 @@ label lunch_1c:
     call sabie_spaz()
     call tyree_spaz()
     call rohan_spaz()
+    show masami at shake, mc_pos
     m "I - "
     call rohan_spaz()
     call tyree_spaz()
@@ -525,6 +567,7 @@ label lunch_1c:
     call sabie_spaz()
     call tyree_spaz()
     call rohan_spaz()
+    show masami at shake, mc_pos
     m "I gotta go."
     call tyree_spaz()
     call rohan_spaz()
@@ -536,8 +579,12 @@ label lunch_1c:
 # Masami runs into Nasir
 label hallway_1:
 
-    scene bg black with Dissolve(0.5)
-    scene bg hallway with Dissolve(0.5)
+    scene bg black
+    hide masami
+    with Dissolve(0.5)
+    scene bg hallway
+    show masami surprised at mc_pos
+    with Dissolve(0.5)
 
     show bg hallway with vpunch
     n "He pushes open the door and tries to lose himself in the crowd."
@@ -547,24 +594,25 @@ label hallway_1:
     show bg hallway with vpunch
     s "You can't run from yourself forever!"
     show bg hallway with vpunch
-    m "(I'm not running from myself. I'm not.)"
+    m exasperated "(I'm not running from myself. I'm not.)"
     show bg hallway with vpunch
-    m "(I'm just...)"
+    m sad "(I'm just...)"
     show bg hallway with vpunch
     m "..."
     show bg hallway with vpunch
-    m "(Damn it.)"
+    m exasperated "(Damn it.)"
     show bg hallway with vpunch
     n "Masami quickens his pace, weaving in between the molasses slow current of people."
     show bg hallway with vpunch
-    m "(Can't everyone just leave me alone?)"
+    m sad "(Can't everyone just leave me alone?)"
     show bg hallway with vpunch
     m "(Nothing happened, nothing changed.)"
     show bg hallway with vpunch
-    m "(So why can't I just - )"
+    m exasperated "(So why can't I just - )"
     show bg hallway with vpunch
     n "He turns a corner and brushes a little too hard against an unsuspecting student."
     show bg hallway with vpunch
+    show masami surprised at shake, mc_pos
     m "Ah, sorry - "
     show bg hallway with vpunch
 
@@ -579,6 +627,7 @@ label hallway_1:
     a sad "Ugh, you again? Got some nerve to show up, huh."
     call nasir_spaz()
     call alyssa_spaz()
+    show masami at shake, mc_pos
     m "Alyssa - "
     call alyssa_spaz()
     call nasir_spaz()
@@ -590,6 +639,7 @@ label hallway_1:
     a "Go on, take your boyfriend and be happy. That's what you want, right?"
     call alyssa_spaz()
     call nasir_spaz()
+    show masami angry at shake, mc_pos
     m "The hell? I never - "
     call nasir_spaz()
     call alyssa_spaz()
@@ -597,20 +647,23 @@ label hallway_1:
     call alyssa_spaz()
     hide alyssa
     call nasir_spaz()
+    show masami surprised at shake, mc_pos
     m "No, Alyssa, please - "
     call nasir_spaz()
-    m "I didn't mean - "
+    m sad "I didn't mean - "
     call nasir_spaz()
     na sad "It's alright."
-    show nasir surprised at center with move
+    show nasir at center with move
     call nasir_spaz()
     n "Nasir looks away and also moves to leave, but Masami moves to grab his wrist."
     show bg hallway with vpunch
+    show nasir surprised at vpunch, center
+    show masami surprised at shake, mc_pos
     m "Wait!"
     call nasir_spaz()
     na sad "What is it?"
     call nasir_spaz()
-    m "About last night. I - "
+    m sad "About last night. I - "
     call nasir_spaz()
     na happy "You don't need to explain. I understand."
     call nasir_spaz()
@@ -641,9 +694,10 @@ label hallway_1:
             na "Is a kiss really too much go give?"
 
     call nasir_spaz()
+    show masami exasperated at shake, mc_pos
     m "I - I wasn't thinking straight. Neither of us were."
     call nasir_spaz()
-    m "I'm trying to tell you what I really want now. And that's - "
+    m sad "I'm trying to tell you what I really want now. And that's - "
 
     if kiss:
 
@@ -651,11 +705,13 @@ label hallway_1:
         call nasir_spaz()
         na "What?"
         call nasir_spaz()
-        m "…I think I like you. The same way. I just didn't realize until last night."
+        m neutral "…I think I like you. The same way."
+        m sad "I just didn't realize until last night."
         call nasir_spaz()
         call nasir_spaz()
         na "Ah."
         call nasir_spaz()
+        show masami angry at shake, mc_pos
         m "That's it? Your only response? Isn't this suppose to be a mutual feeling where we're both supposed to be excited?"
         call nasir_spaz()
         na "Perhaps."
@@ -669,7 +725,7 @@ label hallway_1:
         call nasir_spaz()
         na "Is that something you could truly ask of yourself when you don’t even have the courage to speak up for your own sister?"
         call nasir_spaz()
-        m "..."
+        m sad "..."
         call nasir_spaz()
         call nasir_spaz()
         na "That's what I was afraid of."
@@ -697,8 +753,12 @@ label hallway_1:
 # Blackout scene change back to house
 label masami_kitchen_1:
 
-    scene bg black with Dissolve(1.5)
+    scene bg black
+    hide masami
+    with Dissolve(1.5)
+    pause(1.0)
     scene bg kitchen
+    show masami sad at mc_pos
     show wsprite at center
     with Dissolve(1.5)
     play music emotional fadein 1.0
@@ -706,24 +766,26 @@ label masami_kitchen_1:
     mm "Hello Masami! Welcome home!"
     m "…"
     mm "Something wrong?"
-    m "Not really, no."
+    m neutral "Not really, no."
     n "Masami glances at the stovetop."
-    m "Making the ginger duck hotpot so soon?"
+    m happy "Making the ginger duck so soon?"
     show wsprite at bounce, center
     n "Masami's mother laughs."
-    mm "Well you made a lot of {i}tangyuan{/i}. So I think, why not start making soup?"
-    m "Oh."
+    mm "Well you made a lot of {i}tangyuan{/i}. So I think, why not start making other thing?"
+    m neutral "Oh."
     show wsprite at bounce, center
     mm "We can always make more tomorrow {i}tangyuan{/i} to cook tomorrow, don't worry!"
     m "Of course."
     n "She pats him heartily on the back."
     show wsprite at bounce, center
     mm "You excited to eat? Have family time?"
-    m "Yeah. I think so."
-    m "That would be nice. I couldn't wish for more than that."
-    m "(I just such a wish was worth having to begin with.)"
+    m happy "Yeah. I think so."
+    m neutral "That would be nice. I couldn't wish for more than that."
+    m sad "(I just such a wish was worth having to begin with.)"
 
     stop music fadeout 2.0
-    scene bg black with Dissolve(2.0)
+    scene bg black
+    hide masami
+    with Dissolve(3.0)
 
-    jump tangyuan_cook
+    jump day0_transition

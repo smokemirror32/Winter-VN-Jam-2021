@@ -1,5 +1,15 @@
 ﻿## DAY 3 - BEFORE
 
+label day_3_transition:
+
+    pause(2.0)
+    show text "{size=+50}Day 3 - Before{/size}" at trans_text with Dissolve(2.0)
+    pause(4.0)
+    hide text with Dissolve(2.0)
+    pause(2.0)
+
+    jump class_3
+
 label class_3:
 
     play music lighthearted fadein 1.0
@@ -748,7 +758,7 @@ label lunch_end:
     m "Hm?"
 
     show sabie annoyed with moveinleft
-    show sabie at shake
+    show sabie at shake, center
 
     n "Masami glances over his shoulder as if he's just noticed Sabie tearing down the sidewalk at full speed. He dramatically slows to a stop to let her catch up to him."
     m happy "Heh. Did you really think I wasn't going to wait?" # TODO: Start here!
@@ -1448,7 +1458,7 @@ label masami_room_3b:
 
     scene bg black
     hide masami
-    with Dissolve(2.0)
+    with Dissolve(3.0)
     stop music fadeout 2.0
 
-    jump masami_room2a
+    jump day2_transition

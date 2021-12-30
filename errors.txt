@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/day+3.rpy", line 25: expected statement.
-    add SideImage()
-                 ^
+File "game/day+3.rpy", line 5: end of line expected.
+    show text "Day 3 - Before" xalign 1.0 with Dissolve(1.0)
+                               ^
 
 Ren'Py Version: Ren'Py 7.4.8.1895
-Mon Dec 27 19:35:57 2021
+Wed Dec 29 20:04:14 2021

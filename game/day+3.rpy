@@ -1,9 +1,17 @@
 ﻿## DAY 3 - AFTER
-# Setting the scene - this is in black
+
+label day3_transition:
+
+    show text "{size=+50}Day 3 - After{/size}" at trans_text with Dissolve(2.0)
+    pause(4.0)
+    hide text with Dissolve(2.0)
+
+    jump office
+
 label office:
 
     play music reflective fadein 2.0 fadeout 1.0
-    #scene bg black with Dissolve(2.0)
+    scene bg black with Dissolve(2.0)
 
     m "…"
     m "(Ugh.)"
@@ -310,6 +318,6 @@ label masami_home3:
     stop music fadeout 2.0
     hide masami
     scene bg black
-    with Dissolve(2.0)
+    with Dissolve(3.0)
 
-    jump class_3
+    jump day_3_transition
