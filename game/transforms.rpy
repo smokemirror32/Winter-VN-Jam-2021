@@ -34,7 +34,7 @@ transform innerright:
 ##### Defining Masami's Position #####
 
 transform mc_pos:
-    xpos -225
+    xpos -215
     ypos 450
     zoom 0.7
 

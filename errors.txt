@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/day+3.rpy", line 5: end of line expected.
-    show text "Day 3 - Before" xalign 1.0 with Dissolve(1.0)
-                               ^
+File "game/screens.rpy", line 392: expected 'simple_expression' not found.
+    background 
+               ^
 
-Ren'Py Version: Ren'Py 7.4.8.1895
-Wed Dec 29 20:04:14 2021
+Ren'Py Version: Ren'Py 7.4.10.2178
+Fri Dec 31 22:12:24 2021
