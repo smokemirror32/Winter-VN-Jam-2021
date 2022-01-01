@@ -18,7 +18,7 @@ define config.name = _("And So, I Fall")
 ## Determines if the title given above is shown on the main menu screen. Set
 ## this to False to hide the title.
 
-define gui.show_name = True
+define gui.show_name = False
 
 
 ## The version of the game.
@@ -37,7 +37,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "Solstice"
+define build.name = "AndSoIFall"
 
 
 ## Sounds and music ############################################################
@@ -150,7 +150,7 @@ default preferences.afm_time = 15
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "Solstice-1639174892"
+define config.save_directory = "AndSoIFall-1639174892"
 
 
 ## Icon ########################################################################

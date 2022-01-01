@@ -1,40 +1,36 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/day+1.rpy", line 203, in script
-    pause()
-  File "renpy/common/000statements.rpy", line 453, in execute_pause
-    renpy.pause(delay)
-TypeError: unsupported operand type(s) for -: 'tuple' and 'float'
+  File "game/gui.rpy", line 107, in script
+    define gui.name_xpos = gui.dialogue_xpos
+  File "game/gui.rpy", line 107, in script
+    define gui.name_xpos = gui.dialogue_xpos
+  File "game/gui.rpy", line 107, in <module>
+    define gui.name_xpos = gui.dialogue_xpos
+AttributeError: 'StoreModule' object has no attribute 'dialogue_xpos'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/day+1.rpy", line 203, in script
-    pause()
-  File "renpy/ast.py", line 2010, in execute
-    self.call("execute")
-  File "renpy/ast.py", line 1998, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "renpy/statements.py", line 278, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 453, in execute_pause
-    renpy.pause(delay)
-  File "renpy/exports.py", line 1561, in pause
-    rv = renpy.ui.interact(mouse='pause', type='pause', roll_forward=roll_forward, pause=delay)
-  File "renpy/ui.py", line 298, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "renpy/display/core.py", line 3276, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "renpy/display/core.py", line 4110, in interact_core
-    rv = root_widget.event(ev, x, y, 0)
-  File "renpy/display/layout.py", line 1090, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "renpy/display/behavior.py", line 530, in event
-    renpy.game.interface.timeout(max(self.delay - st, 0))
-TypeError: unsupported operand type(s) for -: 'tuple' and 'float'
+  File "renpy/bootstrap.py", line 331, in bootstrap
+    renpy.main.main()
+  File "renpy/main.py", line 550, in main
+    renpy.game.context().run(node)
+  File "game/gui.rpy", line 107, in script
+    define gui.name_xpos = gui.dialogue_xpos
+  File "game/gui.rpy", line 107, in script
+    define gui.name_xpos = gui.dialogue_xpos
+  File "renpy/ast.py", line 2213, in execute
+    self.set()
+  File "renpy/ast.py", line 2224, in set
+    value = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "renpy/python.py", line 2269, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/gui.rpy", line 107, in <module>
+    define gui.name_xpos = gui.dialogue_xpos
+AttributeError: 'StoreModule' object has no attribute 'dialogue_xpos'
 
 Windows-10-10.0.19041
-Ren'Py 7.4.8.1895
+Ren'Py 7.4.10.2178
 And So, I Fall 1.0
-Thu Dec 30 18:36:26 2021
+Fri Dec 31 22:52:22 2021
