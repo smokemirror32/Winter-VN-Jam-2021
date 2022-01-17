@@ -17,7 +17,7 @@ label office:
     m "(Ugh.)"
     m "(The hell am I even waiting for?)"
     m "(The damage is already done.)"
-    n "{i}* knocking sounds *{/i}"
+    n "{i}* knocking sounds *{/i}" # SEFF - Knocking door
     p "Who's there?"
     m "…It's me."
     p "Oh! Come on in."
@@ -34,12 +34,12 @@ label office_inside:
     with Dissolve(2.0)
 
     # Initial introduction and setting description
-    n "The principal gestures to a stiff wooden chair on the opposite side of the desk."
+    n "The principal gestures to a stiff wooden chair on the opposite side of the desk." # SEFF - Door opening
     p "Have a seat! Make yourself comfortable."
     m neutral "…Thanks."
-    n "Masami eases himself into the chair. It feels about as uncomfortable as it looks."
+    n "Masami eases himself into the chair. It feels more uncomfortable than it looks." # SEFF - Seat noises
     m sad "(I don't know what I expected.)"
-    n "He shuffles around anyways, attempting to find the most bearable position he can."
+    n "He shuffles around anyways, attempting to find the most bearable position he can." # SEFF - Seat noises
     m "Sorry."
     show masami exasperated at shake, mc_pos
     n "Masami flinches, startled. He turns away, face slightly flushed."
@@ -90,7 +90,7 @@ label office_question:
     p "It would have been a less…disruptive occurrence had the display not been so effectively crafted to provoke."
     m sad "..."
     n "Noticing Masami's reaction, the principal pauses for a moment."
-    p "I mean to reassure you that we cannot say anything for sure from the footage alone."
+    p "I mean to reassure you that we will not incriminate you for this on the basis of footage alone."
     p "But, those of us who have reviewed it believe that the appearance and demeanor of the perpetrator strongly suggests it’s you."
     p "Do you…have anything you'd like to discuss with me about this?"
 
@@ -141,7 +141,7 @@ label office_outburst:
     show wsprite:
         ease 1.0 zoom 1.0
     show masami sad
-    n "The principal leans forward slightly, her fingers laced."
+    n "The principal leans forward slightly, her fingers laced." # SEFF - Seat noises
     p "Masami, I've already been very lenient with you."
     p "Three days of suspension at the beginning of next semester is the least we can do for someone without a prior record."
     p "You are one of the best students in your grade, or in our school, even. Many of the underclassmen look up to you."
@@ -240,7 +240,7 @@ label car:
     show masami sad at mc_pos
     with Dissolve(1.5)
 
-    n "Masami heads out of the office and back to his car."
+    n "Masami heads out of the office and back to his car." # SEFF - Door shut, car door noises?
     n "Once he's inside, he leans against the headrest and sighs."
     m exasperated "(I've really been a loose cannon lately, haven't I?)"
     m sad "(I don’t know if I even believe half of what I said.)"

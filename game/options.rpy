@@ -30,6 +30,56 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+
+{i}Made for the 2021 Winter VN Jam{/i}
+
+{size=+20}{b}The Team{/b}{/size}
+
+Lead Developer: {a=https://twitter.com/SmokeMirrorDev}Smoke Mirror Studios{/a}
+
+Character/Phone GUI Artist: {a=https://twitter.com/ChaniMK_VN}ChaniMK{/a}
+
+CG Artist: {a=https://twitter.com/mx_ruk}Mx. RuK{/a}
+
+Background/General GUI Artist: cypher
+
+Audio Director: {a=https://twitter.com/TheStorysinger}Eliana Zebro{/a}
+
+Composers: {a=https://www.trashcatmusic.com/}Kelly Thiessen{/a}, {a=https://sharjcomposer.com/}Shar J{/a}
+
+Editor: {a=https://twitter.com/theallievera}Allie Vera{/a}
+
+
+{size=+20}{b}Creative Commons Attributions{/b}{/size}
+
+Our backgrounds were derived from the following images licensed under CC by 2.0 (https://creativecommons.org/licenses/by/2.0/):
+
+-- Grunge Vignette Border PNG Transparent for Photoshop by Textures4Photoshop (http://www.textures4photoshop.com/tex/grunge-and-rust/grunge-vignette-border-png-transparent-for-photoshop.aspx)
+
+-- Our Dallas Personal Injury Lawyers Care by Mullen & Mullen Law Firm (https://www.pinterest.ca/pin/323062973247629685/)
+
+-- School Lockers Hallway High by elizabethaferry (https://pixabay.com/photos/school-lockers-hallway-high-school-417612/)
+
+-- Courtyard, Lincoln-Sudbury Regional High SChoo, Sudbury MA by Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Courtyard,_Lincoln-Sudbury_Regional_High_School,_Sudbury_MA.jpg)
+
+-- Black Vehicle Interior by Mike (https://www.pexels.com/photo/black-vehicle-interior-244818/)
+
+-- gray freestanding range oven by Becca Tapert (https://unsplash.com/photos/uGak0qtrphM)
+
+-- Bedroom Room Youth by lrainero (https://pixabay.com/photos/bedroom-room-youth-design-1137939/)
+
+-- black wooden table on rug by NeONBRAND (https://unsplash.com/photos/mGZX2MOPR-s)
+
+-- Free Home Image by Francesca Tosolini (https://unsplash.com/photos/XcVm8mn7NUM)
+
+-- Cairo in winter woods cat by Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Cairo-in-winter-woods-cat.JPG)
+
+-- Old railway carriages with graffiti by Chris F (https://www.pexels.com/photo/old-railway-carriages-with-graffiti-on-surface-under-cloudy-sky-4000251/)
+
+-- bare tree under Milky Way at night by Jack B (https://unsplash.com/photos/Hg5dJF-ootQ)
+
+-- brown brick wall during daytime by Marie-Michele Bouchard (https://unsplash.com/photos/9nQfpvQxQe0)
+
 """)
 
 
