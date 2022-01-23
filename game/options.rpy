@@ -33,6 +33,7 @@ define gui.about = _p("""
 
 {i}Made for the 2021 Winter VN Jam{/i}
 
+
 {size=+20}{b}The Team{/b}{/size}
 
 Lead Developer: {a=https://twitter.com/SmokeMirrorDev}Smoke Mirror Studios{/a}
@@ -50,7 +51,28 @@ Composers: {a=https://www.trashcatmusic.com/}Kelly Thiessen{/a}, {a=https://shar
 Editor: {a=https://twitter.com/theallievera}Allie Vera{/a}
 
 
+{size=+20}{b}Voice Actors{/b}{/size}
+
+Masami: Ryoma Ishizuka
+
+Xinyi: Megan Youmans
+
+Sabie: Erica Chiem
+
+Rohan: Pranshu Mishra
+
+Tyree: Jay M.
+
+Nasir: Darius T. Jackson
+
+
 {size=+20}{b}Creative Commons Attributions{/b}{/size}
+
+Our sound effects were derived from:
+
+-- Free SFX
+-- freesound
+-- marker medium streep by badvibezproductionz (https://freesound.org/people/badvibezproductionz/sounds/178372/)
 
 Our backgrounds were derived from the following images licensed under CC by 2.0 (https://creativecommons.org/licenses/by/2.0/):
 
