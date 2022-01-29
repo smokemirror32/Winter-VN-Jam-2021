@@ -53,17 +53,17 @@ Editor: {a=https://twitter.com/theallievera}Allie Vera{/a}
 
 {size=+20}{b}Voice Actors{/b}{/size}
 
-Masami: Ryoma Ishizuka
+Masami: {a=https://twitter.com/SumRGuy}Ryoma Ishizuka{/a}
 
-Xinyi: Megan Youmans
+Xinyi: {a=https://twitter.com/MeganRYoumans}Megan Youmans{/a}
 
-Sabie: Erica Chiem
+Sabie: {a=https://twitter.com/EricaChiem}Erica Chiem{/a}
 
-Rohan: Pranshu Mishra
+Rohan: {a=https://twitter.com/pranshuland}Pranshu Mishra{/a}
 
-Tyree: Jay M.
+Tyree: {a=https://twitter.com/JtasticVA}Jay M.{/a}
 
-Nasir: Darius T. Jackson
+Nasir: {a=https://twitter.com/WindLightHub}Darius T. Jackson{/a}
 
 
 {size=+20}{b}Creative Commons Attributions{/b}{/size}
