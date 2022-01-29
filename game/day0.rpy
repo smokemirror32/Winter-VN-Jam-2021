@@ -122,14 +122,19 @@ label xinyi_appearance:
     scene cg Family_Dinner with Dissolve(3.0)
 
     # Shadow appears in window
+    voice "audio/voice/masami/masami_finalscene_jie1.mp3"
     m "{i}Jie?{/i}"
     # Shadow disappears
     play music finale fadein 2.0
     scene cg Family_Dinner_NoShadow with Dissolve(3.0)
+    voice "audio/voice/masami/masami_finalscene_jie2.mp3"
     m "{i}Jie{/i} - "
+    voice "audio/voice/masami/masami_finalscene_isawher.mp3"
     m "I saw her out there, I know I did."
+    voice "audio/voice/masami/masami_finalscene_whycanti.mp3"
     m "But, why can't I seem to move?"
     show cg Family_Dinner_NoShadow at hpunch
+    voice "audio/voice/masami/masami_finalscene_damniti.mp3"
     m "Damn it. I have to - agh!"
     scene bg black with Dissolve(0.1)
     scene bg nightsky
@@ -137,18 +142,23 @@ label xinyi_appearance:
     with Dissolve(0.1)
     show bg nightsky at shake
 
+    voice "audio/voice/masami/masami_finalscene_jiewait.mp3"
     m "{i}Jie{/i}! Wait!"
 
     show xinyi with Dissolve(0.4)
 
     x "Huh?"
+    voice "audio/voice/masami/masami_finalscene_pleaseimhere.mp3"
     m neutral "Please, I'm here now - "
     show masami sad at shake, mc_pos
+    voice "audio/voice/masami/masami_finalscene_yourhandstheyre.mp3"
     m "Your hands. T-They're like ice. And your face, your hair - " # Gasp at the begin
+    voice "audio/voice/masami/masami_finalscene_whyareyou.mp3"
     m "W-Why are you so cold?"
     x sad "..." # A sigh
     x "Because I am not truly here."
     show masami surprised at shake, mc_pos
+    voice "audio/voice/masami/masami_finalscene_huh.mp3"
     m surprised "Huh?"
 
     jump house_reflect
@@ -161,6 +171,7 @@ label house_reflect:
     with Dissolve(2.0)
     scene cg Looking_Back with Dissolve(2.0)
 
+    voice "audio/voice/masami/masami_finalscene_no.mp3"
     m "No…"
     x "You are still there, Masami. Where you belong."
     x "And I am where I belong as well."
@@ -172,6 +183,7 @@ label house_reflect:
     show masami sad at mc_pos
     with Dissolve(2.0)
 
+    voice "audio/voice/masami/masami_finalscene_jiei.mp3"
     m "{i}Jie{/i}, I - "
     x happy "You do not need to feel pity for me. I know what it means to make the choice I did."
     x "If I am to be selfish, I shall be so until the end. And if I have hurt anyone for that decision, I will pay the price for it accordingly."
@@ -179,25 +191,37 @@ label house_reflect:
     show xinyi neutral
 
     show masami exasperated at shake, mc_pos
+    voice "audio/voice/masami/masami_finalscene_thatwasntwhat.mp3"
     m "That…wasn't what I was going to say."
+    voice "audio/voice/masami/masami_finalscene_whatimeant.mp3"
     m sad "What I meant was, I understand."
     x sad "…"
+    voice "audio/voice/masami/masami_finalscene_notcompletelyof.mp3"
     m neutral "Not completely, of course. I still haven't figured out how to use a spray can properly."
+    voice "audio/voice/masami/masami_finalscene_butimstill.mp3"
     m "But I'm still watching the skies for the same birds as you. Trying to figure out what the hell they've got that makes them able to just {i}be{/i} when the rest of us are still struggling to figure out how."
     x neutral "I suppose you've reached the same conclusion as me, then."
     x "They are just birds in the same way that we are just humans. There is nothing different. Nothing except for belief."
     x sad "And call that what you will, delusion or self-worth. It does not matter in the end if you cannot find it."
+    voice "audio/voice/masami/masami_finalscene_...1.mp3"
     m sad "…" # Sigh
+    voice "audio/voice/masami/masami_finalscene_imnotasking.mp3"
     m "I'm not asking for you to change your answer, {i}jie{/i}. I don't think I ever could."
+    voice "audio/voice/masami/masami_finalscene_butiido.mp3"
     m neutral "But I - I do have something to ask."
     x neutral "Yes?"
+    voice "audio/voice/masami/masami_finalscene_couldyoulet.mp3"
     m sad "Could you let me hold you?"
     x sad "I don't see what this will change for either of us."
+    voice "audio/voice/masami/masami_finalscene_i-iknowbut.mp3"
     m "I - I know. But I want this."
+    voice "audio/voice/masami/masami_finalscene_iwantto.mp3"
     m neutral "I want to be selfish. If only for a little while. If only for you."
     x "I - I don't want to hurt you more than I already have."
     # Masami starts choking up here
+    voice "audio/voice/masami/masami_finalscene_nojieyou.mp3"
     m sad "No, {i}jie{/i}, you didn't…you never…"
+    voice "audio/voice/masami/masami_finalscene_itwasme.mp3"
     m "It was me. Just me. And I..."
 
     jump ending
@@ -211,14 +235,19 @@ label ending:
     scene cg Masami_Xinyi_Hug with Dissolve(2.0)
 
     x "Shh…it's okay."
+    voice "audio/voice/masami/masami_finalscene_dontsaythat.mp3"
     m "Don't say that. Please don't say that when it's…it's…"
     x "I'm here."
+    voice "audio/voice/masami/masami_finalscene_pleasedontdont.mp3"
     m "Please…don't…don't…"
     x "I'm still here, Masami. I'm still here."
+    voice "audio/voice/masami/masami_finalscene_yourewarmernow.mp3"
     m "You’re…warmer now. So warm…"
+    voice "audio/voice/masami/masami_finalscene_dontletgo.mp3"
     m "Don't let go. I don't want to forget you like everyone else. Please - "
     x "I promise."
-    m "{i}Jie...{/i}" # TODO: Replace with "..." when voicelines are in!
+    voice "audio/voice/masami/masami_finalscene_...2.mp3"
+    m "..." # TODO: Replace with "..." when voicelines are in!
     x "I promise."
 
     window hide dissolve
