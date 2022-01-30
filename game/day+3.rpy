@@ -123,7 +123,7 @@ label office_question_pa:
     n "The principal sighs again."
     p "I care about you just as I care about all my students."
     p "I want them to succeed and to not jeopardize their futures with the consequences of impulsive decisions."
-    voice "audio/voice/masami/masami_whatever.mp3"
+    voice "audio/voice/masami/masami_jie.mp3"
     m exasperated "(Right. I’m sure you thought the same about {i}jie{/i}.)"
 
     jump office_outburst
@@ -134,7 +134,7 @@ label office_question_divert:
     m "What made you think so?"
     n "The principal smiles bitterly."
     p "For better or worse, we take on the traits of those around us."
-    voice "audio/voice/masami/masami_whatever.mp3"
+    voice "audio/voice/masami/masami_jie.mp3"
     m exasperated "(Yeah, right. Just admit you never liked {i}jie{/i}.)"
 
     jump office_outburst
@@ -144,8 +144,8 @@ label office_question_silence:
 
     m "..."
     m exasperated "(What do you want out of me? A confession?)"
-    voice "audio/voice/masami/masami_whatever.mp3"
-    m sad "(As if that would change anything.)"
+    voice "audio/voice/masami/masami_jie.mp3"
+    m sad "(As if that would have changed anything for {i}jie{/i}.)"
 
     jump office_outburst
 

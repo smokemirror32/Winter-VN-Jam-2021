@@ -134,7 +134,7 @@ define config.has_voice = True
 ## game, until it is stopped or another file is played.
 
 define config.main_menu_music = "audio/music/finale.mp3"
-define config.default_music_volume = 0.5
+define config.default_music_volume = 0.6
 
 
 ## Transitions #################################################################
