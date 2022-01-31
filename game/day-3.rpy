@@ -1618,14 +1618,17 @@ label masami_room_3a:
     scene bg bedroom
     show masami sad at mc_pos
     with Dissolve(1.0)
+    play sound "audio/sound/door_open.mp3"
+    queue sound "audio/sound/door_close.mp3"
 
     n "The moment that Masami sets foot in his room, he flops down face first on the bed with a groan."
+    stop sound
     show bg bedroom at vpunch
     show masami exasperated at vpunch, mc_pos
     play sound "audio/sound/bed_bounce.mp3"
     m "(Ugh…)"
     m "(What a day…)"
-    m sad "(I don't feel like functioning any more.)"
+    m sad "(I don't feel like functioning anymore.)"
     n "He rolls over onto his back to stare at the ceiling."
     voice "audio/voice/masami/masami_whatever.mp3"
     m exasperated "(I should be doing homework, but I can't focus.)"
