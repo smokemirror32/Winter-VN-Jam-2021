@@ -139,11 +139,10 @@ label lunch_chaos:
     s "That's not what you said yesterday."
     r "I-I take what I said back!"
     s "Too late, buddy. You gotta learn to - ah!"
-    play sound "audio/sound/phone_vibrate.mp3"
-    queue sound "audio/sound/phone_vibrate.mp3"
-    queue sound "audio/sound/phone_vibrate.mp3"
+    play sound "audio/sound/phone_vibrate.mp3" loop
     n "As if on cue, Masami's own phone, which had been silent for some time, starts buzzing again."
     m "(I should probably hurry up.)"
+    stop sound fadeout 3.0
     n "Masami quickens his pace to a light jog as he heads down the courtyard path."
     voice "audio/voice/masami/masami_quietsigh.mp3"
     m "(Of all the places they could sit, they still chose the spot farthest from the door.)"
@@ -1516,8 +1515,7 @@ label masami_home_3:
     voice "audio/voice/masami/masami_hm.mp3"
     m "(It's been three whole hours and I still haven't figured out what I'm doing yet.)"
     m "(I usually wouldn't be too worried about something like this, but…)"
-    play sound "audio/sound/phone_vibrate.mp3"
-    queue sound "audio/sound/phone_vibrate.mp3"
+    play sound "audio/sound/phone_vibrate.mp3" loop
     n "As if on cue, Masami's phone starts buzzing again with new messages."
     m exasperated "(…and it's starting again.)"
     stop sound
