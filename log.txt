@@ -1,22 +1,21 @@
-Thu Feb  3 21:08:43 2022
+Sat Feb  5 20:26:34 2022
 Windows-10-10.0.19041
 Ren'Py 7.4.8.1895
  
 
-Bootstrap to the start of init.init took 0.07s
+Bootstrap to the start of init.init took 0.06s
 Early init took 0.00s
-Loader init took 0.07s
-Loading error handling took 0.02s
-Loading script took 0.70s
-Loading save slot metadata. took 0.07s
+Loader init took 0.03s
+Loading error handling took 0.03s
+Loading script took 0.36s
+Loading save slot metadata. took 0.05s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Running init code took 0.08s
 Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.07s
+Dump and make backups. took 0.05s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.03s
@@ -25,17 +24,17 @@ nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: "Couldn't load nvlib." (can be ignored)
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.07s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.08s
-Prepare screens took 0.05s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.06s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.03s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.14s
+Interface start took 0.12s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 3840, 2160)
@@ -45,14 +44,58 @@ Vendor: 'Intel'
 Renderer: 'Intel(R) UHD Graphics 620'
 Version: '4.6.0 - Build 27.20.100.9664'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
+Screen sizes: virtual=(1920, 1080) physical=(3648, 2052) drawable=(3648, 2052)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init took 71.05s
+Bootstrap to the start of init.init took 3.86s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.20s
+Loading save slot metadata. took 0.06s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 3.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: "Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Intel'
+Renderer: 'Intel(R) UHD Graphics 620'
+Version: '4.6.0 - Build 27.20.100.9664'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3648, 2052) drawable=(3648, 2052)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 87.87s
 Early init took 0.00s
 Loader init took 0.04s
 Loading error handling took 0.02s
-Loading script took 0.23s
+Loading script took 0.34s
 Loading save slot metadata. took 0.06s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
@@ -64,7 +107,7 @@ Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\An
 Dump and make backups. took 0.06s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.04s
+Initial gc. took 0.05s
 DPI scale factor: 3.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: "Couldn't load nvlib." (can be ignored)
@@ -74,13 +117,13 @@ Init translation took 0.05s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
-Save screen analysis took 0.06s
+Save screen analysis took 0.07s
 Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.01s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.05s
+Interface start took 0.04s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 3840, 2160)
@@ -90,42 +133,100 @@ Vendor: 'Intel'
 Renderer: 'Intel(R) UHD Graphics 620'
 Version: '4.6.0 - Build 27.20.100.9664'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
+Screen sizes: virtual=(1920, 1080) physical=(3648, 2052) drawable=(3648, 2052)
 Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/day+1.rpy", line 26, in script
-    pause()
-  File "renpy/ast.py", line 2010, in execute
-    self.call("execute")
-  File "renpy/ast.py", line 1998, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "renpy/statements.py", line 278, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 453, in execute_pause
-    renpy.pause(delay)
-  File "renpy/exports.py", line 1561, in pause
-    rv = renpy.ui.interact(mouse='pause', type='pause', roll_forward=roll_forward, pause=delay)
-  File "renpy/ui.py", line 298, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "renpy/display/core.py", line 3276, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "renpy/display/core.py", line 4110, in interact_core
-    rv = root_widget.event(ev, x, y, 0)
-  File "renpy/display/layout.py", line 1090, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "renpy/display/behavior.py", line 530, in event
-    renpy.game.interface.timeout(max(self.delay - st, 0))
-TypeError: unsupported operand type(s) for -: 'tuple' and 'float'
-
-While running game code:
-  File "game/day+1.rpy", line 26, in script
-    pause()
-  File "renpy/common/000statements.rpy", line 453, in execute_pause
-    renpy.pause(delay)
-TypeError: unsupported operand type(s) for -: 'tuple' and 'float'
 Resetting cache.
-Bootstrap to the start of init.init took 92.64s
+Bootstrap to the start of init.init took 166.64s
+Early init took 0.00s
+Loader init took 0.04s
+Loading error handling took 0.02s
+Loading script took 0.32s
+Loading save slot metadata. took 0.06s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
+Dump and make backups. took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 3.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: "Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.06s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Intel'
+Renderer: 'Intel(R) UHD Graphics 620'
+Version: '4.6.0 - Build 27.20.100.9664'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3648, 2052) drawable=(3648, 2052)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 465.04s
+Early init took 0.00s
+Loader init took 0.04s
+Loading error handling took 0.02s
+Loading script took 0.30s
+Loading save slot metadata. took 0.06s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
+Dump and make backups. took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 3.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: "Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.06s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Intel'
+Renderer: 'Intel(R) UHD Graphics 620'
+Version: '4.6.0 - Build 27.20.100.9664'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3648, 2052) drawable=(3648, 2052)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 525.72s
 Early init took 0.00s
 Loader init took 0.04s
 Loading error handling took 0.02s
@@ -147,538 +248,6 @@ nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: "Couldn't load nvlib." (can be ignored)
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 123.39s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.26s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.07s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 401.70s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.26s
-Loading save slot metadata. took 0.07s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 493.34s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.25s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.07s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 554.39s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.26s
-Loading save slot metadata. took 0.08s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 913.64s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.26s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 980.81s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.28s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 1025.33s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.26s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.01s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.06s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/day+1.rpy", line 143, in script
-    n "Masami sighs and stares out the window."
-  File "renpy/ast.py", line 716, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "renpy/exports.py", line 1417, in say
-    who(what, *args, **kwargs)
-  File "renpy/character.py", line 1223, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "renpy/character.py", line 875, in do_display
-    **display_args)
-  File "renpy/character.py", line 621, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "renpy/ui.py", line 298, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "renpy/display/core.py", line 3276, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "renpy/display/core.py", line 3979, in interact_core
-    renpy.audio.audio.periodic()
-  File "renpy/audio/audio.py", line 1138, in periodic
-    raise_(exc[0], exc[1], exc[2])
-  File "renpy/audio/audio.py", line 1116, in periodic_thread_main
-    periodic_pass()
-  File "renpy/audio/audio.py", line 1058, in periodic_pass
-    c.periodic()
-  File "renpy/audio/audio.py", line 512, in periodic
-    topf = load(filename)
-  File "renpy/audio/audio.py", line 69, in load
-    rv = renpy.loader.load(fn)
-  File "renpy/loader.py", line 798, in load
-    raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file 'audio/voice/masami/masami_jieh.mp3'.
-
-While running game code:
-  File "game/day+1.rpy", line 143, in script
-    n "Masami sighs and stares out the window."
-IOError: Couldn't find file 'audio/voice/masami/masami_jieh.mp3'.
-Resetting cache.
-Bootstrap to the start of init.init took 1053.02s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.29s
-Loading save slot metadata. took 0.07s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.07s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 1060.90s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.23s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.06s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.01s
-Load screen analysis took 0.05s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 1150.80s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.26s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 1160.46s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.24s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
 Init translation took 0.06s
 Build styles took 0.00s
 Load screen analysis took 0.00s
@@ -699,1464 +268,13 @@ Vendor: 'Intel'
 Renderer: 'Intel(R) UHD Graphics 620'
 Version: '4.6.0 - Build 27.20.100.9664'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
+Screen sizes: virtual=(1920, 1080) physical=(3648, 2052) drawable=(3648, 2052)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init took 1305.23s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.28s
-Loading save slot metadata. took 0.09s
-Loading persistent took 0.01s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 1328.47s
+Bootstrap to the start of init.init took 605.80s
 Early init took 0.00s
 Loader init took 0.03s
 Loading error handling took 0.02s
-Loading script took 0.24s
-Loading save slot metadata. took 0.07s
-Loading persistent took 0.01s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 1345.59s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.24s
-Loading save slot metadata. took 0.07s
-Loading persistent took 0.01s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 1388.46s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.28s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.01s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 1466.55s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.25s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 1485.13s
-Early init took 0.00s
-Loader init took 0.03s
-Loading error handling took 0.02s
-Loading script took 0.26s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.01s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 1511.25s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.27s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 1537.44s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.26s
-Loading save slot metadata. took 0.07s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 1794.48s
-Early init took 0.00s
-Loader init took 0.03s
-Loading error handling took 0.02s
-Loading script took 0.29s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 1876.95s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.27s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.01s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 1991.38s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.25s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.06s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 2098.13s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.26s
-Loading save slot metadata. took 0.07s
-Loading persistent took 0.01s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.07s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 2162.27s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.25s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/day+1.rpy", line 234, in script
-    queue sound ["audio/sound/spray_long.mp3". "<silence 0.5>"]
-  File "renpy/ast.py", line 2010, in execute
-    self.call("execute")
-  File "renpy/ast.py", line 1998, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "renpy/statements.py", line 278, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 327, in execute_queue_sound
-    renpy.sound.queue(_audio_eval(p["file"]), channel=channel, loop=loop, relative_volume=eval(p.get("volume", "1.0")))
-  File "renpy/common/000statements.rpy", line 32, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
-  File "renpy/python.py", line 2264, in py_eval
-    code = py_compile(code, 'eval')
-  File "renpy/python.py", line 835, in py_compile
-    raise e
-SyntaxError: invalid syntax (day+1.rpy, line 234)
-
-While running game code:
-  File "game/day+1.rpy", line 234, in script
-    queue sound ["audio/sound/spray_long.mp3". "<silence 0.5>"]
-  File "renpy/common/000statements.rpy", line 327, in execute_queue_sound
-    renpy.sound.queue(_audio_eval(p["file"]), channel=channel, loop=loop, relative_volume=eval(p.get("volume", "1.0")))
-  File "renpy/common/000statements.rpy", line 32, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
-SyntaxError: invalid syntax (day+1.rpy, line 234)
-Resetting cache.
-Bootstrap to the start of init.init took 2176.14s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.28s
-Loading save slot metadata. took 0.10s
-Loading persistent took 0.01s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.07s
-Loading analysis data took 0.03s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.14s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.07s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.07s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.08s
-Prepare screens took 0.07s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 2246.34s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.25s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 2310.51s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.26s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 2492.86s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.33s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 2515.93s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.25s
-Loading save slot metadata. took 0.07s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 2542.08s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.25s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 2554.56s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.28s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.01s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.06s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 2600.33s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.27s
-Loading save slot metadata. took 0.07s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.08s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 2626.51s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.26s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.01s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 2655.69s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.21s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-
-File "game/day+1.rpy", line 234: is not terminated with a newline. (Check strings and parenthesis.)
-        pause(1.50
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Interface start took 0.09s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 2658.83s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.25s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 2718.30s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.25s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 2730.75s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.26s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 2787.14s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.26s
-Loading save slot metadata. took 0.07s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 2849.78s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.26s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3504, 1971) drawable=(3504, 1971)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
-Resetting cache.
-Bootstrap to the start of init.init took 2973.30s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.26s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
-Resetting cache.
-Bootstrap to the start of init.init took 2996.52s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.25s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
-Resetting cache.
-Bootstrap to the start of init.init took 3083.61s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.26s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
-Resetting cache.
-Bootstrap to the start of init.init took 3111.44s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.25s
-Loading save slot metadata. took 0.07s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
-Resetting cache.
-Bootstrap to the start of init.init took 3124.09s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
 Loading script took 0.30s
 Loading save slot metadata. took 0.06s
 Loading persistent took 0.00s
@@ -2179,7 +297,7 @@ Init translation took 0.05s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
-Save screen analysis took 0.06s
+Save screen analysis took 0.07s
 Prepare screens took 0.06s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.01s
@@ -2195,59 +313,14 @@ Vendor: 'Intel'
 Renderer: 'Intel(R) UHD Graphics 620'
 Version: '4.6.0 - Build 27.20.100.9664'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
+Screen sizes: virtual=(1920, 1080) physical=(3648, 2052) drawable=(3648, 2052)
+Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init took 3156.57s
+Bootstrap to the start of init.init took 629.64s
 Early init took 0.00s
 Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.25s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
-Resetting cache.
-Bootstrap to the start of init.init took 3178.29s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.25s
+Loading error handling took 0.02s
+Loading script took 0.29s
 Loading save slot metadata. took 0.06s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
@@ -2265,7 +338,7 @@ nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: "Couldn't load nvlib." (can be ignored)
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.05s
+Init translation took 0.06s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
@@ -2285,14 +358,59 @@ Vendor: 'Intel'
 Renderer: 'Intel(R) UHD Graphics 620'
 Version: '4.6.0 - Build 27.20.100.9664'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
+Screen sizes: virtual=(1920, 1080) physical=(3648, 2052) drawable=(3648, 2052)
+Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init took 3198.57s
+Bootstrap to the start of init.init took 668.69s
 Early init took 0.00s
 Loader init took 0.04s
 Loading error handling took 0.02s
-Loading script took 0.24s
+Loading script took 0.30s
+Loading save slot metadata. took 0.06s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
+Dump and make backups. took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 3.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: "Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.06s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Intel'
+Renderer: 'Intel(R) UHD Graphics 620'
+Version: '4.6.0 - Build 27.20.100.9664'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3648, 2052) drawable=(3648, 2052)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 722.89s
+Early init took 0.00s
+Loader init took 0.04s
+Loading error handling took 0.02s
+Loading script took 0.31s
 Loading save slot metadata. took 0.06s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
@@ -2304,7 +422,7 @@ Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\An
 Dump and make backups. took 0.06s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.05s
+Initial gc. took 0.06s
 DPI scale factor: 3.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: "Couldn't load nvlib." (can be ignored)
@@ -2313,7 +431,7 @@ Cleaning stores took 0.00s
 Init translation took 0.06s
 Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.02s
+Analyze screens took 0.01s
 Save screen analysis took 0.06s
 Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
@@ -2330,14 +448,14 @@ Vendor: 'Intel'
 Renderer: 'Intel(R) UHD Graphics 620'
 Version: '4.6.0 - Build 27.20.100.9664'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
+Screen sizes: virtual=(1920, 1080) physical=(3648, 2052) drawable=(3648, 2052)
+Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init took 3217.32s
+Bootstrap to the start of init.init took 737.54s
 Early init took 0.00s
 Loader init took 0.04s
 Loading error handling took 0.02s
-Loading script took 0.25s
+Loading script took 0.30s
 Loading save slot metadata. took 0.06s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
@@ -2349,7 +467,7 @@ Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\An
 Dump and make backups. took 0.06s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.05s
+Initial gc. took 0.06s
 DPI scale factor: 3.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: "Couldn't load nvlib." (can be ignored)
@@ -2360,7 +478,7 @@ Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.06s
-Prepare screens took 0.05s
+Prepare screens took 0.06s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.01s
 Running _start took 0.00s
@@ -2375,151 +493,16 @@ Vendor: 'Intel'
 Renderer: 'Intel(R) UHD Graphics 620'
 Version: '4.6.0 - Build 27.20.100.9664'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
+Screen sizes: virtual=(1920, 1080) physical=(3648, 2052) drawable=(3648, 2052)
+Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init took 3237.58s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.24s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
-Resetting cache.
-Bootstrap to the start of init.init took 3256.38s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.27s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.07s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
-Resetting cache.
-Bootstrap to the start of init.init took 3305.49s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.24s
-Loading save slot metadata. took 0.07s
-Loading persistent took 0.01s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
-Resetting cache.
-Bootstrap to the start of init.init took 3444.39s
+Bootstrap to the start of init.init took 947.02s
 Early init took 0.00s
 Loader init took 0.04s
 Loading error handling took 0.02s
-Loading script took 0.24s
+Loading script took 0.30s
 Loading save slot metadata. took 0.06s
-Loading persistent took 0.01s
+Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Running init code took 0.04s
 Loading analysis data took 0.02s
@@ -2536,7 +519,7 @@ nvdrs: "Couldn't load nvlib." (can be ignored)
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.06s
-Build styles took 0.01s
+Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.06s
@@ -2555,14 +538,14 @@ Vendor: 'Intel'
 Renderer: 'Intel(R) UHD Graphics 620'
 Version: '4.6.0 - Build 27.20.100.9664'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
+Screen sizes: virtual=(1920, 1080) physical=(3648, 2052) drawable=(3648, 2052)
+Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init took 3457.04s
+Bootstrap to the start of init.init took 1030.39s
 Early init took 0.00s
-Loader init took 0.04s
+Loader init took 0.03s
 Loading error handling took 0.01s
-Loading script took 0.21s
+Loading script took 0.31s
 Loading save slot metadata. took 0.06s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
@@ -2570,7 +553,8 @@ Running init code took 0.04s
 Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Dump and make backups. took 0.05s
+Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
+Dump and make backups. took 0.06s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.05s
@@ -2581,9 +565,9 @@ Creating interface object took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.06s
 Build styles took 0.00s
-Load screen analysis took 0.04s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.06s
 Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.01s
@@ -2599,14 +583,14 @@ Vendor: 'Intel'
 Renderer: 'Intel(R) UHD Graphics 620'
 Version: '4.6.0 - Build 27.20.100.9664'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
+Screen sizes: virtual=(1920, 1080) physical=(3648, 2052) drawable=(3648, 2052)
+Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init took 3491.04s
+Bootstrap to the start of init.init took 1217.56s
 Early init took 0.00s
-Loader init took 0.04s
+Loader init took 0.03s
 Loading error handling took 0.02s
-Loading script took 0.26s
+Loading script took 0.30s
 Loading save slot metadata. took 0.06s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
@@ -2644,14 +628,14 @@ Vendor: 'Intel'
 Renderer: 'Intel(R) UHD Graphics 620'
 Version: '4.6.0 - Build 27.20.100.9664'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
+Screen sizes: virtual=(1920, 1080) physical=(3648, 2052) drawable=(3648, 2052)
+Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init took 3584.16s
+Bootstrap to the start of init.init took 1303.80s
 Early init took 0.00s
 Loader init took 0.04s
 Loading error handling took 0.01s
-Loading script took 0.25s
+Loading script took 0.30s
 Loading save slot metadata. took 0.06s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
@@ -2679,7 +663,7 @@ Save pyanalysis. took 0.00s
 Save bytecode. took 0.01s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.05s
+Interface start took 0.06s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 3840, 2160)
@@ -2689,698 +673,26 @@ Vendor: 'Intel'
 Renderer: 'Intel(R) UHD Graphics 620'
 Version: '4.6.0 - Build 27.20.100.9664'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
+Screen sizes: virtual=(1920, 1080) physical=(3648, 2052) drawable=(3648, 2052)
+Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init took 3633.28s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.26s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
-Resetting cache.
-Bootstrap to the start of init.init took 3671.89s
+Bootstrap to the start of init.init took 1393.27s
 Early init took 0.00s
 Loader init took 0.04s
 Loading error handling took 0.02s
-Loading script took 0.25s
-Loading save slot metadata. took 0.06s
+Loading script took 0.34s
+Loading save slot metadata. took 0.07s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
-
-Full traceback:
-  File "game/day0.rpy", line 101, in script
-    scene cg Cooking_Tangyuan_Step42 with Dissolve(1.0)
-  File "renpy/ast.py", line 1318, in execute
-    statement_name("scene")
-  File "renpy/ast.py", line 46, in statement_name
-    i(name)
-  File "renpy/common/000window.rpy", line 111, in _window_auto_callback
-    _window_hide(auto=True)
-  File "renpy/common/000window.rpy", line 101, in _window_hide
-    renpy.with_statement(trans)
-  File "renpy/exports.py", line 1682, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "renpy/display/core.py", line 2718, in do_with
-    clear=clear)
-  File "renpy/display/core.py", line 3276, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "renpy/display/core.py", line 3979, in interact_core
-    renpy.audio.audio.periodic()
-  File "renpy/audio/audio.py", line 1138, in periodic
-    raise_(exc[0], exc[1], exc[2])
-  File "renpy/audio/audio.py", line 1116, in periodic_thread_main
-    periodic_pass()
-  File "renpy/audio/audio.py", line 1058, in periodic_pass
-    c.periodic()
-  File "renpy/audio/audio.py", line 512, in periodic
-    topf = load(filename)
-  File "renpy/audio/audio.py", line 69, in load
-    rv = renpy.loader.load(fn)
-  File "renpy/loader.py", line 798, in load
-    raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file 'audio/sound/boiling.mp3'.
-
-While running game code:
-  File "game/day0.rpy", line 101, in script
-    scene cg Cooking_Tangyuan_Step42 with Dissolve(1.0)
-  File "renpy/common/000window.rpy", line 111, in _window_auto_callback
-    _window_hide(auto=True)
-  File "renpy/common/000window.rpy", line 101, in _window_hide
-    renpy.with_statement(trans)
-IOError: Couldn't find file 'audio/sound/boiling.mp3'.
-Resetting cache.
-Bootstrap to the start of init.init took 3683.02s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.26s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
-Resetting cache.
-Bootstrap to the start of init.init took 3694.11s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.25s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
-Resetting cache.
-Bootstrap to the start of init.init took 3708.27s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.27s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
+Running init code took 0.05s
 Loading analysis data took 0.02s
 Analyze and compile ATL took 0.01s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
+Dump and make backups. took 0.07s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.07s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
-Resetting cache.
-Bootstrap to the start of init.init took 3758.88s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.26s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.01s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.06s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
-Resetting cache.
-Bootstrap to the start of init.init took 3786.75s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.25s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.06s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
-Resetting cache.
-Bootstrap to the start of init.init took 3812.98s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.26s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.06s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
-Resetting cache.
-Bootstrap to the start of init.init took 3846.86s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.25s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
-Resetting cache.
-Bootstrap to the start of init.init took 3856.47s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.26s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.06s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
-Resetting cache.
-Bootstrap to the start of init.init took 3908.66s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.28s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.01s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
-Resetting cache.
-Bootstrap to the start of init.init took 3945.42s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.30s
-Loading save slot metadata. took 0.08s
-Loading persistent took 0.01s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.06s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.07s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
-Resetting cache.
-Bootstrap to the start of init.init took 3958.07s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.27s
-Loading save slot metadata. took 0.07s
-Loading persistent took 0.01s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.06s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
-Resetting cache.
-Bootstrap to the start of init.init took 3972.29s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.25s
-Loading save slot metadata. took 0.07s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 3.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics 620'
-Version: '4.6.0 - Build 27.20.100.9664'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
-Resetting cache.
-Bootstrap to the start of init.init took 4030.51s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.01s
-Loading script took 0.25s
-Loading save slot metadata. took 0.06s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.06s
 DPI scale factor: 3.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: "Couldn't load nvlib." (can be ignored)
@@ -3396,7 +708,7 @@ Save pyanalysis. took 0.00s
 Save bytecode. took 0.01s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.07s
+Interface start took 0.06s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 3840, 2160)
@@ -3406,5 +718,95 @@ Vendor: 'Intel'
 Renderer: 'Intel(R) UHD Graphics 620'
 Version: '4.6.0 - Build 27.20.100.9664'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(5760, 2930) drawable=(5760, 2930)
-Maximum texture size: 5824x4096
+Screen sizes: virtual=(1920, 1080) physical=(3648, 2052) drawable=(3648, 2052)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1456.70s
+Early init took 0.00s
+Loader init took 0.04s
+Loading error handling took 0.02s
+Loading script took 0.30s
+Loading save slot metadata. took 0.06s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
+Dump and make backups. took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 3.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: "Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.06s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Intel'
+Renderer: 'Intel(R) UHD Graphics 620'
+Version: '4.6.0 - Build 27.20.100.9664'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3648, 2052) drawable=(3648, 2052)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1520.07s
+Early init took 0.00s
+Loader init took 0.04s
+Loading error handling took 0.02s
+Loading script took 0.30s
+Loading save slot metadata. took 0.06s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\kitsu\\AppData\\Roaming/RenPy/backups\\And So, I Fall':
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 3.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: "Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.06s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Intel'
+Renderer: 'Intel(R) UHD Graphics 620'
+Version: '4.6.0 - Build 27.20.100.9664'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3648, 2052) drawable=(3648, 2052)
+Maximum texture size: 4096x4096

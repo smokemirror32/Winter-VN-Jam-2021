@@ -24,7 +24,9 @@ label class_1:
     # SEFF: SCHOOL BELL RING
     m "Thanks, Mr. Friedman! Happy holidays to you, too!"
     n "Masami waves goodbye to his physics teacher before he steps out of the classroom, joining the sea of students heading to lunch."
+    voice "audio/voice/masami/masami_hm.mp3"
     m happy "(Phew. I can't believe that - )"
+    play sound "audio/sound/phone_vibrate.mp3"
     n "Suddenly, his phone buzzes in his pocket."
     m neutral "(Hm. It's probably Sabie again. I wonder what she's up to this time.)"
 
@@ -51,6 +53,7 @@ label class_1_panik:
     show masami surprised at mc_pos
     n "Masami nearly drops his phone."
     show masami at shake, mc_pos
+    voice "audio/voice/masami/masami_whatthehell.mp3"
     m "What the hell?"
     show masami sad
     n "He nervously picks up his phone again."
@@ -80,10 +83,12 @@ label class_1_kalm:
     show masami sad at mc_pos
 
     n "Masami exhales slowly and slides the phone back into his pocket."
+    voice "audio/voice/masami/masami_oh.mp3"
     m neutral "(It's okay. I'm just seeing things.)"
     n "He rubs his temples."
     show masami exasperated at shake, mc_pos
     m "(Dammit. I should have gotten back earlier last night. Three hours is definitely not enough sleep.)"
+    voice "audio/voice/masami/masami_quietsigh.mp3"
     m sad "..."
     m neutral "(I'll just reply to Sabie in person.)"
 
@@ -110,16 +115,20 @@ label lunch_1a:
 
     n "He hurries in as quickly as he can to find Rohan and Sabie engaged in another one of their tabletop battles."
     show rohan at shake, right
+    voice "audio/voice/rohan/rohan_seriously.mp3"
     r "Hey, let go of my phone!"
     show sabie at shake, left
+    voice "audio/voice/sabie/sabie_hmmmm.mp3"
     s "But you gotta delete those videos you took of me last night."
     r "What? No! They were good videos."
     r sad "Besides I - I wasn't even planning on sharing them."
     s "I don't trust you. You sent those drunk karaoke videos last time without a second thought."
     show rohan annoyed at shake, right
+    voice "audio/voice/rohan/rohan_um.mp3"
     r "But Smash videos are different!"
     s "No, they are not."
     r sad "Why?"
+    voice "audio/voice/sabie/sabie_ugh.mp3"
     s worried "Ugh, spare me, will you? The number of times I suicided with Kirby was - "
 
     show sabie surprised
@@ -151,6 +160,7 @@ label sabie_glitching:
     if support == "Sabie":
 
         call sabie_spaz()
+        voice "audio/voice/sabie/sabie_nervouslaughter.mp3"
         s "Feel like coming to help me again?"
         call sabie_spaz()
         s "Or are you going to leave me out to dry like you did to Alyssa because you've got commitment issues?"
@@ -158,6 +168,7 @@ label sabie_glitching:
         s "I should hope that a good old family friend means something to you, {i}ge{/i}."
         call sabie_spaz()
         call sabie_spaz()
+        voice "audio/voice/sabie/sabie_gotcha.mp3"
         s innocent "But then again, Xinyi did decide to leave her poor little brother behind."
         call sabie_spaz()
         s happy "Who knows how much more you've learned from her? You two were close after all."
@@ -165,18 +176,21 @@ label sabie_glitching:
     else:
 
         call sabie_spaz()
+        voice "audio/voice/sabie/sabie_nervouslaughter.mp3"
         s "Are you going to help me this time?"
         call sabie_spaz()
         s "Or are going to leave me to suffer alone."
         call sabie_spaz()
         s "I wonder if it's worth it for me to care about someone who didn't care for me back."
         call sabie_spaz()
+        voice "audio/voice/sabie/sabie_gotcha.mp3"
         s innocent "That's what Xinyi did to you, after all."
         call sabie_spaz()
         call sabie_spaz()
         s happy "It's only fair that you take it out on the rest of us, right {i}ge{/i}?"
 
     show masami surprised at shake, mc_pos
+    voice "audio/voice/masami/masami_huh.mp3"
     m "W-What? When did I ever think that?"
 
     # Glitch OFF
@@ -187,10 +201,13 @@ label sabie_glitching:
     hide glitch_filter onlayer glitching with Dissolve(2.0)
     play music uptempo fadein 2.0
 
+    voice "audio/voice/sabie/sabie_uh.mp3"
     s "Uh…I guess you could start thinking about helping me right about now. Kinda in a tough spot, as you can see."
     m sad "Ah."
     n "Masami swallows."
+    voice "audio/voice/masami/masami_hm.mp3"
     m neutral "Rohan, maybe this time if you - "
+    voice "audio/voice/rohan/rohan_defeatedsigh.mp3"
     r "Does it matter what I do?"
     stop music fadeout 1.0
 
@@ -217,6 +234,7 @@ label sabie_glitching:
         r "Stand up for me like you did last time."
         call rohan_spaz()
         call rohan_spaz()
+        voice "audio/voice/rohan/rohan_igiveup.mp3"
         r sad "Or do I not matter to you either?"
 
     else:
@@ -225,6 +243,7 @@ label sabie_glitching:
         r sad "But definitely, go ahead. Let her walk all over to me."
         call rohan_spaz()
         call rohan_spaz()
+        voice "audio/voice/rohan/rohan_igiveup.mp3"
         r "I won't care."
 
     show masami surprised at shake, mc_pos
@@ -239,12 +258,14 @@ label sabie_glitching:
     play music uptempo fadein 2.0
 
     n "Sabie and Rohan exchange glances. The phone hangs between them in their limp grasps, forgotten. "
+    voice "audio/voice/rohan/rohan_um.mp3"
     r neutral "Uh, we already knew that part, but thanks."
     s "Is there something that you're thinking too hard about, {i}ge{/i}?"
     show masami at shake, mc_pos
     m "I - "
     show masami neutral
     n "Masami runs his hand through his hair."
+    voice "audio/voice/masami/masami_im...fine.mp3"
     m happy "It's nothing. Just tired. You know what happens when you don't get those eight hours."
     n "Sabie and Rohan just stare at him."
     m exasperated "(Shit. I should have known they wouldn't buy it. Not when they've got a worse sleep schedule than me.)"
@@ -253,6 +274,7 @@ label sabie_glitching:
     hide sabie
     hide rohan
 
+    voice "audio/voice/tyree/tyree_ah.mp3"
     t "Ah."
     show masami surprised at shake, mc_pos
     m "Wait, when did you - "
@@ -263,6 +285,7 @@ label sabie_glitching:
 
     stop music fadeout 1.0
 
+    voice "audio/voice/tyree/tyree_hm.mp3"
     t "Hm."
 
     # Glitch ON
@@ -280,6 +303,7 @@ label sabie_glitching:
         call tyree_spaz()
         t "Not if you've expressed affection for them before. It will be too late then."
         call tyree_spaz()
+        voice "audio/voice/tyree/tyree_quietchuckle.mp3"
         t neutral "They will always want the old you back. As they should."
         call tyree_spaz()
         call tyree_spaz()
@@ -292,6 +316,7 @@ label sabie_glitching:
         call tyree_spaz()
         t "They will accept no less and we must follow through."
         call tyree_spaz()
+        voice "audio/voice/tyree/tyree_quietchuckle.mp3"
         t neutral "This is how we become who we need to be."
         call tyree_spaz()
         call tyree_spaz()
@@ -304,6 +329,7 @@ label sabie_glitching:
     n "Masami backs up quickly, colliding into a nearby tree. His hands reach backwards around the trunk."
     # Glitch OFF
     hide glitch_filter onlayer glitching with Dissolve(2.0)
+    voice "audio/voice/masami/masami_whatthehell.mp3"
     m "I - I..."
     show masami exasperated at shake, mc_pos
     m "Look, I don't know what I should do anymore."
@@ -331,10 +357,12 @@ label lunch_1b:
     show sabie worried at left
 
     n "Sabie lets go of the phone and nudges it back to Rohan. Rohan quietly pockets it, eyes trained on Masami."
+    voice "audio/voice/sabie/sabie_uh.mp3"
     s "{i}Ge{/i}. What happened last night?"
     m sad "Last night?"
     s "Something happened last night or you wouldn't be acting like this."
     n "Masami inhales slowly."
+    voice "audio/voice/masami/masami_quietchuckle.mp3"
     m happy "Nothing happened. I have no idea what you're talking about."
 
     show sabie annoyed at center with move
@@ -342,14 +370,17 @@ label lunch_1b:
         ease 1.5 zoom 1.05
     show rohan neutral
 
+    play sound "audio/sound/footsteps_walk1.mp3"
     n "Sabie gets up and walks over to him very slowly, her fists balled."
     n "She stops when she's inches away and stares up at him, unflinching."
+    voice "audio/voice/sabie/sabie_ugh.mp3"
     s "Don't even try that on me, dumbass. I thought you knew better than that."
 
     show sabie at shake, center
 
     n "She pokes him hard on the forehead."
     show masami angry at shake, mc_pos
+    voice "audio/voice/masami/masami_whatthehell.mp3"
     m "Ow! What was that for?"
     s "Your idiocy."
     s worried "Look, I really didn't want things to go this way, but you're not giving me a choice."
@@ -372,6 +403,7 @@ label lunch_1b:
     # Depends if you visited Alyssa first or not
     if alyssa_visit_first:
 
+        voice "audio/voice/sabie/sabie_gotcha.mp3"
         s innocent "You ditch the girl you've been pining over for years as if it were nothing."
         call sabie_spaz()
         s happy "I'll give you credit for even having the balls to go straight to her in the first place."
@@ -380,6 +412,7 @@ label lunch_1b:
 
     else:
 
+        voice "audio/voice/sabie/sabie_gotcha.mp3"
         s innocent "You waste so much time trying to decide whether or not you actually want to get the idiot you've been pining over for years."
         call sabie_spaz()
         s happy "Then after you finally work up the fucking nerve, you just ditch her."
@@ -395,6 +428,7 @@ label lunch_1b:
     if sabie_trust:
 
         call sabie_spaz()
+        voice "audio/voice/sabie/sabie_imean.mp3"
         s happy "You told me something was wrong before and I supported you."
         call sabie_spaz()
         s "What about that wasn't enough for you that you had to clam up like this again?"
@@ -402,6 +436,7 @@ label lunch_1b:
     else:
 
         call sabie_spaz()
+        voice "audio/voice/sabie/sabie_imean.mp3"
         s happy "Don't you care that there are people out here trying to help you at all?"
         call sabie_spaz()
         s "Was it worth it being so damn selfish that you couldn't even bother to explain yourself? Not even to me when I fucking asked you what was wrong?"
@@ -412,6 +447,7 @@ label lunch_1b:
     s "What on earth is going on in your head that's worth keeping from the rest of us?"
     call sabie_spaz()
     show masami surprised at shake, mc_pos
+    voice "audio/voice/masami/masami_huh.mp3"
     m "I - "
     call sabie_spaz()
     m "I don’t know."
@@ -422,6 +458,7 @@ label lunch_1c:
 
     call sabie_glitch_big()
     call sabie_spaz()
+    voice "audio/voice/sabie/sabie_cmon.mp3"
     s mischievous "Pft. Of course you know yourself, silly."
 
     # Depends on if you answered Sabie's message on Day 2 - After
@@ -440,6 +477,7 @@ label lunch_1c:
 
     call sabie_spaz()
     call sabie_spaz()
+    voice "audio/voice/sabie/sabie_nervouslaughter.mp3"
     s happy "Sometimes, I really can't believe you."
 
     show masami at shake, mc_pos
@@ -453,6 +491,7 @@ label lunch_1c:
     call rohan_glitch()
     call rohan_spaz()
 
+    voice "audio/voice/rohan/rohan_seriously.mp3"
     r "Don't even try lying to yourself."
     call rohan_spaz()
     call sabie_spaz()
@@ -468,6 +507,7 @@ label lunch_1c:
         call rohan_spaz()
         call sabie_spaz()
         call rohan_spaz()
+        voice "audio/voice/rohan/rohan_defeatedsigh.mp3"
         r "Just like your sister."
         call rohan_spaz()
         call sabie_spaz()
@@ -479,6 +519,7 @@ label lunch_1c:
         call rohan_spaz()
         call sabie_spaz()
         call rohan_spaz()
+        voice "audio/voice/rohan/rohan_defeatedsigh.mp3"
         r "It wasn't even much to ask for. Just a glance to say that you supported me when I needed it."
 
     show rohan happy
@@ -488,10 +529,12 @@ label lunch_1c:
     r happy "But definitely, believe what you want. That you actually look good in the eyes of others."
     call sabie_spaz()
     call rohan_spaz()
+    voice "audio/voice/rohan/rohan_nervouslaughter.mp3"
     r "Keep your pathetic little image of yourself as the golden boy."
     call sabie_spaz()
     call rohan_spaz()
     show masami angry at shake, mc_pos
+    voice "audio/voice/masami/masami_whatthehell.mp3"
     m "What the hell are you talking about?"
     call rohan_spaz()
     call sabie_spaz()
@@ -506,6 +549,7 @@ label lunch_1c:
     call tyree_spaz()
     call sabie_spaz()
 
+    voice "audio/voice/tyree/tyree_no.mp3"
     t "We know you aren't."
     call sabie_spaz()
     call tyree_spaz()
@@ -521,6 +565,7 @@ label lunch_1c:
         call tyree_spaz()
         call rohan_spaz()
         call sabie_spaz()
+        voice "audio/voice/tyree/tyree_hm.mp3"
         t "What's more is that you take on more than what you can give."
     else:
         call tyree_spaz()
@@ -534,6 +579,7 @@ label lunch_1c:
         call sabie_spaz()
         call tyree_spaz()
         call rohan_spaz()
+        voice "audio/voice/tyree/tyree_hm.mp3"
         t "Nothing is ever enough for you and in your cowardice, you will never be satisfied."
 
     # TODO: Change Tyree's expression to happy and add dialogue to adjust flow, address secrets kept, etc.
@@ -542,6 +588,7 @@ label lunch_1c:
     call rohan_spaz()
     call sabie_spaz()
     show masami surprised at shake, mc_pos
+    voice "audio/voice/masami/masami_huh.mp3"
     m "Please, I - "
     call sabie_spaz()
     call tyree_spaz()
@@ -550,6 +597,7 @@ label lunch_1c:
     call rohan_spaz()
     call tyree_spaz()
     call sabie_spaz()
+    voice "audio/voice/sabie/sabie_nervouslaughter.mp3"
     s innocent "If you don't trust us, just say so. At least you're being honest."
     call tyree_spaz()
     call rohan_spaz()
@@ -589,30 +637,45 @@ label hallway_1:
     show bg hallway with vpunch
     n "He pushes open the door and tries to lose himself in the crowd."
     n "Behind him, he can hear Sabie's footsteps hot on his heels."
+    play sound "audio/sound/footsteps_pound.mp3"
     show bg hallway with vpunch
+    voice "audio/voice/sabie/sabie_mischievousgiggle.mp3"
     s "Oi, dumbass!"
     show bg hallway with vpunch
+    play sound "audio/sound/footsteps_pound.mp3"
     s "You can't run from yourself forever!"
     show bg hallway with vpunch
+    play sound "audio/sound/footsteps_pound.mp3"
+    voice "audio/voice/masami/masami_thatsbullshit.mp3"
     m exasperated "(I'm not running from myself. I'm not.)"
     show bg hallway with vpunch
+    play sound "audio/sound/footsteps_pound.mp3"
     m sad "(I'm just...)"
     show bg hallway with vpunch
+    play sound "audio/sound/footsteps_pound.mp3"
     m "..."
     show bg hallway with vpunch
+    play sound "audio/sound/footsteps_pound.mp3"
+    voice "audio/voice/masami/masami_quietsigh.mp3"
     m exasperated "(Damn it.)"
     show bg hallway with vpunch
+    play sound "audio/sound/footsteps_pound.mp3"
     n "Masami quickens his pace, weaving in between the molasses slow current of people."
     show bg hallway with vpunch
+    play sound "audio/sound/footsteps_pound.mp3"
     m sad "(Can't everyone just leave me alone?)"
     show bg hallway with vpunch
+    play sound "audio/sound/footsteps_pound.mp3"
     m "(Nothing happened, nothing changed.)"
     show bg hallway with vpunch
+    play sound "audio/sound/footsteps_pound.mp3"
     m exasperated "(So why can't I just - )"
     show bg hallway with vpunch
+    play sound "audio/sound/footsteps_pound.mp3"
     n "He turns a corner and brushes a little too hard against an unsuspecting student."
     show bg hallway with vpunch
     show masami surprised at shake, mc_pos
+    play sound "audio/sound/crash.mp3"
     m "Ah, sorry - "
     show bg hallway with vpunch
 
@@ -620,7 +683,7 @@ label hallway_1:
     call nasir_spaz()
     show alyssa nervous at right
     call alyssa_spaz()
-
+    voice "audio/voice/masami/masami_oh.mp3"
     m "Oh."
     call alyssa_spaz()
     call nasir_spaz()
@@ -640,6 +703,7 @@ label hallway_1:
     call alyssa_spaz()
     call nasir_spaz()
     show masami angry at shake, mc_pos
+    voice "audio/voice/masami/masami_whatthehell.mp3"
     m "The hell? I never - "
     call nasir_spaz()
     call alyssa_spaz()
@@ -652,6 +716,7 @@ label hallway_1:
     call nasir_spaz()
     m sad "I didn't mean - "
     call nasir_spaz()
+    voice "audio/voice/nasir/nasir_dontworryaboutme.mp3"
     na sad "It's alright."
     show nasir at center with move
     call nasir_spaz()
@@ -663,8 +728,10 @@ label hallway_1:
     call nasir_spaz()
     na sad "What is it?"
     call nasir_spaz()
+    voice "audio/voice/masami/masami_quietsigh.mp3"
     m sad "About last night. I - "
     call nasir_spaz()
+    voice "audio/voice/nasir/nasir_quietchuckle.mp3"
     na happy "You don't need to explain. I understand."
     call nasir_spaz()
     call nasir_spaz()
@@ -675,6 +742,7 @@ label hallway_1:
         na "You should have pushed me away earlier if you didn't want me."
         call nasir_spaz()
         call nasir_spaz()
+        voice "audio/voice/nasir/nasir_quietsigh.mp3"
         na "You shouldn't have kissed me back as if it meant something."
 
     else:
@@ -686,6 +754,7 @@ label hallway_1:
             call nasir_spaz()
             na "I should have known when you refused to take a cookie."
             call nasir_spaz()
+            voice "audio/voice/nasir/nasir_quietsigh.mp3"
             na "But then, you led me on the whole night with the journey and conversation. And I thought, maybe, we did feel the same way about each other."
             call nasir_spaz()
             call nasir_spaz()
@@ -697,6 +766,7 @@ label hallway_1:
     show masami exasperated at shake, mc_pos
     m "I - I wasn't thinking straight. Neither of us were."
     call nasir_spaz()
+    voice "audio/voice/masami/masami_sorryaboutthat.mp3"
     m sad "I'm trying to tell you what I really want now. And that's - "
 
     if kiss:
@@ -709,13 +779,16 @@ label hallway_1:
         m sad "I just didn't realize until last night."
         call nasir_spaz()
         call nasir_spaz()
+        voice "audio/voice/nasir/nasir_hm.mp3"
         na "Ah."
         call nasir_spaz()
         show masami angry at shake, mc_pos
+        voice "audio/voice/masami/masami_whatthehell.mp3"
         m "That's it? Your only response? Isn't this suppose to be a mutual feeling where we're both supposed to be excited?"
         call nasir_spaz()
         na "Perhaps."
         call nasir_spaz()
+        voice "audio/voice/nasir/nasir_quietchuckle.mp3"
         na "But let me ask you this: if we start something, would you be ready to tell your friends and family about it?"
         call nasir_spaz()
         call nasir_spaz()
@@ -728,12 +801,14 @@ label hallway_1:
         m sad "..."
         call nasir_spaz()
         call nasir_spaz()
+        voice "audio/voice/nasir/nasir_iunderstand.mp3"
         na "That's what I was afraid of."
 
     else:
         call nasir_spaz()
         call nasir_spaz()
         call nasir_spaz()
+        voice "audio/voice/nasir/nasir_iunderstand.mp3"
         na "You've already made yourself clear enough."
 
     stop music fadeout 1.5
@@ -746,6 +821,7 @@ label hallway_1:
     # GLITCH OFF - Fade out
 
     n "With that, Nasir twists his arm free and disappears into the outgoing stream of people."
+    voice "audio/voice/masami/masami_quietsigh.mp3"
     m "..."
 
     jump masami_kitchen_1
@@ -766,12 +842,14 @@ label masami_kitchen_1:
     mm "Hello Masami! Welcome home!"
     m "…"
     mm "Something wrong?"
+    voice "audio/voice/masami/masami_im...fine.mp3"
     m neutral "Not really, no."
     n "Masami glances at the stovetop."
     m happy "Making the ginger duck so soon?"
     show wsprite at bounce, center
     n "Masami's mother laughs."
     mm "Well you made a lot of {i}tangyuan{/i}. So I think, why not start making other thing?"
+    voice "audio/voice/masami/masami_oh.mp3"
     m neutral "Oh."
     show wsprite at bounce, center
     mm "We can always make more tomorrow {i}tangyuan{/i} to cook tomorrow, don't worry!"
@@ -779,6 +857,7 @@ label masami_kitchen_1:
     n "She pats him heartily on the back."
     show wsprite at bounce, center
     mm "You excited to eat? Have family time?"
+    voice "audio/voice/masami/masami_quietchuckle.mp3"
     m happy "Yeah. I think so."
     m neutral "That would be nice. I couldn't wish for more than that."
     m sad "(I just such a wish was worth having to begin with.)"
