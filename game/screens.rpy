@@ -480,7 +480,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
         action Return()
 
-    label title
+    label _("Menu")
 
     if main_menu:
         key "game_menu" action ShowMenu("main_menu")
@@ -570,7 +570,8 @@ screen about():
 
 style about_label is gui_label
 style about_label_text is gui_label_text
-style about_text is gui_text
+style about_text is gui_text:
+    color gui.idle_small_color
 
 style about_label_text:
     size gui.label_text_size
@@ -956,6 +957,7 @@ style history_text:
     xsize gui.history_text_width
     min_width gui.history_text_width
     text_align gui.history_text_xalign
+    color gui.idle_color
     layout ("subtitle" if gui.history_text_xalign else "tex")
 
 style history_label:
@@ -1104,7 +1106,8 @@ style help_button is gui_button
 style help_button_text is gui_button_text
 style help_label is gui_label
 style help_label_text is gui_label_text
-style help_text is gui_text
+style help_text is gui_text:
+    color gui.idle_small_color
 
 style help_button:
     properties gui.button_properties("help_button")

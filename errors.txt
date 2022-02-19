@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 392: expected 'simple_expression' not found.
-    background 
-               ^
+File "game/screens.rpy", line 576: style property darkGui_text is not known.
+    style about_text darkGui_text
+                                 ^
 
 Ren'Py Version: Ren'Py 7.4.10.2178
-Fri Dec 31 22:12:24 2021
+Sat Feb 19 01:11:17 2022
