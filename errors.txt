@@ -1,9 +1,0 @@
-﻿I'm sorry, but errors were detected in your script. Please correct the
-errors listed below, and try again.
-
-
-File "game/day+1.rpy", line 234: is not terminated with a newline. (Check strings and parenthesis.)
-        pause(1.50
-
-Ren'Py Version: Ren'Py 7.4.8.1895
-Thu Feb  3 21:52:58 2022

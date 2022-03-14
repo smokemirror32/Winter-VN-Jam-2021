@@ -480,7 +480,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
         action Return()
 
-    label title
+    label _("Menu")
 
     if main_menu:
         key "game_menu" action ShowMenu("main_menu")
@@ -510,7 +510,7 @@ style game_menu_navigation_frame:
     yfill True
 
 style game_menu_content_frame:
-    left_margin 60
+    left_margin 150
     right_margin 30
     top_margin 15
 
@@ -570,7 +570,8 @@ screen about():
 
 style about_label is gui_label
 style about_label_text is gui_label_text
-style about_text is gui_text
+style about_text is gui_text:
+    color gui.idle_small_color
 
 style about_label_text:
     size gui.label_text_size
@@ -859,7 +860,7 @@ style check_button_text:
     properties gui.button_text_properties("check_button")
 
 style slider_slider:
-    xsize 525
+    xsize 400
 
 style slider_button:
     properties gui.button_properties("slider_button")
@@ -870,7 +871,7 @@ style slider_button_text:
     properties gui.button_text_properties("slider_button")
 
 style slider_vbox:
-    xsize 675
+    xsize 600
 
 
 ## History screen ##############################################################
@@ -956,6 +957,7 @@ style history_text:
     xsize gui.history_text_width
     min_width gui.history_text_width
     text_align gui.history_text_xalign
+    color gui.idle_color
     layout ("subtitle" if gui.history_text_xalign else "tex")
 
 style history_label:
@@ -1104,7 +1106,8 @@ style help_button is gui_button
 style help_button_text is gui_button_text
 style help_label is gui_label
 style help_label_text is gui_label_text
-style help_text is gui_text
+style help_text is gui_text:
+    color gui.idle_small_color
 
 style help_button:
     properties gui.button_properties("help_button")
@@ -1668,6 +1671,12 @@ screen nphone():
 ################################################################################
 
 ### Bedroom Point and Click
+style tooltip_display:
+    background "gui/pointandclick_background.png"
+    # Unsure of where the best place to put the box for this
+    
+    #pos renpy.get_mouse_pos() # This puts the text where the mouse is, but doesn't look pretty
+
 
 screen bedroom:
 
@@ -1702,6 +1711,10 @@ screen bedroom:
             yalign 0.1
             #pos renpy.get_mouse_pos() # This puts the text where the mouse is, but doesn't look pretty
             text "[tooltip]"
+
+                
+
+            
 
 
 ### Party Point and Click
@@ -1770,8 +1783,8 @@ screen railcar:
 
     $ tooltip = GetTooltip()
     if tooltip:
-        frame:
-            background None
+        button:
+            background
             xalign 0.5 # Unsure of where the best place to put the box for this
             yalign 0.1
             #pos renpy.get_mouse_pos() # This puts the text where the mouse is, but doesn't look pretty

@@ -53,50 +53,50 @@ label phone_3a:
 
     hide masami with Dissolve(0.5)
 
-    call phone_open(True)
+    call phone_open(True) from _call_phone_open_10
 
-    call message(s, "yo", True)
-    call message(s, "yo")
-    call message(s, "yooo")
-    call message(s,"{i}ge{/i}")
-    call message(s, "r u there")
-    call message(s, "...")
-    call message(s, "{i}ge geeeeeee{/i}")
-    call message(s, "u r not ignoring me right")
-    call message(s, ":(((((")
-    call message(m, "Hey", True)
-    call message(s, ":o", True)
-    call message(s, "ur here")
-    call message(s, ":D")
-    call message(m, "Ye", True)
-    call message(m, "Sorry, just got out of class")
-    call message(s, "tis ok ^.^", True)
-    call message(s, "we r outside at usual spot")
-    call message(s, "dont take too long or rohan will niwnag;awngawn")
-    call message(s, "nae;iwngliane;li;ngial")
-    call message(s, "I;eangioaen;oein;ioeanwi")
-    call message(s, "ianewgilnewa")
-    call message(m, "?", True)
-    call message(s, "naigneianeiawne;", True)
-    call message(s, "wia;eiai")
-    call message(s, "eaaijeianwl")
-    call message(m, "...", True)
-    call message(s, "sry he took my phone again :(", True)
-    call message(m, "Okay. You deserved it.", True)
-    call message(s, "hey >:(", True)
-    call message(s, "rude")
-    call message(m, ":)", True)
-    call message(s, "fine then dont come", True)
-    call message(s, "i dont need u to bully me")
-    call message(m, "Someone needs to bully you", True)
-    call message(s, ">:(", True)
-    call message(m, ":)", True)
-    call message(s, "meanie", True)
-    call message(s, "i hate u")
-    call message(s, "leave me alone")
-    call message(m, "Okay bye", True)
+    call message(s, "yo", True) from _call_message_168
+    call message(s, "yo") from _call_message_169
+    call message(s, "yooo") from _call_message_170
+    call message(s,"{i}ge{/i}") from _call_message_171
+    call message(s, "r u there") from _call_message_172
+    call message(s, "...") from _call_message_173
+    call message(s, "{i}ge geeeeeee{/i}") from _call_message_174
+    call message(s, "u r not ignoring me right") from _call_message_175
+    call message(s, ":(((((") from _call_message_176
+    call message(m, "Hey", True) from _call_message_177
+    call message(s, ":o", True) from _call_message_178
+    call message(s, "ur here") from _call_message_179
+    call message(s, ":D") from _call_message_180
+    call message(m, "Ye", True) from _call_message_181
+    call message(m, "Sorry, just got out of class") from _call_message_182
+    call message(s, "tis ok ^.^", True) from _call_message_183
+    call message(s, "we r outside at usual spot") from _call_message_184
+    call message(s, "dont take too long or rohan will niwnag;awngawn") from _call_message_185
+    call message(s, "nae;iwngliane;li;ngial") from _call_message_186
+    call message(s, "I;eangioaen;oein;ioeanwi") from _call_message_187
+    call message(s, "ianewgilnewa") from _call_message_188
+    call message(m, "?", True) from _call_message_189
+    call message(s, "naigneianeiawne;", True) from _call_message_190
+    call message(s, "wia;eiai") from _call_message_191
+    call message(s, "eaaijeianwl") from _call_message_192
+    call message(m, "...", True) from _call_message_193
+    call message(s, "sry he took my phone again :(", True) from _call_message_194
+    call message(m, "Okay. You deserved it.", True) from _call_message_195
+    call message(s, "hey >:(", True) from _call_message_196
+    call message(s, "rude") from _call_message_197
+    call message(m, ":)", True) from _call_message_198
+    call message(s, "fine then dont come", True) from _call_message_199
+    call message(s, "i dont need u to bully me") from _call_message_200
+    call message(m, "Someone needs to bully you", True) from _call_message_201
+    call message(s, ">:(", True) from _call_message_202
+    call message(m, ":)", True) from _call_message_203
+    call message(s, "meanie", True) from _call_message_204
+    call message(s, "i hate u") from _call_message_205
+    call message(s, "leave me alone") from _call_message_206
+    call message(m, "Okay bye", True) from _call_message_207
 
-    call phone_close()
+    call phone_close() from _call_phone_close_10
 
     jump hallway_3
 
@@ -1657,12 +1657,12 @@ label masami_room_3a:
 label phone_3b:
 
     hide masami
-    call phone_open(True)
+    call phone_open(True) from _call_phone_open_11
 
-    call message(m, "Hey.", True)
-    call message(m, "I'm going.")
+    call message(m, "Hey.", True) from _call_message_208
+    call message(m, "I'm going.") from _call_message_209
 
-    call phone_close()
+    call phone_close() from _call_phone_close_11
 
     jump masami_room_3b
 

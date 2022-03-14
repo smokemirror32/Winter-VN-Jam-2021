@@ -127,14 +127,14 @@ label phone2a:
 # Masami chose to check Rohan's message - on phone
 label phone2a_rohan:
 
-    call phone_open(True,"Rohan")
+    call phone_open(True,"Rohan") from _call_phone_open
 
-    call message(r, "Hey", True)
-    call message(r, "About the mall pics from a couple days ago")
-    call message(r, "I think I found one thats not bad if u want to look")
-    call message(r, "Not ready to post in gc yet")
+    call message(r, "Hey", True) from _call_message
+    call message(r, "About the mall pics from a couple days ago") from _call_message_1
+    call message(r, "I think I found one thats not bad if u want to look") from _call_message_2
+    call message(r, "Not ready to post in gc yet") from _call_message_3
 
-    call phone_close()
+    call phone_close() from _call_phone_close
 
     menu:
 
@@ -149,46 +149,46 @@ label phone2a_rohan:
 # Reply to Rohan's message
 label phone2a_rohan_respond:
 
-    call phone_open(False, "Rohan", False)
+    call phone_open(False, "Rohan", False) from _call_phone_open_1
 
     # On phone portion
-    call message(m, "Yeah sure", True)
-    call message(r, "Kk give me one sec", True)
-    call message("Image", "cg/Rohan_Mall.png") # TODO: Rohan picture here
-    call message(r, "Sabie helped me pick")
-    call message(r, "Makeup isnt very good since I did it myself this time")
-    call message(r, "It isnt too bad is it")
-    call message(m, "You look great", True)
-    call message(r, "...", True)
-    call message(m, "You don't believe me?", True)
-    call message(r, "Uh", True)
-    call message(r, "You always say stuff like that so I cant tell if youre just trying to make me feel better")
-    call message(m, "...", True)
-    call message(r, "Sabie does that too", True)
-    call message(m, "Well, we are being honest", True)
-    call message(r, "Maybe", True)
-    call message(r, "Sometimes I wonder if that would change if she knew")
-    call message(m, "Knew what?", True)
-    call message(r, "Like what I told you about before", True)
-    call message(m, "Oh, that.", True)
-    call message(m, "Nah, I don't think she'd treat you any differently if she knew you felt that way about her")
-    call message(r, "I hope so", True)
-    call message(m, "Why ask?", True)
-    call message(r, "Dunno just thinking", True)
-    call message(m, "Ah", True)
-    call message(r, "Wanna coop", True)
-    call message(r, "I can carry you")
-    call message(m, "I'll think about it", True)
-    call message(r, "Kk", True)
-    call message(r, "Oh")
-    call message(r, "I almost forgot")
-    call message(r, "I have leftover gingerbread cookies if u want extra")
-    call message(m, "I'm good, thanks.", True)
-    call message(r, "U sure", True)
-    call message(m, "Yeah. I'll let you know if I want any.", True)
-    call message(r, "Kk", True)
+    call message(m, "Yeah sure", True) from _call_message_4
+    call message(r, "Kk give me one sec", True) from _call_message_5
+    call message("Image", "cg/Rohan_Mall.webp") from _call_message_6 # TODO: Rohan picture here
+    call message(r, "Sabie helped me pick") from _call_message_7
+    call message(r, "Makeup isnt very good since I did it myself this time") from _call_message_8
+    call message(r, "It isnt too bad is it") from _call_message_9
+    call message(m, "You look great", True) from _call_message_10
+    call message(r, "...", True) from _call_message_11
+    call message(m, "You don't believe me?", True) from _call_message_12
+    call message(r, "Uh", True) from _call_message_13
+    call message(r, "You always say stuff like that so I cant tell if youre just trying to make me feel better") from _call_message_14
+    call message(m, "...", True) from _call_message_15
+    call message(r, "Sabie does that too", True) from _call_message_16
+    call message(m, "Well, we are being honest", True) from _call_message_17
+    call message(r, "Maybe", True) from _call_message_18
+    call message(r, "Sometimes I wonder if that would change if she knew") from _call_message_19
+    call message(m, "Knew what?", True) from _call_message_20
+    call message(r, "Like what I told you about before", True) from _call_message_21
+    call message(m, "Oh, that.", True) from _call_message_22
+    call message(m, "Nah, I don't think she'd treat you any differently if she knew you felt that way about her") from _call_message_23
+    call message(r, "I hope so", True) from _call_message_24
+    call message(m, "Why ask?", True) from _call_message_25
+    call message(r, "Dunno just thinking", True) from _call_message_26
+    call message(m, "Ah", True) from _call_message_27
+    call message(r, "Wanna coop", True) from _call_message_28
+    call message(r, "I can carry you") from _call_message_29
+    call message(m, "I'll think about it", True) from _call_message_30
+    call message(r, "Kk", True) from _call_message_31
+    call message(r, "Oh") from _call_message_32
+    call message(r, "I almost forgot") from _call_message_33
+    call message(r, "I have leftover gingerbread cookies if u want extra") from _call_message_34
+    call message(m, "I'm good, thanks.", True) from _call_message_35
+    call message(r, "U sure", True) from _call_message_36
+    call message(m, "Yeah. I'll let you know if I want any.", True) from _call_message_37
+    call message(r, "Kk", True) from _call_message_38
 
-    call phone_close()
+    call phone_close() from _call_phone_close_1
 
     # Off phone portion
     show masami at mc_pos
@@ -213,13 +213,13 @@ label phone2a_rohan_ignore:
 # Masami chose to check Sabie's message - on phone
 label phone2a_sabie:
 
-    call phone_open(True)
+    call phone_open(True) from _call_phone_open_2
 
-    call message(s, "{b}This message was deleted.{/b}", True)
-    call message(s, "sry {i}ge{/i} my bad")
-    call message(s, "ignore me")
+    call message(s, "{b}This message was deleted.{/b}", True) from _call_message_39
+    call message(s, "sry {i}ge{/i} my bad") from _call_message_40
+    call message(s, "ignore me") from _call_message_41
 
-    call phone_close()
+    call phone_close() from _call_phone_close_2
 
     menu:
 
@@ -236,56 +236,56 @@ label phone2a_sabie_respond:
 
     # On phone portion
 
-    call phone_open(False, "Sabie", False)
+    call phone_open(False, "Sabie", False) from _call_phone_open_3
 
-    call message(m, "Okay.", True)
-    call message(s, "bruh", True)
-    call message(s, "you didnt listen >:(")
-    call message(m, "What else did you expect me to do?", True)
-    call message(s, "idk", True)
-    call message(s, "just not respond ig")
-    call message(m, "Okay.", True)
-    call message(m, "But what was it?")
-    call message(s, "...", True)
-    call message(m, "Are you actually embarrassed?", True)
-    call message(s, "no ofc not", True)
-    call message(m, "Why no show?", True)
-    call message(s, "do u wanna see drunk pics again", True)
-    call message(m, "No?", True)
-    call message(s, "there u go", True)
-    call message(m, "...", True)
-    call message(s, "what", True)
-    call message(m, "Nothing.", True)
-    call message(m, "Nothing at all. (:")
-    call message(s, "...", True)
-    call message(s, "are u trying to blackmail me again")
-    call message(m, "Blackmail? When have I blackmailed you?", True)
-    call message(s, "uh all the time", True)
-    call message(m, "Like what", True)
-    call message(s, "is threatening to tell my parents about me going out to have fun not blackmail", True)
-    call message(m, "No, that's me looking out for you", True)
-    call message(m, "I don't like seeing you getting wasted every weekend")
-    call message(s, "but you keep your mouth shut about rohan doing theatre in front of his parents", True)
-    call message(s, "thats very fair")
-    call message(s, "no problems at all")
-    call message(m, "That's different. His parents are worse than yours and you know it.", True)
-    call message(s, ":P", True)
-    call message(s, "whatevs")
-    call message(s, "anyways")
-    call message(s, "how are quizbowl qs going")
-    call message(s, "i need my steady supply of nerd qs to torture the kiddos with")
-    call message(m, "Nerd qs", True)
-    call message(s, "yes nerd qs", True)
-    call message(s, "you need something to keep you busy")
-    call message(s, "and i don’t want to touch any of your gross sciencey math shit")
-    call message(m, "You know, if you keep insulting me, I won't help you.", True)
-    call message(s, "see theres the blackmail right there", True)
-    call message(m, "(:", True)
-    call message(s, "ugh ur hopeless", True)
-    call message(s, "bye")
-    call message(m, "Okay, bye.", True)
+    call message(m, "Okay.", True) from _call_message_42
+    call message(s, "bruh", True) from _call_message_43
+    call message(s, "you didnt listen >:(") from _call_message_44
+    call message(m, "What else did you expect me to do?", True) from _call_message_45
+    call message(s, "idk", True) from _call_message_46
+    call message(s, "just not respond ig") from _call_message_47
+    call message(m, "Okay.", True) from _call_message_48
+    call message(m, "But what was it?") from _call_message_49
+    call message(s, "...", True) from _call_message_50
+    call message(m, "Are you actually embarrassed?", True) from _call_message_51
+    call message(s, "no ofc not", True) from _call_message_52
+    call message(m, "Why no show?", True) from _call_message_53
+    call message(s, "do u wanna see drunk pics again", True) from _call_message_54
+    call message(m, "No?", True) from _call_message_55
+    call message(s, "there u go", True) from _call_message_56
+    call message(m, "...", True) from _call_message_57
+    call message(s, "what", True) from _call_message_58
+    call message(m, "Nothing.", True) from _call_message_59
+    call message(m, "Nothing at all. (:") from _call_message_60
+    call message(s, "...", True) from _call_message_61
+    call message(s, "are u trying to blackmail me again") from _call_message_62
+    call message(m, "Blackmail? When have I blackmailed you?", True) from _call_message_63
+    call message(s, "uh all the time", True) from _call_message_64
+    call message(m, "Like what", True) from _call_message_65
+    call message(s, "is threatening to tell my parents about me going out to have fun not blackmail", True) from _call_message_66
+    call message(m, "No, that's me looking out for you", True) from _call_message_67
+    call message(m, "I don't like seeing you getting wasted every weekend") from _call_message_68
+    call message(s, "but you keep your mouth shut about rohan doing theatre in front of his parents", True) from _call_message_69
+    call message(s, "thats very fair") from _call_message_70
+    call message(s, "no problems at all") from _call_message_71
+    call message(m, "That's different. His parents are worse than yours and you know it.", True) from _call_message_72
+    call message(s, ":P", True) from _call_message_73
+    call message(s, "whatevs") from _call_message_74
+    call message(s, "anyways") from _call_message_75
+    call message(s, "how are quizbowl qs going") from _call_message_76
+    call message(s, "i need my steady supply of nerd qs to torture the kiddos with") from _call_message_77
+    call message(m, "Nerd qs", True) from _call_message_78
+    call message(s, "yes nerd qs", True) from _call_message_79
+    call message(s, "you need something to keep you busy") from _call_message_80
+    call message(s, "and i don’t want to touch any of your gross sciencey math shit") from _call_message_81
+    call message(m, "You know, if you keep insulting me, I won't help you.", True) from _call_message_82
+    call message(s, "see theres the blackmail right there", True) from _call_message_83
+    call message(m, "(:", True) from _call_message_84
+    call message(s, "ugh ur hopeless", True) from _call_message_85
+    call message(s, "bye") from _call_message_86
+    call message(m, "Okay, bye.", True) from _call_message_87
 
-    call phone_close()
+    call phone_close() from _call_phone_close_3
 
     # Off phone portion
     show masami at mc_pos
@@ -308,12 +308,12 @@ label phone2a_sabie_ignore:
 # Masami chose to check Tyree's message - on phone
 label phone2a_tyree:
 
-    call phone_open(True, "Tyree")
+    call phone_open(True, "Tyree") from _call_phone_open_4
 
-    call message(t, "Let me know if you want me to take over anything for you.", True)
-    call message(t, "You do not need to reply, but I am here if you need me.")
+    call message(t, "Let me know if you want me to take over anything for you.", True) from _call_message_88
+    call message(t, "You do not need to reply, but I am here if you need me.") from _call_message_89
 
-    call phone_close()
+    call phone_close() from _call_phone_close_4
 
     menu:
 
@@ -328,28 +328,28 @@ label phone2a_tyree:
 # Masami responds to Tyree
 label phone2a_tyree_respond:
 
-    call phone_open(False, "Tyree", False)
+    call phone_open(False, "Tyree", False) from _call_phone_open_5
 
     # On-phone portion
-    call message(m, "Hey thanks for reaching out", True)
-    call message(m, "I think I'm good for now, but I'll let you know")
-    call message(t, "Alright.", True)
-    call message(m, "Oh yeah, I forgot to ask", True)
-    call message(m, "Are there any more sponsors I need to reach out or grants I should apply to before the season starts?")
-    call message(m, "Our budget is looking a bit tight right now")
-    call message(t, "There are a few, but I can manage them.", True)
-    call message(m, "You sure?", True)
-    call message(m, "You're not too busy with swim captaining and recruiting?")
-    call message(m, "Or helping Sabie with Quizbowl?")
-    call message(t, "Don't worry, I can do it.", True)
-    call message(m, "You sure?", True)
-    call message(t, "I'm sure.", True)
-    call message(t, ":)")
-    call message(m, "Alright, I'll take your word for it.", True)
-    call message(m, "Let me know if you need me to look over anything!")
-    call message(t, "Okay!", True)
+    call message(m, "Hey thanks for reaching out", True) from _call_message_90
+    call message(m, "I think I'm good for now, but I'll let you know") from _call_message_91
+    call message(t, "Alright.", True) from _call_message_92
+    call message(m, "Oh yeah, I forgot to ask", True) from _call_message_93
+    call message(m, "Are there any more sponsors I need to reach out or grants I should apply to before the season starts?") from _call_message_94
+    call message(m, "Our budget is looking a bit tight right now") from _call_message_95
+    call message(t, "There are a few, but I can manage them.", True) from _call_message_96
+    call message(m, "You sure?", True) from _call_message_97
+    call message(m, "You're not too busy with swim captaining and recruiting?") from _call_message_98
+    call message(m, "Or helping Sabie with Quizbowl?") from _call_message_99
+    call message(t, "Don't worry, I can do it.", True) from _call_message_100
+    call message(m, "You sure?", True) from _call_message_101
+    call message(t, "I'm sure.", True) from _call_message_102
+    call message(t, ":)") from _call_message_103
+    call message(m, "Alright, I'll take your word for it.", True) from _call_message_104
+    call message(m, "Let me know if you need me to look over anything!") from _call_message_105
+    call message(t, "Okay!", True) from _call_message_106
 
-    call phone_close()
+    call phone_close() from _call_phone_close_5
 
     # Off-phone portion
     show masami at mc_pos
@@ -378,65 +378,65 @@ label phone2a_gc:
 
     hide masami
 
-    call phone_open(True,"Group")
+    call phone_open(True,"Group") from _call_phone_open_6
 
-    call message(s, "yo", True)
-    call message(s, "did yall see that")
-    call message(r, "See what", True)
-    call message(s, "the vandalism thing", True)
-    call message(s, "someone absolutely lost their shit")
-    call message(r, "Uh...", True)
-    call message(r, "But hasnt everyone lost their shit")
-    call message(s, "well yeah", True)
-    call message(r, "Except for like tyree", True)
-    call message(s, "also yeah", True)
-    call message(s, "bc hes just special like that")
-    call message(r, "Truee", True)
-    call message(t, "Okay.", True)
-    call message(s, "anyways somebody really snapped this time", True)
-    call message(s, "went savagely poetic spitting them facts")
-    call message(s, "it was beautiful <3")
-    call message(r, "Uh...", True)
-    call message(s, "what", True)
-    call message(s, "ik art when i see it")
-    call message(r, "Im not questioning that", True)
-    call message(r, "You just sound suspiciously like the one who did it")
-    call message(s, "lmaoo i wish", True)
-    call message(s, "i don’t have the balls to do that")
-    call message(s, "i just drink and drive :3")
-    call message(r, "...", True)
-    call message(s, "ur judging me arent u -_-", True)
-    call message(r, "No, ofc not!", True)
-    call message(t, "Lol.", True)
-    call message(s, "i agree rohan is very sus", True)
-    call message(r, "Hey!", True)
-    call message(t, ":)", True)
-    call message(s, "anyways, im not crazy enough to risk my perfect school record with a suspension ^.^", True)
-    call message(r, "Yeah I feel kinda bad for whoever did it", True)
-    call message(r, "Its like academic suicide")
-    call message(s, "psh now you sound like masami", True)
-    call message(r, "Lol for real though, I scared myself channeling that energy", True)
-    call message(t, "I just hope whoever it is finds the help they need.", True)
-    call message(s, "ykw ur right", True)
-    call message(s, "we should all be nice people like tyree")
-    call message(s, "right {i}ge{/i}")
-    call message(s, "...")
-    call message(s, "......")
-    call message(t, ".........", True)
-    call message(r, "Uh...", True)
-    call message(s, "guess hell see this later", True)
-    call message(r, "*he'll", True)
-    call message(s, "**hell", True)
-    call message(t, "He's probably taking some time off.", True)
-    call message(r, "or just watching us", True)
-    call message(s, "truu he really likes lurking", True)
-    call message(r, "Lol", True)
-    call message(s, "heyo {i}gegeee{/i}", True)
-    call message(s, "if youre reading this i just wanna say that you gotta let go like vandal dude")
-    call message(s, "but not too much like vandal dude")
-    call message(s, "u will feel better i promiseee")
+    call message(s, "yo", True) from _call_message_107
+    call message(s, "did yall see that") from _call_message_108
+    call message(r, "See what", True) from _call_message_109
+    call message(s, "the vandalism thing", True) from _call_message_110
+    call message(s, "someone absolutely lost their shit") from _call_message_111
+    call message(r, "Uh...", True) from _call_message_112
+    call message(r, "But hasnt everyone lost their shit") from _call_message_113
+    call message(s, "well yeah", True) from _call_message_114
+    call message(r, "Except for like tyree", True) from _call_message_115
+    call message(s, "also yeah", True) from _call_message_116
+    call message(s, "bc hes just special like that") from _call_message_117
+    call message(r, "Truee", True) from _call_message_118
+    call message(t, "Okay.", True) from _call_message_119
+    call message(s, "anyways somebody really snapped this time", True) from _call_message_120
+    call message(s, "went savagely poetic spitting them facts") from _call_message_121
+    call message(s, "it was beautiful <3") from _call_message_122
+    call message(r, "Uh...", True) from _call_message_123
+    call message(s, "what", True) from _call_message_124
+    call message(s, "ik art when i see it") from _call_message_125
+    call message(r, "Im not questioning that", True) from _call_message_126
+    call message(r, "You just sound suspiciously like the one who did it") from _call_message_127
+    call message(s, "lmaoo i wish", True) from _call_message_128
+    call message(s, "i don’t have the balls to do that") from _call_message_129
+    call message(s, "i just drink and drive :3") from _call_message_130
+    call message(r, "...", True) from _call_message_131
+    call message(s, "ur judging me arent u -_-", True) from _call_message_132
+    call message(r, "No, ofc not!", True) from _call_message_133
+    call message(t, "Lol.", True) from _call_message_134
+    call message(s, "i agree rohan is very sus", True) from _call_message_135
+    call message(r, "Hey!", True) from _call_message_136
+    call message(t, ":)", True) from _call_message_137
+    call message(s, "anyways, im not crazy enough to risk my perfect school record with a suspension ^.^", True) from _call_message_138
+    call message(r, "Yeah I feel kinda bad for whoever did it", True) from _call_message_139
+    call message(r, "Its like academic suicide") from _call_message_140
+    call message(s, "psh now you sound like masami", True) from _call_message_141
+    call message(r, "Lol for real though, I scared myself channeling that energy", True) from _call_message_142
+    call message(t, "I just hope whoever it is finds the help they need.", True) from _call_message_143
+    call message(s, "ykw ur right", True) from _call_message_144
+    call message(s, "we should all be nice people like tyree") from _call_message_145
+    call message(s, "right {i}ge{/i}") from _call_message_146
+    call message(s, "...") from _call_message_147
+    call message(s, "......") from _call_message_148
+    call message(t, ".........", True) from _call_message_149
+    call message(r, "Uh...", True) from _call_message_150
+    call message(s, "guess hell see this later", True) from _call_message_151
+    call message(r, "*he'll", True) from _call_message_152
+    call message(s, "**hell", True) from _call_message_153
+    call message(t, "He's probably taking some time off.", True) from _call_message_154
+    call message(r, "or just watching us", True) from _call_message_155
+    call message(s, "truu he really likes lurking", True) from _call_message_156
+    call message(r, "Lol", True) from _call_message_157
+    call message(s, "heyo {i}gegeee{/i}", True) from _call_message_158
+    call message(s, "if youre reading this i just wanna say that you gotta let go like vandal dude") from _call_message_159
+    call message(s, "but not too much like vandal dude") from _call_message_160
+    call message(s, "u will feel better i promiseee") from _call_message_161
 
-    call phone_close()
+    call phone_close() from _call_phone_close_6
 
     jump masami_room2c
 
@@ -654,12 +654,12 @@ label phone2b:
 
     hide masami
 
-    call phone_open(True, "???")
+    call phone_open(True, "???") from _call_phone_open_7
 
-    call message("???", "You're really a brave one, aren't you, magpie?", True)
-    call message("???", "Your sister must be proud of you. :)")
+    call message("???", "You're really a brave one, aren't you, magpie?", True) from _call_message_162
+    call message("???", "Your sister must be proud of you. :)") from _call_message_163
 
-    call phone_close()
+    call phone_close() from _call_phone_close_7
 
     jump masami_dayend
 

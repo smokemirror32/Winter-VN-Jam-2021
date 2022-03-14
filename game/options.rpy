@@ -161,12 +161,12 @@ define config.intra_transition = dissolve
 
 ## A transition that is used after a game has been loaded.
 
-define config.after_load_transition = None
+define config.after_load_transition = Dissolve(.5)
 
 
 ## Used when entering the main menu after the game has ended.
 
-define config.end_game_transition = None
+define config.end_game_transition = Dissolve(.5)
 
 
 ## A variable to set the transition used when the game starts does not exist.
@@ -194,6 +194,8 @@ define config.window_hide_transition = Dissolve(.2)
 ## Getting images to strip properly
 define config.automatic_images = ['/']
 define config.automatic_images_strip = [ 'images' ]
+
+
 
 ## Preference defaults #########################################################
 
