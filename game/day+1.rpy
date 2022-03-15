@@ -26,7 +26,7 @@ label masami_kitchen1:
 
     # Masami's parents come in
     voice "audio/voice/masami/masami_oh.mp3"
-    m "Hey. You're finally back from the damn hospital."
+    m "Hey. You're finally back from the hospital."
     m "I was beginning to wonder what was taking you so long."
     mm "…"
     m sad "You don't need to tell me. {i}Jie{/i} is gone, isn't she?"
@@ -51,7 +51,7 @@ label masami_kitchen1:
     voice "audio/voice/masami/masami_whatthehell.mp3"
     m "Sure. Like she even meant to stick around in the first place."
     mm "That is not true! I am her mother. I know her."
-    m sad "Then you knew why she went and graffitied every illegal surface she could find."
+    m sad "Then you knew why she went and graffitied every surface she could find."
     m "Why her bank account always had monthly cash withdrawals."
     m "Why she bought a noise machine to put outside her room."
     voice "audio/voice/masami/masami_hm.mp3"
@@ -89,7 +89,7 @@ label masami_kitchen1:
     show bg kitchen at hpunch
     show masami angry at hpunch, mc_pos
     m "And everyone still wants to keep dancing around the whole thing like it didn't happen."
-    m "Is it a crime that I want to actually talk about how fucked up it is that we are erasing a whole member of our family’s existence because she wouldn’t be the fucking doll you wanted her to?"
+    m "Is it a crime that I want to actually talk about how fucked up it is that we are erasing a whole member of our family’s existence because she wouldn’t be the fucking doll you wanted her to be?"
 
     stop music fadeout 3.0
 
@@ -103,7 +103,7 @@ label masami_kitchen1:
     n "Masami sighs."
     m "I - I don't know what else I expected."
     mm "…"
-    mm "You changed Masami."
+    mm "You changed, Masami."
     mm "Why? Why you change?"
     m sad "…"
     show bg kitchen at shake
@@ -137,7 +137,7 @@ label masami_room1:
     voice "audio/voice/masami/masami_hm.mp3"
     m sad "(How is it that you still want to cling to me so long after you left?)"
     m "(Couldn't you have picked someone else to bother, {i}jie{/i}?)"
-    m "(Someone a little less perfect? Someone who didn’t belong? Someone who wasn’t too comfortable where they were at and was willing to vanish away with you?)"
+    m "(Someone a little less perfect? Someone who didn’t belong? Someone who wasn’t too comfortable where they were at and was willing to vanish with you?)"
     m "(Maybe you’d have come out of this alive, then.)"
     voice "audio/voice/masami/masami_quietsigh.mp3"
     n "Masami sighs and stares out the window."
@@ -145,7 +145,7 @@ label masami_room1:
     m "(Who am I even kidding anymore?)"
     m sad "(On nights like this, you never pressured me into going with you. But I still went.)"
     m "(I helped you buy the cans. Disabled the cameras. Watched for the police.)"
-    m neutral "(I guess we are on the same on the inside, after all.)"
+    m neutral "(I guess we are the same on the inside, after all.)"
     m sad "(But on the outside…)"
     voice "audio/voice/masami/masami_jie.mp3"
     m "(There was a reason you took the fall.)"

@@ -56,7 +56,7 @@ label office_inside:
     p "Reminds me, I really need to go about replacing that chair..."
     m sad "..."
     n "Masami stares quietly at his fingers, which are interlaced and twitching in his lap."
-    n "His simple apology from earlier blooms in his mind, large and looming, reducing the principal's voice into a background drone."
+    n "His simple apology from earlier blooms in his mind, large and looming, reducing the principal's voice to a background drone."
     voice "audio/voice/masami/masami_quietsigh.mp3"
     m "(...It just slipped out.)"
     m "(Why did I say that?)"
@@ -93,7 +93,7 @@ label office_question:
     n "The principal sighs."
     p "...I'll admit that this is a hard and unexpected conversation for me to have as well."
     p "Can you please stay with me?"
-    show masami neutral at bounce, mc_pos
+    show masami neutral at mc_pos
     n "Masami nods vacantly, staring straight ahead."
     p "The security camera near the breezeway recorded a student carrying out an act of vandalism near the carpool loop this past Sunday."
     p "It would have been a less…disruptive occurrence had the display not been so effectively crafted to provoke."
@@ -157,7 +157,7 @@ label office_outburst:
     n "The principal leans forward slightly, her fingers laced." # SEFF - Seat noises
     p "Masami, I've already been very lenient with you."
     p "Three days of suspension at the beginning of next semester is the least we can do for someone without a prior record."
-    p "You are one of the best students in your grade, or in our school, even. Many of the underclassmen look up to you."
+    p "You are one of the best students in your grade. In our school, even. Many of the underclassmen look up to you."
     p "Teachers consistently tell me how kind, how bright, how motivated you are. How promising of a future you have ahead of you."
     m neutral "So they did."
     p "I am not trying to use this to dismiss the severity of our present circumstances."
@@ -172,7 +172,7 @@ label office_outburst:
     play music chaos
 
     m exasperated "Hmph."
-    voice "audio/voice/masami/masami_thatsbullshit.mp3"
+    voice "audio/voice/masami/masami_whatthehell.mp3"
     m angry "You don’t actually expect me to believe that, do you?"
     m "That {i}jie{/i} actually amounted to anything in your eyes?"
     show wsprite at shake, center
@@ -194,13 +194,10 @@ label office_outburst:
     m angry "Fine. I'll tell you then."
     p "…"
     m "All of us here are cowards."
-    show bg office at vpunch
-    show masami at shake, mc_pos
-    m "Fucking dancing puppets on strings."
+    m "Fucking puppets dancing on strings."
     m sad "We're all pulling at each other because we're too damn stupid to know any other way to move."
+    voice "audio/voice/masami/masami_thatsbullshit.mp3"
     m exasperated "Get good grades to get into a good college. Get a good resume to get into a good job."
-    show bg office at vpunch
-    show masami at shake, mc_pos
     m "Get a good salary to get a nice, big house you can retire in."
     m sad "Smile good enough that you won't feel like you need to roll over in your grave when you die."
     m neutral "Feels good, doesn't it?"
@@ -208,14 +205,9 @@ label office_outburst:
     show bg office at vpunch
     show masami at shake, mc_pos
     m angry "That they've had enough of the bullshit?"
-    show bg office at vpunch
-    show masami at shake, mc_pos
     m "That they want to find out how to move on their own?"
-    show bg office at vpunch
-    show masami at shake, mc_pos
     m "That they want - "
     show bg office at vpunch
-    show masami at shake, mc_pos
     stop music
 
     m "That I - "
@@ -262,11 +254,16 @@ label car:
     n "Masami heads out of the office and back to his car."
     play sound "audio/sound/car_door_close.mp3"
     n "Once he's inside, he collapses into the seat."
-    voice "audio/voice/masami/masami_quietsigh.mp3"
     m exasperated "(I've really been a loose cannon lately, haven't I?)"
-    m sad "(I don’t know if I even believe half of what I said.)"
+    m sad "(Sound just like the Joker.)"
+    voice "audio/voice/masami/masami_quietchuckle.mp3"
+    m neutral "(A lunatic blaming everything in the system except themselves.)"
+    m "(And everyone else is probably taking me just as seriously.)"
+    m sad "(Not that I blame them.)"
+    m "(...I don’t know if I even believe half of what I said.)"
     m "(But some days, things like that feel awfully real.)"
     n "Masami's gaze instinctively drifts towards a magpie keychain hanging from his car keys. He catches himself and looks away."
+    voice "audio/voice/masami/masami_quietsigh.mp3"
     m "…"
     n "He sits quietly there for a couple more minutes."
     play sound "audio/sound/car_start.mp3"

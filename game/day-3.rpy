@@ -601,7 +601,7 @@ label lunch_stable:
     n "Sabie shrugs."
     voice "audio/voice/sabie/sabie_well.mp3"
     s "We could."
-    s mischievous "But I also kind of want to check in since {i}some{/i} people I don't share their feelings unless they're asked to."
+    s mischievous "But I also kind of want to check in since {i}some{/i} people don't share their feelings unless they're asked to."
 
     show sabie happy at bounce
 
@@ -638,7 +638,7 @@ label lunch_stable:
     show sabie at bounce
     s "Are you counting down the days to Christmas carousing?"
     show sabie at bounce
-    s "Are you holding on to the promise {i}Dongzhi{/i} binge-eating with the fam like they're a lifeline from above?"
+    s "Are you holding on to the promise {i}Dongzhi{/i} binge-eating with the fam like it's a lifeline from above?"
     show sabie at bounce
     s "Are you - "
     n "She stops when she sees Rohan raising his hand."
@@ -699,7 +699,7 @@ label lunch_stable_tyree:
     voice "audio/voice/sabie/sabie_cmon.mp3"
     s annoyed "Well, that's exactly what I wanted you to bring up! Friends always celebrate each other's wins right?"
     t neutral "Um. Sure."
-    s neutral "Now, that's the spirit!"
+    s neutral "Now that's the spirit!"
     n "Sabie then whirls on Rohan."
 
     show sabie annoyed at shake
@@ -730,7 +730,7 @@ label lunch_stable_rohan:
     s "Not a chance. So, what do you have to say for yourself?"
     voice "audio/voice/rohan/rohan_um.mp3"
     r neutral "Uh, my grades are probably good enough for me to go to the state university for medical school and my classes are kinda interesting?"
-    r sad "...All of the ones except for the STEM ones at least. I hate bio."
+    r sad "...All of them except for the STEM ones at least. I hate bio."
     r neutral "Most of my clubs have wound down for the year. We had a full house for our productions all last week, so that was nice."
     r sad "I still haven't done anything for Science Olympiad, though. Or HOSA. Or the Intel Research competition. I need to get on that."
     r neutral "Anyways, I am definitely very tired and looking forward to break."
@@ -780,7 +780,7 @@ label lunch_stable_masami:
     m "Grades and classes are pretty good, though break is also nice."
     m "I…don't really have anything to complain about."
     voice "audio/voice/masami/masami_whatever.mp3"
-    m sad "(At least, in the sense that is acceptable for me to say, that is.)"
+    m sad "(At least, anything that's acceptable for me to say, that is.)"
     show masami neutral
     show rohan at bounce, right
     voice "audio/voice/rohan/rohan_hey.mp3"
@@ -846,7 +846,7 @@ label lunch_end:
     n "Masami heads quickly into the building and down the hallway to chemistry."
     voice "audio/voice/masami/masami_quietsigh.mp3"
     m "(Thank God for the indoor heating. I don't know why we sit outside.)"
-    m exasperated "(Actually, I do know. Sabie is a masochist and we're too dead on the inside to contradict her.)"
+    m exasperated "(Actually, I do know. Sabie is a masochist and we're too dead inside to contradict her.)"
     show masami neutral
     n "His hand twitches and he realizes his fingers are still tightly wrapped around the object in his pocket."
     n "After a moment of hesitation, he lets go."
@@ -899,7 +899,7 @@ label lunch_end:
     # The more serious part of the conversation
     voice "audio/voice/sabie/sabie_uh.mp3"
     s worried "Is everything alright? You've been kind of stuck in that head of yours for days now."
-    s "Like {i}stuck{/i}, stuck. The {i}not-just-a-mood{/i}, kind of stuck. You know what I mean?"
+    s "Like {i}stuck{/i}, stuck. The {i}not-just-a-mood{/i} kind of stuck. You know what I mean?"
     s neutral "Wanna talk about it?"
     voice "audio/voice/masami/masami_quietsigh.mp3"
     m "…"
@@ -949,7 +949,7 @@ label lunch_end_vague:
     voice "audio/voice/sabie/sabie_well.mp3"
     s "Nah. I don't think anyone else noticed."
     s neutral "Mm, now that I think about it, maybe Tyree did."
-    s innocent "Then again, who knows what he does or doesn't notice because he won't say anything."
+    s innocent "Then again, who knows what he does or doesn't notice, because he won't say anything."
     voice "audio/voice/masami/masami_quietchuckle.mp3"
     m neutral "True."
     s happy "But, that's besides the point!"
@@ -990,7 +990,7 @@ label lunch_end_vague:
     s "You got it!"
     m "(It's nice being reminded that someone has my back, but…)"
     voice "audio/voice/masami/masami_whatever.mp3"
-    m sad "(Well, it's probably too selfish of me to wish that there is someone who gets me a little better that I could talk to.)"
+    m sad "(Well, it's probably too selfish of me to wish that there was someone who gets me a little better that I could talk to.)"
 
     jump lunch_end_invite
 
@@ -1092,10 +1092,9 @@ label lunch_end_alyssa:
     m "(Shit.)"
     m "(Shit. Shit. Shit.)"
     m "Sabie. What are you - "
-    play sound "audio/sound/thud.mp3"
-    queue sound "audio/sound/thud.mp3"
-    queue sound "audio/sound/thud.mp3"
+    play sound ["audio/sound/thud.mp3","<silence 1.0>"] loop volume 0.5
     n "Sabie ignores him and starts jumping up and down."
+    stop sound
     show sabie at shake, center
     voice "audio/voice/sabie/sabie_cmon.mp3"
     s "HEY ALYSSA, BESTIE - "
@@ -1103,10 +1102,10 @@ label lunch_end_alyssa:
     show masami exasperated at shake, mc_pos
     show sabie at shake, center
     pause(0.1)
-    play sound "audio/sound/crash.mp3"
     show sabie at left with move
     show bg hallway behind sabie at hpunch
     show sabie surprised
+    play sound "audio/sound/crash.mp3" volume 0.2
 
     n "Sabie lets out a muffled cry of protest as Masami puts a hand lightly over her mouth and yanks them behind a corner."
     show sabie annoyed
@@ -1173,7 +1172,7 @@ label lunch_end_alyssa:
     voice "audio/voice/masami/masami_whatever.mp3"
     m neutral "Mm. Whatever. It's…fine."
     m sad "(It's not fine.)"
-    m neutral "(...I still kind of want to listen into what's going on, though.)"
+    m neutral "(...I still kind of want to listen in, though.)"
     m sad "(But should I?)"
 
     menu:
@@ -1397,7 +1396,7 @@ label lunch_end_aftermath:
 
     show sabie at bounce, center
     voice "audio/voice/sabie/sabie_mischievousgiggle.mp3"
-    s "Oo, so somebody does want to play a little Scrabble after all."
+    s "Ooh, so somebody does want to play a little Scrabble after all."
     show masami exasperated at shake, mc_pos
     voice "audio/voice/masami/masami_quietsigh.mp3"
     m "I-I did not say that."
@@ -1435,7 +1434,7 @@ label lunch_end_party:
     m sad "Well, yeah. But Rohan and Tyree are probably going to be playing Smash."
     m happy "And you're going to be - uh. Singing karaoke."
     voice "audio/voice/sabie/sabie_imean.mp3"
-    s worried "Look I understand if you don't want to get drunk with me."
+    s worried "Look, I understand if you don't want to get drunk with me."
     s "But what's wrong with Smash? I thought you liked playing it."
     m neutral "Uh…I don’t own a console."
     s "But you’ve played it before."
@@ -1519,7 +1518,7 @@ label masami_home_3:
     n "As if on cue, Masami's phone starts buzzing again with new messages."
     m exasperated "(…and it's starting again.)"
     stop sound
-    n "He sighs and sets his phone silent."
+    n "He sighs and sets his phone to silent."
     m neutral "(Finally. Peace and quiet for me to think. Should have done it earlier.)"
     m sad "..."
     voice "audio/voice/masami/masami_whatever.mp3"
@@ -1540,7 +1539,7 @@ label masami_kitchen_3:
     n "A pungent aroma fills the air long before Masami reaches the kitchen."
     voice "audio/voice/masami/masami_oh.mp3"
     m "(Looks like we're having curry tonight.)"
-    play sound "audio/sound/boil.mp3" volume 0.1 fadein 3.0 fadeout 3.0 loop
+    play sound "audio/sound/boil.mp3" volume 0.1 fadein 3.0 fadeout 3.0
     n "He hangs his coat on the rack near the door."
     m "{i}Ma{/i}. I'm home."
 
@@ -1549,10 +1548,8 @@ label masami_kitchen_3:
 
     mm "Masami!"
     n "Masami's mother leaves her cooking in an instant to sweep her son up into a warm hug, her eyes twinkling."
-    show wsprite at bounce
     mm "{i}Bagaimana harimu?{/i} Learn a lot today?"
-    m "It went well."
-    show wsprite at bounce
+    m "Yeah."
     mm "Good, good. You keep working hard, you have good future."
     voice "audio/voice/masami/masami_quietsigh.mp3"
     m sad "…"
@@ -1564,7 +1561,6 @@ label masami_kitchen_3:
     voice "audio/voice/masami/masami_quietchuckle.mp3"
     m "It smells really good. Thanks for making it."
     n "His mother beams."
-    show wsprite at bounce
     mm "Of course!"
     n "She gestures towards the refrigerator."
     mm "If you not busy, you can help make {i}tangyuan{/i}. I buy ingredients today."
@@ -1574,17 +1570,14 @@ label masami_kitchen_3:
     mm "Ah."
     show wsprite at bounce
     mm "Not bad to start early, right?"
-    show wsprite at bounce
     mm "You grow up, you eat more! Also, more to save for later."
-    show wsprite at bounce
     mm "I buy sesame. More variety. You ask for that, right?"
     voice "audio/voice/masami/masami_hm.mp3"
     m "..."
     m neutral "Yeah, I did."
     show masami happy at bounce, mc_pos
     m "Thanks for remembering."
-    m neutral "I'll get started on making the peanut ones after dinner and freeze them up. Probably should get warmed up with something familiar before I try anything new."
-    show wsprite at bounce
+    m neutral "I'll get started on making the peanut ones after dinner and freeze them. Probably should get warmed up with something familiar before I try anything new."
     mm "You're welcome."
     n "She leans forward to tuck a stray lock of hair behind his ear."
     mm "Stay focused, okay?"
@@ -1600,7 +1593,6 @@ label masami_kitchen_3:
     m sad "I've...got some homework to do."
     m happy "I'll be back down in a bit!"
     mm "Okay, I call you down for dinner."
-    show wsprite at bounce
     mm "Remember, stay focused!"
     m neutral "...I will."
     stop sound
@@ -1636,10 +1628,10 @@ label masami_room_3a:
     m "(Looks like I'm going to be failing you all today.)"
     n "Masami gently removes a small keychain in the shape of a magpie from his pants pocket, turning it over in his hands."
     voice "audio/voice/masami/masami_quietchuckle.mp3"
-    m happy "(Heh. You'd never told me you'd be giving me so much trouble after you left.)"
+    m happy "(Heh. You never told me you'd be giving me so much trouble after you left.)"
     m sad "..."
     m "(Three days from now…)"
-    m "(You said you'll be back to give me your answer then.)"
+    m "(You said you'd be back to give me your answer then.)"
     m neutral "(And I'd promised to give you mine. Even if neither of us had quite figured things out yet.)"
     voice "audio/voice/masami/masami_jie.mp3"
     m sad "(...I don’t know if I’m more afraid of my answer or yours.)"

@@ -292,7 +292,7 @@ label phone2a_sabie_respond:
     voice "audio/voice/masami/masami_quietchuckle.mp3"
     m neutral "(Well, at least things seem normal with her.)"
     m sad "…"
-    m "(It's nice that she's not bringing up {i}jie{/i}, but I kind of wish she did.)"
+    m "(It's nice that she's not bringing up {i}jie{/i}, but I kind of wish she would.)"
 
     jump phone2a
 
@@ -335,7 +335,7 @@ label phone2a_tyree_respond:
     call message(m, "I think I'm good for now, but I'll let you know") from _call_message_91
     call message(t, "Alright.", True) from _call_message_92
     call message(m, "Oh yeah, I forgot to ask", True) from _call_message_93
-    call message(m, "Are there any more sponsors I need to reach out or grants I should apply to before the season starts?") from _call_message_94
+    call message(m, "Are there any more sponsors I need to reach out to or grants I should apply for before the season starts?") from _call_message_94
     call message(m, "Our budget is looking a bit tight right now") from _call_message_95
     call message(t, "There are a few, but I can manage them.", True) from _call_message_96
     call message(m, "You sure?", True) from _call_message_97
@@ -454,7 +454,7 @@ label masami_room2c:
     m sad "…"
     n "His stomach rumbles."
     m neutral "(Right. Mom's probably making lunch right now.)"
-    m sad "(...I probably owe her an apology since I haven't given her one last night either.)"
+    m sad "(...I probably owe her an apology since I didn't give her one last night either.)"
     m "(Not sure if I even want to say anything.)"
     m "(No matter what I say, she still wouldn't really understand. She never has.)"
     voice "audio/voice/masami/masami_quietsigh.mp3"
@@ -475,7 +475,7 @@ label masami_kitchen2:
 
     n "Masami can smell the fragrant aroma of sesame oil long before he reaches the kitchen."
     show wsprite with Dissolve(0.2)
-    play sound "audio/sound/boil.mp3" volume 0.1 loop fadein 3.0
+    play sound "audio/sound/boil.mp3" volume 0.1 fadein 3.0
     n "He walks in to find his mother with her apron on and back turned, having just finished cooking."
     stop sound fadeout 10.0
     n "She turns off the heat on the bok choi she was stir-frying in a wok. A clay pot sits on low heat on the back burner."
@@ -548,7 +548,7 @@ label masami_room2d:
     n "Masami heads back to his room, where he eats in silence."
     m neutral "(This is really good. I actually feel better now.)"
     m sad "(Sort of.)"
-    n "Despite himself, instinctively turns to look out the window."
+    n "Despite himself, he instinctively turns to look out the window."
     voice "audio/voice/masami/masami_whatever.mp3"
     m "…"
     m exasperated "(I wonder why I still bother when she's gone.)"
@@ -631,12 +631,12 @@ label masami_news:
     voice "audio/voice/masami/masami_im...fine.mp3"
     m "(I…)"
     show masami sad
-    n "His eyes snap back open, roaming around in every direction beside the window and the door."
+    n "His eyes snap back open, roaming around in every direction besides the window and the door."
     n "They settle on the phone face down on his desk."
     m "(Rohan, Sabie, Tyree...none of them know, do they?)"
-    m exasperated "(...With how they thought about the vandalism, do I even want them to know?)"
+    m exasperated "(...With what they thought about the vandalism, do I even want them to know?)"
     show masami sad
-    n "His fingers gingerly trace the shell of the case before flipping it over, screen side belly-up."
+    n "His fingers gingerly trace the shell of the case before flipping it over, screen side up."
     show masami surprised
     voice "audio/voice/masami/masami_huh.mp3"
     n "When the home screen flicks on, his breath catches."

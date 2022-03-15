@@ -179,7 +179,7 @@ label sabie_glitching:
         voice "audio/voice/sabie/sabie_nervouslaughter.mp3"
         s "Are you going to help me this time?"
         call sabie_spaz() from _call_sabie_spaz_8
-        s "Or are going to leave me to suffer alone."
+        s "Or are you going to leave me to suffer alone?"
         call sabie_spaz() from _call_sabie_spaz_9
         s "I wonder if it's worth it for me to care about someone who didn't care for me back."
         call sabie_spaz()
@@ -660,7 +660,7 @@ label hallway_1:
     m exasperated "(Damn it.)"
     show bg hallway with vpunch
     play sound "audio/sound/footsteps_pound.mp3"
-    n "Masami quickens his pace, weaving in between the molasses slow current of people."
+    n "Masami quickens his pace, weaving in between the molasses-slow current of people."
     show bg hallway with vpunch
     play sound "audio/sound/footsteps_pound.mp3"
     m sad "(Can't everyone just leave me alone?)"

@@ -31,7 +31,17 @@ define config.version = "1.0"
 
 define gui.about = _p("""
 
-{i}Made for the 2021 Winter VN Jam{/i}
+{size=+20}{b}Note from the Lead Developer{/b}{/size}
+
+Hey there,
+
+Thanks for playing the game we made for the 2021 Winter VN Jam. If you're interested in more related content on the story (including some epilogue tidbits), check out the development logs on our Itch page {a=https://smokemirror.itch.io/and-so-i-fall}here{/a}.
+
+We also want to hear from you. Whether it's about things that you loved or things that we could improve upon for future releases, feel free to drop us a line. We don't bite. :)
+
+Until next time!
+
+Smoke Mirror Studios
 
 
 {size=+20}{b}The Team{/b}{/size}
@@ -67,6 +77,8 @@ Nasir: {a=https://twitter.com/WindLightHub}Darius T. Jackson{/a}
 
 
 {size=+20}{b}Creative Commons Attributions{/b}{/size}
+
+Our glitch code was derived from {a=https://github.com/Gouvernathor/renpy-ChromaGlitch}Gouvernathor{/a}
 
 Our sound effects were derived from:
 
@@ -134,7 +146,7 @@ define config.has_voice = True
 ## game, until it is stopped or another file is played.
 
 define config.main_menu_music = "audio/music/finale.mp3"
-define config.default_music_volume = 0.6
+define config.default_music_volume = 0.5
 
 
 ## Transitions #################################################################
@@ -202,7 +214,7 @@ define config.automatic_images_strip = [ 'images' ]
 ## Controls the default text speed. The default, 0, is infinite, while any other
 ## number is the number of characters per second to type out.
 
-default preferences.text_cps = 30
+default preferences.text_cps = 60
 
 
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0

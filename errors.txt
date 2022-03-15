@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/credits.rpy", line 18: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+        show text p("""{b}Voice Actors{/b}
+
+Ren'Py Version: Ren'Py 7.4.8.1895
+Tue Mar 15 13:57:14 2022

@@ -77,7 +77,7 @@ label masami_kitchen_2:
     show masami happy at bounce, mc_pos
     voice "audio/voice/masami/masami_quietchuckle.mp3"
     m "That was exactly the point."
-    s neutral "At least, you'll be taking it off at the party, right?"
+    s neutral "At least you'll be taking it off at the party, right?"
     m "No."
     show sabie at bounce, center
     show masami neutral
@@ -85,7 +85,6 @@ label masami_kitchen_2:
     s innocent "Aw, come on! I bet someone there {i}really{/i} wants to see you in that beautiful Christmas sweater."
     s "You won't let them down, will you?"
     n "At this, Masami's mom lays the spoon momentarily down in the pot."
-    show wsprite at bounce, right
     mm "Masami, this is giving season. We have Christmas, we have {i}Dongzhi{/i}."
     show wsprite at bounce, right
     mm "Holiday spirit! We be with others and be happy."
@@ -114,22 +113,20 @@ label masami_kitchen_2:
     n "Masami's mother hums to herself as she puts a layer of saran wrap over the bowl and puts it in the refrigerator."
     show wsprite at shake, right
     mm "Oh, I almost forget!"
-    show wsprite at bounce, right
     mm "Masami make {i}tangyuan{/i} yesterday. Peanut type!"
     mm "Do you want some, Sabrina?"
-    show masami at shake, mc_pos
     voice "audio/voice/masami/masami_jie.mp3"
     m "Uh, Mom, I made those for - "
     voice "audio/voice/sabie/sabie_imean.mp3"
     s innocent "Oh no, it's fine. I couldn't!"
     mm "Are you sure? We cannot eat all by ourselves."
     s "Yeah, I'm sure. If there are leftovers, I can always come by to pick them up the day after."
-    s "But, I think you all will be able to finish everything."
+    s "But I think you all will be able to finish everything."
     s neutral "Right, Masami?"
     voice "audio/voice/masami/masami_oh.mp3"
     m "..."
     m neutral "Yeah. I hope so."
-    n "Masami's mother purses her lips together, but nods along anyways."
+    n "Masami's mother purses her lips, but nods along anyways."
     mm "I keep forgetting Masami is growing boy. He eat much more now."
     play sound "audio/sound/washing_dishes_2.mp3" volume 0.1 fadein 3.0 fadeout 3.0
     n "Her eyes glaze over a little as she worries her hands together. Behind her, the clacking noises of the dishware grow noticeably more quiet."
@@ -142,13 +139,12 @@ label masami_kitchen_2:
     mm "I hope. Family stay together important."
     mm "That way we can keep celebrate together. Love together. Stay strong. Year after year."
     n "She pats Sabie on the shoulder."
-    mm "Take care of him okay?"
+    mm "Take care of him, okay?"
     show sabie neutral at bounce
     s "You can count on me!"
     show wsprite at bounce, right
     mm "Good, good."
     n "She adjusts the apron she's wearing and grins."
-    show wsprite at bounce, right
     mm "You two have fun now! Don’t come back too late."
     voice "audio/voice/masami/masami_quietchuckle.mp3"
     m neutral "Don't worry, Mom, we won't."
@@ -192,7 +188,7 @@ label masami_kitchen_leave:
 
     hide sabie with moveoutleft
     show bg kitchen at hpunch
-    play sound "audio/sound/crash.mp3"
+    play sound "audio/sound/crash.mp3" volume 0.2
 
     n "With that, Masami forcibly drags Sabie out the door with him."
 
@@ -210,7 +206,7 @@ label tyree_car:
     show sabie party innocent with moveinright
     show sabie at shake
 
-    n "For better or worse, Sabie follows him to Tyree's car without issue, though she is cackling the entire time."
+    n "For better or worse, Sabie follows him to Tyree's car without issue, though she cackles the entire time."
     n "She also doesn't protest when Masami takes shotgun."
 
     show sabie party at left with move
@@ -344,7 +340,7 @@ label party_living_room:
     n "Masami scans the living room, trying to find a friendly face."
     voice "audio/voice/masami/masami_hm.mp3"
     m "(Hm, I have seen most of these people before at one point or another.)"
-    m neutral "(A few people from the stage crew are here. A couple of robotics are people, too, though more of them are probably upstairs playing Smash.)"
+    m neutral "(A few people from the stage crew are here. A couple of robotics people are, too, though more of them are probably upstairs playing Smash.)"
     m sad "(But there's no one here that I - )"
     show masami surprised
     voice "audio/voice/masami/masami_oh.mp3"
@@ -417,7 +413,7 @@ label party_alyssa_contemplate:
     voice "audio/voice/masami/masami_im...fine.mp3"
     n "An odd lump forms in Masami's throat at the last thought. He forces it down."
     m neutral "(This could be my chance.)"
-    m "(This was what I wanted, didn't I?)"
+    m "(This was what I wanted, right?)"
     m sad "…"
     n "He stares at the drink that Sabie had unceremoniously pushed into his hands."
     m happy "(For my nerves, huh?)"
@@ -608,7 +604,7 @@ label party_porch_initial:
 
     show nasir party
 
-    n "There, sitting by the table with an empty solo cup and a plate full of gingerbread cookies is Nasir."
+    n "Sitting by the table with an empty solo cup and a plate full of gingerbread cookies is Nasir."
     m "(Oh. So that's where he went.)"
 
     show nasir party happy at bounce
@@ -725,7 +721,7 @@ label party_porch_alyssa:
     na "And if that's how she feels, I'll do what I can to see it through."
     m "…"
     voice "audio/voice/masami/masami_whatthehell.mp3"
-    m angry "All this time, I thought you were being possessive or something when you're just self-sacrificing doormat."
+    m angry "All this time, I thought you were being possessive or something when you're just a self-sacrificing doormat."
 
     show nasir party happy
 
@@ -818,7 +814,7 @@ label party_porch_reflection:
     show masami sad at mc_pos
     n "The two of them lapse into an awkward silence as Nasir finishes off the remaining cookies."
     na happy "You don't have to feel obliged to keep me company with conversation. We do, as you've said, hardly know each other."
-    m neutral "No, it's fine. You deserve an explanation anyways since you're friends with Alyssa and all."
+    m neutral "No, it's fine. You deserve an explanation anyways, since you're friends with Alyssa and all."
     $ nasir_blush = True
     voice "audio/voice/nasir/nasir_dontworryaboutme.mp3"
     na sad "I wouldn't say I deserve it."
@@ -934,13 +930,14 @@ label walk_woods:
     m sad "I guess."
     n "Masami stares at his hands, watching as they tighten around the empty solo cup they're holding."
     m "But sometimes…the light isn't what you're looking for."
-    m "Its brightness, its warmth, its, well, everything is taunting. It only displays the part of you that everyone else wants to see."
+    m "Its brightness, its warmth, its...well...{i}everything{/i} is taunting. It only displays the part of you that everyone else wants to see."
     m exasperated "Puts you on a pedestal for everyone to blindly admire."
     m "Which makes the parts decaying inside of you that it doesn’t reach feel all the more broken. Especially to yourself."
     n "The bend marks in the red plastic begin to whiten between Masami's fingers, contorted beyond the point of return."
     n "He barely notices."
     show masami angry at shake, mc_pos
     m "You want to smother the light, shove it as far out of the way as you can, because the sight of it makes you sick."
+    show nasir sad
     m "It reminds you that you have no right to complain when you were blessed to appear so favorably in the eyes of others."
     m "That things are so much better for you than you have the right to deserve."
     voice "audio/voice/masami/masami_quietsigh.mp3"
@@ -948,7 +945,7 @@ label walk_woods:
     m "So you just leave the light there."
     m "Let your thoughts about it fester."
     m "And, well. I haven't figured out what happens after that."
-    na sad "…"
+    na "…"
     show masami surprised at shake, mc_pos
     voice "audio/voice/masami/masami_sorryaboutthat.mp3"
     m "Shit. That was so cringe."
@@ -1199,7 +1196,7 @@ label walk_splace_graffiti:
     voice "audio/voice/masami/masami_oh.mp3"
     m "Oh. She was a well known writer back in the 90s. A graffiti artist, I mean."
     na "Ah, I see."
-    m "I'm surprised no one's painted over it, yet."
+    m "I'm surprised no one's painted over it yet."
     voice "audio/voice/nasir/nasir_isee.mp3"
     na "I don't blame them. It's beautiful."
     m "Yeah, she's always been good at that sort of thing."
@@ -1395,7 +1392,7 @@ label walk_splace_charm:
     n "Masami puts the charm away with a sigh."
     m "I…think I'm the only one who still tries to think about her."
     m "Nobody will show it, but to everyone else who knew her, she's basically gone. Even my parents."
-    m "But from the way that people talk around her, it's almost like she's still there. Like grating the edge of a wound so that it never heals properly."
+    m "But from the way that people talk, it's almost like she's still there. Like grating the edge of a wound so that it never heals properly."
     m "I hear it when they talk about how well I'm doing in school. How successful I am and how much more so I will be in the future."
     m "..."
     voice "audio/voice/nasir/nasir_hm.mp3"
@@ -1404,7 +1401,7 @@ label walk_splace_charm:
     m "I’m not sure what to make of it all, whether I should follow what the world wants out of me or reject everything like {i}jie{/i}."
     m "In both cases, I know I will feel guilty, like I was coerced into a decision. I know I will question what the point of it all is."
     m "Heh, the grass is always greener on the other side, isn’t it?"
-    n "Masami notices that his grip has only been tightening Nasir's hand and lets go with a start."
+    n "Masami notices that his grip on Nasir's hand has only been tightening, and lets go with a start."
     voice "audio/voice/masami/masami_sorryaboutthat.mp3"
     m "Ah, sorry. I didn't mean to - "
     na "It's alright. Take it if you need it. I don't mind."
@@ -1429,7 +1426,7 @@ label walk_splace_magpie:
     m "Heh."
     voice "audio/voice/nasir/nasir_hm.mp3"
     na "It's kind of why I look up to magpies."
-    na "They're intelligent and represent many things to many people. Some of these things are good and some of these things not so much."
+    na "They're intelligent and represent many things to many people. Some of these things are good and some of them not so much."
     na "Even so, they innately know who they are. Those external impositions don't matter to them."
     na "It's something that I wish I could say for myself. I'm still looking for it and I do hope I'll get there someday."
     voice "audio/voice/masami/masami_oh.mp3"
@@ -1463,7 +1460,7 @@ label walk_end:
     show nasir at bounce
 
     play sound "audio/sound/thud.mp3"
-    n "After a moment of hesitation, Nasir follows suite. He stumbles on the landing, catching hold of Masami to steady himself."
+    n "After a moment of hesitation, Nasir follows suit. He stumbles on the landing, catching hold of Masami to steady himself."
     m happy "You good?"
     voice "audio/voice/nasir/nasir_quietchuckle.mp3"
     na happy "I believe so, thanks to you."
@@ -1471,7 +1468,7 @@ label walk_end:
     voice "audio/voice/masami/masami_oh.mp3"
     m neutral "Eh. Just takes a little practice. Nothing that you can't do."
     na neutral "Heh. I’ll take your word for it."
-    m happy "C'mon let's head back. Don't want to keep everyone waiting on us, do we?"
+    m happy "C'mon, let's head back. Don't want to keep everyone waiting on us, do we?"
     voice "audio/voice/nasir/nasir_hm.mp3"
     na embarrassed "Ah, yes. Of course."
 
@@ -1713,7 +1710,7 @@ label party_living_room_end:
     voice "audio/voice/sabie/sabie_ugh.mp3"
     s "What the fuck are you talking about? I am a grown woman and I sure as hell have not been bothering - "
     voice "audio/voice/rohan/rohan_nervouslaughter.mp3"
-    r neutral "Yeah, yeah we know. C’mon, Sabie, let’s go upstairs."
+    r neutral "Yeah, yeah, we know. C’mon, Sabie, let’s go upstairs."
     s surprised "Upstairs? I don’t know how to play Smash."
     r "Sabie, I know you do. Just take my spot in the bracket."
     voice "audio/voice/sabie/sabie_uh.mp3"
@@ -1724,7 +1721,7 @@ label party_living_room_end:
     hide sabie
     with moveoutright
 
-    play audio "audio/sound/crash.mp3"
+    play audio "audio/sound/crash.mp3" volume 0.2
     n "With that, he half drags her upstairs and away from the eggnog, leaving Masami alone with Tyree."
 
     jump tyree_chat

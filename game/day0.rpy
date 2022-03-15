@@ -276,7 +276,7 @@ label ending:
     scene cg Masami_Xinyi_Hug with Dissolve(2.0)
 
     voice "audio/voice/xinyi/xinyi_shhhitsok.mp3"
-    x "Shh…it's okay."
+    x "Shh...it's...it's okay."
     voice "audio/voice/masami/masami_finalscene_dontsaythat.mp3"
     m "Don't say that. Please don't say that when it's…it's…"
     voice "audio/voice/xinyi/xinyi_imhere.mp3"
