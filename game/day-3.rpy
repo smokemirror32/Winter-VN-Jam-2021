@@ -2,11 +2,8 @@
 
 label day_3_transition:
 
-    pause(2.0)
-    show text "{size=+50}Day 3 - Before{/size}" at trans_text with Dissolve(2.0)
-    pause(4.0)
-    hide text with Dissolve(2.0)
-    pause(2.0)
+    call screen day_change(5, "Day 3 - Before") with Dissolve(2.0)
+    pause(3.0)
 
     jump class_3
 

@@ -2,9 +2,8 @@
 
 label day3_transition:
 
-    show text "{size=+50}Day 3 - After{/size}" at trans_text with Dissolve(2.0)
-    pause(4.0)
-    hide text with Dissolve(2.0)
+    call screen day_change(660, "Day 3 - After") with Dissolve(2.0)
+    pause(3.0)
 
     jump office
 

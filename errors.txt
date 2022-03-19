@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/transforms.rpy", line 66: expected 'comma or end of line' not found.
+    time 1.0 pos (0.1, -0.1)
+             ^
+
+Ren'Py Version: Ren'Py 7.4.10.2178
+Sat Mar 19 11:49:01 2022
