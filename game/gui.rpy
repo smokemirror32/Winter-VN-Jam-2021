@@ -85,8 +85,8 @@ define gui.title_text_size = 75
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
-define gui.main_menu_background = "gui/main_menu.png"
-define gui.game_menu_background = "gui/game_menu.png"
+define gui.main_menu_background = "gui/main_menu.webp"
+define gui.game_menu_background = "gui/game_menu.webp"
 
 
 ## Dialogue ####################################################################
@@ -205,7 +205,7 @@ define gui.quick_button_text_selected_color = gui.accent_color
 define gui.choice_button_width = 1185
 define gui.choice_button_height = None
 define gui.choice_button_tile = False
-define gui.choice_button_borders = Borders(150, 8, 150, 8)
+define gui.choice_button_borders = Borders(150, 16, 150, 16)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5

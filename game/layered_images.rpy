@@ -196,14 +196,14 @@ layeredimage alyssa:
 
 layeredimage glitch_filter:
 
-    always:
-
-        "bg/vignette.png"
-
     group scan:
 
         attribute normal default:
-            "bg/scanlines.png"
+            "bg/scanlines.webp"
 
         attribute normal2:
-            "bg/scanlinesmellow.png"
+            "bg/scanlinesmellow.webp"
+
+    always:
+
+        "bg/vignette.webp"

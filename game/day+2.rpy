@@ -2,11 +2,8 @@
 
 label day2_transition:
 
-    pause(2.0)
-    show text "{size=+50}Day 2 - After{/size}" at trans_text with Dissolve(2.0)
-    pause(4.0)
-    hide text with Dissolve(2.0)
-    pause(2.0)
+    call screen day_change(550, "Day 2 - After") with Dissolve(2.0)
+    pause(3.0)
 
     jump masami_room2a
 
@@ -15,9 +12,11 @@ label masami_room2a:
     play music reflective fadein 2.0
     scene bg black with Dissolve(2.0)
 
+    play sound "audio/sound/knock_pound.mp3"
     mm "Masami!"
     mm "{i}Cepetan{/i}! Breakfast is getting cold."
     n "Masami groans. He curls up into a fetal position and shoves the pillow over his head."
+    voice "audio/voice/masami/masami_whatthehell.mp3"
     m "…"
     m "No."
     n "He swallows thickly, his voice dropping to a hoarse whisper."
@@ -26,6 +25,7 @@ label masami_room2a:
     mm "Watch your - "
     m "I said, fuck breakfast!"
     mm "…"
+    voice "audio/voice/masami/masami_im...fine.mp3"
     m "I'm not hungry."
     mm "If you do not eat, you will not be able to study  - "
     m "My grades can go burn in fucking hell."
@@ -34,6 +34,7 @@ label masami_room2a:
     m "Leave me the fuck alone."
     mm "…"
     n "There's silence on the other end of the door for a full minute. Then, there's a soft patter of footsteps as his mom heads off down the hall."
+    voice "audio/voice/masami/masami_quietsigh.mp3"
     n "Masami exhales quietly and flops onto his back, the pillow still plastered onto his face."
     m "(Fuck.)"
     m "(I…shouldn't have unloaded on her like that. Again.)"
@@ -63,20 +64,25 @@ label masami_room2b:
     show masami at shake, mc_pos
     m exasperated "(Ugh. My eyes. Where's…pillow?)"
     show bg bedroom at shake
+    play sound "audio/sound/bed_bounce.mp3" volume 0.3
     n "He feels around the bed for a moment, before sitting up with a sigh."
+    voice "audio/voice/masami/masami_huh.mp3"
     m "(Where? I still don't - )"
     show bg bedroom at shake
+    play sound "audio/sound/bed_bounce.mp3" volume 0.3
     n "His hand hits something fluffy right behind him."
     m sad "(Oh. Well. Guess today is just one of those days.)"
     n "Masami props the pillow behind his head, where it's supposed to go."
     $ masami_glasses = True
     n "Then, he puts on his glasses and picks up his phone."
     m "(It's almost twelve. Half the day is gone.)"
+    voice "audio/voice/masami/masami_quietchuckle.mp3"
     m happy "(To think that I expected the world to end or something after what I did yesterday...)"
     m sad "..."
     m "(It feels…kinda weird.)"
     m neutral "(But also kinda nice, actually.)"
     n "He hums a little to himself as he unlocks his phone."
+    voice "audio/voice/masami/masami_oh.mp3"
     m "(Hm. New messages.)"
 
     jump phone2a
@@ -106,7 +112,10 @@ label phone2a:
     else:
         show masami neutral at mc_pos
         m "(Well, looks like I've finished responding to all the messages.)"
+        play sound "audio/sound/phone_vibrate.mp3"
+        queue sound "audio/sound/phone_vibrate.mp3"
         n "Just then, Masami's phone starts buzzing again."
+        voice "audio/voice/masami/masami_quietsigh.mp3"
         m exasperated "(Dammit. It's the group chat.)"
         m sad "(Wonder what they're up to now.)"
 
@@ -180,6 +189,7 @@ label phone2a_rohan_respond:
 
     # Off phone portion
     show masami at mc_pos
+    voice "audio/voice/masami/masami_quietsigh.mp3"
     m neutral "(Ahh, I'd actually kill for one of those cookies right now. Or anything he'd make.)"
     m sad "(But I also don't feel like seeing anyone today.)"
     m "…"
@@ -191,6 +201,7 @@ label phone2a_rohan_respond:
 label phone2a_rohan_ignore:
 
     show masami at mc_pos
+    voice "audio/voice/masami/masami_hm.mp3"
     m sad "(I wouldn't mind seeing it, but…)"
     m neutral "(It wouldn't hurt if I delayed replying by a day or two.)"
 
@@ -275,6 +286,7 @@ label phone2a_sabie_respond:
 
     # Off phone portion
     show masami at mc_pos
+    voice "audio/voice/masami/masami_quietchuckle.mp3"
     m neutral "(Well, at least things seem normal with her.)"
     m sad "…"
     m "(It's nice that she's not bringing up {i}jie{/i}, but I kind of wish she did.)"
@@ -285,6 +297,7 @@ label phone2a_sabie_respond:
 label phone2a_sabie_ignore:
 
     show masami at mc_pos
+    voice "audio/voice/masami/masami_whatever.mp3"
     m neutral "(Well, she said to ignore it, so that's what I'm gonna do.)"
 
     jump phone2a
@@ -337,6 +350,7 @@ label phone2a_tyree_respond:
 
     # Off-phone portion
     show masami at mc_pos
+    voice "audio/voice/masami/masami_hm.mp3"
     m neutral "(That was nice.)"
     m sad "…"
     m "(I know he can handle it, but I still feel bad about giving him so much to do.)"
@@ -347,6 +361,7 @@ label phone2a_tyree_respond:
 label phone2a_tyree_ignore:
 
     show masami at mc_pos
+    voice "audio/voice/masami/masami_quietchuckle.mp3"
     m neutral "(I appreciate that.)"
     m "(I'll just leave the message as is. Tyree understands.)"
     m sad "(Besides, he'll probably have his hands full enough once the school realizes what I've done.)"
@@ -427,17 +442,20 @@ label masami_room2c:
 
     show masami at mc_pos
 
+    play sound "audio/sound/phone_vibrate.mp3" volume 0.6 loop
     n "Masami casually lets his phone drop onto his stomach. It keeps buzzing, but he doesn't bother to pick it up."
+    stop sound
     m "(If only you knew, Sabie.)"
     m "(If only you knew how temporary that relief was.)"
+    voice "audio/voice/masami/masami_whatever.mp3"
     m sad "…"
     n "His stomach rumbles."
     m neutral "(Right. Mom's probably making lunch right now.)"
     m sad "(...I probably owe her an apology since I haven't given her one last night either.)"
     m "(Not sure if I even want to say anything.)"
     m "(No matter what I say, she still wouldn't really understand. She never has.)"
+    voice "audio/voice/masami/masami_quietsigh.mp3"
     m "…"
-    n "Masami sighs."
     m "(Well. Might as well head on over since I need food anyways.)"
 
     jump masami_kitchen2
@@ -454,8 +472,11 @@ label masami_kitchen2:
 
     n "Masami can smell the fragrant aroma of sesame oil long before he reaches the kitchen."
     show wsprite with Dissolve(0.2)
+    play sound "audio/sound/boil.mp3" volume 0.1 loop fadein 3.0
     n "He walks in to find his mother with her apron on and back turned, having just finished cooking."
+    stop sound fadeout 10.0
     n "She turns off the heat on the bok choi she was stir-frying in a wok. A clay pot sits on low heat on the back burner."
+    voice "audio/voice/masami/masami_oh.mp3"
     m "(Looks like it's a Hainanese chicken rice day.)"
     m neutral "(Kind of need that.)"
     m sad "…"
@@ -479,6 +500,7 @@ label masami_kitchen2_talk:
     n "Masami's mother stops stirring the pot and turns around."
     mm "Yes?"
     m "I…"
+    voice "audio/voice/masami/masami_nevermind.mp3"
     m sad "…"
     n "Masami's eyes drop to the floor, his hand retracting back to his side."
     show masami exasperated at shake, mc_pos
@@ -489,7 +511,9 @@ label masami_kitchen2_talk:
     mm "{i}Makan.{/i} Have some food. You feel better, okay?"
     show masami neutral
     n "Masami nods."
+    voice "audio/voice/masami/masami_hm.mp3"
     m "Okay. Thanks."
+    play sound "audio/sound/plates.mp3"
     n "He grabs a plate and spoon from the cupboard, helping himself to some food."
 
     jump masami_room2d
@@ -497,7 +521,9 @@ label masami_kitchen2_talk:
 # Masami choses to ignore his mom
 label masami_kitchen2_ignore:
 
+    play sound "audio/sound/plates.mp3"
     n "Masami grabs a plate and spoon from the cupboard. His mom watches in silence as he helps himself to the food."
+    voice "audio/voice/masami/masami_quietsigh.mp3"
     m "…"
     m exasperated "(This is awkward. I thought she'd say something by now.)"
     m sad "(Guess she's just deciding to give me some space.)"
@@ -514,10 +540,13 @@ label masami_room2d:
     show masami sad at mc_pos
     with Dissolve(1.0)
 
+    play sound "audio/sound/door_open.mp3"
+    queue sound "audio/sound/door_close.mp3"
     n "Masami heads back to his room, where he eats in silence."
     m neutral "(This is really good. I actually feel better now.)"
     m sad "(Sort of.)"
     n "Despite himself, instinctively turns to look out the window."
+    voice "audio/voice/masami/masami_whatever.mp3"
     m "…"
     m exasperated "(I wonder why I still bother when she's gone.)"
     show masami sad
@@ -536,6 +565,7 @@ label masami_room2_explore:
 label masami_room2_read:
 
     $ room_read = False
+    voice "audio/voice/masami/masami_quietchuckle.mp3"
     m "(Heh. Younger me definitely had the patience for that.)"
     m "(But now? For some reason, I can't get myself to read for fun anymore.)"
     jump masami_room2_explore
@@ -544,6 +574,7 @@ label masami_room2_read:
 label masami_room2_study:
 
     $ room_study = False
+    voice "audio/voice/masami/masami_hm.mp3"
     m "(Right. I still need to do that.)"
     m "…"
     m "(I don't really think I can focus on that now.)"
@@ -552,6 +583,7 @@ label masami_room2_study:
 # If the computer option is selected
 label masami_room2_games:
 
+    voice "audio/voice/masami/masami_oh.mp3"
     m "(Hm, looks like Sabie is online playing Genshin.)"
     m "(And Rohan, too, with League of Legends as always.)"
     m "..."
@@ -571,6 +603,9 @@ label masami_news:
     show masami sad at mc_pos
     with Dissolve(1.0)
 
+    play sound "audio/sound/phone_ring.mp3"
+    queue sound "audio/sound/footsteps_walk2.mp3"
+    queue sound "audio/sound/phone_ring.mp3"
     n "A few hours later, he is faintly aware of the ringing of the telephone and the soft clack of his mom's slippers as she goes to pick it up."
 
     play music reflective fadein 2.0
@@ -582,6 +617,7 @@ label masami_news:
     n "His mom goes silent, not saying a word as she hangs up the phone."
     n "Masami hears his father, who must have come home some time ago, say something indiscernible to her and the two of them speak in hushed whispers."
     n "A moment later, he hears his mother's muffled sobbing."
+    voice "audio/voice/masami/masami_quietsigh.mp3"
     m "(...The school called them about the vandalism, didn't they?)"
     n "A lump forms in Masami's throat. He swallows hard and stares at his hands."
     n "They're shaking."
@@ -589,6 +625,7 @@ label masami_news:
     m exasperated "(How did she learn to stop caring?)"
     n "He squeezes his fists tight, only vaguely noticing the way his nails dig into his palms."
     show masami at shake, mc_pos
+    voice "audio/voice/masami/masami_im...fine.mp3"
     m "(I…)"
     show masami sad
     n "His eyes snap back open, roaming around in every direction beside the window and the door."
@@ -598,6 +635,7 @@ label masami_news:
     show masami sad
     n "His fingers gingerly trace the shell of the case before flipping it over, screen side belly-up."
     show masami surprised
+    voice "audio/voice/masami/masami_huh.mp3"
     n "When the home screen flicks on, his breath catches."
     m "(New messages from an unknown number.)"
     m "(No way. I thought…)"
@@ -628,9 +666,11 @@ label masami_dayend:
     show masami at mc_pos
 
     n "Masami feels his chest warm."
+    voice "audio/voice/masami/masami_quietchuckle.mp3"
     m "(Ah, so it was you.)"
     n "He delicately traces the outline of the text bubbles with his thumb."
     m happy "(You think she's proud of me, huh?)"
+    voice "audio/voice/masami/masami_quietsigh.mp3"
     m sad "..."
     m "(Is that what I even want anymore?)"
 

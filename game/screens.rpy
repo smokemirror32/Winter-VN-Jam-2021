@@ -136,7 +136,7 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background Image("gui/textbox.webp", xalign=0.5, yalign=1.0)
 
 style namebox:
     xpos gui.name_xpos
@@ -503,14 +503,14 @@ style game_menu_outer_frame:
     bottom_padding 45
     top_padding 180
 
-    background "gui/overlay/game_menu.png"
+    background "gui/overlay/game_menu.webp"
 
 style game_menu_navigation_frame:
     xsize 420
     yfill True
 
 style game_menu_content_frame:
-    left_margin 60
+    left_margin 150
     right_margin 30
     top_margin 15
 
@@ -860,7 +860,7 @@ style check_button_text:
     properties gui.button_text_properties("check_button")
 
 style slider_slider:
-    xsize 525
+    xsize 400
 
 style slider_button:
     properties gui.button_properties("slider_button")
@@ -871,7 +871,7 @@ style slider_button_text:
     properties gui.button_text_properties("slider_button")
 
 style slider_vbox:
-    xsize 675
+    xsize 600
 
 
 ## History screen ##############################################################
@@ -1671,7 +1671,12 @@ screen nphone():
 ################################################################################
 
 ### Bedroom Point and Click
-
+style point_button is choice_button
+style point_button:
+    background "gui/pointandclick_background.webp"
+    #pos renpy.get_mouse_pos() # This puts the text where the mouse is, but doesn't look pretty
+    yalign 0.1
+            
 screen bedroom:
 
     if room_read:
@@ -1699,12 +1704,10 @@ screen bedroom:
 
     $ tooltip = GetTooltip()
     if tooltip:
-        frame:
-            background None
-            xalign 0.5 # Unsure of where the best place to put the box for this
-            yalign 0.1
-            #pos renpy.get_mouse_pos() # This puts the text where the mouse is, but doesn't look pretty
-            text "[tooltip]"
+        button:
+            style "point_button"
+            text "[tooltip]":
+                xalign 1.0
 
 
 ### Party Point and Click
@@ -1736,12 +1739,10 @@ screen party:
 
     $ tooltip = GetTooltip()
     if tooltip:
-        frame:
-            background None
-            xalign 0.5 # Unsure of where the best place to put the box for this
-            yalign 0.1
-            #pos renpy.get_mouse_pos() # This puts the text where the mouse is, but doesn't look pretty
-            text "[tooltip]"
+        button:
+            style "point_button"
+            text "[tooltip]":
+                xalign 1.0
 
 ### Railcar Point and Click
 
@@ -1773,9 +1774,37 @@ screen railcar:
 
     $ tooltip = GetTooltip()
     if tooltip:
-        frame:
-            background None
-            xalign 0.5 # Unsure of where the best place to put the box for this
-            yalign 0.1
-            #pos renpy.get_mouse_pos() # This puts the text where the mouse is, but doesn't look pretty
-            text "[tooltip]"
+        button:
+            style "point_button"
+            text "[tooltip]":
+                xalign 1.0
+
+##### Day Change Screen ##### 
+image timeline = "gui/timeline.png"
+image feather = "gui/feather.png"
+
+screen day_change(pos, display_msg):
+    
+    timer 2.0 action Return()
+
+    vbox at basicfade:
+        xpos 0.6
+        ypos 0.7
+
+        text "{size=+50}[display_msg]{/size}"
+
+        fixed:
+
+            ypos 0.12
+
+            imagebutton:
+                idle "feather"
+                xanchor 0.5
+                yanchor 110
+                xpos pos
+
+            imagebutton:
+                idle "timeline"
+                yanchor 0.5
+            
+

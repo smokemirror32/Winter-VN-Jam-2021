@@ -2,9 +2,8 @@
 
 label day3_transition:
 
-    show text "{size=+50}Day 3 - After{/size}" at trans_text with Dissolve(2.0)
-    pause(4.0)
-    hide text with Dissolve(2.0)
+    call screen day_change(660, "Day 3 - After") with Dissolve(2.0)
+    pause(3.0)
 
     jump office
 
@@ -14,14 +13,18 @@ label office:
     scene bg black with Dissolve(2.0)
 
     m "…"
+    voice "audio/voice/masami/masami_quietsigh.mp3"
     m "(Ugh.)"
     m "(The hell am I even waiting for?)"
     m "(The damage is already done.)"
-    n "{i}* knocking sounds *{/i}"
+    play sound "audio/sound/knock_simple.mp3"
+    window hide
+    pause
     p "Who's there?"
     m "…It's me."
     p "Oh! Come on in."
     m "Okay."
+    play sound "audio/sound/door_open.mp3"
 
     jump office_inside
 
@@ -34,12 +37,14 @@ label office_inside:
     with Dissolve(2.0)
 
     # Initial introduction and setting description
-    n "The principal gestures to a stiff wooden chair on the opposite side of the desk."
+    play sound "audio/sound/door_close.mp3"
+    n "The principal gestures to a stiff wooden chair on the opposite side of the desk." # SEFF - Door opening
     p "Have a seat! Make yourself comfortable."
     m neutral "…Thanks."
-    n "Masami eases himself into the chair. It feels about as uncomfortable as it looks."
+    n "Masami eases himself into the chair. It feels more uncomfortable than it looks." # SEFF - Seat noises
     m sad "(I don't know what I expected.)"
-    n "He shuffles around anyways, attempting to find the most bearable position he can."
+    n "He shuffles around anyways, attempting to find the most bearable position he can." # SEFF - Seat noises
+    voice "audio/voice/masami/masami_sorryaboutthat.mp3"
     m "Sorry."
     show masami exasperated at shake, mc_pos
     n "Masami flinches, startled. He turns away, face slightly flushed."
@@ -51,6 +56,7 @@ label office_inside:
     m sad "..."
     n "Masami stares quietly at his fingers, which are interlaced and twitching in his lap."
     n "His simple apology from earlier blooms in his mind, large and looming, reducing the principal's voice into a background drone."
+    voice "audio/voice/masami/masami_quietsigh.mp3"
     m "(...It just slipped out.)"
     m "(Why did I say that?)"
     m "(It was just a chair.)"
@@ -67,6 +73,7 @@ label office_question:
     show wsprite at bounce
     p "Masami?"
     show masami surprised at shake, mc_pos
+    voice "audio/voice/masami/masami_huh.mp3"
     n "Masami's head jolts back upright again."
     show wsprite:
         ease 1.0 zoom 0.98
@@ -75,6 +82,7 @@ label office_question:
     n "It doesn't make Masami feel any different, but he smiles a little and relaxes his tense shoulders as if it does."
     m "Yes?"
     p "I've baked some cookies, if you want any."
+    voice "audio/voice/masami/masami_oh.mp3"
     m "Uh, I think I’m good."
     m "Thank you though."
     p "Are you sure? I've got plenty to spare."
@@ -88,9 +96,10 @@ label office_question:
     n "Masami nods vacantly, staring straight ahead."
     p "The security camera near the breezeway recorded a student carrying out an act of vandalism near the carpool loop this past Sunday."
     p "It would have been a less…disruptive occurrence had the display not been so effectively crafted to provoke."
+    voice "audio/voice/masami/masami_hm.mp3"
     m sad "..."
     n "Noticing Masami's reaction, the principal pauses for a moment."
-    p "I mean to reassure you that we cannot say anything for sure from the footage alone."
+    p "I mean to reassure you that we will not incriminate you for this on the basis of footage alone."
     p "But, those of us who have reviewed it believe that the appearance and demeanor of the perpetrator strongly suggests it’s you."
     p "Do you…have anything you'd like to discuss with me about this?"
 
@@ -113,6 +122,7 @@ label office_question_pa:
     n "The principal sighs again."
     p "I care about you just as I care about all my students."
     p "I want them to succeed and to not jeopardize their futures with the consequences of impulsive decisions."
+    voice "audio/voice/masami/masami_jie.mp3"
     m exasperated "(Right. I’m sure you thought the same about {i}jie{/i}.)"
 
     jump office_outburst
@@ -123,6 +133,7 @@ label office_question_divert:
     m "What made you think so?"
     n "The principal smiles bitterly."
     p "For better or worse, we take on the traits of those around us."
+    voice "audio/voice/masami/masami_jie.mp3"
     m exasperated "(Yeah, right. Just admit you never liked {i}jie{/i}.)"
 
     jump office_outburst
@@ -132,7 +143,8 @@ label office_question_silence:
 
     m "..."
     m exasperated "(What do you want out of me? A confession?)"
-    m sad "(As if that would change anything.)"
+    voice "audio/voice/masami/masami_jie.mp3"
+    m sad "(As if that would have changed anything for {i}jie{/i}.)"
 
     jump office_outburst
 
@@ -141,7 +153,7 @@ label office_outburst:
     show wsprite:
         ease 1.0 zoom 1.0
     show masami sad
-    n "The principal leans forward slightly, her fingers laced."
+    n "The principal leans forward slightly, her fingers laced." # SEFF - Seat noises
     p "Masami, I've already been very lenient with you."
     p "Three days of suspension at the beginning of next semester is the least we can do for someone without a prior record."
     p "You are one of the best students in your grade, or in our school, even. Many of the underclassmen look up to you."
@@ -150,6 +162,7 @@ label office_outburst:
     p "I am not trying to use this to dismiss the severity of our present circumstances."
     p "But they do make them all the more baffling."
     p "I want to understand where you're coming from, but you're not making this easy for me."
+    voice "audio/voice/masami/masami_quietsigh.mp3"
     m sad "..."
     p "I know that the past few days have been difficult for you."
     p "Losing a loved one isn't something to be taken lightly. It is necessary to take the time and space you need to grieve."
@@ -158,6 +171,7 @@ label office_outburst:
     play music chaos
 
     m exasperated "Hmph."
+    voice "audio/voice/masami/masami_thatsbullshit.mp3"
     m angry "You don’t actually expect me to believe that, do you?"
     m "That {i}jie{/i} actually amounted to anything in your eyes?"
     show wsprite at shake, center
@@ -210,21 +224,24 @@ label office_outburst:
 
     n "Suddenly, just as it begins to crescendo, Masami's voice breaks and the dark fire in his eyes flickers out. Hollow."
     n "His gaze drops back to the desk again, but he remains standing."
+    voice "audio/voice/masami/masami_quietsigh.mp3"
     m "(Shit.)"
     m "(I'm doing it again.)"
     m "(Taking things out on people who just want to help.)"
     m "(Repeating {i}jie’s{/i} mistakes all over.)"
     n "He inhales quietly."
     p "Masami?"
+    voice "audio/voice/masami/masami_nevermind.mp3"
     m neutral "…Never mind."
     p "…"
     p "I'm sorry. I didn't mean to bring up things like this for you."
     m sad "It shouldn't matter. I…"
+    voice "audio/voice/masami/masami_im...fine.mp3"
     m neutral "I'm fine."
     p "…"
     m "Three days, right?"
     p "A three day suspension, yes."
-    m "…I'll be back after three days, then."
+    m "…I'll be back after those three days, then."
     p "Alright. Please, take care of yourself, Masami."
     m sad "…"
 
@@ -240,15 +257,21 @@ label car:
     show masami sad at mc_pos
     with Dissolve(1.5)
 
+    play sound "audio/sound/car_door_open.mp3"
     n "Masami heads out of the office and back to his car."
-    n "Once he's inside, he leans against the headrest and sighs."
+    play sound "audio/sound/car_door_close.mp3"
+    n "Once he's inside, he collapses into the seat."
+    voice "audio/voice/masami/masami_quietsigh.mp3"
     m exasperated "(I've really been a loose cannon lately, haven't I?)"
     m sad "(I don’t know if I even believe half of what I said.)"
     m "(But some days, things like that feel awfully real.)"
     n "Masami's gaze instinctively drifts towards a magpie keychain hanging from his car keys. He catches himself and looks away."
     m "…"
-    n "He sits quietly there for a couple more minutes before he starts up the engine for the drive home."
-    n "When he hits the open road, the speakerphone rings in with an incoming call."
+    n "He sits quietly there for a couple more minutes."
+    play sound "audio/sound/car_start.mp3"
+    n "Then, he starts up the engine for the drive home."
+    n "When he hits the open road, the screen on the dash lights up with in with an incoming call."
+    voice "audio/voice/masami/masami_oh.mp3"
     m neutral "(Oh. It's Mom.)"
 
     # Decide whether or not to pick up
@@ -273,6 +296,7 @@ label phone_mom:
     mm "What did - "
     m "Three days."
     mm "…Masami - "
+    voice "audio/voice/masami/masami_im...fine.mp3"
     m neutral "It's alright. I don't care."
     mm "…Okay."
     n "Masami blinks."
@@ -281,6 +305,7 @@ label phone_mom:
     m "That's it?"
     mm "Yes."
     m sad "I thought…"
+    voice "audio/voice/masami/masami_nevermind.mp3"
     m exasperated "Never mind."
     n "Masami sighs."
     n "The other end of the line goes quiet as well, dropping down into a mix of static and light chattering."
@@ -288,6 +313,7 @@ label phone_mom:
     n "Masami listens in for a bit, trying to pick out the individual voices in the background, but everything just blurs together."
     m "Is everyone already there?"
     mm "Yes. We are waiting for you. Five of your friends here too."
+    voice "audio/voice/masami/masami_oh.mp3"
     m sad "…"
     m neutral "I'll be there in ten."
     mm "Okay."
@@ -303,13 +329,16 @@ label masami_home3:
 
     n "Some time later, Masami pulls up to his street."
     m "(The driveway is already full. The curb, too, for a couple blocks.)"
-    n "Sighing, Masami circles around and goes to park at the nearest spot down the road."
+    n "Masami circles around and goes to park at the nearest spot down the road."
+    voice "audio/voice/masami/masami_quietsigh.mp3"
     m sad "(I…didn't expect so many people to be there.)"
     m neutral "(Funny how everyone talks about {i}jie{/i} now. But only because she's actually gone.)"
     show masami sad
     n "Masami shuts his eyes. When he opens them, he finds himself staring at the magpie keychain again."
     m neutral "(I guess I've sort of known all along that it would end like this.)"
+    voice "audio/voice/masami/masami_whatever.mp3"
     m exasperated "(...Whatever.)"
+    play sound "audio/sound/car_keys_out.mp3"
     n "He musters what remained of his willpower and takes his keys out from the ignition."
     show masami sad
     n "Cradling the magpie delicately in his hands, he cracks open the car and steps outside."
