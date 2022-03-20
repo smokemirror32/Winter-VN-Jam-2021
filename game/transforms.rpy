@@ -41,14 +41,24 @@ transform mc_pos:
 ##### Defining Transition Text Position #####
 
 transform trans_text:
-    xalign 0.8
-    yalign 0.8
+    xpos 0.6
+    ypos 0.7
 
 ##### Defining Glitched Transition Text Position #####
 
 transform glitch_trans_text:
-    xalign 0.7
-    yalign 0.6
+    xpos 0.7
+    ypos 0.6
+
+##### Defining Timeline Screen Transition #####
+
+transform basicfade:
+    on show:
+        alpha 0.0
+        linear 2.0 alpha 1.0
+    on hide:
+        alpha 1.0
+        linear 2.0 alpha 0.0
 
 ################################################################################
 ## General Glitch Definitions

@@ -2,15 +2,19 @@
 
 label day_1_transition:
 
-    pause(2.0)
-    show text "{size=+50}Day 1 - Before{/size}" at trans_text with Dissolve(2.0)
-    pause(1.0)
-    show text "{size=+50}Day1-Before{/size}" at glitch, glitch_trans_text
-    pause(0.5)
-    show text "{size=+50}Day 1 - Before{/size}" at trans_text
-    pause(1.5)
-    hide text with Dissolve(2.0)
-    pause(2.0)
+    # old glitch anim
+    # pause(2.0)
+    # show text "{size=+50}Day 1 - Before{/size}" at trans_text with Dissolve(2.0)
+    # pause(1.0)
+    # show text "{size=+50}Day1-Before{/size}" at glitch, glitch_trans_text
+    # pause(0.5)
+    # show text "{size=+50}Day 1 - Before{/size}" at trans_text
+    # pause(1.5)
+    # hide text with Dissolve(2.0)
+    # pause(2.0)
+
+    call screen day_change(221, "Day 1 - Before") with Dissolve(2.0)
+    pause(3.0)
 
     jump class_1
 
