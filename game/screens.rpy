@@ -510,7 +510,7 @@ style game_menu_navigation_frame:
     yfill True
 
 style game_menu_content_frame:
-    left_margin 60
+    left_margin 150
     right_margin 30
     top_margin 15
 
@@ -860,7 +860,7 @@ style check_button_text:
     properties gui.button_text_properties("check_button")
 
 style slider_slider:
-    xsize 525
+    xsize 400
 
 style slider_button:
     properties gui.button_properties("slider_button")
@@ -871,7 +871,7 @@ style slider_button_text:
     properties gui.button_text_properties("slider_button")
 
 style slider_vbox:
-    xsize 675
+    xsize 600
 
 
 ## History screen ##############################################################
@@ -1671,6 +1671,12 @@ screen nphone():
 ################################################################################
 
 ### Bedroom Point and Click
+style tooltip_display:
+    background "gui/pointandclick_background.png"
+    # Unsure of where the best place to put the box for this
+    
+    #pos renpy.get_mouse_pos() # This puts the text where the mouse is, but doesn't look pretty
+
 
 screen bedroom:
 
@@ -1705,6 +1711,10 @@ screen bedroom:
             yalign 0.1
             #pos renpy.get_mouse_pos() # This puts the text where the mouse is, but doesn't look pretty
             text "[tooltip]"
+
+                
+
+            
 
 
 ### Party Point and Click
@@ -1773,8 +1783,8 @@ screen railcar:
 
     $ tooltip = GetTooltip()
     if tooltip:
-        frame:
-            background None
+        button:
+            background
             xalign 0.5 # Unsure of where the best place to put the box for this
             yalign 0.1
             #pos renpy.get_mouse_pos() # This puts the text where the mouse is, but doesn't look pretty

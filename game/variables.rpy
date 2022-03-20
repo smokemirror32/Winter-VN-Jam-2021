@@ -56,4 +56,3 @@ image cg Masami_Nasir_Kiss  = "images/cg/Masami_Nasir_Kiss.webp"
 image cg Masami_Xinyi_Hug  = "images/cg/Masami_Xinyi_Hug.webp"
 image cg Masami_Xinyi_Hug_BGonly  = "images/cg/Masami_Xinyi_Hug_BGonly.webp"
 image cg Rohan_Mall  = "images/cg/Rohan_Mall.webp"
-
