@@ -2,7 +2,7 @@
 
 label day0_transition:
 
-    call screen day_change(332, "Day 0") with Dissolve(2.0)
+    call screen day_change(332, 5, "Day 0") with Dissolve(2.0)
     pause(3.0)
 
     jump tangyuan_cook

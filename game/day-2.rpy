@@ -2,7 +2,7 @@
 
 label day_2_transition:
 
-    call screen day_change(110, "Day 2 - Before") with Dissolve(2.0)
+    call screen day_change(110, 5, "Day 2 - Before") with Dissolve(2.0)
     pause(3.0)
 
     jump masami_room_2
@@ -1389,7 +1389,7 @@ label walk_splace_charm:
     n "Masami puts the charm away with a sigh."
     m "I…think I'm the only one who still tries to think about her."
     m "Nobody will show it, but to everyone else who knew her, she's basically gone. Even my parents."
-    m "But from the way that people talk, it's almost like she's still there. Like grating the edge of a wound so that it never heals properly."
+    m "But from the way people talk, it's almost like she's still there. Like grating the edge of a wound so that it never heals properly."
     m "I hear it when they talk about how well I'm doing in school. How successful I am and how much more so I will be in the future."
     m "..."
     voice "audio/voice/nasir/nasir_hm.mp3"

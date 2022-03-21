@@ -315,6 +315,10 @@ screen navigation():
 
         textbutton _("Preferences") action ShowMenu("preferences")
 
+        if main_menu:
+
+            textbutton _("Extras") action ShowMenu("gallery")
+
         if _in_replay:
 
             textbutton _("End Replay") action EndReplay(confirm=True)
@@ -1676,7 +1680,7 @@ style point_button:
     background "gui/pointandclick_background.webp"
     #pos renpy.get_mouse_pos() # This puts the text where the mouse is, but doesn't look pretty
     yalign 0.1
-            
+
 screen bedroom:
 
     if room_read:
@@ -1779,13 +1783,13 @@ screen railcar:
             text "[tooltip]":
                 xalign 1.0
 
-##### Day Change Screen ##### 
+##### Day Change Screen #####
 image timeline = "gui/timeline.png"
 image feather = "gui/feather.png"
 
-screen day_change(pos, display_msg):
-    
-    timer 2.0 action Return()
+screen day_change(pos, wait_len, display_msg):
+
+    timer wait_len action Return()
 
     vbox at basicfade:
         xpos 0.6
@@ -1806,5 +1810,3 @@ screen day_change(pos, display_msg):
             imagebutton:
                 idle "timeline"
                 yanchor 0.5
-            
-

@@ -2,19 +2,15 @@
 
 label day_1_transition:
 
-    # old glitch anim
-    # pause(2.0)
-    # show text "{size=+50}Day 1 - Before{/size}" at trans_text with Dissolve(2.0)
-    # pause(1.0)
-    # show text "{size=+50}Day1-Before{/size}" at glitch, glitch_trans_text
-    # pause(0.5)
-    # show text "{size=+50}Day 1 - Before{/size}" at trans_text
-    # pause(1.5)
-    # hide text with Dissolve(2.0)
-    # pause(2.0)
-
-    call screen day_change(221, "Day 1 - Before") with Dissolve(2.0)
-    pause(3.0)
+    call screen day_change(221, 5, "Day 1 - Before") with Dissolve(2.0)
+    show layer screens at chromatic_offset
+    pause(0.4)
+    show layer screens at reset
+    pause(0.2)
+    show layer screens at chromatic_offset
+    pause(0.1)
+    show layer screens at reset
+    pause(2.0)
 
     jump class_1
 
@@ -679,7 +675,7 @@ label hallway_1:
     n "He turns a corner and brushes a little too hard against an unsuspecting student."
     show bg hallway with vpunch
     show masami surprised at shake, mc_pos
-    play sound "audio/sound/crash.mp3"
+    play sound "audio/sound/crash.mp3" volume 0.3
     m "Ah, sorry - "
     show bg hallway with vpunch
 
@@ -855,7 +851,6 @@ label masami_kitchen_1:
     mm "Well you made a lot of {i}tangyuan{/i}. So I think, why not start making other thing?"
     voice "audio/voice/masami/masami_oh.mp3"
     m neutral "Oh."
-    show wsprite at bounce, center
     mm "We can always make more tomorrow {i}tangyuan{/i} to cook tomorrow, don't worry!"
     m "Of course."
     n "She pats him heartily on the back."

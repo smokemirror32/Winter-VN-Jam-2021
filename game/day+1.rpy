@@ -2,7 +2,7 @@
 
 label day1_transition:
 
-    call screen day_change(443, "Day 1 - After") with Dissolve(2.0)
+    call screen day_change(443, 5, "Day 1 - After") with Dissolve(2.0)
     pause(3.0)
 
     jump masami_kitchen1
@@ -60,18 +60,14 @@ label masami_kitchen1:
     m sad "…"
     voice "audio/voice/masami/masami_thatsbullshit.mp3"
     m exasperated "That's bullshit."
-    show wsprite at shake, right
+    show msprite at shake, left
     md "Masami! You apologize to your mother - "
     show bg kitchen at hpunch
     show masami at hpunch, mc_pos
     m angry "I said, that's bullshit!"
-    show bg kitchen at hpunch
-    show masami at hpunch, mc_pos
     m "And I am not apologizing!"
-    show bg kitchen at hpunch
-    show masami exasperated at hpunch, mc_pos
     voice "audio/voice/masami/masami_quietsigh.mp3"
-    m "I'm fucking sick of apologies that don't fix any fucking problems."
+    m sad "I'm fucking sick of apologies that don't fix any fucking problems."
     m "{i}Jie{/i} was basically dead to everyone the moment she left the house three years ago."
     m "No one said a word about her."
     show bg kitchen at hpunch
@@ -242,7 +238,7 @@ label wall:
     queue sound "audio/sound/marker_long.mp3" volume 0.1
 
     pause
-
+    stop sound
     scene bg graffitizoom with Dissolve(2.0)
     pause
     scene bg graffiti

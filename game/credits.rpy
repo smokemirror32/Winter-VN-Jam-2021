@@ -12,7 +12,7 @@
     show text "{b}Character & Phone GUI Artist{/b}\nChaniMK\n\n{b}CG Artist{/b}\nMx. RuK\n\n{b}Background & General GUI Artist{/b}\ncypher" with Dissolve(1.5)
     pause
     hide text with Dissolve(1.0)
-    show text "{b}Audio Director{/b}\nEliana\n\n{b}Composers{/b}\nKelly Thiessen\nShar J\n\n{b}Editor{/b}\nAllie Vera" with Dissolve(1.5)
+    show text "{b}Audio & Voice Director{/b}\nEliana\n\n{b}Composers{/b}\nKelly Thiessen\nShar J\n\n{b}Editor{/b}\nAllie Vera\n\n{b}Gallery Screen Programmer{/b}\nPumpkin Spike" with Dissolve(1.5)
     pause
     hide text with Dissolve(1.0)
     show text "{b}Voice Actors{/b}\n{i}Masami{/i}                             Ryoma Ishizuka\n  {i}Xinyi{/i}                                  Megan Youmans\n{i}Sabie{/i}                                  Erica Chiem        \n{i}Rohan{/i}                                Pranshu Mishra\n{i}Tyree{/i}                                  Jay M.                   \n   {i}Nasir{/i}                                   Darius T. Jackson" with Dissolve(1.5)
@@ -25,7 +25,7 @@
 
     pause(0.5)
 
-    show screen about
-    $ renpy.pause(hard=True)
+    #show screen about
+    #$ renpy.pause(hard=True)
 
     return

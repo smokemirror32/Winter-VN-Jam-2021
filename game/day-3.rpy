@@ -2,7 +2,7 @@
 
 label day_3_transition:
 
-    call screen day_change(5, "Day 3 - Before") with Dissolve(2.0)
+    call screen day_change(5, 5, "Day 3 - Before") with Dissolve(2.0)
     pause(3.0)
 
     jump class_3
@@ -479,7 +479,7 @@ label lunch_chaos_tyree:
     hide sabie
     show tyree
 
-    voice "audio/voice/tyree/tyree_heh.mp3"
+    voice "audio/voice/tyree/tyree_hm.mp3"
     t "Change your mind, Masami?"
     m neutral "Nope."
     t "Good."

@@ -52,13 +52,15 @@ Character/Phone GUI Artist: {a=https://twitter.com/ChaniMK_VN}ChaniMK{/a}
 
 CG Artist: {a=https://twitter.com/mx_ruk}Mx. RuK{/a}
 
-Background/General GUI Artist: cypher
+Background/General GUI Artist & GUI Programmer: cypher
 
-Audio Director: {a=https://twitter.com/TheStorysinger}Eliana Zebro{/a}
+Audio & Voice Director: {a=https://twitter.com/TheStorysinger}Eliana Zebro{/a}
 
 Composers: {a=https://www.trashcatmusic.com/}Kelly Thiessen{/a}, {a=https://sharjcomposer.com/}Shar J{/a}
 
 Editor: {a=https://twitter.com/theallievera}Allie Vera{/a}
+
+Gallery Screen Programmer: {a=https://twitter.com/PumpkinSpike}Pumpkin Spike{/a}
 
 
 {size=+20}{b}Voice Actors{/b}{/size}

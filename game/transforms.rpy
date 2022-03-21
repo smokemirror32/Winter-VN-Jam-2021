@@ -2,6 +2,11 @@
 ## Simple Transformations
 ################################################################################
 
+##### Defining Reset #####
+transform reset:
+    xoffset 0
+    yoffset 0
+
 ##### Defining Shake #####
 
 init python:

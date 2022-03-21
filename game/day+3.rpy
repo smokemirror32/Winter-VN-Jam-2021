@@ -2,7 +2,7 @@
 
 label day3_transition:
 
-    call screen day_change(660, "Day 3 - After") with Dissolve(2.0)
+    call screen day_change(660, 5.0, "Day 3 - After") with Dissolve(2.0)
     pause(3.0)
 
     jump office
@@ -38,7 +38,7 @@ label office_inside:
 
     # Initial introduction and setting description
     play sound "audio/sound/door_close.mp3"
-    n "The principal gestures to a stiff wooden chair on the opposite side of the desk." # SEFF - Door opening
+    n "The principal gestures to a chair on the opposite side of the desk." # SEFF - Door opening
     p "Have a seat! Make yourself comfortable."
     m neutral "…Thanks."
     n "Masami eases himself into the chair. It feels more uncomfortable than it looks." # SEFF - Seat noises
@@ -256,7 +256,7 @@ label car:
     m exasperated "(I've really been a loose cannon lately, haven't I?)"
     m sad "(Sound just like the Joker.)"
     voice "audio/voice/masami/masami_quietchuckle.mp3"
-    m neutral "(A lunatic blaming everything in the system except themselves.)"
+    m neutral "(A lunatic who blames everything in the system for their downfall...except themselves.)"
     m "(And everyone else is probably taking me just as seriously.)"
     m sad "(Not that I blame them.)"
     m "(...I don’t know if I even believe half of what I said.)"

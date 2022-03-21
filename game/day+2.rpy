@@ -2,7 +2,7 @@
 
 label day2_transition:
 
-    call screen day_change(550, "Day 2 - After") with Dissolve(2.0)
+    call screen day_change(550, 5, "Day 2 - After") with Dissolve(2.0)
     pause(3.0)
 
     jump masami_room2a
@@ -603,11 +603,12 @@ label masami_news:
     show masami sad at mc_pos
     with Dissolve(1.0)
 
-    play sound "audio/sound/phone_ring.mp3"
+    play sound "<from 0 to 2.6>audio/sound/phone_ring.mp3"
     queue sound "audio/sound/footsteps_walk2.mp3"
     queue sound "audio/sound/phone_ring.mp3"
     n "A few hours later, he is faintly aware of the ringing of the telephone and the soft clack of his mom's slippers as she goes to pick it up."
 
+    stop sound
     play music reflective fadein 2.0
 
     mm "Hello?"
