@@ -159,15 +159,15 @@ label sabie_glitching:
 
     if support == "Sabie":
 
-        call sabie_spaz()
+        call sabie_spaz() from _call_sabie_spaz_1
         voice "audio/voice/sabie/sabie_nervouslaughter.mp3"
         s "Feel like coming to help me again?"
         call sabie_spaz() from _call_sabie_spaz_2
         s "Or are you going to leave me out to dry like you did to Alyssa because you've got commitment issues?"
         call sabie_spaz() from _call_sabie_spaz_3
         s "I should hope that a good old family friend means something to you, {i}ge{/i}."
-        call sabie_spaz()
-        call sabie_spaz()
+        call sabie_spaz() from _call_sabie_spaz_4
+        call sabie_spaz() from _call_sabie_spaz_5
         voice "audio/voice/sabie/sabie_gotcha.mp3"
         s innocent "But then again, Xinyi did decide to leave her poor little brother behind."
         call sabie_spaz() from _call_sabie_spaz_6
@@ -175,14 +175,14 @@ label sabie_glitching:
 
     else:
 
-        call sabie_spaz()
+        call sabie_spaz() from _call_sabie_spaz_7
         voice "audio/voice/sabie/sabie_nervouslaughter.mp3"
         s "Are you going to help me this time?"
         call sabie_spaz() from _call_sabie_spaz_8
         s "Or are you going to leave me to suffer alone?"
         call sabie_spaz() from _call_sabie_spaz_9
         s "I wonder if it's worth it for me to care about someone who didn't care for me back."
-        call sabie_spaz()
+        call sabie_spaz() from _call_sabie_spaz_10
         voice "audio/voice/sabie/sabie_gotcha.mp3"
         s innocent "That's what Xinyi did to you, after all."
         call sabie_spaz() from _call_sabie_spaz_11
@@ -232,8 +232,8 @@ label sabie_glitching:
 
         call rohan_spaz() from _call_rohan_spaz_3
         r "Stand up for me like you did last time."
-        call rohan_spaz()
-        call rohan_spaz()
+        call rohan_spaz() from _call_rohan_spaz_4
+        call rohan_spaz() from _call_rohan_spaz_5
         voice "audio/voice/rohan/rohan_igiveup.mp3"
         r sad "Or do I not matter to you either?"
 
@@ -241,8 +241,8 @@ label sabie_glitching:
 
         call rohan_spaz() from _call_rohan_spaz_6
         r sad "But definitely, go ahead. Let her walk all over to me."
-        call rohan_spaz()
-        call rohan_spaz()
+        call rohan_spaz() from _call_rohan_spaz_7
+        call rohan_spaz() from _call_rohan_spaz_8
         voice "audio/voice/rohan/rohan_igiveup.mp3"
         r "I won't care."
 
@@ -302,7 +302,7 @@ label sabie_glitching:
         t "You may be able to ignore others for a short while, but you cannot ignore them forever."
         call tyree_spaz() from _call_tyree_spaz_2
         t "Not if you've expressed affection for them before. It will be too late then."
-        call tyree_spaz()
+        call tyree_spaz() from _call_tyree_spaz_3
         voice "audio/voice/tyree/tyree_quietchuckle.mp3"
         t neutral "They will always want the old you back. As they should."
         call tyree_spaz() from _call_tyree_spaz_4
@@ -315,7 +315,7 @@ label sabie_glitching:
         t "People will always expect the same good thing out of you once you've given it to them before."
         call tyree_spaz() from _call_tyree_spaz_7
         t "They will accept no less and we must follow through."
-        call tyree_spaz()
+        call tyree_spaz() from _call_tyree_spaz_8
         voice "audio/voice/tyree/tyree_quietchuckle.mp3"
         t neutral "This is how we become who we need to be."
         call tyree_spaz() from _call_tyree_spaz_9
@@ -427,7 +427,7 @@ label lunch_1b:
     # Depends if you trusted Sabie with the Xinyi response earlier on Day 3 - Before
     if sabie_trust:
 
-        call sabie_spaz()
+        call sabie_spaz() from _call_sabie_spaz_22
         voice "audio/voice/sabie/sabie_imean.mp3"
         s happy "You told me something was wrong before and I supported you."
         call sabie_spaz() from _call_sabie_spaz_23
@@ -435,7 +435,7 @@ label lunch_1b:
 
     else:
 
-        call sabie_spaz()
+        call sabie_spaz() from _call_sabie_spaz_24
         voice "audio/voice/sabie/sabie_imean.mp3"
         s happy "Don't you care that there are people out here trying to help you at all?"
         call sabie_spaz() from _call_sabie_spaz_25
@@ -456,8 +456,8 @@ label lunch_1b:
 
 label lunch_1c:
 
-    call sabie_glitch_big()
-    call sabie_spaz()
+    call sabie_glitch_big() from _call_sabie_glitch_big
+    call sabie_spaz() from _call_sabie_spaz_31
     voice "audio/voice/sabie/sabie_cmon.mp3"
     s mischievous "Pft. Of course you know yourself, silly."
 
@@ -475,8 +475,8 @@ label lunch_1c:
         call sabie_spaz() from _call_sabie_spaz_36
         s "You have to at least leave an emoji."
 
-    call sabie_spaz()
-    call sabie_spaz()
+    call sabie_spaz() from _call_sabie_spaz_37
+    call sabie_spaz() from _call_sabie_spaz_38
     voice "audio/voice/sabie/sabie_nervouslaughter.mp3"
     s happy "Sometimes, I really can't believe you."
 
@@ -504,9 +504,9 @@ label lunch_1c:
         call rohan_spaz() from _call_rohan_spaz_13
         call sabie_spaz() from _call_sabie_spaz_42
         r "You wouldn't dare tell me otherwise or you think I'll go even further off the rails."
-        call rohan_spaz()
-        call sabie_spaz()
-        call rohan_spaz()
+        call rohan_spaz() from _call_rohan_spaz_14
+        call sabie_spaz() from _call_sabie_spaz_43
+        call rohan_spaz() from _call_rohan_spaz_15
         voice "audio/voice/rohan/rohan_defeatedsigh.mp3"
         r "Just like your sister."
         call rohan_spaz() from _call_rohan_spaz_16
@@ -516,9 +516,9 @@ label lunch_1c:
         call rohan_spaz() from _call_rohan_spaz_17
         call sabie_spaz() from _call_sabie_spaz_45
         r "You couldn't even spend a moment to look at a single photo."
-        call rohan_spaz()
-        call sabie_spaz()
-        call rohan_spaz()
+        call rohan_spaz() from _call_rohan_spaz_18
+        call sabie_spaz() from _call_sabie_spaz_46
+        call rohan_spaz() from _call_rohan_spaz_19
         voice "audio/voice/rohan/rohan_defeatedsigh.mp3"
         r "It wasn't even much to ask for. Just a glance to say that you supported me when I needed it."
 
@@ -527,8 +527,8 @@ label lunch_1c:
     call rohan_spaz() from _call_rohan_spaz_20
     call sabie_spaz() from _call_sabie_spaz_47
     r happy "But definitely, believe what you want. That you actually look good in the eyes of others."
-    call sabie_spaz()
-    call rohan_spaz()
+    call sabie_spaz() from _call_sabie_spaz_48
+    call rohan_spaz() from _call_rohan_spaz_21
     voice "audio/voice/rohan/rohan_nervouslaughter.mp3"
     r "Keep your pathetic little image of yourself as the golden boy."
     call sabie_spaz() from _call_sabie_spaz_49
@@ -562,9 +562,9 @@ label lunch_1c:
         call sabie_spaz() from _call_sabie_spaz_53
         call tyree_spaz() from _call_tyree_spaz_14
         t "You always care too much about what others think."
-        call tyree_spaz()
-        call rohan_spaz()
-        call sabie_spaz()
+        call tyree_spaz() from _call_tyree_spaz_15
+        call rohan_spaz() from _call_rohan_spaz_27
+        call sabie_spaz() from _call_sabie_spaz_54
         voice "audio/voice/tyree/tyree_hm.mp3"
         t "What's more is that you take on more than what you can give."
     else:
@@ -576,9 +576,9 @@ label lunch_1c:
         call sabie_spaz() from _call_sabie_spaz_56
         call tyree_spaz() from _call_tyree_spaz_17
         t "When the world gives you its favor, you wallow in self-pity. And when you do not succeed, you bury yourself even deeper."
-        call sabie_spaz()
-        call tyree_spaz()
-        call rohan_spaz()
+        call sabie_spaz() from _call_sabie_spaz_57
+        call tyree_spaz() from _call_tyree_spaz_18
+        call rohan_spaz() from _call_rohan_spaz_30
         voice "audio/voice/tyree/tyree_hm.mp3"
         t "Nothing is ever enough for you and in your cowardice, you will never be satisfied."
 
@@ -594,9 +594,9 @@ label lunch_1c:
     call tyree_spaz() from _call_tyree_spaz_20
     call rohan_spaz() from _call_rohan_spaz_32
     n "Masami looks desperately around. His arms lock tighter around the trunk."
-    call rohan_spaz()
-    call tyree_spaz()
-    call sabie_spaz()
+    call rohan_spaz() from _call_rohan_spaz_33
+    call tyree_spaz() from _call_tyree_spaz_21
+    call sabie_spaz() from _call_sabie_spaz_60
     voice "audio/voice/sabie/sabie_nervouslaughter.mp3"
     s innocent "If you don't trust us, just say so. At least you're being honest."
     call tyree_spaz() from _call_tyree_spaz_22
@@ -682,7 +682,7 @@ label hallway_1:
     show nasir surprised at innerright
     call nasir_spaz() from _call_nasir_spaz
     show alyssa nervous at right
-    call alyssa_spaz()
+    call alyssa_spaz() from _call_alyssa_spaz
     voice "audio/voice/masami/masami_oh.mp3"
     m "Oh."
     call alyssa_spaz() from _call_alyssa_spaz_1
@@ -715,7 +715,7 @@ label hallway_1:
     m "No, Alyssa, please - "
     call nasir_spaz() from _call_nasir_spaz_8
     m sad "I didn't mean - "
-    call nasir_spaz()
+    call nasir_spaz() from _call_nasir_spaz_9
     voice "audio/voice/nasir/nasir_dontworryaboutme.mp3"
     na sad "It's alright."
     show nasir at center with move
@@ -727,10 +727,10 @@ label hallway_1:
     m "Wait!"
     call nasir_spaz() from _call_nasir_spaz_11
     na sad "What is it?"
-    call nasir_spaz()
+    call nasir_spaz() from _call_nasir_spaz_12
     voice "audio/voice/masami/masami_quietsigh.mp3"
     m sad "About last night. I - "
-    call nasir_spaz()
+    call nasir_spaz() from _call_nasir_spaz_13
     voice "audio/voice/nasir/nasir_quietchuckle.mp3"
     na happy "You don't need to explain. I understand."
     call nasir_spaz() from _call_nasir_spaz_14
@@ -740,8 +740,8 @@ label hallway_1:
     if kiss:
         call nasir_spaz() from _call_nasir_spaz_16
         na "You should have pushed me away earlier if you didn't want me."
-        call nasir_spaz()
-        call nasir_spaz()
+        call nasir_spaz() from _call_nasir_spaz_17
+        call nasir_spaz() from _call_nasir_spaz_18
         voice "audio/voice/nasir/nasir_quietsigh.mp3"
         na "You shouldn't have kissed me back as if it meant something."
 
@@ -753,7 +753,7 @@ label hallway_1:
         else:
             call nasir_spaz() from _call_nasir_spaz_20
             na "I should have known when you refused to take a cookie."
-            call nasir_spaz()
+            call nasir_spaz() from _call_nasir_spaz_21
             voice "audio/voice/nasir/nasir_quietsigh.mp3"
             na "But then, you led me on the whole night with the journey and conversation. And I thought, maybe, we did feel the same way about each other."
             call nasir_spaz() from _call_nasir_spaz_22
@@ -765,7 +765,7 @@ label hallway_1:
     call nasir_spaz() from _call_nasir_spaz_25
     show masami exasperated at shake, mc_pos
     m "I - I wasn't thinking straight. Neither of us were."
-    call nasir_spaz()
+    call nasir_spaz() from _call_nasir_spaz_26
     voice "audio/voice/masami/masami_sorryaboutthat.mp3"
     m sad "I'm trying to tell you what I really want now. And that's - "
 
@@ -777,8 +777,8 @@ label hallway_1:
         call nasir_spaz() from _call_nasir_spaz_29
         m neutral "…I think I like you. The same way."
         m sad "I just didn't realize until last night."
-        call nasir_spaz()
-        call nasir_spaz()
+        call nasir_spaz() from _call_nasir_spaz_30
+        call nasir_spaz() from _call_nasir_spaz_31
         voice "audio/voice/nasir/nasir_hm.mp3"
         na "Ah."
         call nasir_spaz() from _call_nasir_spaz_32
@@ -787,7 +787,7 @@ label hallway_1:
         m "That's it? Your only response? Isn't this suppose to be a mutual feeling where we're both supposed to be excited?"
         call nasir_spaz() from _call_nasir_spaz_33
         na "Perhaps."
-        call nasir_spaz()
+        call nasir_spaz() from _call_nasir_spaz_34
         voice "audio/voice/nasir/nasir_quietchuckle.mp3"
         na "But let me ask you this: if we start something, would you be ready to tell your friends and family about it?"
         call nasir_spaz() from _call_nasir_spaz_35
@@ -799,15 +799,15 @@ label hallway_1:
         na "Is that something you could truly ask of yourself when you don’t even have the courage to speak up for your own sister?"
         call nasir_spaz() from _call_nasir_spaz_40
         m sad "..."
-        call nasir_spaz()
-        call nasir_spaz()
+        call nasir_spaz() from _call_nasir_spaz_41
+        call nasir_spaz() from _call_nasir_spaz_42
         voice "audio/voice/nasir/nasir_iunderstand.mp3"
         na "That's what I was afraid of."
 
     else:
-        call nasir_spaz()
-        call nasir_spaz()
-        call nasir_spaz()
+        call nasir_spaz() from _call_nasir_spaz_43
+        call nasir_spaz() from _call_nasir_spaz_44
+        call nasir_spaz() from _call_nasir_spaz_45
         voice "audio/voice/nasir/nasir_iunderstand.mp3"
         na "You've already made yourself clear enough."
 

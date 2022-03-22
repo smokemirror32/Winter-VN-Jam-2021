@@ -98,31 +98,31 @@ init python:
     g = Gallery()
 
     g.button("cg_3")
-    g.unlock_image("images/cg/Cooking_Tangyuan_Empty.webp")
-    g.unlock_image("images/cg/Cooking_TangYuan_Step1.webp")
-    g.unlock_image("images/cg/Cooking_TangYuan_Step2.webp")
-    g.unlock_image("images/cg/Cooking_TangYuan_Step3.webp")
-    g.unlock_image("images/cg/Cooking_TangYuan_Step41.webp")
-    g.unlock_image("images/cg/Cooking_TangYuan_Step42.webp")
+    g.unlock_image("cg Cooking_Tangyuan_Empty")
+    g.unlock_image("cg Cooking_Tangyuan_Step1")
+    g.unlock_image("cg Cooking_Tangyuan_Step2")
+    g.unlock_image("cg Cooking_Tangyuan_Step3")
+    g.unlock_image("cg Cooking_Tangyuan_Step41")
+    g.unlock_image("cg Cooking_Tangyuan_Step42")
 
     g.button("cg_4")
-    g.unlock_image("images/cg/Family_Dinner.webp")
-    g.unlock_image("images/cg/Family_Dinner_NoShadow.webp")
+    g.unlock_image("cg Family_Dinner")
+    g.unlock_image("cg Family_Dinner_NoShadow")
 
     g.button("cg_5")
-    g.unlock_image("images/cg/Looking_Back.webp")
+    g.unlock_image("cg Looking_Back")
 
     g.button("cg_1")
-    g.unlock_image("images/cg/Magpie_Keychain.webp")
+    g.unlock_image("cg Magpie_Keychain")
 
     g.button("cg_2")
-    g.unlock_image("images/cg/Masami_Nasir_kiss.webp")
+    g.unlock_image("cg Masami_Nasir_Kiss")
 
     g.button("cg_6")
-    g.unlock_image("images/cg/Masami_Xinyi_Hug.webp")
+    g.unlock_image("cg Masami_Xinyi_Hug")
 
     g.button("cg_7")
-    g.unlock_image("images/cg/Rohan_Mall.webp")
+    g.unlock_image("cg Rohan_Mall")
 
     g.transition = dissolve
 
@@ -160,12 +160,12 @@ init python:
     mr = MusicRoom(fadeout=1.0)
 
     # Add music files.
+    mr.add("audio/music/reflective.mp3")
     mr.add("audio/music/chaos.mp3")
     mr.add("audio/music/emotional.mp3")
-    mr.add("audio/music/finale.mp3")
     mr.add("audio/music/lighthearted.mp3")
     mr.add("audio/music/uptempo.mp3")
-    mr.add("audio/music/reflective.mp3")
+    mr.add("audio/music/finale.mp3")
 
 screen music_gallery():
 
@@ -262,4 +262,4 @@ screen music_gallery():
         ## Restore the main menu music upon leaving.
         ## You can actually comment this out if you want to let players enjoy the music
         ## while looking at the other screens.
-        on "replaced" action [mr.Stop(),Play("music", "audio/music/finale.mp3")]
+        on "replaced" action Play("music", "audio/music/finale.mp3")

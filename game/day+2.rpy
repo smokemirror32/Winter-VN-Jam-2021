@@ -151,7 +151,11 @@ label phone2a_rohan_respond:
     # On phone portion
     call message(m, "Yeah sure", True) from _call_message_4
     call message(r, "Kk give me one sec", True) from _call_message_5
-    call message("Image", "cg/Rohan_Mall.webp") from _call_message_6 # TODO: Rohan picture here
+    call message("Image", "cg/Rohan_Mall.webp") from _call_message_6
+    show cg Rohan_Mall:
+        alpha 0.0
+    pause(0.01)
+    hide cg Rohan_Mall
     call message(r, "Sabie helped me pick") from _call_message_7
     call message(r, "Makeup isnt very good since I did it myself this time") from _call_message_8
     call message(r, "It isnt too bad is it") from _call_message_9
